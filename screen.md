@@ -1,11 +1,11 @@
 ## Desktop
 
-See pomo 	🍅 on bar!!!!
+👀 pomo	🍅 and 	ℹ️ on bar!!!!
 
 ![bg](assets/bg1.jpg)
 ![bg](assets/bg2.jpg)
 
-See noti :v
+👀 noti :v
 
 ![bg](assets/bg3.png)
 
@@ -17,7 +17,7 @@ Dashboard
 
 ![nv](assets/nv1.png)
 
-Look error and warning :v
+👀 ❌ error and ⚠️ warning :v
 
 ![nv](assets/nv2.png)
 
