@@ -17,7 +17,7 @@ Dashboard
 
 ![nv](assets/nv1.png)
 
-👀 ❌ error and ⚠️ warning :v
+👀 Look  ❌ error, ⚠️ warning and 🐼 for hint:v
 
 ![nv](assets/nv2.png)
 
