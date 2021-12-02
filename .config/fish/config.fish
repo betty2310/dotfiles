@@ -8,6 +8,7 @@ alias cat="bat"
 alias ls="logo-ls -XD"
 alias ll="logo-ls -XDlh"
 alias lla="logo-ls -a -XDlh"
+alias fetch="rxfetch"
 
 # navigation
 alias ..='cd ..'
