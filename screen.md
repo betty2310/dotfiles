@@ -2,7 +2,7 @@
 
 👀 🍅pomo and ℹ️, spotify on bar!!!!
 
-![bg](assets/bg1.jpg)
+![bg](assets/bg0.png)
 ![bg](assets/bg4.jpg)
 
 ---
