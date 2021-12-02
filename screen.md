@@ -5,6 +5,9 @@
 ![bg](assets/bg0.png)
 ![bg](assets/bg4.jpg)
 
+* [rxfetch](https://github.com/Mangeshrex/rxfetch)
+* [gotop](https://github.com/cjbassi/gotop)
+
 ---
 
 ## Neovim
