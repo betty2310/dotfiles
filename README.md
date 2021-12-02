@@ -1,6 +1,6 @@
 # 🐧🐧🐧 Hmmmm
 
-![1](assets/bg1.jpg)
+![1](assets/bg0.png)
 
 [🔆See more](screen.md)
 ### 🚧 Requires
