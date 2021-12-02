@@ -1,13 +1,9 @@
 ## Desktop
 
-👀 pomo	🍅 and 	ℹ️ on bar!!!!
+👀 🍅pomo and ℹ️, spotify on bar!!!!
 
 ![bg](assets/bg1.jpg)
-![bg](assets/bg2.jpg)
-
-👀 noti :v
-
-![bg](assets/bg3.png)
+![bg](assets/bg4.jpg)
 
 ---
 
