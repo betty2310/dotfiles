@@ -27,8 +27,8 @@ font:
     family: Liga SFMono Nerd Font
     style: Bold
   italic:
-    family: Cascadia Code 
-    style:  Italic 
+    family: Liga SFMono Nerd Font 
+    style:  Medium 
 
   size: 8.0
 
