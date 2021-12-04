@@ -6,7 +6,7 @@
 ### 🚧 Requires
 ---
 * [bspwm](https://github.com/baskerville/bspwm): tiling window manager
-* [alacritty](https://github.com/alacritty/alacritty): terminal emulator
+* [alacritty](https://github.com/alacritty/alacritty): terminal emulator (but hasn't ligatures, u should use ver on Aur instead)
 * [fish](https://fishshell.com/): smart and user-friendly command line
 shell
 * [neovim](https://github.com/neovim/neovim): text editor
