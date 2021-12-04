@@ -1,121 +1,105 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
+/*******************************************************************************
+ * MACOS SPOTLIGHT LIKE THEME FOR ROFI 
+ * User                 : LR-Tech               
+ * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
+ *******************************************************************************/
 
+* {
+    font:   "SF Pro Display 12";
 
-configuration {
-	font:							"Liga SFMono Nerd Font 11";
+    bg0:     #F5F5F5BF;
+    bg1:     #7E7E7E80;
+    bg2:     #0860F2E6;
+
+    fg0:     #242424;
+    fg1:     #FFFFFF;
+    fg2:     #24242480;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+
     show-icons:                     true;
 	icon-theme: 					"Papirus";
-    display-drun: 					"הּ";
-    drun-display-format:            "{name}";
-    disable-history:                false;
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
 }
-
-@import "colors.rasi"
-
 window {
-    transparency:                   "real";
-    background-color:               @bg;
-    text-color:                     @fg;
-	border:							3px;
-	border-color:					@bg3;
-    border-radius:                  8px;
-	width:							500px;
-    location:                       center;
-    x-offset:                       0;
-    y-offset:                       0;
-}
+    background-color:   @bg0;
 
-prompt {
-    enabled: 						true;
-	padding: 						14px 0px 14px 14px;
-	background-color: 				@bg;
-	text-color: 					@fg2;
-	font:							"Liga SFMono Nerd Font 14";
-}
-
-entry {
-    background-color:               @bg;
-    text-color:                     @fg2;
-    placeholder-color:              @bg2;
-    expand:                         true;
-    horizontal-align:               0;
-    placeholder:                    " Search...";
-	padding: 						15px 0px 0px 15px;
-    margin:                         0px 250px 0px 0px;
-    border-radius:                  0px 50px 50px 0px;
-    blink:                          true;
+    location:       center;
+    width:          640;
+    y-offset:       -200;
+    border-radius:  8;
 }
 
 inputbar {
-	children: 						[ prompt, entry ];
-    background-color:               @bg;
-    text-color:                     @fg2;
-    expand:                         false;
-	border:							0px;
-    border-radius:                  0px;
-	border-color:					@ac;
-    spacing:                        0px;
+    font:       "SF Pro Display 20";
+    padding:    12px;
+    spacing:    12px;
+    children:   [ icon-search, entry ];
+}
+
+icon-search {
+    expand:     false;
+    filename:   "search";
+    size: 28px;
+}
+
+icon-search, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+entry {
+    font:   inherit;
+
+    placeholder         : "Search";
+    placeholder-color   : @fg2;
+}
+
+message {
+    border:             2px 0 0;
+    border-color:       @bg1;
+    background-color:   @bg1;
+}
+
+textbox {
+    padding:    8px 24px;
 }
 
 listview {
-    background-color:               @bg1;
-    padding:                        10px 10px 10px 10px;
-    columns:                        1;
-    lines:                          8;
-    spacing:                        4px;
-    cycle:                          true;
-    dynamic:                        true;
-    layout:                         vertical;
-}
+    lines:      10;
+    columns:    1;
 
-mainbox {
-    background-color:               @bg;
-	border:							0px;
-    border-radius:                  0px;
-	border-color:					@bg1;
-    children:                       [ inputbar, listview ];
-    spacing:                       	0px;
-    padding:                        0px;
+    fixed-height:   false;
+    border:         1px 0 0;
+    border-color:   @bg1;
 }
 
 element {
-    background-color:               @bg1;
-    text-color:                     @fg;
-    orientation:                    horizontal;
-    border-radius:                  0px;
-	padding: 						8px 8px 8px 20px;
+    padding:            8px 16px;
+    spacing:            16px;
+    background-color:   transparent;
+}
+
+element normal active {
+    text-color: @bg2;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg2;
+    text-color:         @fg1;
 }
 
 element-icon {
-    size:                           20px;
-    border:                         0px;
-    background-color:               @transparent;
-    text-color:                     @fg2;
+    size:   1em;
+    border: 0px;
+    background-color: transparent;
 }
 
 element-text {
-    expand:                         true;
-    horizontal-align:               0;
-    vertical-align:                 0.5;
-    margin:                         0px 2.5px 0px 2.5px;
-    background-color:               @transparent;
-    text-color:                     @fg2;
-}
-
-element selected {
-    background-color:               @bg;
-    text-color:                     @fg;
-	border:							0 5px 0 5px;
-    border-radius:                  0px;
-    border-color:                  	@cyan;
+    text-color: inherit;
 }

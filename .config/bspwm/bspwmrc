@@ -8,8 +8,8 @@ ibus_daemon &
 imwheel &
 
 # bspc monitor -d  爵    ﴬ   漣
-bspc monitor -d גּ הּ          
-#bspc monitor -d 1 2 3 4 5 6 7 8 9 
+bspc monitor -d          ﭮ 
+#bspc monitor -d 1 2 3 
 # bspc config automatic_scheme spiral
 #bspc config initial_polarity first_child
 bspc config border_width 0
@@ -28,13 +28,14 @@ bspc config pointer_action3 resize_corner
 
 # Specific settings per app
 
-# bspc rule -a notion-app-enhanced desktop='^6' follow=off
+bspc rule -a notion-app-enhanced desktop='^6' follow=off
 bspc rule -a discord desktop='^8' follow=on
 #bspc rule -a TelegramDesktop desktop='^8' follow=on
 #bspc rule -a Caprine desktop='^8' follow=on
-#bspc rule -a pomotroid state=floating rectangle=600+503+145
+#bspc rule -a com.spotify.Client desktop='^8' follow=on state=floating rectangle=600+503+145
 
-bspc rule -a Spotify desktop='^7' follow=on
+#bspc rule -a Spotify state=floating follow=on center=true 
+
 # bspc rule -a qBittorrent desktop='^9' follow=on
 
 bspc rule -a Font-manager state=floating follow=on center=true

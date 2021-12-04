@@ -1,6 +1,6 @@
 #!/bin/sh
 
-USER="thanhvule0310"
+USER="betty2310"
 TOKEN=$GH_TOKEN
 
 notifications=$(echo "user = \"$USER:$TOKEN\"" | curl -sf -K- https://api.github.com/notifications | jq ".[].unread" | grep -c true)

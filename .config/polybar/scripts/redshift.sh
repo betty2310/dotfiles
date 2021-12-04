@@ -38,7 +38,7 @@ temperature)
     printf "%dK" "$REDSHIFT_TEMP"
     ;;
   off)
-    printf "OFF"
+    printf "Off"
     ;;
   esac
   ;;

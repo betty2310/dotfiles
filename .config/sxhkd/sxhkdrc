@@ -2,83 +2,84 @@
 # wm independent hotkeys
 
 # Color picker
-super + F9
+alt + F9
   xcolor | xclip -sel clip
 
 # Open Terminal
-super + Return
+alt + Return
   alacritty
 
 # Open Terminal in floating mode
-super + shift + Return
+alt + shift + Return
   bspc rule -a Alacritty -o state=floating follow=on center=true rectangle=1000x650+0+0 && alacritty
 
+
 # Open launcher
-super + slash
+alt + slash
   ~/.config/rofi/launcher.sh
 
 # Switch input method
-super + @space
+alt + @space
 	~/.scripts/ibus_toggle.sh
 # program launcher
 
 # Make sxhkd reload its configuration files:
-super + Escape
+alt + Escape
 	~/.config/rofi/powermenu.sh
 
-super + n
+alt + n
   notion_enhancer
 # Open web browser
-super + b
+alt + b
   google-chrome-stable
 
 # Visual Studio Code
-super + c
+alt + c
   code
 
 # Open file manager
-super + f
+alt + f
   nautilus
 
 # Open file manager in floating
-super + shift + f
+alt + shift + f
   bspc rule -a Org.gnome.Nautilus -o state=floating follow=on center=true rectangle=1000x650+0+0 && nautilus
 
 # bspwm hotkeys
 
 # Quit/restart bspwm
-super + alt + {q,r}
+alt + super + {q,r}
 	bspc {quit,wm -r}
 
 # Reload sxhkd (keys binding)
-super + r
+alt + r
 	pkill -USR1 -x sxhkd
 
 # Close and kill
-super + {_,shift + }q
+alt + {_,shift + }q
 	bspc node -{c,k}
 
 # Alternate between the tiled and monocle layout
-super + m
+alt + m
 	bspc desktop -l next
 
 # Send the newest marked node to the newest preselected node
-super + y
+alt + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
 # Swap the current node and the biggest window
-super + g
+alt + g
 	bspc node -s biggest.window
 
 #
 # state/flags
 #
 # Set the window state
-super + {t,shift + t,s,o}
+alt + {t,shift + t,s,o}
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Set the node flags
-super + ctrl + {m,x,y,z}
+alt + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 #
@@ -86,33 +87,33 @@ super + ctrl + {m,x,y,z}
 #
 
 # Focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
+alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # Focus the node for the given path jump
-super + {p,b,comma,period}
+alt + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # Focus the next/previous window in the current desktop
-super + {_,shift + }c
+alt + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # Focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+alt + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # Focus the last node/desktop
-super + {grave,Tab}
+alt + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # Focus the older or newer node in the focus history
-super + {o,i}
+alt + {o,i}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
 # Focus or send to the given desktop
-super + {_,shift + }{1-9,0}
+alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
@@ -120,19 +121,19 @@ super + {_,shift + }{1-9,0}
 #
 
 # Preselect the direction
-super + ctrl + {h,j,k,l}
+alt + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # Preselect the ratio
-super + ctrl + {1-9}
+alt + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # Cancel the preselection for the focused node
-super + ctrl + space
+alt + ctrl + space
 	bspc node -p cancel
 
 # Cancel the preselection for the focused desktop
-super + ctrl + shift + space
+alt + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
@@ -140,15 +141,15 @@ super + ctrl + shift + space
 #
 
 # Expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
+alt + super + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # Contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
+alt + super + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # Move a floating window
-super + {Left,Down,Up,Right}
+alt + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Lower volume
@@ -173,4 +174,11 @@ XF86MonBrightnessUp
 # Dmenu scripts
 alt + ctrl + Return
   dmenu_run
+
+alt + ctrl + n
+  networkmanager_dmenu
+#screen shot
+Print
+  flameshot gui
+
 
