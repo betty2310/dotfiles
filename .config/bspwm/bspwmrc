@@ -5,6 +5,7 @@ pgrep -x sxhkd >/dev/null || sxhkd &
 nitrogen --restore &
 picom &
 ibus_daemon &
+imwheel &
 
 # bspc monitor -d  爵    ﴬ   漣
 bspc monitor -d גּ הּ          
