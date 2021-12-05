@@ -6,8 +6,8 @@ window:
     lines: 85
 
   padding:
-    x: 10
-    y: 10 
+    x: 8 
+    y: 8 
 
   dynamic_padding: false
 
@@ -15,7 +15,7 @@ window:
   startup_mode: Windowed
 
 scrolling:
-  history: 0
+  history: 100
 
   multiplier: 3
 
@@ -25,10 +25,10 @@ font:
     style: Medium
   bold:
     family: Liga SFMono Nerd Font
-    style: Bold
+    style: Medium
   italic:
     family: Liga SFMono Nerd Font 
-    style:  Medium 
+    style:  Italic 
 
   size: 8.0
 
@@ -100,7 +100,7 @@ bell:
   color: '0xffffff'
   duration: 0
 
-  background_opacity: 1.0 
+  background_opacity: 1 
 
 
 key_bindings:

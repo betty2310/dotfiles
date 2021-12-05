@@ -151,7 +151,7 @@ _G.packer_plugins = {
   },
   ["onenord.nvim"] = {
     loaded = true,
-    path = "/home/vu/.local/share/nvim/site/pack/packer/start/onenord.nvim",
+    path = "/home/betty/.local/share/nvim/site/pack/packer/start/onenord.nvim",
     url = "https://github.com/rmehri01/onenord.nvim"
   },
   ["nvim-autopairs"] = {

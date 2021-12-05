@@ -32,7 +32,7 @@ switch $argv[1]
         amixer -D pulse set Master 1+ toggle >/dev/null
         if is_mute
             set DIR (dirname "$0")
-            dunstify -h string:x-dunst-stack-tag:test -A 'volume,default' -a VOLUME "$volume" -i '~/.config/dunst/icons/015-sound.svg'
+            dunstify -h string:x-dunst-stack-tag:test -A 'volume,default' -a VOLUME "$volume" -i '~/.config/dunst/icons/volume.svg'
         else
             send_notification
         end

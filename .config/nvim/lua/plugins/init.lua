@@ -9,6 +9,11 @@ if ok then
         -- UI (Color, statusline, dashboard...)
         use { "kyazdani42/nvim-web-devicons", config = setupFrom "icons" }
         use { "rmehri01/onenord.nvim" }
+        use {'shaunsingh/nord.nvim'}
+		use({
+			"catppuccin/nvim",
+			as = "catppuccin"
+		})
         use {
             "glepnir/galaxyline.nvim",
             branch = "main",

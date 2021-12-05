@@ -37,7 +37,7 @@ mute)
   if is_mute; then
     DIR=$(dirname "$0")
 
-    dunstify -h string:x-dunst-stack-tag:test -A 'volume,default' -a VOLUME "$volume" -i '~/.config/dunst/icons/015-sound.svg'
+    dunstify -h string:x-dunst-stack-tag:test -A 'volume,default' -a VOLUME "$volume" -i '~/.config/dunst/icons/volume.svg'
   else
     send_notification
   fi

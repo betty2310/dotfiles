@@ -20,7 +20,7 @@
 	separator_color = frame
 	sort = yes
 	idle_threshold = 120
-	font = Liga SFMono Nerd Font Bold 9
+	font = Liga SFMono Nerd Font Bold 10 
 	line_height = 4
 	markup = full
 	format = "%a\n%s\n%b"

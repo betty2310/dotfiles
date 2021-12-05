@@ -110,7 +110,7 @@ if ok then
     gls.right[4] = {
         DiagnosticError = {
             provider = "DiagnosticError",
-            icon = " ",
+            icon = " ",
             highlight = { colors.white, colors.black },
         },
     }

@@ -4,10 +4,10 @@ if ok then
     bufferline.setup {
         options = {
             -- diagnostics = "nvim_lsp"
-            indicator_icon = "",
+            indicator_icon = "▎",
             buffer_close_icon = "",
             modified_icon = "●",
-            close_icon = "",
+            close_icon = "",
             close_command = "bdelete %d",
             right_mouse_command = "bdelete! %d",
             left_trunc_marker = "ﰰ",

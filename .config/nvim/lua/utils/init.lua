@@ -35,7 +35,7 @@ utils.colors = {
     black = "#222733",
 }
 
-utils.signs = { Error = "", Warn = "", Hint = "", Info = "" }
+utils.signs = { Error = "", Warn = "", Hint = "", Info = "ﯦ" }
 
 utils.powerline = {
     circle = {
