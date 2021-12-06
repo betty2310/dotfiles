@@ -7,11 +7,11 @@ alt + F9
 
 # Open Terminal
 alt + Return
-  alacritty
+  kitty
 
 # Open Terminal in floating mode
 alt + shift + Return
-  bspc rule -a Alacritty -o state=floating follow=on center=true rectangle=1000x650+0+0 && alacritty
+  bspc rule -a kitty -o state=floating follow=on center=true rectangle=1000x650+0+0 && kitty
 
 
 # Open launcher
