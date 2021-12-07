@@ -8,13 +8,13 @@ ibus_daemon &
 imwheel &
 
 # bspc monitor -d  爵    ﴬ   漣
-bspc monitor -d          ﭮ 
-#bspc monitor -d 1 2 3 
+bspc monitor -d          ﭮ
+#bspc monitor -d 1 2 3
 # bspc config automatic_scheme spiral
 #bspc config initial_polarity first_child
 bspc config border_width 0
-bspc config window_gap 10 
-bspc config focused_border_color "#4c566a"
+bspc config window_gap 10
+bspc config focused_border_color "#a3be8c"
 bspc config normal_border_color "#4c566a"
 bspc config focus_follows_pointer true
 bspc config split_ratio 0.5
@@ -32,9 +32,9 @@ bspc rule -a notion-app-enhanced desktop='^6' follow=off
 bspc rule -a discord desktop='^8' follow=on
 #bspc rule -a TelegramDesktop desktop='^8' follow=on
 #bspc rule -a Caprine desktop='^8' follow=on
-#bspc rule -a com.spotify.Client desktop='^8' follow=on state=floating rectangle=600+503+145
+bspc rule -a com.spotify.Client desktop='^8' follow=on state=floating rectangle=600+503+145
 
-#bspc rule -a Spotify state=floating follow=on center=true 
+#bspc rule -a Spotify state=floating follow=on center=true
 
 # bspc rule -a qBittorrent desktop='^9' follow=on
 
