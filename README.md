@@ -13,7 +13,7 @@ shell
 * [polybar](https://github.com/polybar/polybar): status bar
 * [rofi](https://github.com/davatorium/rofi): Launch apps
 * [nitrogen](https://aur.archlinux.org/packages/nitrogen-git/): For background
-* [picom](https://github.com/yshui/picom): A lightweight compositor for X11
+* [picom-jonaburg-git](https://github.com/jonaburg/picom): A lightweight compositor for X11 (fork from picom)
 * [dunst](https://github.com/dunst-project/dunst): Lightweight and customizable notification daemon
 ---
 - GTK3: [Nordic-darker](https://www.gnome-look.org/p/1267246/)
