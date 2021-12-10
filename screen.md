@@ -6,7 +6,10 @@
 ![bg](assets/bg4.jpg)
 
 * [rxfetch](https://github.com/Mangeshrex/rxfetch)
-* [gotop](https://github.com/cjbassi/gotop)
+
+And some widgets
+
+![bg](assets/ww.png)
 
 ---
 
