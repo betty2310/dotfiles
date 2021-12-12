@@ -1,5 +1,3 @@
-fishd.tmp.*
-/functions/*
-/functions/tide/configure
-fish_plugins
+/functions/
+fishd*
 fish_variables
