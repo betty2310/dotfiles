@@ -9,6 +9,8 @@ alias cat="bat"
 alias ls="logo-ls -XD"
 alias ll="logo-ls -XDlh"
 alias lla="logo-ls -a -XDlh"
+alias ide="tmux split-window -v -p 30"
+alias za="zathura"
 
 # navigation
 alias ..='cd ..'
@@ -16,6 +18,7 @@ alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
+alias :q='exit'
 
 #color scheme
 
@@ -30,7 +33,7 @@ set -x TERM xterm-256color
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
-
+set -gx PATH ~/.bin $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
@@ -48,4 +51,7 @@ set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --
 #end
 # random cool image
 # colorscript -e pacman
+
+# starship prompt
+# starship init fish | source
 
