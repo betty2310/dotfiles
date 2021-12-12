@@ -39,10 +39,10 @@
 
 		<!--Weather vars-->
     <var name="ICON">Dev</var>
-    <var name="STAT">Ôi bạn ơi! Lương 10k đô</var>
+    <var name="QUOTE2">Ôi bạn ơi! Lương 10k đô</var>
     <var name="TEMP">N1 JA</var>
     <var name="HEX">4</var>
-    <var name="QUOTE2">Stay focused, be present</var>
+    <var name="STAT">Stay focused, be present</var>
     <var name="QUOTE">How are you feeling?</var>
 
         <!-- Apps vars -->
