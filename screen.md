@@ -1,5 +1,7 @@
 ## Desktop
 
+*Notes: something here is out of date*
+
 👀 🍅pomo and ℹ️, spotify on bar!!!!
 
 ![bg](assets/bg0.png)
@@ -7,7 +9,11 @@
 
 * [rxfetch](https://github.com/Mangeshrex/rxfetch)
 
-And some widgets
+[Polybar](https://github.com/polybar/polybar)
+
+![bg](assets/bar.png)
+
+And some widgets (from [eww]())
 
 ![bg](assets/ww.png)
 
