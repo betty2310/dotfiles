@@ -29,8 +29,8 @@ if ok then
             -- the 'curved' border is a custom border type
             -- not natively supported but implemented in this plugin.
             border = "curved",
-            width = 120,
-            height = 30,
+            width = 100,
+            height = 20,
             winblend = 0,
             highlights = {
                 border = "Normal",

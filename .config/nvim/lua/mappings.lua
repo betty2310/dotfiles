@@ -58,4 +58,8 @@ map("n", "<leader>s", "<cmd>SymbolsOutline<cr>", { silent = true, noremap = true
 -- [Neoformat]
 map("n", "<leader>fm", "<cmd>Format<cr>", { silent = true, noremap = true })
 
+-- map jj to Normal mode
 map("i", "jj", "<Esc>")
+
+-- [ToggleTerm]
+map("n", "<leader>tg", "<cmd>ToggleTerm direction=float<cr>", { silent = true, noremap = true })
