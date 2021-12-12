@@ -5,6 +5,7 @@ pgrep -x sxhkd >/dev/null || sxhkd &
 nitrogen --restore &
 picom &
 ibus_daemon &
+eww daemon &
 imwheel &
 
 # bspc monitor -d  爵    ﴬ   漣
@@ -27,14 +28,16 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 # Specific settings per app
+bspc config external_rules_command "${HOME}/.config/bspwm/external_rules"
 
 bspc rule -a notion-app-enhanced desktop='^6' follow=off
-bspc rule -a discord desktop='^8' follow=on
-#bspc rule -a TelegramDesktop desktop='^8' follow=on
-#bspc rule -a Caprine desktop='^8' follow=on
-bspc rule -a com.spotify.Client desktop='^8' follow=on state=floating rectangle=600+503+145
+bspc rule -a discord desktop='^10' follow=on
+bspc rule -a Caprine desktop='^8' follow=on
+#bspc rule -a com.spotify.Client desktop='^7' follow=on
+bspc rule -add code desktop=2 follow=on
+bspc rule --add org.pwmt.zathura desktop=2
 
-#bspc rule -a Spotify state=floating follow=on center=true
+bspc rule -a Spotify state=floating follow=on center=true
 
 # bspc rule -a qBittorrent desktop='^9' follow=on
 
