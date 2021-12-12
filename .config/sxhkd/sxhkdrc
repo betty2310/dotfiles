@@ -1,10 +1,11 @@
-#
 # wm independent hotkeys
-
+#
 # Color picker
 alt + F9
   xcolor | xclip -sel clip
 
+alt + F10
+  sh ~/.scripts/bluetooth.sh
 # Open Terminal
 alt + Return
   kitty
@@ -21,7 +22,9 @@ alt + slash
 # Switch input method
 alt + @space
 	~/.scripts/ibus_toggle.sh
-# program launcher
+
+shift + @space
+  sh ~/.scripts/web-search.sh
 
 # Make sxhkd reload its configuration files:
 alt + Escape
@@ -30,8 +33,8 @@ alt + Escape
 alt + n
   notion_enhancer
 # Open web browser
-alt + b
-  google-chrome-stable
+alt + i 
+  firefox
 
 # Visual Studio Code
 alt + c
@@ -165,19 +168,39 @@ XF86AudioMute
   ~/.scripts/volume.fish mute
 
 XF86MonBrightnessDown
-  light -U 10
+  sh ~/.scripts/light-down.sh
 
 
 XF86MonBrightnessUp
-  light -A 10
+  sh ~/.scripts/light-up.sh
 
-# Dmenu scripts
+# Dmenu 
 alt + ctrl + Return
   dmenu_run
 
 alt + ctrl + w 
   networkmanager_dmenu
 
+#widgets
+
+super + l
+  sh ~/.scripts/eww.sh
 #screen shot
 Print
   flameshot gui
+# --| Cropped Save |-- #
+
+super + u
+    sh ~/.scripts/screenshot.sh -s save -m select
+
+# --| Fullscreen Save |--#
+super + shift + u
+    sh ~/.scripts/screenshot.sh -s save -m full
+
+# --| Clipboard cropped |-- #
+super + p
+    sh ~/.scripts/screenshot.sh -s clip -m select
+
+# --| Clipboard Fullscreen |-- #
+super + shift + p
+    sh ~/.scripts/screenshot.sh -s clip -m full
