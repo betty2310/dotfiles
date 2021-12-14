@@ -21,12 +21,18 @@
     padding:    0;
     spacing:    0;
 
+}
+
+configuration {
+	font:							"SF Pro Display 13";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
-    fullscreen:                     false;
-	hide-scrollbar: 				true;
+    display-drun: 					"";
+    drun-display-format:            "{name}";
+    disable-history:                false;
 	sidebar-mode: 					false;
 }
+
 window {
     background-color:   @bg0;
 
@@ -95,9 +101,12 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size:   1em;
-    border: 0px;
-    background-color: transparent;
+    background-color: 				inherit;
+    text-color:       				inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           25;
+    border:                         0px;
 }
 
 element-text {

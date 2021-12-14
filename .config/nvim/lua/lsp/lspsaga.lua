@@ -11,7 +11,9 @@ if ok then
         infor_sign = signs.Info,
         border_style = "round",
         code_action_prompt = {
-            enable = false,
+            enable = true,
+            sign = false,
+            sign_priority = 40,
         },
     }
 end

@@ -7,18 +7,6 @@ map("n", "<Right>", "<cmd>echom 'ﮧ Use l bro!'<cr>")
 map("n", "<Up>", "<cmd>echom 'ﮧ Use k bro!'<cr>")
 map("n", "<Down>", "<cmd>echom 'ﮧ Use j bro!'<cr>")
 
--- Resize buffer
-map("", "<M-l>", "<cmd>vertical resize +3<CR>", { silent = true, noremap = true })
-map("", "<M-h>", "<cmd>vertical resize -3<CR>", { silent = true, noremap = true })
-map("", "<M-j>", "<cmd>resize +3<CR>", { silent = true, noremap = true })
-map("", "<M-k>", "<cmd>resize -3<CR>", { silent = true, noremap = true })
-
--- [vim-tmux-navigator] Moving arround vim buffers and tmux panes
-map("n", "<c-k>", "<cmd>TmuxNavigateUp<cr>", { silent = true })
-map("n", "<c-j>", "<cmd>TmuxNavigateDown<cr>", { silent = true })
-map("n", "<c-h>", "<cmd>TmuxNavigateLeft<cr>", { silent = true })
-map("n", "<c-l>", "<cmd>TmuxNavigateRight<cr>", { silent = true })
-
 -- [bufferline] Moving arround buffer tab
 map("", "<a-.>", "<cmd>BufferLineCycleNext<cr>", { silent = true }) -- Move to next buffer
 map("", "<a-,>", "<cmd>BufferLineCyclePrev<cr>", { silent = true }) -- Move to prev buffer
@@ -63,3 +51,8 @@ map("i", "jj", "<Esc>")
 
 -- [ToggleTerm]
 map("n", "<leader>tg", "<cmd>ToggleTerm direction=float<cr>", { silent = true, noremap = true })
+-- [lspsaga]
+map("n", "<leader>lsd", "<cmd>Lspsaga preview_definition<cr>", { silent = true, noremap = true })
+map("n", "<leader>lsf", "<cmd>Lspsaga lsp_finder<cr>", { silent = true, noremap = true })
+map("n", "<leader>rn", "<cmd>Lspsaga rename<cr>", { silent = true, noremap = true })
+map("n", "<leader>lsc", "<cmd>Lspsaga code_action<cr>", { silent = true, noremap = true })

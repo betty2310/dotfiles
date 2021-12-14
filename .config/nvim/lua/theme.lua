@@ -12,7 +12,7 @@ if ok then
             variables = false,
         },
         disable = {
-            background = false,
+            background = true,
             cursorline = false,
             eob_lines = true,
         },
