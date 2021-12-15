@@ -13,6 +13,10 @@
 
 ![bg](assets/bar.png)
 
+Firefox theme
+
+![bg](assets/firefox.png)
+
 And some widgets (from [eww](https://github.com/elkowar/eww))
 
 ![bg](assets/ww.png)
