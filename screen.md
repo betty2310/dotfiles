@@ -13,7 +13,7 @@
 
 ![bg](assets/bar.png)
 
-And some widgets (from [eww]())
+And some widgets (from [eww](https://github.com/elkowar/eww))
 
 ![bg](assets/ww.png)
 
@@ -25,17 +25,11 @@ Dashboard
 
 ![nv](assets/nv1.png)
 
-👀 Look  ❌ error, ⚠️ warning and 🐼 for hint:v
+Auto complete, disgnotics and preview
 
 ![nv](assets/nv2.png)
 
-Auto complete
 
-![nv](assets/nv3.png)
-
-And tmux (like Vscode)
-
-![nv](assets/nvtmux.png)
 
 Search words
 
