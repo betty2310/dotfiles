@@ -1,9 +1,11 @@
 local ok, onenord = pcall(require, "onenord")
-local colors = require("utils").colors
 
 if ok then
+    local colors = require("utils").colors
+
     onenord.setup {
         borders = true,
+        fade_nc = false,
         italics = {
             comments = true,
             strings = false,
@@ -12,23 +14,12 @@ if ok then
             variables = false,
         },
         disable = {
-            background = true,
+            background = false,
             cursorline = false,
             eob_lines = true,
         },
         custom_highlights = {
-            GitSignsAdd = { fg = colors.green },
-            GitSignsChange = { fg = colors.orange },
-            GitSignsDelete = { fg = colors.red },
             NvimTreeNormal = { fg = colors.fg, bg = colors.bg },
-            CmpItemAbbr = { fg = colors.fg1 },
-            CmpItemAbbrDeprecated = { fg = colors.red },
-            CmpItemAbbrMatch = { fg = colors.green, style = "bold" },
-            CmpItemKind = { fg = colors.orange },
-            CmpItemMenu = { fg = colors.magenta },
-            CmpItemAbbrMatchFuzzy = { fg = colors.yellow },
-
-            LspFloatWinNormal = { bg = colors.bg },
         },
     }
 end

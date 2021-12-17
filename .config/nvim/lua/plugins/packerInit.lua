@@ -1,5 +1,4 @@
 local cmd = vim.cmd
-
 local ok, packer = pcall(require, "packer")
 
 if not ok then
@@ -16,9 +15,9 @@ if not ok then
     }
 
     cmd "packadd packer.nvim"
-    present, packer = pcall(require, "packer")
+    is_exist_packer, packer = pcall(require, "packer")
 
-    if present then
+    if is_exist_packer then
         print "Packer cloned successfully."
     else
         error("Couldn't clone packer !\nPacker path: " .. packer_path .. "\n" .. packer)
@@ -26,6 +25,7 @@ if not ok then
 end
 
 packer.init {
+    compile_path = vim.fn.stdpath "config" .. "/lua/packer_compiled.lua",
     display = {
         open_fn = function()
             return require("packer.util").float { border = "single" }

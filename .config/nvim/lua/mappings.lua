@@ -1,3 +1,4 @@
+local ok, wk = pcall(require, "which-key")
 local utils = require "utils"
 local map = utils.map
 
@@ -7,52 +8,56 @@ map("n", "<Right>", "<cmd>echom 'ﮧ Use l bro!'<cr>")
 map("n", "<Up>", "<cmd>echom 'ﮧ Use k bro!'<cr>")
 map("n", "<Down>", "<cmd>echom 'ﮧ Use j bro!'<cr>")
 
--- [bufferline] Moving arround buffer tab
-map("", "<a-.>", "<cmd>BufferLineCycleNext<cr>", { silent = true }) -- Move to next buffer
-map("", "<a-,>", "<cmd>BufferLineCyclePrev<cr>", { silent = true }) -- Move to prev buffer
-map("", "<a-q>", "<cmd>bdelete<cr>", { silent = true }) -- Close current buffer
-map("", "<a-Q>", "<cmd>bufdo bd<cr>", { silent = true }) -- Close all buffers
-
--- [nvim-tree]
-map("n", "<c-n>", "<cmd>NvimTreeToggle<cr>")
-map("n", "<leader>r", "<cmd>NvimTreeRefresh<cr>")
-
--- [Telescope]
-map("", "<c-p>", "<cmd>Telescope find_files<cr>")
-map("", "<leader>ff", "<cmd>Telescope find_files<cr>")
-map("", "<leader>fg", "<cmd>Telescope live_grep<cr>")
-map("", "<leader>fo", "<cmd>Telescope live_grep<cr>")
-map("", "<leader>fb", "<cmd>Telescope buffers<cr>")
-map("", "<leader>fh", "<cmd>Telescope help_tags<cr>")
-map("", "<leader>fm", "<cmd>Telescope marks<cr>")
-
--- [dashboard.nvim]
-map("", "<leader>fn", "<cmd>DashboardNewFile<cr>")
-
--- [Trouble.nvim]
-map("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true, noremap = true })
-map("n", "<leader>xw", "<cmd>Trouble lsp_workspace_diagnostics<cr>", { silent = true, noremap = true })
-map("n", "<leader>xd", "<cmd>Trouble lsp_document_diagnostics<cr>", { silent = true, noremap = true })
-map("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { silent = true, noremap = true })
-map("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { silent = true, noremap = true })
-map("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
-
--- [Vista.vim] ctags
-map("n", "<leader>v", "<cmd>Vista!!<cr>", { silent = true, noremap = true })
-
--- [symbols-outline.nvim] A tree like view for symbols
-map("n", "<leader>s", "<cmd>SymbolsOutline<cr>", { silent = true, noremap = true })
-
--- [Neoformat]
-map("n", "<leader>fm", "<cmd>Format<cr>", { silent = true, noremap = true })
-
--- map jj to Normal mode
-map("i", "jj", "<Esc>")
-
--- [ToggleTerm]
+-- [toggleterm]
 map("n", "<leader>tg", "<cmd>ToggleTerm direction=float<cr>", { silent = true, noremap = true })
--- [lspsaga]
-map("n", "<leader>lsd", "<cmd>Lspsaga preview_definition<cr>", { silent = true, noremap = true })
-map("n", "<leader>lsf", "<cmd>Lspsaga lsp_finder<cr>", { silent = true, noremap = true })
-map("n", "<leader>rn", "<cmd>Lspsaga rename<cr>", { silent = true, noremap = true })
-map("n", "<leader>lsc", "<cmd>Lspsaga code_action<cr>", { silent = true, noremap = true })
+
+wk.register {
+
+    -- [bufferline] Moving arround buffer tab
+    ["<a-.>"] = { "<cmd>BufferLineCycleNext<cr>", "Go next buffer" },
+    ["<a-,>"] = { "<cmd>BufferLineCyclePrev<cr>", "Go previous buffer" },
+    ["<a-q>"] = { "<cmd>bdelete<cr>", "Close current buffer" },
+    ["<a-Q>"] = { "<cmd>bufdo bd<cr>", "Close current buffer" },
+
+    ["<leader>tg"] = { "<cmd>ToggleTerm direction=float<cr>", "[toggleterm] Open floating terminal" },
+    -- [nvim-tree]
+    ["<c-n>"] = { "<cmd>NvimTreeToggle<cr>", "[nvimtree] Toggle" },
+    ["<leader>r"] = { "<cmd>NvimTreeRefresh<cr>", "[nvimtree] Refresh" },
+
+    -- [Telescope]
+    ["<leader>f"] = {
+        name = "+file",
+        f = { "<cmd>Telescope find_files<cr>", "[Telescope] Find File" },
+        g = { "<cmd>Telescope live_grep<cr>", "[Telescope] Find File by grep" },
+        b = { "<cmd>Telescope buffers<cr>", "[Telescope] Find buffers" },
+        h = { "<cmd>Telescope help_tags<cr>", "[Telescope] Help tags" },
+        m = { "<cmd>Telescope marks<cr>", "[Telescope] Marks" },
+    },
+
+    -- [Trouble.nvim]
+    ["<leader>x"] = {
+        x = { "<cmd>Trouble<cr>", "[Trouble] Show trouble list" },
+        w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "[Trouble] Show LSP workspace diagnostic" },
+        d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "[Trouble] Show LSP Document diagnostic" },
+        l = { "<cmd>Trouble loclist<cr>", "[Trouble] Locklist" },
+        q = { "<cmd>Trouble quickfix<cr>", "[Trouble] Quick fix" },
+    },
+    ["gR"] = { "<cmd>Trouble lsp_references<cr>", "[Trouble] References" },
+
+    -- [Vista.vim] ctags
+    ["<leader>v"] = { "<cmd>Vista!!<cr>", "[Vista] Show" },
+
+    -- [symbols-outline.nvim] A tree like view for symbols
+    ["<leader>s"] = { "<cmd>SymbolsOutline<cr>", "[Symbol Outline] Show" },
+
+    -- [lspsaga]
+    ["<leader>ls"] = {
+        n = { "<cmd>Lspsaga diagnostic_jump_next<cr>", "[SAGA] Diagnostic jump next" },
+        p = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "[SAGA] Diagnostic jump previous" },
+        d = { "<cmd>Lspsaga preview_definition<cr>", "[SAGA] Preview definition" },
+        f = { "<cmd>Lspsaga lsp_finder<cr>", "[SAGA] LSP Finder" },
+        c = { "<cmd>Lspsaga code_action<cr>", "[SAGA] Code Action" },
+    },
+    ["<leader>rn"] = { "<cmd>Lspsaga rename<cr>", "[SAGA] Rename" },
+}
+wk.setup {}

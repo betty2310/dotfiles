@@ -1,95 +1,105 @@
-local ok, packer = pcall(require, "plugins.packerInit")
-local setupFrom = require("utils").setupFrom
+local packer = require "plugins.packerInit"
+local use = packer.use
 
-if ok then
-    local use = packer.use
+return packer.startup(function()
+    use { "wbthomason/packer.nvim" }
+    use { "lewis6991/impatient.nvim" }
+    use {
+        "max397574/better-escape.nvim",
+        config = function()
+            require("better_escape").setup()
+        end,
+    }
+    -- UI (Color, statusline, dashboard...)
+    use { "rmehri01/onenord.nvim" }
+    use { "L3MON4D3/LuaSnip" }
 
-    return packer.startup(function()
-        use { "wbthomason/packer.nvim" }
-        -- UI (Color, statusline, dashboard...)
-        use { "kyazdani42/nvim-web-devicons", config = setupFrom "icons" }
-        use { "rmehri01/onenord.nvim" }
-        use { "shaunsingh/nord.nvim" }
-        use {
-            "catppuccin/nvim",
-            as = "catppuccin",
-        }
-        use { "easymotion/vim-easymotion" }
-        use {
-            "glepnir/galaxyline.nvim",
-            branch = "main",
-            config = setupFrom "galaxyline",
-            requires = { "kyazdani42/nvim-web-devicons" },
-        }
-        use {
-            "glepnir/dashboard-nvim",
-            config = setupFrom "dashboard",
-        }
-        use {
-            "akinsho/bufferline.nvim",
-            requires = { "kyazdani42/nvim-web-devicons" },
-            config = setupFrom "bufferline",
-        }
+    use { "andersevenrud/nordic.nvim" }
 
-        -- Coding utilities
-        use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = setupFrom "treesitter" }
-        use {
-            "kyazdani42/nvim-tree.lua",
-            requires = { "kyazdani42/nvim-web-devicons" },
-            config = setupFrom "nvimtree",
-        }
-        use {
-            "nvim-telescope/telescope.nvim",
-            requires = { "nvim-lua/plenary.nvim" },
-            config = setupFrom "telescope",
-        }
-        use { "blackCauldron7/surround.nvim", config = setupFrom "surround" }
-        use { "lukas-reineke/indent-blankline.nvim", config = setupFrom "indent" }
-        use { "akinsho/toggleterm.nvim", config = setupFrom "toggleterm" }
-        use { "windwp/nvim-autopairs", config = setupFrom "autopairs" }
-        use { "norcalli/nvim-colorizer.lua" }
-        use { "karb94/neoscroll.nvim", config = setupFrom "neoscroll" }
-        use { "liuchengxu/vista.vim" }
-        use { "simrat39/symbols-outline.nvim" }
+    use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }
+    use {
+        "glepnir/galaxyline.nvim",
+        branch = "main",
+        config = require "plugins.config.galaxyline",
+        requires = { "kyazdani42/nvim-web-devicons" },
+    }
+    use {
+        "goolord/alpha-nvim",
+        config = require "plugins.config.alpha",
+    }
+    use {
+        "akinsho/bufferline.nvim",
+        requires = { "kyazdani42/nvim-web-devicons" },
+        config = require "plugins.config.bufferline",
+    }
+    use { "folke/which-key.nvim" }
+    -- Coding utilities
+    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = require "plugins.config.treesitter" }
+    use { "windwp/nvim-ts-autotag" }
+    use { "p00f/nvim-ts-rainbow" }
+    use {
+        "kyazdani42/nvim-tree.lua",
+        requires = {
+            "kyazdani42/nvim-web-devicons",
+        },
+        config = require "plugins.config.nvimtree",
+    }
+    use {
+        "nvim-telescope/telescope.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+        config = require "plugins.config.telescope",
+    }
+    use { "blackCauldron7/surround.nvim", config = require "plugins.config.surround" }
+    use { "lukas-reineke/indent-blankline.nvim", config = require "plugins.config.indent" }
+    use { "akinsho/toggleterm.nvim", config = require "plugins.config.toggleterm" }
+    use { "windwp/nvim-autopairs", config = require "plugins.config.autopairs" }
+    use { "norcalli/nvim-colorizer.lua" }
+    use { "karb94/neoscroll.nvim", config = require "plugins.config.neoscroll" }
+    use { "liuchengxu/vista.vim" }
+    use { "simrat39/symbols-outline.nvim" }
 
-        -- LSP
-        use { "neovim/nvim-lspconfig" }
-        use { "williamboman/nvim-lsp-installer" }
+    -- LSP
+    use { "neovim/nvim-lspconfig" }
+    use { "williamboman/nvim-lsp-installer" }
 
-        -- -- Lint
-        use { "folke/lsp-colors.nvim" }
-        use { "glepnir/lspsaga.nvim" }
-        use { "folke/trouble.nvim" }
-        use { "ray-x/lsp_signature.nvim" }
+    -- -- Lint
+    use { "folke/lsp-colors.nvim" }
+    use { "tami5/lspsaga.nvim" }
+    use { "folke/trouble.nvim" }
+    use { "ray-x/lsp_signature.nvim", branch = "neovim-0.6" }
 
-        -- -- Comment
-        use { "terrortylor/nvim-comment", config = setupFrom "commenter" }
+    -- -- Comment
+    use { "numToStr/Comment.nvim", config = require "plugins.config.comment" }
 
-        -- -- Completion
-        use { "hrsh7th/nvim-cmp" }
-        use { "hrsh7th/cmp-nvim-lsp" }
-        use { "hrsh7th/cmp-buffer" }
-        use { "hrsh7th/cmp-path" }
-        use { "hrsh7th/cmp-cmdline" }
-        use { "L3MON4D3/LuaSnip" }
-        use { "saadparwaiz1/cmp_luasnip" }
+    -- -- Completion
+    use { "hrsh7th/nvim-cmp" }
+    use { "hrsh7th/cmp-nvim-lsp" }
+    use { "hrsh7th/cmp-nvim-lua" }
+    use { "hrsh7th/cmp-buffer" }
+    use { "hrsh7th/cmp-path" }
+    use { "hrsh7th/cmp-cmdline" }
+    use { "hrsh7th/cmp-nvim-lsp-document-symbol" }
+    use { "saadparwaiz1/cmp_luasnip" }
+    use { "hrsh7th/cmp-calc" }
 
-        -- -- Formatter
-        use { "mhartington/formatter.nvim" }
+    -- -- Formatter and Linting
+    use {
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+            require("null-ls").setup()
+        end,
+        requires = { "nvim-lua/plenary.nvim" },
+    }
 
-        -- -- Debugger
-        use { "puremourning/vimspector" }
+    -- Tmux
+    use { "aserowy/tmux.nvim", config = require "plugins.config.tmux" }
 
-        -- Tmux
-        use { "christoomey/vim-tmux-navigator" }
-
-        -- Git
-        use {
-            "lewis6991/gitsigns.nvim",
-            requires = {
-                "nvim-lua/plenary.nvim",
-            },
-            config = setupFrom "gitsigns",
-        }
-    end)
-end
+    -- Git
+    use {
+        "lewis6991/gitsigns.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+        config = require "plugins.config.gitsigns",
+    }
+end)

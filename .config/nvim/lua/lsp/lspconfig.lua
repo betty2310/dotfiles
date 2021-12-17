@@ -12,8 +12,13 @@ if ok then
             vim.api.nvim_buf_set_option(bufnr, ...)
         end
 
+        local is_null_ls = client.name == "null-ls"
+        client.resolved_capabilities.document_formatting = is_null_ls
+        client.resolved_capabilities.document_range_formatting = is_null_ls
+
         -- LSP Keymaps
         local opts = { noremap = true, silent = true }
+
         buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
         buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
         buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
@@ -34,6 +39,7 @@ if ok then
     end
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
+
     capabilities.textDocument.completion.completionItem.documentationFormat = { "markdown", "plaintext" }
     capabilities.textDocument.completion.completionItem.snippetSupport = true
     capabilities.textDocument.completion.completionItem.preselectSupport = true

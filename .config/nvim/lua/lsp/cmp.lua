@@ -1,22 +1,11 @@
 local ok, cmp = pcall(require, "cmp")
 
 if ok then
-    -- Color for cmp item
-    vim.cmd [[highlight CmpItemKind guifg=#b48ead]]
-    vim.cmd [[highlight CmpItemAbbr guifg=#88C0D0]]
-    vim.cmd [[highlight CmpItemMenu guifg=#D08770]]
-
-    require("luasnip/loaders/from_vscode").lazy_load {
-        paths = {
-            "~/.config/nvim/snippets/vscode-es7-javascript-react-snippets",
-        },
-    }
-
     local icons = {
         Text = "",
         Method = "",
         Function = "",
-        Constructor = "",
+        Constructor = "⌘",
         Field = "ﰠ",
         Variable = "",
         Class = "ﴯ",
@@ -48,22 +37,21 @@ if ok then
             end,
         },
         completion = {
-            -- completeopt = "menu,menuone,noinsert", -- completion menu select like vscode
             completeopt = "menu,longest,noinsert,noselect,preview",
             keyword_pattern = [[\%(-\?\d\+\%(\.\d\+\)\?\|\h\w*\%(-\w*\)*\)]],
             keyword_length = 1,
         },
         formatting = {
             format = function(entry, vim_item)
-                -- Set Icons for completion menu
                 vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
 
                 vim_item.menu = ({
-                    buffer = "[BUFFER]",
-                    nvim_lsp = "[LSP]",
-                    nvim_lua = "[LUA]",
-                    path = "[PATH]",
-                    luasnip = "[SNIPPET]",
+                    buffer = "⌈BUFFER⌋",
+                    nvim_lsp = "⌈LSP⌋",
+                    nvim_lua = "⌈LUA⌋",
+                    path = "⌈PATH⌋",
+                    luasnip = "⌈SNIPPET⌋",
+                    calc = "⌈CALC⌋",
                 })[entry.source.name]
 
                 return vim_item
@@ -109,16 +97,20 @@ if ok then
         },
         sources = {
             { name = "nvim_lsp" },
+            { name = "nvim_lua" },
             { name = "luasnip" },
             { name = "path" },
             { name = "buffer" },
+            { name = "calc" },
         },
     }
 
     cmp.setup.cmdline("/", {
-        sources = {
+        sources = cmp.config.sources({
+            { name = "nvim_lsp_document_symbol" },
+        }, {
             { name = "buffer" },
-        },
+        }),
     })
 
     cmp.setup.cmdline(":", {
