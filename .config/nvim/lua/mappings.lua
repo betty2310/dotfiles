@@ -1,7 +1,6 @@
 local ok, wk = pcall(require, "which-key")
 local utils = require "utils"
 local map = utils.map
-
 -- Disable move by arrow keys
 map("n", "<Left>", "<cmd>echom 'ﮧ Use h bro!'<cr>")
 map("n", "<Right>", "<cmd>echom 'ﮧ Use l bro!'<cr>")

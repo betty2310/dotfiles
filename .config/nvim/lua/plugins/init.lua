@@ -10,10 +10,10 @@ return packer.startup(function()
             require("better_escape").setup()
         end,
     }
+    use { "easymotion/vim-easymotion" }
     -- UI (Color, statusline, dashboard...)
     use { "rmehri01/onenord.nvim" }
     use { "L3MON4D3/LuaSnip" }
-
     use { "andersevenrud/nordic.nvim" }
 
     use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }

@@ -3,7 +3,7 @@
 ## Open links in firefox
 FILE="$HOME/.cache/eww_launch.xyz"
 EWW="$HOME/.bin/eww"
-cmd="firefox --new-tab"
+cmd="google-chrome-stable --new-tab"
 
 if [[ "$1" == "--mail" ]]; then
 	${EWW} close-all && rm -rf "$FILE" && ${cmd} "https://mail.google.com"

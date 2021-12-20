@@ -1,0 +1,2 @@
+sh ~/.config/eww/scripts/music/echoart
+playerctl next

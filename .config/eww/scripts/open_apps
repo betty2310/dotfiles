@@ -5,30 +5,30 @@ FILE="$HOME/.cache/eww_launch.xyz"
 EWW="$HOME/.bin/eww"
 
 if [[ "$1" == "--ff" ]]; then
-	${EWW} close-all && rm -rf "$FILE" && firefox &
+	${EWW} close-all && rm -rf "$FILE" && google-chrome-stable &
 
 elif [[ "$1" == "--tg" ]]; then
-	${EWW} close-all && rm -rf "$FILE" && telegram-desktop &
+	sh ~/.scripts/notion.sh &
 
 elif [[ "$1" == "--dc" ]]; then
 	${EWW} close-all && rm -rf "$FILE" && discord &
 
 elif [[ "$1" == "--tr" ]]; then
-	${EWW} close-all && rm -rf "$FILE" && alacritty --working-directory ~ &
+	${EWW} close-all && rm -rf "$FILE" && kitty --working-directory ~ &
 
 elif [[ "$1" == "--fm" ]]; then
 	${EWW} close-all && rm -rf "$FILE" && thunar ~ &
 
 elif [[ "$1" == "--ge" ]]; then
-	${EWW} close-all && rm -rf "$FILE" && geany &
+	${EWW} close-all && rm -rf "$FILE" && com.spotify.Client &
 
 elif [[ "$1" == "--cd" ]]; then
 	${EWW} close-all && rm -rf "$FILE" && code &
 
 elif [[ "$1" == "--gp" ]]; then
-	${EWW} close-all && rm -rf "$FILE" && gimp &
+	${EWW} close-all && rm -rf "$FILE" && teams &
 
 elif [[ "$1" == "--vb" ]]; then
-	${EWW} close-all && rm -rf "$FILE" && virtualbox &
+	${EWW} close-all && rm -rf "$FILE" &&  &
 
 fi
