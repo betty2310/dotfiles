@@ -15,6 +15,7 @@ return packer.startup(function()
     use { "rmehri01/onenord.nvim" }
     use { "L3MON4D3/LuaSnip" }
     use { "andersevenrud/nordic.nvim" }
+    use { "tjdevries/colorbuddy.nvim" }
 
     use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }
     use {

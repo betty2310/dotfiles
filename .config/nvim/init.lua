@@ -1,22 +1,21 @@
-require "impatient"
-
 require "theme"
 
 vim.cmd [[
+nmap ;;w  <Plug>(easymotion-w)
+nmap ;;b  <Plug>(easymotion-b)
+
 let g:nord_underline_option = 'none'
 let g:nord_italic = v:false
 let g:nord_italic_comments = v:true
 let g:nord_minimal_mode = v:false
 let g:nord_alternate_backgrounds = v:false
-colorscheme nordic
-nmap ;;w  <Plug>(easymotion-w)
-nmap ;;b  <Plug>(easymotion-b)
 ]]
-
+--colorscheme nordic
 require "settings"
 require "plugins"
 require "lsp"
 require "mappings"
+require "impatient"
 
 require("better_escape").setup {
     mapping = { "jj" }, -- a table with mappings to use

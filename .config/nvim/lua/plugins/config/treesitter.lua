@@ -13,12 +13,12 @@ if ok then
         },
         rainbow = {
             colors = {
-                colors.red,
-                colors.orange,
-                colors.yellow,
-                colors.green,
                 colors.magenta,
+                colors.blue,
+                colors.green,
                 colors.cyan,
+                colors.magenta,
+                colors.green,
                 colors.blue,
             },
             enable = true,

@@ -50,6 +50,7 @@ wk.register {
     ["<leader>s"] = { "<cmd>SymbolsOutline<cr>", "[Symbol Outline] Show" },
 
     -- [lspsaga]
+    ["K"] = { "<cmd>Lspsaga hover_doc<CR>", "[SAGA] Hover doc" },
     ["<leader>ls"] = {
         n = { "<cmd>Lspsaga diagnostic_jump_next<cr>", "[SAGA] Diagnostic jump next" },
         p = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "[SAGA] Diagnostic jump previous" },
