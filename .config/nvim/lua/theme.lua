@@ -27,7 +27,7 @@ onenord.setup {
     },
     custom_colors = {
         purple = "#88C0D0",
-        yellow = "#81A1C1",
+        yellow = "#88C0D0",
         orange = "#B48EAD",
         red = "#EBCB8B",
     },

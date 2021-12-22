@@ -19,11 +19,17 @@ return packer.startup(function()
 
     use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }
     use {
-        "glepnir/galaxyline.nvim",
-        branch = "main",
-        config = require "plugins.config.galaxyline",
-        requires = { "kyazdani42/nvim-web-devicons" },
+        "nvim-lualine/lualine.nvim",
+        requires = { "kyazdani42/nvim-web-devicons", opt = true },
+        config = require "plugins.config.lualine",
     }
+    -- use {
+    --     "glepnir/galaxyline.nvim",
+    --     branch = "main",
+    --     requires = { "kyazdani42/nvim-web-devicons" },
+    --     config = require "plugins.config.galaxyline",
+    -- }
+    --
     use {
         "goolord/alpha-nvim",
         config = require "plugins.config.alpha",
@@ -34,6 +40,8 @@ return packer.startup(function()
         config = require "plugins.config.bufferline",
     }
     use { "folke/which-key.nvim" }
+    use { "Pocco81/TrueZen.nvim" }
+
     -- Coding utilities
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = require "plugins.config.treesitter" }
     use { "windwp/nvim-ts-autotag" }

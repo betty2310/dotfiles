@@ -15,6 +15,7 @@ if ok then
             offsets = { { filetype = "NvimTree", text = "", padding = 1, text_align = "center" } },
             show_tab_indicators = true,
             show_close_icon = false,
+            separator_style = "bar", --| "thick" | "thin" | { 'any', 'any' },
         },
         highlights = {
             fill = {
@@ -40,7 +41,7 @@ if ok then
                 guibg = { attribute = "bg", highlight = "StatusLine" },
             },
             separator_selected = {
-                guifg = { attribute = "fg", highlight = "Special" },
+                guifg = { attribute = "fg", highlight = "Normal" },
                 guibg = { attribute = "bg", highlight = "Normal" },
             },
             separator_visible = {

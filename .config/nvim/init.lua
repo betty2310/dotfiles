@@ -23,3 +23,5 @@ require("better_escape").setup {
     clear_empty_lines = false, -- clear line after escaping if there is only whitespace
     keys = "<Esc>", -- keys used for escaping, if it is a function will use the result everytime
 }
+
+vim.cmd [[autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif]]
