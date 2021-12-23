@@ -6,11 +6,11 @@ ENGLISH="xkb:us::eng"
 VIETNAM="Bamboo"
 JA="mozc-jp"
 if [[ "$engine" == "$VIETNAM" ]]; then
-	echo " "
+	echo " VN"
 fi
 if [[ "$engine" == "$ENGLISH" ]]; then
-	echo " "
+	echo " EN"
 fi
 if [[ "$engine" == "$JA" ]]; then
-	echo " "
+	echo " JA"
 fi
