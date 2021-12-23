@@ -27,31 +27,32 @@ symbol= " "
 symbol= "  "
 
 [git_status]
-format = "[$all_status$ahead_behind]($style)"
-ahead = "⇡$count "
-behind = "⇣$count "
-deleted = "🗑 $count "
-diverged = "$count "
-stashed = "📦$count "
-modified = " $count "
-staged = '[$count ](green)'
+format ='([\[$all_status$ahead_behind\] ]($style))'
+conflicted = "="
+ahead = '[⇡$count ](bold green)'
+behind = '[⇣$count ](bold green)'
+deleted = "✘$count "
+diverged = '[⇕⇡${ahead_count}⇣${behind_count}](yellow)'
+stashed = '[$count ](yellow)'
+modified = '[!$count ](yellow)'
+staged = '[+$count ](bold green)'
 renamed = " $count "
-untracked = "🤷‍$count "
-style = "red"
+untracked = '[?$count](red)'
+style = "bold red"
 
 [cmake]
-symbol = "卑 "
+symbol = "卑"
 
 [golang]
 symbol = "ﳑ "
 
 [directory]
-read_only = " גּ "
-read_only_style = "yellow"
-style = "green"
-truncation_length = 3 
-truncation_symbol = "~~/"
-home_symbol = "~"
+read_only = "  "
+read_only_style = "red"
+style = "bold green"
+truncation_length = 1
+truncation_symbol = "  ~/"
+home_symbol = "  "
 
 [custom.docker]
 command = "docker version -f '{{.Server.Version}}' 2>/dev/null"

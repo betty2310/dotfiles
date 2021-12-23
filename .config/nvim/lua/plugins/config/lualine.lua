@@ -100,11 +100,7 @@ ins_left {
 ins_left {
     function()
         vim.api.nvim_command(
-            "hi LualineViMode guifg="
-                .. mode_color[vim.fn.mode()]
-                .. " guibg="
-                .. colors.black
-                .. " gui=bold cterm=bold"
+            "hi LualineViMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.test .. " gui=bold cterm=bold"
         )
         return require("lualine.utils.mode").get_mode()
     end,
@@ -117,12 +113,21 @@ ins_left {
     function()
         return powerline.right
     end,
-    color = { fg = colors.black, bg = colors.bg1 },
+    color = { fg = colors.test, bg = colors.bg1 },
     padding = 0,
 }
 ins_left {
+    -- mode component
     function()
-        return "   "
+        -- auto change color according to neovims mode
+        vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg1)
+        return ""
+    end,
+    color = "LualineMode",
+}
+ins_left {
+    function()
+        return " "
     end,
     color = { fg = colors.white, bg = colors.bg1 },
     padding = 0,
@@ -130,11 +135,8 @@ ins_left {
 
 -- ins_left {
 --     "filetype",
---     fmt = string.upper,
---     cond = conditions.hide_in_width,
---     icons_enabled = true,
---     icon_only = true,
 --     colored = true,
+--     icon_only = true,
 --     color = { fg = colors.bg1, bg = colors.bg1 },
 -- }
 --
@@ -169,13 +171,22 @@ ins_left {
     sources = { "nvim_diagnostic" },
     symbols = { error = " ", warn = " ", info = " " },
     color = { bg = colors.bg1 },
-    cond = conditions.hide_in_width,
     diagnostics_color = {
         color_error = { fg = colors.red },
         color_warn = { fg = colors.yellow },
         color_info = { fg = colors.cyan },
     },
 }
+ins_left {
+    -- mode component
+    function()
+        -- auto change color according to neovims mode
+        vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg1)
+        return ""
+    end,
+    color = "LualineMode",
+}
+
 ins_left {
     function()
         return powerline.right
@@ -218,12 +229,21 @@ ins_right {
     cond = conditions.hide_in_width,
     color = { fg = colors.fg1, bg = colors.bg1 },
 }
+ins_right {
+    -- mode component
+    function()
+        -- auto change color according to neovims mode
+        vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg1)
+        return " "
+    end,
+    color = "LualineMode",
+}
 
 ins_right {
     function()
         return powerline.left
     end,
-    color = { fg = colors.black, bg = colors.bg1 },
+    color = { fg = colors.test, bg = colors.bg1 },
     cond = conditions.check_git_workspace,
     padding = 0,
 }
@@ -232,16 +252,16 @@ ins_right {
     "branch",
     icon = "",
     cond = conditions.check_git_workspace,
-    color = { fg = colors.magenta, bg = colors.black, gui = "bold" },
+    color = { fg = colors.magenta, bg = colors.test, gui = "bold" },
 }
 
 ins_right {
     "diff",
     symbols = { added = " ", modified = " ", removed = " " },
     diff_color = {
-        added = { fg = colors.green, bg = colors.black },
-        modified = { fg = colors.orange, bg = colors.black },
-        removed = { fg = colors.red, bg = colors.black },
+        added = { fg = colors.green, bg = colors.test },
+        modified = { fg = colors.orange, bg = colors.test },
+        removed = { fg = colors.red, bg = colors.test },
     },
 }
 
@@ -266,14 +286,14 @@ ins_left_inactive {
 ins_left_inactive {
     "filename",
     cond = conditions.buffer_not_empty,
-    color = { fg = colors.fg1, bg = colors.black, gui = "bold" },
+    color = { fg = colors.fg1, bg = colors.test, gui = "bold" },
 }
 
 ins_left_inactive {
     function()
         return powerline.right
     end,
-    color = { fg = colors.black, bg = colors.bg },
+    color = { fg = colors.test, bg = colors.bg },
     padding = 0,
 }
 
