@@ -13,5 +13,6 @@ cp ~/.config/starship.toml /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/alacritty/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/kitty/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cd /home/betty/ghq/github.com/betty2310/dotifles
+DATE=$(date)
 git add .
-git commit -m "auto update $date"
+git commit -m "auto update ${DATE}"

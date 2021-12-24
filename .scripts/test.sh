@@ -1,11 +1,2 @@
-title=$(playerctl metadata --format '{{ title }}')
-count=$(echo -n "$title" | wc -c)
-if [ -z "$title" ]; then
-	echo "Nothing Playing..."
-else
-	if [ "$count" -le 18 ]; then
-		echo $title
-	else
-		echo $(playerctl metadata --format '{{ title }}' | awk '{print $1, $2}')...
-	fi
-fi
+DATE=$(date)
+echo ${DATE}
