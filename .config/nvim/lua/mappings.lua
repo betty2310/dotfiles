@@ -17,8 +17,9 @@ wk.register {
     ["<a-,>"] = { "<cmd>BufferLineCyclePrev<cr>", "Go previous buffer" },
     ["<a-q>"] = { "<cmd>bdelete<cr>", "Close current buffer" },
     ["<a-Q>"] = { "<cmd>bufdo bd<cr>", "Close current buffer" },
-
+    -- [run]
     ["<leader>tg"] = { "<cmd>ToggleTerm direction=float<cr>", "[toggleterm] Open floating terminal" },
+    ["<leader>g"] = { '<cmd>TermExec cmd="g++ -Wall % && ./a.out" go_back=0 size=13<cr>', "[C++] Compile an run!!" },
     -- [nvim-tree]
     ["<c-n>"] = { "<cmd>NvimTreeToggle<cr>", "[nvimtree] Toggle" },
     ["<leader>r"] = { "<cmd>NvimTreeRefresh<cr>", "[nvimtree] Refresh" },

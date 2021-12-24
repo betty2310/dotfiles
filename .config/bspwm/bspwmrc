@@ -26,10 +26,12 @@ bspc config pointer_action3 resize_corner
 bspc config external_rules_command "${HOME}/.config/bspwm/external_rules"
 
 bspc rule -a discord desktop='^6' follow=on
+
+bspc rule -a solaar desktop='^1' follow=on state=floating center=true
 bspc rule -add code desktop=2 follow=on
 bspc rule --add org.pwmt.zathura desktop=2
 
-spc rule -a qBittorrent desktop='^9' follow=on
+bspc rule -a qBittorrent desktop='^9' follow=on
 
 bspc rule -a Font-manager state=floating follow=on center=true
 #bspc rule -a Gnome-calculator state=floating follow=on center=true rectangle=400x400+0+0

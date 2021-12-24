@@ -1,14 +1,12 @@
 # 🐧🐧🐧 Hmmmm
 
 ![1](assets/bg0.png)
-
-[🔆See more](screen.md)
 ### 🚧 Requires
 
 ---
 
 * [bspwm](https://github.com/baskerville/bspwm): tiling window manager
-* [alacritty](https://github.com/alacritty/alacritty): terminal emulator (but hasn't ligatures, u should use ver on Aur instead)
+* [kitty](https://github.com/kovidgoyal/kitty): terminal emulator 
 * [fish](https://fishshell.com/): smart and user-friendly command line
 shell
 * [neovim](https://github.com/neovim/neovim): text editor

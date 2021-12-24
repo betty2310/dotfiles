@@ -54,6 +54,6 @@ set -g tide_virtual_env_bg_color 444444
 
 set -U tide_pwd_icon 
 set -U tide_cmd_duration_icon 
-set -U tide_pwd_icon_unwritable גּ
+set -U tide_pwd_icon_unwritable 
 set -U tide_pwd_icon_home 
 set -U tide_git_icon  

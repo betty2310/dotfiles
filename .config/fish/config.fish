@@ -54,5 +54,5 @@ set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --
 # colorscript -e pacman
 
 # starship prompt
- starship init fish | source
+#starship init fish | source
 alias rr="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
