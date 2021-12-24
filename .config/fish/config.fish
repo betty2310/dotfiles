@@ -11,6 +11,7 @@ alias ll="logo-ls -XDlh"
 alias lla="logo-ls -a -XDlh"
 alias ide="tmux split-window -v -p 30"
 alias za="zathura"
+alias dots="~/.scripts/dots.sh"
 
 # navigation
 alias ..='cd ..'
