@@ -12,6 +12,9 @@ cp -r ~/.scripts/ /home/betty/ghq/github.com/betty2310/dotifles/
 cp ~/.config/starship.toml /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/alacritty/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/kitty/ /home/betty/ghq/github.com/betty2310/dotifles/.config
+cp ~/.xinitrc /home/betty/ghq/github/github.com/betty2310/dotifles/X/
+cp ~/.xprofile /home/betty/ghq/github/github.com/betty2310/dotifles/X/
+cp ~/.Xresources /home/betty/ghq/github/github.com/betty2310/dotifles/X/
 cd /home/betty/ghq/github.com/betty2310/dotifles
 DATE=$(date)
 git add .
