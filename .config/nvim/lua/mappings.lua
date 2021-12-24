@@ -1,28 +1,29 @@
 local ok, wk = pcall(require, "which-key")
 local utils = require "utils"
 local map = utils.map
+
 -- Disable move by arrow keys
 map("n", "<Left>", "<cmd>echom 'ﮧ Use h bro!'<cr>")
 map("n", "<Right>", "<cmd>echom 'ﮧ Use l bro!'<cr>")
 map("n", "<Up>", "<cmd>echom 'ﮧ Use k bro!'<cr>")
 map("n", "<Down>", "<cmd>echom 'ﮧ Use j bro!'<cr>")
 
--- [toggleterm]
-map("n", "<leader>tg", "<cmd>ToggleTerm direction=float<cr>", { silent = true, noremap = true })
-
 wk.register {
 
     -- [bufferline] Moving arround buffer tab
-    ["<a-.>"] = { "<cmd>BufferLineCycleNext<cr>", "Go next buffer" },
-    ["<a-,>"] = { "<cmd>BufferLineCyclePrev<cr>", "Go previous buffer" },
-    ["<a-q>"] = { "<cmd>bdelete<cr>", "Close current buffer" },
-    ["<a-Q>"] = { "<cmd>bufdo bd<cr>", "Close current buffer" },
+    ["[b"] = { "<cmd>BufferLineCycleNext<cr>", "Go next buffer" },
+    ["]b"] = { "<cmd>BufferLineCyclePrev<cr>", "Go previous buffer" },
+    ["<leader>mv"] = { "<cmd>bdelete<cr>", "Close current buffer" },
     -- [run]
     ["<leader>tg"] = { "<cmd>ToggleTerm direction=float<cr>", "[toggleterm] Open floating terminal" },
     ["<leader>g"] = { '<cmd>TermExec cmd="g++ -Wall % && ./a.out" go_back=0 size=13<cr>', "[C++] Compile an run!!" },
     -- [nvim-tree]
     ["<c-n>"] = { "<cmd>NvimTreeToggle<cr>", "[nvimtree] Toggle" },
     ["<leader>r"] = { "<cmd>NvimTreeRefresh<cr>", "[nvimtree] Refresh" },
+
+    -- [easy-motion]
+    [";;w"] = { "<Plug>(easymotion-w)", "[easymotion] move after!" },
+    [";;b"] = { "<Plug>(easymotion-b)", "[easymotion] move before!" },
 
     -- [Telescope]
     ["<leader>f"] = {

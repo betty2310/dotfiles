@@ -52,9 +52,7 @@ return packer.startup(function()
     use { "simrat39/symbols-outline.nvim" }
     use {
         "max397574/better-escape.nvim",
-        config = function()
-            require("better_escape").setup()
-        end,
+        config = require "plugins.config.escape",
     }
     use { "easymotion/vim-easymotion" }
 

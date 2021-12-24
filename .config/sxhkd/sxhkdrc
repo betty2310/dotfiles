@@ -207,3 +207,5 @@ super + p
 # --| Clipboard Fullscreen |-- #
 super + shift + p
     sh ~/.scripts/screenshot.sh -s clip -m full
+super + shift + m
+    sh ~/mouse.sh
