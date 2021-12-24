@@ -4,32 +4,17 @@ local use = packer.use
 return packer.startup(function()
     use { "wbthomason/packer.nvim" }
     use { "lewis6991/impatient.nvim" }
-    use {
-        "max397574/better-escape.nvim",
-        config = function()
-            require("better_escape").setup()
-        end,
-    }
-    use { "easymotion/vim-easymotion" }
+
     -- UI (Color, statusline, dashboard...)
     use { "rmehri01/onenord.nvim" }
     use { "L3MON4D3/LuaSnip" }
     use { "andersevenrud/nordic.nvim" }
-    use { "tjdevries/colorbuddy.nvim" }
-
     use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }
     use {
         "nvim-lualine/lualine.nvim",
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
         config = require "plugins.config.lualine",
     }
-    -- use {
-    --     "glepnir/galaxyline.nvim",
-    --     branch = "main",
-    --     requires = { "kyazdani42/nvim-web-devicons" },
-    --     config = require "plugins.config.galaxyline",
-    -- }
-    --
     use {
         "goolord/alpha-nvim",
         config = require "plugins.config.alpha",
@@ -40,7 +25,6 @@ return packer.startup(function()
         config = require "plugins.config.bufferline",
     }
     use { "folke/which-key.nvim" }
-    use { "Pocco81/TrueZen.nvim" }
 
     -- Coding utilities
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = require "plugins.config.treesitter" }
@@ -66,6 +50,13 @@ return packer.startup(function()
     use { "karb94/neoscroll.nvim", config = require "plugins.config.neoscroll" }
     use { "liuchengxu/vista.vim" }
     use { "simrat39/symbols-outline.nvim" }
+    use {
+        "max397574/better-escape.nvim",
+        config = function()
+            require("better_escape").setup()
+        end,
+    }
+    use { "easymotion/vim-easymotion" }
 
     -- LSP
     use { "neovim/nvim-lspconfig" }

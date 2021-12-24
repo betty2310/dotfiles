@@ -8,6 +8,9 @@ cmd="google-chrome-stable --new-tab"
 if [[ "$1" == "--mail" ]]; then
 	${EWW} close-all && rm -rf "$FILE" && ${cmd} "https://mail.google.com"
 
+elif [[ "$1" == "--od" ]]; then
+	${EWW} close-all && rm -rf "$FILE" && ${cmd} "https://husteduvn-my.sharepoint.com/personal/huynh_dh205087_sis_hust_edu_vn/_layouts/15/onedrive.aspx"
+
 elif [[ "$1" == "--gh" ]]; then
 	${EWW} close-all && rm -rf "$FILE" && ${cmd} "https://github.com"
 

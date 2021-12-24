@@ -44,6 +44,7 @@ set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
 set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --theme=ansi" --layout=reverse --height=50% --info=inline --border --margin=1 --padding=1'
+
 #auto run tmux
 #if status is-interactive
 #and not set -q TMUX
@@ -53,5 +54,5 @@ set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --
 # colorscript -e pacman
 
 # starship prompt
-# starship init fish | source
-
+ starship init fish | source
+alias rr="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"

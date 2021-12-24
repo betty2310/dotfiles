@@ -14,8 +14,8 @@ if ok then
         rainbow = {
             colors = {
                 colors.magenta,
-                colors.blue,
                 colors.green,
+                colors.yellow,
                 colors.cyan,
                 colors.magenta,
                 colors.green,

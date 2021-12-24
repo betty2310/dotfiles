@@ -6,7 +6,7 @@
     width = 300
     height = 400
     origin = top-right
-    offset = 6x35
+    offset = 16x50
     scale = 1
     indicate_hidden = yes
 	shrink = yes
@@ -20,7 +20,7 @@
 	separator_color = frame
 	sort = yes
 	idle_threshold = 120
-	font = Liga SFMono Nerd Font Bold 10 
+	font = Liga SFMono Nerd Font Bold 10
 	line_height = 4
 	markup = full
 	format = "%a\n%s\n%b"
@@ -48,10 +48,10 @@
     [experimental]
 	per_monitor_dpi = false
 [shortcuts]
-	close = 
-	close_all = 
-	history = 
-	context = 
+	close =
+	close_all =
+	history =
+	context =
 [Discord]
 appname = Discord
 format = "Discord\n%s\n%b"
@@ -67,19 +67,19 @@ format = "Discord\n%s\n%b"
 	background  = "#2E3440"
 	foreground  = "#ECEFF4"
 	timeout     = 2
-	icon        = "/home/betty/.config/dunst/icons/030-notification bell.svg" 
+	icon        = "/home/betty/.config/dunst/icons/030-notification bell.svg"
 
 [urgency_normal]
 	background  = "#2E3440"
 	foreground  = "#ECEFF4"
 	timeout = 2
-	icon        = "/home/betty/.config/dunst/icons/030-notification bell.svg" 
+	icon        = "/home/betty/.config/dunst/icons/030-notification bell.svg"
 
 [urgency_critical]
 	background  = "#2E3440"
 	foreground  = "#ECEFF4"
 	timeout = 2
-	icon        = "/home/betty/.config/dunst/icons/030-notification bell.svg" 
+	icon        = "/home/betty/.config/dunst/icons/030-notification bell.svg"
 
 
 [Youtube Music]

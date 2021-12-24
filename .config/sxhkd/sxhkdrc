@@ -24,17 +24,17 @@ alt + @space
 	~/.scripts/ibus_toggle.sh
 
 shift + @space
-  sh ~/.scripts/web-search.sh
+  ~/.config/rofi/custom.sh
 
 # Make sxhkd reload its configuration files:
 alt + Escape
 	~/.config/rofi/powermenu.sh
 
 alt + n
-  notion_enhancer
+  sh ~/.scripts/notion.sh
 # Open web browser
-alt + i 
-  firefox
+alt + i
+  google-chrome-stable
 
 # Visual Studio Code
 alt + c
@@ -174,17 +174,20 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
   sh ~/.scripts/light-up.sh
 
-# Dmenu 
+# Dmenu
 alt + ctrl + Return
   dmenu_run
 
-alt + ctrl + w 
+alt + ctrl + w
   networkmanager_dmenu
 
 #widgets
 
 super + l
   sh ~/.scripts/eww.sh
+alt + ctrl + t
+  sh ~/.scripts/traycollapse
+#
 #screen shot
 Print
   flameshot gui
