@@ -10,8 +10,8 @@ cp -r ~/.config/rofi/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/sxhkd/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.scripts/ /home/betty/ghq/github.com/betty2310/dotifles/
 cp ~/.config/starship.toml /home/betty/ghq/github.com/betty2310/dotifles/.config
-
+cp -r ~/.config/alacritty/ /home/betty/ghq/github.com/betty2310/dotifles/.config
+cp -r ~/.config/kitty/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cd /home/betty/ghq/github.com/betty2310/dotifles
 git add .
-DATE = $(date)
-git commit -m "auto update ${DATE}"
+git commit -m "auto update $date"
