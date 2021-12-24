@@ -16,4 +16,3 @@ cd /home/betty/ghq/github.com/betty2310/dotifles
 DATE=$(date)
 git add .
 git commit -m "auto update ${DATE}"
-git push -u origin master
