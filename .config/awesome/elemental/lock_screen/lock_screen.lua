@@ -2,13 +2,13 @@
 -- This lock screen was not designed with security in mind. There is
 -- no guarantee that it will protect you against someone that wants to
 -- gain access to your computer.
-local awful = require("awful")
-local gears = require("gears")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
-local naughty = require("naughty")
-local helpers = require("helpers")
-local lock_screen = require("elemental.lock_screen")
+local awful = require "awful"
+local gears = require "gears"
+local wibox = require "wibox"
+local beautiful = require "beautiful"
+local naughty = require "naughty"
+local helpers = require "helpers"
+local lock_screen = require "elemental.lock_screen"
 
 local lock_screen_symbol = ""
 local lock_screen_fail_symbol = ""
@@ -19,7 +19,7 @@ local lock_animation_icon = wibox.widget {
     font = "icomoon 40",
     align = "center",
     valign = "center",
-    widget = wibox.widget.textbox(lock_screen_symbol)
+    widget = wibox.widget.textbox(lock_screen_symbol),
 }
 
 -- A dummy textbox needed to get user input.
@@ -29,7 +29,7 @@ local some_textbox = wibox.widget.textbox()
 -- Create the lock screen wibox
 -- Set the type to "splash" and set all "splash" windows to be blurred in your
 -- compositor configuration file
-lock_screen_box = wibox({visible = false, ontop = true, type = "splash", screen = screen.primary})
+lock_screen_box = wibox { visible = false, ontop = true, type = "splash", screen = screen.primary }
 awful.placement.maximize(lock_screen_box)
 
 lock_screen_box.bg = beautiful.lock_screen_bg or beautiful.exit_screen_bg or beautiful.wibar_bg or "#111111"
@@ -53,7 +53,7 @@ end
 -- Items
 local day_of_the_week = wibox.widget {
     -- Fancy font
-    font = "Scriptina Bold 80",
+    font = "Meow Script Regular 110",
     -- font = "Space Craft 50",
     -- font = "Razed Galerie 70",
     -- font = "A-15-BIT 70",
@@ -62,25 +62,24 @@ local day_of_the_week = wibox.widget {
     forced_width = dpi(1000),
     align = "center",
     valign = "center",
-    widget = wibox.widget.textclock(helpers.colorize_text("%A", x.color3))
+    widget = wibox.widget.textclock(helpers.colorize_text("%A", x.color2)),
 }
 
 local month = wibox.widget {
     font = "San Francisco Display Heavy 100",
     align = "center",
     valign = "center",
-    widget = wibox.widget.textclock("%B %d")
+    widget = wibox.widget.textclock "%B %d",
 }
 
 local function update_month()
-    month.markup = helpers.colorize_text(month.text:upper(), x.foreground.."25")
+    month.markup = helpers.colorize_text(month.text:upper(), x.foreground .. "25")
 end
 
 update_month()
-month:connect_signal("widget::redraw_needed", function ()
+month:connect_signal("widget::redraw_needed", function()
     update_month()
 end)
-
 
 -- Month + Day of the week stacked on top of each other
 local fancy_date = wibox.widget {
@@ -88,20 +87,20 @@ local fancy_date = wibox.widget {
     day_of_the_week,
     -- Set forced width in order to keep it from getting cut off
     forced_width = dpi(1000),
-    layout = wibox.layout.stack
+    layout = wibox.layout.stack,
 }
 
 local time = {
-        {
-            font = "sans bold 16",
-            widget = wibox.widget.textclock("%H")
-        },
-        {
-            font = "sans 16",
-            widget = wibox.widget.textclock("%M")
-        },
-        spacing = dpi(2),
-        layout = wibox.layout.fixed.horizontal
+    {
+        font = "sans bold 16",
+        widget = wibox.widget.textclock "%H",
+    },
+    {
+        font = "sans 16",
+        widget = wibox.widget.textclock "%M",
+    },
+    spacing = dpi(2),
+    layout = wibox.layout.fixed.horizontal,
 }
 
 -- Lock animation
@@ -109,7 +108,7 @@ local lock_animation_widget_rotate = wibox.container.rotate()
 
 local arc = function()
     return function(cr, width, height)
-        gears.shape.arc(cr, width, height, dpi(5), 0, math.pi/2, true, true)
+        gears.shape.arc(cr, width, height, dpi(5), 0, math.pi / 2, true, true)
     end
 end
 
@@ -118,29 +117,29 @@ local lock_animation_arc = wibox.widget {
     bg = "#00000000",
     forced_width = dpi(100),
     forced_height = dpi(100),
-    widget = wibox.container.background
+    widget = wibox.container.background,
 }
 
 local lock_animation_widget = {
     {
         lock_animation_arc,
-        widget = lock_animation_widget_rotate
+        widget = lock_animation_widget_rotate,
     },
     lock_animation_icon,
-    layout = wibox.layout.stack
+    layout = wibox.layout.stack,
 }
 
 -- Lock helper functions
 local characters_entered = 0
 local function reset()
-    characters_entered = 0;
+    characters_entered = 0
     lock_animation_icon.markup = helpers.colorize_text(lock_screen_symbol, x.color7)
     lock_animation_widget_rotate.direction = "north"
     lock_animation_arc.bg = "#00000000"
 end
 
 local function fail()
-    characters_entered = 0;
+    characters_entered = 0
     lock_animation_icon.text = lock_screen_fail_symbol
     lock_animation_widget_rotate.direction = "north"
     lock_animation_arc.bg = "#00000000"
@@ -156,7 +155,7 @@ local animation_colors = {
     x.color3,
 }
 
-local animation_directions = {"north", "west", "south", "east"}
+local animation_directions = { "north", "west", "south", "east" }
 
 -- Function that "animates" every key press
 local function key_animation(char_inserted)
@@ -183,19 +182,25 @@ local function grab_password()
         hooks = {
             -- Custom escape behaviour: Do not cancel input with Escape
             -- Instead, this will just clear any input received so far.
-            {{ }, 'Escape',
+            {
+                {},
+                "Escape",
                 function(_)
                     reset()
                     grab_password()
-                end
+                end,
             },
             -- Fix for Control+Delete crashing the keygrabber
-            {{ 'Control' }, 'Delete', function ()
-                reset()
-                grab_password()
-            end}
+            {
+                { "Control" },
+                "Delete",
+                function()
+                    reset()
+                    grab_password()
+                end,
+            },
         },
-        keypressed_callback  = function(mod, key, cmd)
+        keypressed_callback = function(mod, key, cmd)
             -- Only count single character keys (thus preventing
             -- "Shift", "Escape", etc from triggering the animation)
             if #key == 1 then
@@ -228,7 +233,7 @@ local function grab_password()
 end
 
 function lock_screen_show()
-    set_visibility(true) 
+    set_visibility(true)
     grab_password()
 end
 
@@ -245,7 +250,7 @@ lock_screen_box:setup {
                     {
                         month,
                         day_of_the_week,
-                        layout = wibox.layout.stack
+                        layout = wibox.layout.stack,
                     },
                     {
                         nil,
@@ -256,7 +261,7 @@ lock_screen_box:setup {
                                 forced_width = dpi(5),
                                 shape = gears.shape.circle,
                                 bg = x.color3,
-                                widget = wibox.container.background
+                                widget = wibox.container.background,
                             },
                             time,
                             -- Small circle
@@ -265,29 +270,28 @@ lock_screen_box:setup {
                                 forced_width = dpi(5),
                                 shape = gears.shape.circle,
                                 bg = x.color3,
-                                widget = wibox.container.background
+                                widget = wibox.container.background,
                             },
                             spacing = dpi(4),
-                            layout = wibox.layout.fixed.horizontal
+                            layout = wibox.layout.fixed.horizontal,
                         },
                         expand = "none",
-                        layout = wibox.layout.align.horizontal
+                        layout = wibox.layout.align.horizontal,
                     },
                     spacing = dpi(20),
                     -- spacing = dpi(10),
-                    layout = wibox.layout.fixed.vertical
+                    layout = wibox.layout.fixed.vertical,
                 },
                 lock_animation_widget,
                 spacing = dpi(40),
-                layout = wibox.layout.fixed.vertical
-
+                layout = wibox.layout.fixed.vertical,
             },
             bottom = dpi(60),
-            widget = wibox.container.margin
+            widget = wibox.container.margin,
         },
         expand = "none",
-        layout = wibox.layout.align.vertical
+        layout = wibox.layout.align.vertical,
     },
     expand = "none",
-    layout = wibox.layout.align.horizontal
+    layout = wibox.layout.align.horizontal,
 }

@@ -166,14 +166,14 @@ mpd_artist.forced_height = dpi(16)
 
 mpd_song:buttons(gears.table.join(
     awful.button({}, 1, function()
-        awful.spawn.with_shell "mpc -q toggle"
+        awful.spawn.with_shell "playerctl play-pause -p spotify"
     end),
     awful.button({}, 3, apps.music),
     awful.button({}, 4, function()
-        awful.spawn.with_shell "mpc -q prev"
+        awful.spawn.with_shell "playerctl previous -p spotify"
     end),
     awful.button({}, 5, function()
-        awful.spawn.with_shell "mpc -q next"
+        awful.spawn.with_shell "playerctl next -p spotify"
     end)
 ))
 

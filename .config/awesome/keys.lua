@@ -268,6 +268,9 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "i", function()
         awful.spawn.with_shell "google-chrome-stable"
     end, { description = "google", group = "launcher" }),
+    awful.key({ altkey }, "l", function()
+        awful.spawn.with_shell "~/.config/eww/launch_eww"
+    end, { description = "google", group = "launcher" }),
 
     -- Run
     awful.key({ superkey }, "r", function()

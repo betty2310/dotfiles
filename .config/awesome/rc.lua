@@ -36,7 +36,6 @@ local bar_themes = {
     "amarena", -- 5 -- Minimal taglist and dock with autohide
 }
 local bar_theme = bar_themes[5]
-
 -- ===================================================================
 -- Affects which icon theme will be used by widgets that display image icons.
 local icon_themes = {
@@ -369,7 +368,7 @@ awful.rules.rules = {
             honor_workarea = true,
             honor_padding = true,
             maximized = false,
-            titlebars_enabled = beautiful.titlebars_enabled,
+            -- titlebars_enabled = beautiful.titlebars_enabled,
             maximized_horizontal = false,
             maximized_vertical = false,
             placement = floating_client_placement,
@@ -409,7 +408,7 @@ awful.rules.rules = {
                 "dialog",
             },
         },
-        properties = { floating = true },
+        properties = { floating = true, titlebars_enabled = false },
     },
 
     -- TODO why does Chromium always start up floating in AwesomeWM?
@@ -620,6 +619,7 @@ awful.rules.rules = {
             class = {
                 "Nemo",
                 "Thunar",
+                "Spotify",
             },
         },
         except_any = {
@@ -1140,5 +1140,7 @@ end)
 
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
+
 awful.util.spawn "picom"
 awful.util.spawn "ibus_daemon"
+awful.util.spawn "eww daemon"
