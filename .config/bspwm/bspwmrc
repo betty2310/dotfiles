@@ -3,8 +3,8 @@ pgrep -x sxhkd >/dev/null || sxhkd &
 ~/.config/dunst/load.sh &
 ~/.config/polybar/launch.sh float &
 nitrogen --restore &
-picom &
 ibus_daemon &
+picom -f &
 eww daemon &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10

@@ -6,6 +6,7 @@ cp -r ~/.config/picom/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/fish/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/sxhkd/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/bspwm/ /home/betty/ghq/github.com/betty2310/dotifles/.config
+cp -r ~/.config/awesome/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/rofi/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/sxhkd/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.scripts/ /home/betty/ghq/github.com/betty2310/dotifles/

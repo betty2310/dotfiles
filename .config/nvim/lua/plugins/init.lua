@@ -8,7 +8,6 @@ return packer.startup(function()
     -- UI (Color, statusline, dashboard...)
     use { "rmehri01/onenord.nvim" }
     use { "L3MON4D3/LuaSnip" }
-    use { "andersevenrud/nordic.nvim" }
     use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }
     use {
         "nvim-lualine/lualine.nvim",
