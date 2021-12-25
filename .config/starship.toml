@@ -1,6 +1,6 @@
-add_newline = true
+add_newline = false
 [line_break]
-disabled = false
+disabled = true
 
 [hostname]
 ssh_only = false
@@ -54,7 +54,7 @@ symbol = "卑"
 symbol = "ﳑ "
 
 [directory]
-format = "[$read_only]($read_only_style)[ ](white)[$path]($style) "
+format = "[$read_only]($read_only_style)[$path]($style) "
 read_only = "  "
 read_only_style = "yellow"
 style = "bold green"

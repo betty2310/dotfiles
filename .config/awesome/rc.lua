@@ -76,14 +76,14 @@ user = {
     terminal = "kitty -1",
     floating_terminal = "kitty -1",
     browser = "google-chrome-stable",
-    file_manager = "kitty -1 --class files -e ranger",
+    file_manager = "thunar",
     editor = "kitty -1 --class editor -e nvim",
     email_client = "kitty -1 --class email -e neomutt",
     music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
 
     -- >> Web Search <<
     --web_search_cmd = "xdg-open https://duckduckgo.com/?q=",
-    web_search_cmd = "xdg-open https://www.google.com/search?q=",
+    web_search_cmd = 'xdg-open "https://www.google.com/search?q="',
 
     -- >> User profile <<
     profile_picture = os.getenv "HOME" .. "/.config/awesome/profile.png",

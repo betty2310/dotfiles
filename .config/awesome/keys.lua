@@ -262,7 +262,7 @@ keys.globalkeys = gears.table.join(
     --{description = "run prompt", group = "launcher"}),
     -- Run program (d for dmenu ;)
     awful.key({ superkey }, "/", function()
-        awful.spawn.with_shell "rofi -matching fuzzy -show combi -theme ~/.config/rofi/launcher.rasi"
+        awful.spawn.with_shell "~/.config/rofi/launcher.sh"
     end, { description = "rofi launcher", group = "launcher" }),
 
     awful.key({ superkey }, "i", function()
@@ -434,7 +434,7 @@ keys.globalkeys = gears.table.join(
     end, { description = "App drawer", group = "custom" }),
 
     -- Pomodoro timer
-    awful.key({ superkey }, "slash", function()
+    awful.key({ superkey }, ".", function()
         awful.spawn.with_shell "pomodoro"
     end, { description = "pomodoro", group = "launcher" }),
     -- Spawn file manager
