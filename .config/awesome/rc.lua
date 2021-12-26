@@ -76,7 +76,7 @@ user = {
     terminal = "kitty -1",
     floating_terminal = "kitty -1",
     browser = "google-chrome-stable",
-    file_manager = "thunar",
+    file_manager = "kitty -1 --class files -e ranger",
     editor = "kitty -1 --class editor -e nvim",
     email_client = "kitty -1 --class email -e neomutt",
     music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
@@ -600,6 +600,12 @@ awful.rules.rules = {
         properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.65 },
     },
 
+    -- spotify
+    {
+        rule = { class = "[Ss]potify" },
+        properties = { floating = true, width = screen_height * 0.5, height = screen_height * 0.65 },
+    },
+
     -- Pavucontrol
     {
         rule_any = { class = { "Pavucontrol" } },
@@ -619,7 +625,6 @@ awful.rules.rules = {
             class = {
                 "Nemo",
                 "Thunar",
-                "Spotify",
             },
         },
         except_any = {
