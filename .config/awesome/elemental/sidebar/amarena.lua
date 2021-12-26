@@ -148,8 +148,6 @@ local day_of_the_week = wibox.widget {
     layout = wibox.layout.align.horizontal,
 }
 
-local spotify = require "noodle.spotify"
-
 -- Mpd
 local mpd_buttons = require "noodle.mpd_buttons"
 local mpd_song = require "noodle.mpd_song"
@@ -166,14 +164,14 @@ mpd_artist.forced_height = dpi(16)
 
 mpd_song:buttons(gears.table.join(
     awful.button({}, 1, function()
-        awful.spawn.with_shell "playerctl play-pause -p spotify"
+        awful.spawn.with_shell "mpc -q toggle"
     end),
     awful.button({}, 3, apps.music),
     awful.button({}, 4, function()
-        awful.spawn.with_shell "playerctl previous -p spotify"
+        awful.spawn.with_shell "mpc -q prev"
     end),
     awful.button({}, 5, function()
-        awful.spawn.with_shell "playerctl next -p spotify"
+        awful.spawn.with_shell "mpc -q next"
     end)
 ))
 
@@ -507,8 +505,7 @@ sidebar:setup {
                 {
                     {
                         mpd_buttons,
-                        -- mpd_song,
-                        spotify,
+                        mpd_song,
                         spacing = dpi(5),
                         layout = wibox.layout.fixed.vertical,
                     },

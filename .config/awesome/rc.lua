@@ -132,7 +132,7 @@ user = {
     -- >> Coronavirus <<
     -- Country to check for corona statistics
     -- Uses the https://corona-stats.online API
-    coronavirus_country = "Vietnam",
+    coronavirus_country = "vietnam",
 }
 -- ===================================================================
 
@@ -1144,3 +1144,6 @@ collectgarbage("setstepmul", 1000)
 awful.util.spawn "picom"
 awful.util.spawn "ibus_daemon"
 awful.util.spawn "eww daemon"
+awful.util.spawn "mpd"
+awful.util.spawn "mpc update"
+awful.util.spawn "mopidy"

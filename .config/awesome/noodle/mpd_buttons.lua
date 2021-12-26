@@ -5,12 +5,12 @@ local wibox = require "wibox"
 local helpers = require "helpers"
 
 local mpd_prev_symbol = wibox.widget.textbox()
-mpd_prev_symbol.markup = helpers.colorize_text("", x.color6)
+mpd_prev_symbol.markup = helpers.colorize_text("", x.foreground)
 mpd_prev_symbol.font = "Material Icons Bold 18"
 mpd_prev_symbol.align = "center"
 mpd_prev_symbol.valign = "center"
 local mpd_next_symbol = wibox.widget.textbox()
-mpd_next_symbol.markup = helpers.colorize_text("", x.color6)
+mpd_next_symbol.markup = helpers.colorize_text("", x.foreground)
 mpd_next_symbol.font = "Material Icons Bold 18"
 mpd_next_symbol.align = "center"
 mpd_next_symbol.valign = "center"
@@ -21,7 +21,7 @@ big_note.font = "Material Icons Bold 15"
 big_note.align = "center"
 local small_note = wibox.widget.textbox()
 small_note.align = "center"
-small_note.markup = helpers.colorize_text(note_symbol, x.color6)
+small_note.markup = helpers.colorize_text(note_symbol, x.foreground)
 small_note.font = "Material Icons Bold 11"
 -- small_note.valign = "bottom"
 local double_note = wibox.widget {
@@ -43,10 +43,10 @@ local mpd_toggle_icon = wibox.widget {
 }
 mpd_toggle_icon:buttons(gears.table.join(
     awful.button({}, 1, function()
-        awful.spawn.with_shell "playerctl play-pause -p spotify"
+        awful.spawn.with_shell "mpc -q toggle"
     end),
     awful.button({}, 3, function()
-        awful.spawn.with_shell "playerctl play-pause -p spotify"
+        awful.spawn.with_shell "mpvc toggle"
     end)
 ))
 
@@ -57,10 +57,10 @@ local mpd_prev_icon = wibox.widget {
 }
 mpd_prev_icon:buttons(gears.table.join(
     awful.button({}, 1, function()
-        awful.spawn.with_shell "playerctl previous -p spotify"
+        awful.spawn.with_shell "mpc -q prev"
     end),
     awful.button({}, 3, function()
-        awful.spawn.with_shell "playerctl previous -p spotify"
+        awful.spawn.with_shell "mpdc prev"
     end)
 ))
 
@@ -71,10 +71,10 @@ local mpd_next_icon = wibox.widget {
 }
 mpd_next_icon:buttons(gears.table.join(
     awful.button({}, 1, function()
-        awful.spawn.with_shell "playerctl next -p spotify"
+        awful.spawn.with_shell "mpc -q next"
     end),
     awful.button({}, 3, function()
-        awful.spawn.with_shell "playerctl next -p spotify"
+        awful.spawn.with_shell "mpdc next"
     end)
 ))
 

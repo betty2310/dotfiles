@@ -4,17 +4,17 @@
 --      cases_today (integer)
 --      deaths_total (integer)
 --      deaths_today (integer)
-local awful = require("awful")
-local helpers = require("helpers")
-local naughty = require("naughty")
+local awful = require "awful"
+local helpers = require "helpers"
+local naughty = require "naughty"
 
 local update_interval = 60 * 60 * 12 -- 12 hours
-local country = user.coronavirus_country or "germany"
-local temp_file = "/tmp/awesomewm-evil-coronavirus-"..country
+local country = "vietnam" or "germany"
+local temp_file = "/tmp/awesomewm-evil-coronavirus-" .. country
 
 local coronavirus_script = [[
   sh -c '
-  country="]]..country..[["
+  country="]] .. country .. [["
 
   stats=$(curl "https://corona-stats.online/$country?format=json" 2>/dev/null)
 
@@ -27,17 +27,17 @@ local coronavirus_script = [[
   ']]
 
 helpers.remote_watch(coronavirus_script, update_interval, temp_file, function(stdout)
-    local cases_total = stdout:match('^CTOTAL@(.*)@CTODAY')
-    local cases_today = stdout:match('CTODAY@(.*)@DTOTAL')
-    local deaths_total = stdout:match('DTOTAL@(.*)@DTODAY')
-    local deaths_today = stdout:match('DTODAY@(.*)@')
+    local cases_total = stdout:match "^CTOTAL@(.*)@CTODAY"
+    local cases_today = stdout:match "CTODAY@(.*)@DTOTAL"
+    local deaths_total = stdout:match "DTOTAL@(.*)@DTODAY"
+    local deaths_today = stdout:match "DTODAY@(.*)@"
 
     -- If it is found, we assume the command succeeded
     if cases_total then
         awesome.emit_signal("evil::coronavirus", cases_total, cases_today, deaths_total, deaths_today)
     else
         -- Remove temp_file to force an update the next time
-        awful.spawn.with_shell("rm "..temp_file)
+        awful.spawn.with_shell("rm " .. temp_file)
         awesome.emit_signal("evil::coronavirus", -1, -1, -1, -1)
     end
 end)

@@ -1,6 +1,6 @@
 /*******************************************************************************
- * MACOS SPOTLIGHT LIKE THEME FOR ROFI 
- * User                 : LR-Tech               
+ * MACOS SPOTLIGHT LIKE THEME FOR ROFI
+ * User                 : LR-Tech
  * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
  *******************************************************************************/
 
@@ -24,6 +24,14 @@
 }
 
 configuration {
+  modi: "drun, combi";
+    display-window: "";
+    display-windowcd: "";
+    display-run: "";
+    display-ssh: "";
+    display-drun: "";
+    display-combi: "";
+
 	font:							"SF Pro Display 13";
     show-icons:                     true;
 	icon-theme: 					"Papirus";

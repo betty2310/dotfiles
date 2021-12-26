@@ -35,7 +35,7 @@ awesome.connect_signal("evil::spotify", function(artist, title, status)
 
     -- Example notification (might not be needed if spotify already sends one)
     if status == "playing" then
-        -- naughty.notify({ title = "Spotify | Now Playing", message = title.." by "..artist })
+        naughty.notify { title = "Spotify | Now Playing", message = title .. " by " .. artist }
     end
 end)
 

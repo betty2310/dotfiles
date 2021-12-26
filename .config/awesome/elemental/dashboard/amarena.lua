@@ -319,6 +319,55 @@ corona_box:buttons(gears.table.join(
     end)
 ))
 helpers.add_hover_cursor(corona_box, "hand1")
+-- URLs
+local function create_url(name, path)
+    local original_color = x.color4
+    local hover_color = x.color12
+
+    local url = wibox.widget.textbox()
+    url.font = "sans bold 16"
+    -- url.text = wibox.widget.textbox(name:sub(1,1):upper()..name:sub(2))
+    url.markup = helpers.colorize_text(name, original_color)
+    url.align = "center"
+    url.valign = "center"
+
+    -- Buttons
+    url:buttons(gears.table.join(
+        awful.button({}, 1, function()
+            awful.spawn(user.browser .. " " .. path)
+            dashboard_hide()
+        end),
+        awful.button({}, 3, function()
+            awful.spawn(user.browser .. " -new-window " .. path)
+            dashboard_hide()
+        end)
+    ))
+
+    -- Hover effect
+    url:connect_signal("mouse::enter", function()
+        url.markup = helpers.colorize_text(name, hover_color)
+    end)
+    url:connect_signal("mouse::leave", function()
+        url.markup = helpers.colorize_text(name, original_color)
+    end)
+
+    helpers.add_hover_cursor(url, "hand1")
+
+    return url
+end
+
+local urls = wibox.widget {
+    create_url(
+        "ONEDRIVE",
+        "https://husteduvn-my.sharepoint.com/personal/huynh_dh205087_sis_hust_edu_vn/_layouts/15/onedrive.aspx"
+    ),
+    create_url("SPIDERUM", "https://spiderum.com/?sort=hot&page_idx=1"),
+    create_url("LEETCODE", "https://leetcode.com/problemset/all/?page=1&status=NOT_STARTED&difficulty=EASY"),
+    spacing = dpi(10),
+    layout = wibox.layout.fixed.vertical,
+}
+
+local urls_box = create_boxed_widget(urls, dpi(200), dpi(180), x.background)
 
 -- Fortune
 local fortune_command = "fortune -n 140 -s"
@@ -413,18 +462,9 @@ local function create_url_petal(text, bg_color, hover_color, url, tl, tr, br, bl
 end
 
 -- Create the containers
-local petal_top_left = create_url_petal(
-    "GH",
-    x.color4,
-    x.color12,
-    "https://github.com/elenapan/dotfiles",
-    true,
-    true,
-    false,
-    true
-)
+local petal_top_left = create_url_petal("GH", x.color4, x.color12, "https://github.com/", true, true, false, true)
 local petal_top_right = create_url_petal("YT", x.color1, x.color9, "https://youtube.com/", true, true, true, false)
-local petal_bottom_right = create_url_petal("4C", x.color2, x.color10, "https://4chan.org/", false, true, true, true)
+local petal_bottom_right = create_url_petal("FB", x.color2, x.color10, "https://facebook.com/", false, true, true, true)
 local petal_bottom_left = create_url_petal("RD", x.color3, x.color11, "https://reddit.com/", true, false, true, true)
 
 -- Add clickable effects on hover
@@ -559,7 +599,8 @@ dashboard:setup {
             {
                 -- Column 3
                 bookmarks_box,
-                corona_box,
+                --corona_box,
+                urls_box,
                 layout = wibox.layout.fixed.vertical,
             },
             {

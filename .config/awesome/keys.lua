@@ -4,6 +4,7 @@ local gears = require "gears"
 local beautiful = require "beautiful"
 local apps = require "apps"
 local decorations = require "decorations"
+local icons = require "icons"
 
 local helpers = require "helpers"
 
@@ -270,7 +271,10 @@ keys.globalkeys = gears.table.join(
     end, { description = "google", group = "launcher" }),
     awful.key({ altkey }, "l", function()
         awful.spawn.with_shell "~/.config/eww/launch_eww"
-    end, { description = "google", group = "launcher" }),
+    end, { description = "eww", group = "launcher" }),
+    awful.key({ superkey }, "n", function(c)
+        awful.spawn.with_shell "~/.scripts/notion.sh"
+    end, { description = "notion", group = "launcher" }),
 
     -- Run
     awful.key({ superkey }, "r", function()
@@ -454,15 +458,13 @@ keys.globalkeys = gears.table.join(
         awful.spawn "networks-rofi"
     end, { description = "spawn network dialog", group = "launcher" }),
     -- Toggle sidebar
-    awful.key({ superkey }, "grave", function()
+    awful.key({ superkey }, "o", function()
         sidebar_toggle()
     end, { description = "show or hide sidebar", group = "awesome" }),
     -- Toggle wibar(s)
     awful.key({ superkey }, "b", function()
         wibars_toggle()
     end, { description = "show or hide wibar(s)", group = "awesome" }),
-    -- Emacs (O for org mode)
-    awful.key({ superkey }, "o", apps.org, { description = "emacs", group = "launcher" }),
     -- Markdown input scratchpad (I for input)
     -- For quickly typing markdown comments and pasting them in
     -- the browser
@@ -618,10 +620,10 @@ keys.clientkeys = gears.table.join(
     end, { description = "toggle sticky", group = "client" }),
 
     -- Minimize
-    awful.key({ superkey }, "n", function(c)
-        c.minimized = true
-    end, { description = "minimize", group = "client" }),
-
+    -- awful.key({ superkey }, "n", function(c)
+    --     c.minimized = true
+    -- end, { description = "minimize", group = "client" }),
+    --
     -- Maximize
     awful.key({ superkey }, "m", function(c)
         c.maximized = not c.maximized
