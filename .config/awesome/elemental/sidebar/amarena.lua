@@ -148,6 +148,11 @@ local day_of_the_week = wibox.widget {
     layout = wibox.layout.align.horizontal,
 }
 
+-- pomo
+local pomodoro = require "pomodoro"
+-- spotify
+local spotify = require "noodle.spotify"
+
 -- Mpd
 local mpd_buttons = require "noodle.mpd_buttons"
 local mpd_song = require "noodle.mpd_song"
@@ -510,11 +515,20 @@ sidebar:setup {
                         layout = wibox.layout.fixed.vertical,
                     },
                     top = dpi(40),
-                    bottom = dpi(60),
+                    bottom = dpi(5),
                     left = dpi(20),
                     right = dpi(20),
                     widget = wibox.container.margin,
                 },
+                {
+                    pomodoro,
+                    top = dpi(40),
+                    bottom = dpi(30),
+                    left = dpi(70),
+                    right = dpi(70),
+                    widget = wibox.container.margin,
+                },
+
                 {
                     nil,
                     {
@@ -530,8 +544,10 @@ sidebar:setup {
                     expand = "none",
                     layout = wibox.layout.align.horizontal,
                 },
-                helpers.vertical_pad(dpi(25)),
+                helpers.vertical_pad(dpi(40)),
                 layout = wibox.layout.fixed.vertical,
+                spotify,
+                helpers.vertical_pad(dpi(40)),
             },
             shape = helpers.prrect(beautiful.sidebar_border_radius, false, true, false, false),
             bg = x.color0 .. "66",

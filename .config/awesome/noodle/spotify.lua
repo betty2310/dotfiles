@@ -11,14 +11,14 @@ local spotify_widget = wibox.widget {
     -- Title widget
     {
         align = "center",
-        text = "---",
-        font = "sans 14",
+        text = "Noting playing ....",
+        font = "sans 12",
         widget = spotify_title,
     },
     -- Artist widget
     {
         align = "center",
-        text = "---",
+        text = "Betty :v",
         font = "sans 10",
         widget = spotify_artist,
     },
@@ -35,7 +35,7 @@ awesome.connect_signal("evil::spotify", function(artist, title, status)
 
     -- Example notification (might not be needed if spotify already sends one)
     if status == "playing" then
-        naughty.notify { title = "Spotify | Now Playing", message = title .. " by " .. artist }
+        naughty.notify { title = "Now Playing", message = title .. " by " .. artist }
     end
 end)
 

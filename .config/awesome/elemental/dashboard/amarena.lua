@@ -504,7 +504,7 @@ local uptime = wibox.widget {
     {
         align = "center",
         valign = "center",
-        font = "sans medium 11",
+        font = "Liga SFMono Nerd Font medium 11",
         widget = uptime_text,
     },
     spacing = dpi(10),

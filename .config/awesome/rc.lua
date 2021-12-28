@@ -279,10 +279,10 @@ local function set_wallpaper(s)
         -- gears.wallpaper.maximized(wallpaper, s, true)
 
         -- >> Method 2: Set theme's wallpaper with feh
-        --awful.spawn.with_shell("feh --bg-fill " .. wallpaper)
+        awful.spawn.with_shell "nitrogen --restore &"
 
         -- >> Method 3: Set last wallpaper with feh
-        awful.spawn.with_shell(os.getenv "HOME" .. "/.fehbg")
+        -- awful.spawn.with_shell(os.getenv "HOME" .. "/.fehbg")
     end
 end
 
