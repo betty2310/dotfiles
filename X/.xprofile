@@ -2,3 +2,6 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon -drx
+picom --config ~/.config/picom/picom.conf &
+[ ! -s ~/.config/mpd/pid ] && mpd
+
