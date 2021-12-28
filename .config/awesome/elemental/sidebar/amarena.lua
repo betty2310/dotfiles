@@ -121,8 +121,8 @@ local time = {
         nil,
         {
             make_little_dot(x.color1),
+            make_little_dot(x.color2),
             make_little_dot(x.color4),
-            make_little_dot(x.color5),
             spacing = dpi(10),
             widget = wibox.layout.fixed.vertical,
         },

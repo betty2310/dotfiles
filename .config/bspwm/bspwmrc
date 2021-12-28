@@ -4,7 +4,7 @@ pgrep -x sxhkd >/dev/null || sxhkd &
 ~/.config/polybar/launch.sh float &
 nitrogen --restore &
 ibus_daemon &
-picom -f &
+picom --experimental-backends --config ~/.config/picom/picom.conf &
 eww daemon &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10

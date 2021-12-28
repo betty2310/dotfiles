@@ -1146,7 +1146,7 @@ end)
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 
-awful.util.spawn "picom"
+awful.util.spawn "picom --experimental-backends --config ~/.config/picom/picom.conf"
 awful.util.spawn "ibus_daemon"
 awful.util.spawn "eww daemon"
 awful.util.spawn "mpd"

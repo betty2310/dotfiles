@@ -20,7 +20,7 @@ local create_button = function (symbol, color, bg_color, hover_color)
 
     local section = wibox.widget {
         widget,
-        forced_width = dpi(70),
+        forced_width = dpi(50),
         bg = bg_color,
         widget = wibox.container.background
     }
@@ -38,10 +38,17 @@ local create_button = function (symbol, color, bg_color, hover_color)
     return section
 end
 
-local exit = create_button("", x.color6, x.color8.."C0",x.color8.."E0")
+local exit = create_button("", x.color1, x.color8.."C0",x.color8.."E0")
 exit:buttons(gears.table.join(
     awful.button({ }, 1, function ()
         exit_screen_show()
+    end)
+))
+
+local code = create_button("﬏", x.color2, x.color8.."C0",x.color8.."E0")
+exit:buttons(gears.table.join(
+    awful.button({ }, 1, function ()
+        awful.spawn.with_shell("code")
     end)
 ))
 
@@ -109,7 +116,7 @@ music:buttons(gears.table.join(
     end)
 ))
 
-local sandwich = create_button("", x.color1, x.color8.."30", x.color8.."50")
+local sandwich = create_button("", x.color2, x.color8.."30", x.color8.."50")
 sandwich:buttons(gears.table.join(
     awful.button({ }, 1, function ()
         app_drawer_show()
@@ -136,16 +143,16 @@ local tag_colors_urgent = {
 }
 
 local tag_colors_focused = {
-    x.color1,
-    x.color5,
-    x.color4,
-    x.color6,
     x.color2,
     x.color3,
-    x.color1,
-    x.color5,
     x.color4,
+    x.color5,
     x.color6,
+    x.color7,
+    x.color8,
+    x.color9,
+    x.color10,
+    x.color11,
 }
 
 local tag_colors_occupied = {

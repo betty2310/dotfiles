@@ -1,4 +1,7 @@
 cp -r ~/.config/nvim/ /home/betty/ghq/github.com/betty2310/dotifles/.config
+
+cp -r ~/.mpd/ /home/betty/ghq/github.com/betty2310/dotifles/.config
+cp -r ~/.config/ncmpcpp/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/polybar/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/eww/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/dunst/ /home/betty/ghq/github.com/betty2310/dotifles/.config

@@ -1,7 +1,7 @@
-local gears = require("gears")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
-local helpers = require("helpers")
+local gears = require "gears"
+local wibox = require "wibox"
+local beautiful = require "beautiful"
+local helpers = require "helpers"
 
 local weather_temperature_symbol
 if user.weather_units == "metric" then
@@ -35,50 +35,50 @@ local snow_icon = ""
 local mist_icon = ""
 local whatever_icon = ""
 
-local weather_description = wibox.widget{
+local weather_description = wibox.widget {
     -- text = "Weather unavailable",
     text = "Loading weather...",
     -- align  = 'center',
-    valign = 'center',
+    valign = "center",
     -- font = "sans 14",
-    widget = wibox.widget.textbox
+    widget = wibox.widget.textbox,
 }
 
-local weather_icon = wibox.widget{
+local weather_icon = wibox.widget {
     text = whatever_icon,
     -- align  = 'center',
-    valign = 'center',
-    widget = wibox.widget.textbox
+    valign = "center",
+    widget = wibox.widget.textbox,
 }
 
-local weather_temperature = wibox.widget{
+local weather_temperature = wibox.widget {
     text = "  ",
     -- align  = 'center',
-    valign = 'center',
-    widget = wibox.widget.textbox
+    valign = "center",
+    widget = wibox.widget.textbox,
 }
 
-local weather = wibox.widget{
+local weather = wibox.widget {
     weather_icon,
     weather_description,
     weather_temperature,
     spacing = dpi(8),
-    layout = wibox.layout.fixed.horizontal
+    layout = wibox.layout.fixed.horizontal,
 }
 
 local weather_icons = {
     ["01d"] = { icon = sun_icon, color = x.color3 },
-    ["01n"] = { icon = moon_icon, color = x.color4 },
+    ["01n"] = { icon = moon_icon, color = x.color13 },
     ["02d"] = { icon = dcloud_icon, color = x.color3 },
     ["02n"] = { icon = ncloud_icon, color = x.color6 },
-    ["03d"] = { icon = cloud_icon, color = x.color1 },
-    ["03n"] = { icon = cloud_icon, color = x.color1 },
-    ["04d"] = { icon = cloud_icon, color = x.color1 },
-    ["04n"] = { icon = cloud_icon, color = x.color1 },
-    ["09d"] = { icon = rain_icon, color = x.color4 },
-    ["09n"] = { icon = rain_icon, color = x.color4 },
-    ["10d"] = { icon = rain_icon, color = x.color4 },
-    ["10n"] = { icon = rain_icon, color = x.color4 },
+    ["03d"] = { icon = cloud_icon, color = x.color4 },
+    ["03n"] = { icon = cloud_icon, color = x.color4 },
+    ["04d"] = { icon = cloud_icon, color = x.color4 },
+    ["04n"] = { icon = cloud_icon, color = x.color4 },
+    ["09d"] = { icon = rain_icon, color = x.color6 },
+    ["09n"] = { icon = rain_icon, color = x.color6 },
+    ["10d"] = { icon = rain_icon, color = x.color6 },
+    ["10n"] = { icon = rain_icon, color = x.color6 },
     ["11d"] = { icon = storm_icon, color = x.color1 },
     ["11n"] = { icon = storm_icon, color = x.color1 },
     ["13d"] = { icon = snow_icon, color = x.color6 },
@@ -97,8 +97,8 @@ awesome.connect_signal("evil::weather", function(temperature, description, icon_
         icon = weather_icons[icon_code].icon
         color = weather_icons[icon_code].color
     else
-        icon = weather_icons['_'].icon
-        color = weather_icons['_'].color
+        icon = weather_icons["_"].icon
+        color = weather_icons["_"].color
     end
 
     weather_icon.markup = helpers.colorize_text(icon, color)

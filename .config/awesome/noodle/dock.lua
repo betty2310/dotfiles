@@ -43,13 +43,13 @@ local dock_recently_focused = {}
 -- items should always be visible, and the functions which launch them.
 -- Order matters!
 dock_pinned_apps = {
-    { class = "google-chrome-stable", launcher = apps.browser },
-    { class = "music", launcher = apps.music },
-    { class = "calendar", launcher = apps.browser },
-    { class = "code", launcher = apps.code },
-    { class = "weechat", launcher = apps.notion },
-    { class = "spotify", launcher = apps.spotify },
-    { class = "discord", launcher = apps.teams },
+    -- { class = "google-chrome-stable", launcher = apps.browser },
+    -- { class = "music", launcher = apps.music },
+    -- { class = "calendar", launcher = apps.browser },
+    -- { class = "code", launcher = apps.code },
+    -- { class = "weechat", launcher = apps.notion },
+    -- { class = "spotify", launcher = apps.spotify },
+    -- { class = "discord", launcher = apps.teams },
 }
 
 ----------------------------------------------------------------------------

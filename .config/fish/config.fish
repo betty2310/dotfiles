@@ -27,6 +27,9 @@ set -U fish_color_param green
 set -U fish_color_command brblue
 set -U fish_color_operator green
 set -U SPACEFISH_DIR_COLOR green
+set -U fish_color_error red
+set -U fish_color_comment yellow
+set -U fish_color_quote yellow
 set -gx EDITOR nvim
 set -x TERM xterm-256color
 
@@ -35,6 +38,7 @@ set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.bin $PATH
+set -gx PATH ~/.scripts $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH

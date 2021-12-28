@@ -80,7 +80,7 @@ local night_mode = create_button("", x.color1, x.color9, apps.night_mode, "x"
 local record = create_button("", x.color4, x.color12, apps.record, "r")
 local lutris = create_button("", x.color6, x.color14, apps.lutris, "l")
 local steam = create_button("", x.color2, x.color10, apps.steam, "s")
-local org = create_button("", x.color2, x.color10, apps.org, "o")
+local org = create_button("", x.color2, x.color10, apps.editor, "o")
 local compositor = create_button("", x.color5, x.color13, apps.compositor, "z")
 
 local restart_awesome = create_button("", x.color4, x.color12)

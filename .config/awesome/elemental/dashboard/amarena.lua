@@ -383,7 +383,7 @@ local update_fortune = function()
     awful.spawn.easy_async_with_shell(fortune_command, function(out)
         -- Remove trailing whitespaces
         out = out:gsub("^%s*(.-)%s*$", "%1")
-        fortune.markup = "<i>" .. helpers.colorize_text(out, x.color4) .. "</i>"
+        fortune.markup = "<i>" .. helpers.colorize_text(out, x.color2) .. "</i>"
     end)
 end
 

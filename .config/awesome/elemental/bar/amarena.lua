@@ -124,7 +124,7 @@ awful.screen.connect_for_each_screen(function(s)
         ontop = false,
         type = "dock",
         position = "top",
-        height = dpi(10),
+        height = dpi(5),
         -- position = "left",
         -- width = dpi(6),
         bg = "#00000000",
