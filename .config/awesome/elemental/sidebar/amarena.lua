@@ -505,7 +505,7 @@ sidebar:setup {
         },
         { ----------- MIDDLE GROUP -----------
             {
-                helpers.vertical_pad(dpi(30)),
+                helpers.vertical_pad(dpi(20)),
                 weather,
                 {
                     {
@@ -514,7 +514,7 @@ sidebar:setup {
                         spacing = dpi(5),
                         layout = wibox.layout.fixed.vertical,
                     },
-                    top = dpi(40),
+                    top = dpi(30),
                     bottom = dpi(5),
                     left = dpi(20),
                     right = dpi(20),
@@ -522,13 +522,12 @@ sidebar:setup {
                 },
                 {
                     pomodoro,
-                    top = dpi(40),
-                    bottom = dpi(30),
+                    top = dpi(30),
+                    bottom = dpi(40),
                     left = dpi(100),
                     right = dpi(100),
                     widget = wibox.container.margin,
                 },
-
                 {
                     nil,
                     {
@@ -544,9 +543,8 @@ sidebar:setup {
                     expand = "none",
                     layout = wibox.layout.align.horizontal,
                 },
-                helpers.vertical_pad(dpi(40)),
+
                 layout = wibox.layout.fixed.vertical,
-                spotify,
                 helpers.vertical_pad(dpi(40)),
             },
             shape = helpers.prrect(beautiful.sidebar_border_radius, false, true, false, false),

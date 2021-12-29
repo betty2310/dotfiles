@@ -16,21 +16,11 @@ apps.file_manager = function()
     awful.spawn(user.file_manager, { floating = true })
 end
 apps.telegram = function()
-    helpers.run_or_raise({ class = "TelegramDesktop" }, false, "telegram", { switchtotag = true })
+    awful.spawn.with_shell "google-chrome-stable 'https://chat.zalo.me/'"
 end
 apps.discord = function()
-    -- Run or raise Discord running in the browser, spawned with Chromium browser's app mode
-    -- >> Ubuntu / Debian
-    -- helpers.run_or_raise({instance = 'discordapp.com__channels_@me'}, false, "chromium-browser --app=\"https://discordapp.com/channels/@me\"")
-    -- >> Arch
-    helpers.run_or_raise(
-        { instance = "discordapp.com__channels_@me" },
-        false,
-        'chromium --app="https://discordapp.com/channels/@me"'
-    )
-
     -- Run or raise Discord app
-    -- helpers.run_or_raise({class = 'discord'}, false, "discord")
+    helpers.run_or_raise({ class = "discord" }, false, "discord")
 end
 apps.weechat = function()
     helpers.run_or_raise({ instance = "weechat" }, true, user.terminal .. " --class weechat -e weechat")
@@ -48,7 +38,7 @@ apps.lutris = function()
     helpers.run_or_raise({ class = "Lutris" }, false, "lutris")
 end
 apps.youtube = function()
-    awful.spawn.with_shell "rofi_mpvtube"
+    awful.spawn.with_shell "google-chrome-stable 'https://www.youtube.com/'"
 end
 apps.code = function()
     awful.spawn.with_shell "code"
@@ -67,7 +57,7 @@ apps.spotify = function()
 end
 
 apps.networks = function()
-    awful.spawn.with_shell "rofi_networks"
+    awful.spawn.with_shell "nm-applet &"
 end
 apps.passwords = function()
     helpers.run_or_raise({ class = "KeePassXC" }, true, "keepassxc")
@@ -91,7 +81,7 @@ end
 local night_mode_notif
 apps.night_mode = function()
     local cmd =
-        "pgrep redshift > /dev/null && (pkill redshift && echo 'OFF') || (echo 'ON' && redshift -l 0:0 -t 3700:3700 -r &>/dev/null &)"
+        "pgrep redshift > /dev/null && pkill redshift && echo 'OFF' || echo 'ON' && redshift -l 0:0 -t 5500:5500 -r &>/dev/null &"
     awful.spawn.easy_async_with_shell(cmd, function(out)
         local message = out:match "ON" and "Activated!" or "Deactivated!"
         night_mode_notif = notifications.notify_dwim(

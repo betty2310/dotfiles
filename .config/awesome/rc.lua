@@ -79,7 +79,7 @@ user = {
     --browser = "firefox",
     file_manager = "kitty -1 --class files -e ranger",
     editor = "kitty -1 --class editor -e nvim",
-    email_client = "kitty -1 --class email -e neomutt",
+    email_client = "thunderbird",
     music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
 
     -- >> Web Search <<
@@ -393,6 +393,8 @@ awful.rules.rules = {
                 "Nm-connection-editor",
                 "File-roller",
                 "fst",
+                "Font-manager",
+                "Spotify",
                 "Nvidia-settings",
             },
             name = {
@@ -601,16 +603,15 @@ awful.rules.rules = {
         properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.65 },
     },
 
-    -- spotify
-    {
-        rule = { class = "[Ss]potify" },
-        properties = { floating = true, width = screen_height * 0.5, height = screen_height * 0.65 },
-    },
-
     -- Pavucontrol
     {
         rule_any = { class = { "Pavucontrol" } },
         properties = { floating = true, width = screen_width * 0.45, height = screen_height * 0.8 },
+    },
+    -- Zathura
+    {
+        rule_any = { class = { "Zathura" } },
+        properties = { floating = true, width = screen_width * 0.5, height = screen_height * 0.9 },
     },
 
     -- Galculator
@@ -1146,10 +1147,3 @@ end)
 
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
-
-awful.util.spawn "picom --experimental-backends --config ~/.config/picom/picom.conf"
-awful.util.spawn "ibus_daemon"
-awful.util.spawn "eww daemon"
-awful.util.spawn "mpd"
-awful.util.spawn "mpc update"
-awful.util.spawn "mopidy"

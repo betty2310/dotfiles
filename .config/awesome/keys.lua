@@ -273,7 +273,7 @@ keys.globalkeys = gears.table.join(
         awful.spawn.with_shell "~/.config/eww/launch_eww"
     end, { description = "eww", group = "launcher" }),
     awful.key({ superkey }, "n", function(c)
-        awful.spawn.with_shell "~/.scripts/notion.sh"
+        awful.spawn.with_shell 'firefox "https://www.notion.so/bettyyy/0be326627ef74713b1b895e6af6d2c23"'
     end, { description = "notion", group = "launcher" }),
 
     -- Run
