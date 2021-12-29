@@ -524,8 +524,8 @@ sidebar:setup {
                     pomodoro,
                     top = dpi(40),
                     bottom = dpi(30),
-                    left = dpi(70),
-                    right = dpi(70),
+                    left = dpi(100),
+                    right = dpi(100),
                     widget = wibox.container.margin,
                 },
 

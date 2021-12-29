@@ -37,14 +37,14 @@ local battery_bar = wibox.widget {
     forced_height = dpi(50),
     forced_width = 30,
     bar_shape = gears.shape.rectangle,
-    color = x.color1,
-    background_color = x.color1,
+    color = x.color2,
+    background_color = x.color2,
     widget = wibox.widget.progressbar,
 }
 local charging_icon = wibox.widget {
-    font = "Font Awesome 6 Pro 13",
+    font = "icomoon 13",
     align = "right",
-    markup = helpers.colorize_text("", stroke .. "90"),
+    markup = helpers.colorize_text("", stroke .. "90"),
     widget = wibox.widget.textbox(),
 }
 
@@ -128,12 +128,12 @@ local pomodoro = wibox.widget {
         forced_width = 30,
         widget = wibox.container.background,
     },
-    {
-        charging_icon,
-        right = dpi(101),
-        widget = wibox.container.margin(),
-    },
-
+    -- {
+    --     charging_icon,
+    --     right = dpi(101),
+    --     widget = wibox.container.margin(),
+    -- },
+    --
     {
         nil,
         {
@@ -147,7 +147,7 @@ local pomodoro = wibox.widget {
     },
     {
         charging_icon,
-        right = dpi(40),
+        right = dpi(15),
         widget = wibox.container.margin(),
     },
 
