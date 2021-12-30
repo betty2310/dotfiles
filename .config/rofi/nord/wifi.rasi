@@ -46,7 +46,7 @@ configuration {
 window {
   transparency:   "real";
   location:       center;
-  width:          800;
+  width:          1000;
 }
 
 mainbox {

@@ -77,7 +77,7 @@ user = {
     floating_terminal = "kitty -1",
     browser = "google-chrome-stable",
     --browser = "firefox",
-    file_manager = "kitty -1 --class files -e ranger",
+    file_manager = "thunar",
     editor = "kitty -1 --class editor -e nvim",
     email_client = "thunderbird",
     music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
@@ -723,7 +723,7 @@ awful.rules.rules = {
         properties = {
             floating = true,
             width = screen_width * 0.7,
-            height = screen_height * 0.75,
+            height = screen_height * 0.8,
         },
         callback = function(c)
             awful.placement.centered(c, { honor_padding = true, honor_workarea = true })
@@ -1147,3 +1147,8 @@ end)
 
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
+client.connect_signal("mouse::enter", function(c)
+    if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier and awful.client.focus.filter(c) then
+        client.focus = c
+    end
+end)

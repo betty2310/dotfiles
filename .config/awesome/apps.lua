@@ -57,7 +57,7 @@ apps.spotify = function()
 end
 
 apps.networks = function()
-    awful.spawn.with_shell "nm-applet &"
+    awful.spawn.with_shell "rofi-wifi.sh"
 end
 apps.passwords = function()
     helpers.run_or_raise({ class = "KeePassXC" }, true, "keepassxc")

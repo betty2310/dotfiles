@@ -543,7 +543,8 @@ sidebar:setup {
                     expand = "none",
                     layout = wibox.layout.align.horizontal,
                 },
-
+                helpers.vertical_pad(dpi(40)),
+                spotify,
                 layout = wibox.layout.fixed.vertical,
                 helpers.vertical_pad(dpi(40)),
             },

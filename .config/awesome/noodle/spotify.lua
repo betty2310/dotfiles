@@ -22,7 +22,7 @@ local spotify_widget = wibox.widget {
         font = "sans 10",
         widget = spotify_artist,
     },
-    spacing = 2,
+    spacing = 4,
     layout = wibox.layout.fixed.vertical,
 }
 
