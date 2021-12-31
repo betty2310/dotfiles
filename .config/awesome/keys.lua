@@ -412,18 +412,23 @@ keys.globalkeys = gears.table.join(
     -- Single tap: Set tiled layout
     -- Double tap: Also disable floating for ALL visible clients in the tag
     awful.key({ superkey }, "s", function()
-        awful.layout.set(awful.layout.suit.tile)
+        awful.layout.set(awful.layout.suit.spiral.dwindle)
         helpers.single_double_tap(nil, function()
             local clients = awful.screen.focused().clients
             for _, c in pairs(clients) do
                 c.floating = false
             end
         end)
-    end, { description = "set tiled layout", group = "tag" }),
+    end, { description = "set dwindle layout", group = "tag" }),
     -- Set floating layout
     awful.key({ superkey, shiftkey }, "s", function()
         awful.layout.set(awful.layout.suit.floating)
     end, { description = "set floating layout", group = "tag" }),
+
+    -- set tile layout
+    awful.key({ superkey, ctrlkey }, "s", function()
+        awful.layout.set(awful.layout.suit.tile)
+    end, { description = "set tile layout", group = "tag" }),
     -- Dashboard
     awful.key({ superkey }, "F1", function()
         if dashboard_show then
