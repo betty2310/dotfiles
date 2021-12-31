@@ -149,9 +149,21 @@ local day_of_the_week = wibox.widget {
 }
 
 -- pomo
-local pomodoro = require "pomodoro"
+--local pomodoro = require "pomodoro"
 -- spotify
-local spotify = require "noodle.spotify"
+--local spotify = require "noodle.spotify"
+
+-- local quotes
+
+-- local quote = wibox.widget {
+--     text = "Stay focused, be present.",
+--     font = "Cartograph CF Regular Italic 13",
+--     align = "center",
+--     valign = "center",
+--     widget = wibox.widget.textbox,
+-- }
+
+local pacman = require "noodle.pacman"
 
 -- Mpd
 local mpd_buttons = require "noodle.mpd_buttons"
@@ -382,6 +394,50 @@ awesome.connect_signal("evil::battery", function(value)
         .. tostring(value)
         .. "%</b></span>"
 end)
+local awmodoro = require "noodle.awmodoro"
+local pomodoro = awmodoro.new {
+    minutes = 25,
+    do_notify = true,
+    active_bg_color = x.color0,
+    paused_bg_color = x.color2,
+    fg_color = x.color1,
+    width = dpi(90),
+    height = dpi(30),
+}
+pomodoro:buttons(awful.util.table.join(
+    awful.button({}, 1, function()
+        pomodoro:toggle()
+    end),
+    awful.button({}, 2, function()
+        pomodoro:finish()
+    end),
+    awful.button({}, 3, function()
+        pomodoro:reset()
+    end)
+))
+local charging_icon = wibox.widget {
+    font = "Font Awesome 6 Pro Solid 11",
+    align = "right",
+    markup = helpers.colorize_text(" ", x.color1 .. "90"),
+    widget = wibox.widget.textbox(),
+}
+local pomo = wibox.widget {
+    {
+        pomodoro,
+        shape = helpers.rrect(dpi(16)),
+        border_color = "#333946",
+        border_width = dpi(4),
+        bg = x.color4,
+        widget = wibox.container.background,
+    },
+    {
+        charging_icon,
+        right = dpi(10),
+        widget = wibox.container.margin(),
+    },
+    top_only = false,
+    layout = wibox.layout.stack,
+}
 
 -- Add clickable mouse effects on some widgets
 helpers.add_hover_cursor(cpu, "hand1")
@@ -392,6 +448,7 @@ helpers.add_hover_cursor(brightness, "hand1")
 helpers.add_hover_cursor(mpd_song, "hand1")
 helpers.add_hover_cursor(search, "xterm")
 helpers.add_hover_cursor(cute_battery_face, "hand1")
+helpers.add_hover_cursor(pomo, "hand1")
 
 -- Create the sidebar
 sidebar = wibox { visible = false, ontop = true, type = "dock", screen = screen.primary }
@@ -472,7 +529,6 @@ if user.sidebar.show_on_mouse_screen_edge then
         end)
     ))
 end
-
 -- Item placement
 sidebar:setup {
     {
@@ -507,6 +563,13 @@ sidebar:setup {
             {
                 helpers.vertical_pad(dpi(20)),
                 weather,
+                helpers.vertical_pad(dpi(30)),
+                {
+                    pomo,
+                    left = dpi(60),
+                    right = dpi(60),
+                    widget = wibox.container.margin,
+                },
                 {
                     {
                         mpd_buttons,
@@ -515,17 +578,9 @@ sidebar:setup {
                         layout = wibox.layout.fixed.vertical,
                     },
                     top = dpi(30),
-                    bottom = dpi(5),
+                    bottom = dpi(40),
                     left = dpi(20),
                     right = dpi(20),
-                    widget = wibox.container.margin,
-                },
-                {
-                    pomodoro,
-                    top = dpi(30),
-                    bottom = dpi(40),
-                    left = dpi(100),
-                    right = dpi(100),
                     widget = wibox.container.margin,
                 },
                 {
@@ -543,8 +598,9 @@ sidebar:setup {
                     expand = "none",
                     layout = wibox.layout.align.horizontal,
                 },
-                helpers.vertical_pad(dpi(40)),
-                spotify,
+                helpers.vertical_pad(dpi(100)),
+                -- spotify,
+                pacman,
                 layout = wibox.layout.fixed.vertical,
                 helpers.vertical_pad(dpi(40)),
             },
