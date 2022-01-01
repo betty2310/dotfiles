@@ -21,10 +21,6 @@ wk.register {
     ["<c-n>"] = { "<cmd>NvimTreeToggle<cr>", "[nvimtree] Toggle" },
     ["<leader>r"] = { "<cmd>NvimTreeRefresh<cr>", "[nvimtree] Refresh" },
 
-    -- [easy-motion]
-    [";;w"] = { "<Plug>(easymotion-w)", "[easymotion] move after!" },
-    [";;b"] = { "<Plug>(easymotion-b)", "[easymotion] move before!" },
-
     -- [Telescope]
     ["<leader>f"] = {
         name = "+file",

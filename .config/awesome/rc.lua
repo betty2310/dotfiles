@@ -393,6 +393,7 @@ awful.rules.rules = {
                 "File-roller",
                 "fst",
                 "Font-manager",
+                "Solaar",
                 "Spotify",
                 "Nvidia-settings",
             },

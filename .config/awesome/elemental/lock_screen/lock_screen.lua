@@ -66,7 +66,7 @@ local day_of_the_week = wibox.widget {
 }
 
 local month = wibox.widget {
-    font = "San Francisco Display Heavy 100",
+    font = "sans 100",
     align = "center",
     valign = "center",
     widget = wibox.widget.textclock "%B %d",

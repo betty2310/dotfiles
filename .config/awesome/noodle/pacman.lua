@@ -29,6 +29,13 @@ local go1 = wibox.widget {
     markup = helpers.colorize_text(" ", x.color1),
     widget = wibox.widget.textbox(),
 }
+local go0 = wibox.widget {
+    font = "Liga SFMono Nerd Font 13",
+    align = "right",
+    markup = helpers.colorize_text(" ", "#B48EAD"),
+    widget = wibox.widget.textbox(),
+}
+
 local go2 = wibox.widget {
     font = "Liga SFMono Nerd Font 13",
     align = "right",
@@ -44,7 +51,7 @@ local go3 = wibox.widget {
 local go4 = wibox.widget {
     font = "Material Design Icons  13",
     align = "center",
-    markup = helpers.colorize_text("󰮯 ", x.color3),
+    markup = helpers.colorize_text("󰮯     ", x.color3),
     widget = wibox.widget.textbox(),
 }
 
@@ -61,22 +68,27 @@ local pomodoro = wibox.widget {
 
     {
         go1,
-        right = dpi(150),
+        right = dpi(140),
+        widget = wibox.container.margin(),
+    },
+    {
+        go0,
+        right = dpi(120),
         widget = wibox.container.margin(),
     },
     {
         go2,
-        right = dpi(130),
+        right = dpi(100),
         widget = wibox.container.margin(),
     },
     {
         go3,
-        right = dpi(110),
+        right = dpi(80),
         widget = wibox.container.margin(),
     },
     {
         go4,
-        right = dpi(70),
+        right = dpi(90),
         widget = wibox.container.margin(),
     },
 

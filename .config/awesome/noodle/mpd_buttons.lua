@@ -82,12 +82,13 @@ local music_playing_counter = 0
 local last_artist
 local last_title
 local music_playing_colors = {
-    x.color1,
+    x.color9,
     x.color2,
     x.color3,
     x.color4,
     x.color5,
     x.color6,
+    x.color1,
 }
 local last_color = music_playing_colors[1]
 

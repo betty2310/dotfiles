@@ -153,16 +153,6 @@ local day_of_the_week = wibox.widget {
 -- spotify
 --local spotify = require "noodle.spotify"
 
--- local quotes
-
--- local quote = wibox.widget {
---     text = "Stay focused, be present.",
---     font = "Cartograph CF Regular Italic 13",
---     align = "center",
---     valign = "center",
---     widget = wibox.widget.textbox,
--- }
-
 local pacman = require "noodle.pacman"
 
 -- Mpd
@@ -399,10 +389,10 @@ local pomodoro = awmodoro.new {
     minutes = 25,
     do_notify = true,
     active_bg_color = x.color0,
-    paused_bg_color = x.color2,
+    paused_bg_color = x.color0,
     fg_color = x.color1,
     width = dpi(90),
-    height = dpi(30),
+    height = dpi(20),
 }
 pomodoro:buttons(awful.util.table.join(
     awful.button({}, 1, function()
@@ -426,18 +416,20 @@ local pomo = wibox.widget {
         pomodoro,
         shape = helpers.rrect(dpi(16)),
         border_color = "#333946",
-        border_width = dpi(4),
+        border_width = dpi(1),
         bg = x.color4,
         widget = wibox.container.background,
     },
-    {
-        charging_icon,
-        right = dpi(10),
-        widget = wibox.container.margin(),
-    },
+    -- {
+    --     charging_icon,
+    --     right = dpi(10),
+    --     widget = wibox.container.margin(),
+    -- },
     top_only = false,
     layout = wibox.layout.stack,
 }
+
+local quote = require "noodle.quote"
 
 -- Add clickable mouse effects on some widgets
 helpers.add_hover_cursor(cpu, "hand1")
@@ -563,9 +555,11 @@ sidebar:setup {
             {
                 helpers.vertical_pad(dpi(20)),
                 weather,
-                helpers.vertical_pad(dpi(30)),
+                helpers.vertical_pad(dpi(10)),
+                pacman,
                 {
                     pomo,
+                    top = dpi(-10),
                     left = dpi(60),
                     right = dpi(60),
                     widget = wibox.container.margin,
@@ -598,9 +592,8 @@ sidebar:setup {
                     expand = "none",
                     layout = wibox.layout.align.horizontal,
                 },
-                helpers.vertical_pad(dpi(100)),
-                -- spotify,
-                pacman,
+                helpers.vertical_pad(dpi(40)),
+                quote,
                 layout = wibox.layout.fixed.vertical,
                 helpers.vertical_pad(dpi(40)),
             },
