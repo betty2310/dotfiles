@@ -356,17 +356,80 @@ local function create_url(name, path)
     return url
 end
 
+local onedrive = create_url(
+    "Onedrive",
+    "https://husteduvn-my.sharepoint.com/personal/huynh_dh205087_sis_hust_edu_vn/_layouts/15/onedrive.aspx"
+)
+
+local spiderum = create_url("Spiderum", "https://spiderum.com/?sort=hot&page_idx=1")
+local leetcode = create_url(
+    "Leetcode",
+    "https://leetcode.com/problemset/all/?page=1&status=NOT_STARTED&difficulty=EASY"
+)
 local urls = wibox.widget {
-    create_url(
-        "ONEDRIVE",
-        "https://husteduvn-my.sharepoint.com/personal/huynh_dh205087_sis_hust_edu_vn/_layouts/15/onedrive.aspx"
-    ),
-    create_url("SPIDERUM", "https://spiderum.com/?sort=hot&page_idx=1"),
-    create_url("LEETCODE", "https://leetcode.com/problemset/all/?page=1&status=NOT_STARTED&difficulty=EASY"),
-    spacing = dpi(10),
+    {
+        {
+            align = "center",
+            valign = "center",
+            font = "Font Awesome 6 Pro Solid 13",
+            markup = helpers.colorize_text("", x.color4),
+            widget = wibox.widget.textbox(),
+        },
+        {
+            align = "center",
+            valign = "center",
+            font = "sans medium 14",
+            widget = onedrive,
+        },
+        spacing = dpi(8),
+        layout = wibox.layout.fixed.horizontal,
+    },
+    {
+        {
+            align = "center",
+            valign = "center",
+            font = "Font Awesome 6 Pro Solid 13",
+            markup = helpers.colorize_text("", x.color2),
+            widget = wibox.widget.textbox(),
+        },
+        {
+            align = "center",
+            valign = "center",
+            font = "sans medium 14",
+            widget = spiderum,
+        },
+        spacing = dpi(10),
+        layout = wibox.layout.fixed.horizontal,
+    },
+    {
+        {
+            align = "center",
+            valign = "center",
+            font = "Font Awesome 6 Pro Solid 13",
+            markup = helpers.colorize_text("", x.color1),
+            widget = wibox.widget.textbox(),
+        },
+        {
+            align = "center",
+            valign = "center",
+            font = "sans medium 14",
+            widget = leetcode,
+        },
+        spacing = dpi(8),
+        layout = wibox.layout.fixed.horizontal,
+    },
+    spacing = dpi(20),
     layout = wibox.layout.fixed.vertical,
 }
 
+-- local urls = wibox.widget {
+--     onedrive,
+--     spiderum,
+--     leetcode,
+--     spacing = dpi(10),
+--     layout = wibox.layout.fixed.vertical,
+-- }
+--
 local urls_box = create_boxed_widget(urls, dpi(200), dpi(180), x.background)
 
 -- Fortune
@@ -383,7 +446,7 @@ local update_fortune = function()
     awful.spawn.easy_async_with_shell(fortune_command, function(out)
         -- Remove trailing whitespaces
         out = out:gsub("^%s*(.-)%s*$", "%1")
-        fortune.markup = "<i>" .. helpers.colorize_text(out, x.color2) .. "</i>"
+        fortune.markup = "<i>" .. helpers.colorize_text(out, x.foreground) .. "</i>"
     end)
 end
 
@@ -488,7 +551,7 @@ local icon_size = dpi(40)
 
 -- Uptime
 local uptime_text = wibox.widget.textbox()
-awful.widget.watch("uptime -p | sed 's/^...//'", 60, function(_, stdout)
+awful.widget.watch("sh -c 'uptime -p | sed 's/^...//''", 60, function(_, stdout)
     -- Remove trailing whitespaces
     local out = stdout:gsub("^%s*(.-)%s*$", "%1")
     uptime_text.text = out
@@ -498,13 +561,13 @@ local uptime = wibox.widget {
         align = "center",
         valign = "center",
         font = "icomoon 20",
-        markup = helpers.colorize_text("", x.color3),
+        markup = helpers.colorize_text("", x.color9),
         widget = wibox.widget.textbox(),
     },
     {
         align = "center",
         valign = "center",
-        font = "Liga SFMono Nerd Font medium 11",
+        font = "Liga SFMono Nerd Font 11",
         widget = uptime_text,
     },
     spacing = dpi(10),

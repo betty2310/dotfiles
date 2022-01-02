@@ -25,13 +25,13 @@ local quote2 = wibox.widget {
     widget = wibox.widget.textbox,
 }
 local icon2 = wibox.widget {
-    font = "Font Awesome 6 Pro Solid 11",
+    font = "Font Awesome 6 Pro Solid 9",
     align = "center",
     markup = helpers.colorize_text("", x.color2),
     widget = wibox.widget.textbox(),
 }
 local icon1 = wibox.widget {
-    font = "Font Awesome 6 Pro Solid 11",
+    font = "Font Awesome 6 Pro Solid 9",
     align = "right",
     markup = helpers.colorize_text("", x.color2),
     widget = wibox.widget.textbox(),

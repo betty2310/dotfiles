@@ -68,7 +68,7 @@ local weather = wibox.widget {
 
 local weather_icons = {
     ["01d"] = { icon = sun_icon, color = x.color3 },
-    ["01n"] = { icon = moon_icon, color = x.color13 },
+    ["01n"] = { icon = moon_icon, color = x.color4 },
     ["02d"] = { icon = dcloud_icon, color = x.color3 },
     ["02n"] = { icon = ncloud_icon, color = x.color6 },
     ["03d"] = { icon = cloud_icon, color = x.color4 },

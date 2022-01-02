@@ -1,4 +1,0 @@
-local ok, easy = pcall(require, "easymotion")
-if ok then
-    vim.cmd[[map <Leader> <Plug>(easymotion-prefix)]]
-end
