@@ -1,11 +1,11 @@
-local awful = require("awful")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
-local helpers = require("helpers")
-local keys = require("keys")
-local gears = require("gears")
+local awful = require "awful"
+local wibox = require "wibox"
+local beautiful = require "beautiful"
+local helpers = require "helpers"
+local keys = require "keys"
+local gears = require "gears"
 local capi = { screen = screen, client = client }
-local icons = require("icons")
+local icons = require "icons"
 local class_icons = icons.text.by_class
 
 -- TODO ability to switch to specific minimized clients without using the mouse:
@@ -21,22 +21,22 @@ awful.screen.connect_for_each_screen(function(s)
     -- Helper function that sets/updates the icon of a task
     -- according to its class
     local function set_icon(item, c)
-        local i = class_icons[c.class] or class_icons['_']
-        item:get_children_by_id('text_icon')[1].markup = helpers.colorize_text(i.symbol, i.color)
+        local i = class_icons[c.class] or class_icons["_"]
+        item:get_children_by_id("text_icon")[1].markup = helpers.colorize_text(i.symbol, i.color)
     end
 
     -- Tasklist
     s.window_switcher_tasklist = awful.widget.tasklist {
-        screen   = s,
-        filter   = awful.widget.tasklist.filter.currenttags,
-        buttons  = keys.tasklist_buttons,
-        style    = {
+        screen = s,
+        filter = awful.widget.tasklist.filter.currenttags,
+        buttons = keys.tasklist_buttons,
+        style = {
             font = beautiful.tasklist_font,
             -- font = "sans 10 medium",
             bg = x.color0,
         },
-        layout   = {
-            layout  = wibox.layout.fixed.vertical
+        layout = {
+            layout = wibox.layout.fixed.vertical,
         },
         widget_template = {
             {
@@ -48,17 +48,17 @@ awful.screen.connect_for_each_screen(function(s)
                 -- },
                 -- Text icon
                 {
-                    id     = 'text_icon',
-                    font   = 'icomoon 25',
+                    id = "text_icon",
+                    font = "Font Awesome 6 Pro Solid  25",
                     forced_width = dpi(50),
-                    align  = "center",
+                    align = "center",
                     valign = "center",
                     widget = wibox.widget.textbox,
                 },
                 {
                     {
-                        id     = 'text_role',
-                        align  = "center",
+                        id = "text_role",
+                        align = "center",
                         widget = wibox.widget.textbox,
                     },
                     left = dpi(6),
@@ -66,11 +66,11 @@ awful.screen.connect_for_each_screen(function(s)
                     -- Add margins to top and bottom in order to force the
                     -- text to be on a single line, if needed. Might need
                     -- to adjust them according to font size.
-                    top  = dpi(14),
+                    top = dpi(14),
                     bottom = dpi(14),
-                    widget = wibox.container.margin
+                    widget = wibox.container.margin,
                 },
-                layout  = wibox.layout.fixed.horizontal
+                layout = wibox.layout.fixed.horizontal,
             },
             forced_height = item_height,
             id = "bg_role",
@@ -78,12 +78,14 @@ awful.screen.connect_for_each_screen(function(s)
             create_callback = function(self, c, _, __)
                 set_icon(self, c)
                 -- Handle clients which change their own class
-                c:connect_signal("property::class", function() set_icon(self, c) end)
+                c:connect_signal("property::class", function()
+                    set_icon(self, c)
+                end)
             end,
         },
     }
 
-    s.window_switcher = awful.popup({
+    s.window_switcher = awful.popup {
         visible = false,
         ontop = true,
         screen = s,
@@ -94,13 +96,13 @@ awful.screen.connect_for_each_screen(function(s)
                 s.window_switcher_tasklist,
                 forced_width = item_width,
                 margins = window_switcher_margin,
-                widget = wibox.container.margin
+                widget = wibox.container.margin,
             },
             bg = x.color0,
             shape = helpers.rrect(beautiful.border_radius),
-            widget = wibox.container.background
-        }
-    })
+            widget = wibox.container.background,
+        },
+    }
 
     -- Center window switcher whenever its height changes
     s.window_switcher:connect_signal("property::height", function()
@@ -113,8 +115,11 @@ end)
 
 get_num_clients = function(s)
     local minimized_clients_in_tag = 0
-    local matcher = function (c)
-        return awful.rules.match(c, { minimized = true, skip_taskbar = false, hidden = false, first_tag = s.selected_tag })
+    local matcher = function(c)
+        return awful.rules.match(
+            c,
+            { minimized = true, skip_taskbar = false, hidden = false, first_tag = s.selected_tag }
+        )
     end
     for c in awful.client.iterate(matcher) do
         minimized_clients_in_tag = minimized_clients_in_tag + 1
@@ -164,7 +169,7 @@ end
 
 local window_search = function()
     window_switcher_hide()
-    awful.spawn.with_shell("rofi_awesome_window")
+    awful.spawn.with_shell "rofi_awesome_window"
 end
 
 local unminimize = function()
@@ -176,29 +181,45 @@ local unminimize = function()
 end
 
 local close = function()
-    if client.focus then client.focus:kill() end
+    if client.focus then
+        client.focus:kill()
+    end
 end
 
 -- Set up keybinds
 -- Single keys only
 local keybinds = {
-    ['Escape'] = window_switcher_hide,
-    ['Tab'] = function() awful.client.focus.byidx(1) end,
+    ["Escape"] = window_switcher_hide,
+    ["Tab"] = function()
+        awful.client.focus.byidx(1)
+    end,
     -- (Un)Minimize
-    ['n'] = function() if client.focus then client.focus.minimized = true end end,
-    ['N'] = unminimize,
-    ['u'] = unminimize, -- `u` for up
+    ["n"] = function()
+        if client.focus then
+            client.focus.minimized = true
+        end
+    end,
+    ["N"] = unminimize,
+    ["u"] = unminimize, -- `u` for up
     -- Close
-    ['d'] = close,
-    ['q'] = close,
+    ["d"] = close,
+    ["q"] = close,
     -- Move with vim keys
-    ['j'] = function() awful.client.focus.byidx(1) end,
-    ['k'] = function() awful.client.focus.byidx(-1) end,
+    ["j"] = function()
+        awful.client.focus.byidx(1)
+    end,
+    ["k"] = function()
+        awful.client.focus.byidx(-1)
+    end,
     -- Move with arrow keys
-    ['Down'] = function() awful.client.focus.byidx(1) end,
-    ['Up'] = function() awful.client.focus.byidx(-1) end,
+    ["Down"] = function()
+        awful.client.focus.byidx(1)
+    end,
+    ["Up"] = function()
+        awful.client.focus.byidx(-1)
+    end,
     -- Space
-    [' '] = window_search
+    [" "] = window_search,
 }
 
 function window_switcher_show(s)
@@ -233,7 +254,7 @@ function window_switcher_show(s)
             -- Hide if the modifier was released
             -- We try to match Super or Alt or Control since we do not know which keybind is
             -- used to activate the window switcher (the keybind is set by the user in keys.lua)
-            if key:match("Super") or key:match("Alt") or key:match("Control") then
+            if key:match "Super" or key:match "Alt" or key:match "Control" then
                 window_switcher_hide()
             end
             -- Do nothing
@@ -252,4 +273,3 @@ function window_switcher_show(s)
         s.window_switcher.visible = true
     end)
 end
-

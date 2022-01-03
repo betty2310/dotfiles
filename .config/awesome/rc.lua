@@ -470,11 +470,13 @@ awful.rules.rules = {
                 "music",
                 "markdown_input",
                 "scratchpad",
+                "wisdom-tree",
             },
             instance = {
                 "music",
                 "markdown_input",
                 "scratchpad",
+                "wisdom-tree",
             },
             role = {
                 "GtkFileChooserDialog",
@@ -670,7 +672,7 @@ awful.rules.rules = {
             minimized = true,
             sticky = false,
             width = screen_width * 0.7,
-            height = screen_height * 0.75,
+            height = screen_height * 0.8,
         },
     },
 
@@ -682,6 +684,26 @@ awful.rules.rules = {
             },
             class = {
                 "markdown_input",
+            },
+        },
+        properties = {
+            skip_taskbar = false,
+            floating = true,
+            ontop = false,
+            minimized = true,
+            sticky = false,
+            width = screen_width * 0.5,
+            height = screen_height * 0.7,
+        },
+    },
+    -- tree pomodoro
+    {
+        rule_any = {
+            instance = {
+                "wisdom-tree",
+            },
+            class = {
+                "wisdom-tree",
             },
         },
         properties = {
@@ -849,8 +871,7 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "firefox",
-                "Nightly",
+                "code",
                 -- "qutebrowser",
             },
         },

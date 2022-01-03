@@ -154,6 +154,7 @@ local day_of_the_week = wibox.widget {
 --local spotify = require "noodle.spotify"
 
 local pacman = require "noodle.pacman"
+pacman:buttons(gears.table.join(awful.button({}, 1, apps.tree)))
 
 -- Mpd
 local mpd_buttons = require "noodle.mpd_buttons"
@@ -441,6 +442,7 @@ helpers.add_hover_cursor(mpd_song, "hand1")
 helpers.add_hover_cursor(search, "xterm")
 helpers.add_hover_cursor(cute_battery_face, "hand1")
 helpers.add_hover_cursor(pomo, "hand1")
+helpers.add_hover_cursor(pacman, "hand1")
 
 -- Create the sidebar
 sidebar = wibox { visible = false, ontop = true, type = "dock", screen = screen.primary }

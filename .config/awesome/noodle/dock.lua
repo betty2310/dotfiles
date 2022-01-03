@@ -11,8 +11,8 @@ local icons = require "icons"
 local class_icons = icons.text.by_class
 
 -- TODO: These variables (and more) should ideally be retrieved through `beautiful`
-local item_font = "icomoon 15"
-local item_bg = x.background
+local item_font = "Font Awesome 6 Pro Solid 13"
+local item_bg = "#262B33"
 local item_size = dpi(50)
 local item_shape = helpers.squircle(1.7, 0)
 local item_margin = dpi(8) -- For spacing between items
@@ -43,13 +43,13 @@ local dock_recently_focused = {}
 -- items should always be visible, and the functions which launch them.
 -- Order matters!
 dock_pinned_apps = {
-    -- { class = "google-chrome-stable", launcher = apps.browser },
-    -- { class = "music", launcher = apps.music },
-    -- { class = "calendar", launcher = apps.browser },
-    -- { class = "code", launcher = apps.code },
-    -- { class = "weechat", launcher = apps.notion },
-    -- { class = "spotify", launcher = apps.spotify },
-    -- { class = "discord", launcher = apps.teams },
+    { class = "Google-chrome", launcher = apps.browser },
+    { class = "Thunar", launcher = apps.file_manager },
+    { class = "music", launcher = apps.music },
+    { class = "firefox", launcher = apps.notion },
+    { class = "scratchpad", launcher = apps.scratchpad },
+    { class = "Code", launcher = apps.code },
+    { class = "wisdom-tree", launcher = apps.tree },
 }
 
 ----------------------------------------------------------------------------

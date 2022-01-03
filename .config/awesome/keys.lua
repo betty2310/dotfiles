@@ -393,9 +393,13 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey, shiftkey }, "F7", function()
         awful.spawn.with_shell "freeze -u firefox"
     end, { description = "send CONT signal to all firefox processes", group = "other" }),
-    -- awful.key({ superkey }, "q", function()
-    --     apps.scratchpad()
-    -- end, { description = "scratchpad", group = "launcher" }),
+    awful.key({ superkey, shiftkey }, "p", function()
+        apps.scratchpad()
+    end, { description = "scratchpad", group = "launcher" }),
+    awful.key({ superkey, shiftkey }, "o", function()
+        awful.spawn.with_shell "code"
+    end, { description = "open VScode", group = "launcher" }),
+
     -- Max layout
     -- Single tap: Set max layout
     -- Double tap: Also disable floating for ALL visible clients in the tag

@@ -47,10 +47,10 @@ apps.teams = function()
     awful.spawn.with_shell "teams"
 end
 apps.notion = function()
-    awful.spawn.with_shell "google-chrome-stable --force-device-scale-factor=1.5 --user-data-dir=.config/google-chrome-for-notion/ --app=https://www.notion.so/bettyyy/0be326627ef74713b1b895e6af6d2c23"
+    awful.spawn.with_shell 'firefox "https://www.notion.so/bettyyy/0be326627ef74713b1b895e6af6d2c23"'
 end
 apps.calendar = function()
-    awful.spawn.with_shell "google-chrome-stable --force-device-scale-factor=1.5 --user-data-dir=.config/google-chrome-for-notion/ --app=https://calendar.google.com/calendar/u/0/r/week/2021/2/27?pli=1"
+    awful.spawn.with_shell 'firefox "https://calendar.google.com/calendar/u/0/r"'
 end
 apps.spotify = function()
     awful.spawn.with_shell "spotify"
@@ -149,6 +149,9 @@ apps.markdown_input = function()
         user.terminal .. " --class markdown_input -e nvim -c 'startinsert' /tmp/scratchpad.md",
         nil
     )
+end
+apps.tree = function()
+    helpers.scratchpad({ instance = "tree" }, user.terminal .. " --class wisdom-tree -e wisdom-tree", nil)
 end
 
 -- Scratchpad terminal with tmux (see bin/scratchpad)
