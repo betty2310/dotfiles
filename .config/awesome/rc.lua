@@ -25,7 +25,7 @@ local decoration_themes = {
     "skyfall", -- 2 -- No buttons, only title
     "ephemeral", -- 3 -- Text-generated titlebar buttons
 }
-local decoration_theme = decoration_themes[1]
+local decoration_theme = decoration_themes[3]
 -- ===================================================================
 -- Statusbar themes. Multiple bars can be declared in each theme.
 local bar_themes = {
@@ -871,7 +871,8 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "code",
+                "Code",
+                "scratchpad",
                 -- "qutebrowser",
             },
         },
@@ -899,6 +900,8 @@ awful.rules.rules = {
                 "dontstarve_steam",
                 "Wine",
                 "trove.exe",
+                "wisdom-tree",
+                "Anki",
             },
             instance = {
                 "love.exe",
@@ -906,6 +909,7 @@ awful.rules.rules = {
                 "pathofexile_x64steam.exe",
                 "leagueclient.exe",
                 "glyphclientapp.exe",
+                "wisdom-tree",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[2] },
@@ -915,8 +919,6 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "Chromium",
-                "Chromium-browser",
                 "discord",
                 "TelegramDesktop",
                 "Signal",
@@ -927,7 +929,7 @@ awful.rules.rules = {
                 "6cord",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[3] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[5] },
     },
 
     -- Editing
@@ -939,7 +941,7 @@ awful.rules.rules = {
                 -- "Subl3",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[4] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[2] },
     },
 
     -- System monitoring
@@ -952,7 +954,7 @@ awful.rules.rules = {
                 "htop",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[5] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[6] },
     },
 
     -- Image editing
@@ -971,9 +973,11 @@ awful.rules.rules = {
         rule_any = {
             class = {
                 "email",
+                "Thunderbird",
             },
             instance = {
                 "email",
+                "Thunderbird",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[7] },
@@ -1159,17 +1163,12 @@ awful.spawn.easy_async_with_shell("stat " .. dashboard_flag_path .. " >/dev/null
     end
 end)
 
--- Garbage collection
--- Enable for lower memory consumption
--- ===================================================================
-
--- collectgarbage("setpause", 160)
--- collectgarbage("setstepmul", 400)
-
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
-client.connect_signal("mouse::enter", function(c)
-    if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier and awful.client.focus.filter(c) then
-        client.focus = c
-    end
-end)
+-- focus by mouse hover
+-- client.connect_signal("mouse::enter", function(c)
+--     if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier and awful.client.focus.filter(c) then
+--         client.focus = c
+--     end
+-- end)
+awful.spawn.with_shell "imwheel -kill"

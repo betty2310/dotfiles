@@ -19,7 +19,7 @@ local function create_button(symbol, color, hover_color, cmd, key)
         markup = helpers.colorize_text(symbol, color),
         align = "center",
         valign = "center",
-        font = "icomoon 50",
+        font = "Font Awesome 6 Pro Solid 50",
         forced_width = dpi(180),
         forced_height = dpi(200),
         widget = wibox.widget.textbox,
@@ -67,23 +67,23 @@ local function create_button(symbol, color, hover_color, cmd, key)
 end
 
 -- Create app buttons
-local browser = create_button("", x.color3, x.color11, apps.browser, "w")
-local discord = create_button("", x.color5, x.color13, apps.discord, "d")
-local telegram = create_button("", x.color4, x.color12, apps.telegram, "t")
-local mail = create_button("", x.color6, x.color14, apps.mail, "m")
-local files = create_button("", x.color3, x.color11, apps.file_manager, "f")
-local gimp = create_button("", x.color5, x.color13, apps.gimp, "g")
-local youtube = create_button("", x.color1, x.color9, apps.youtube, "y")
-local networks = create_button("", x.color3, x.color11, apps.networks, "n")
-local passwords = create_button("", x.color1, x.color9, apps.code, "p")
-local night_mode = create_button("", x.color1, x.color9, apps.night_mode, "x")
-local record = create_button("", x.color4, x.color12, apps.record, "r")
-local lutris = create_button("", x.color6, x.color14, apps.lutris, "l")
-local steam = create_button("", x.color2, x.color10, apps.steam, "s")
-local org = create_button("", x.color2, x.color10, apps.editor, "o")
-local compositor = create_button("", x.color5, x.color13, apps.compositor, "z")
+local browser = create_button("", x.color2, x.color3, apps.spotify, "m")
+local discord = create_button("", x.color4, x.color6, apps.discord, "d")
+local telegram = create_button("", x.color9, x.color12, apps.telegram, "z")
+local mail = create_button("@", x.color6, x.color14, apps.mail, "e")
+local files = create_button("", x.color5, x.color11, apps.mouse, "l")
+local vlc = create_button("", x.color9, x.color13, apps.vlc, "v")
+local disk = create_button("", x.color3, x.color9, apps.disk, "u")
+local networks = create_button("", x.color2, x.color11, apps.networks, "n")
+local passwords = create_button("", x.color1, x.color9, apps.font, "f")
+local night_mode = create_button("", x.color3, x.color9, apps.night_mode, "x")
+local record = create_button("", x.color2, x.color12, apps.record, "r")
+local steam = create_button("", x.color1, x.color9, apps.steam, "s")
+local volume = create_button("", x.color5, x.color13, apps.volume, "z")
+local bluetooth = create_button("", x.color6, x.color11, apps.bluetooth, "b")
+local teams = create_button("", x.color6, x.color11, apps.teams, "o")
 
-local restart_awesome = create_button("", x.color4, x.color12)
+local restart_awesome = create_button("", x.color1, x.color12)
 restart_awesome:buttons(gears.table.join(awful.button({}, 1, awesome.restart)))
 
 -- Create the widget
@@ -195,10 +195,10 @@ app_drawer:setup {
     -- Background
     {
         -- Stripes
-        create_stripe({ browser, youtube, discord, telegram }, "#00000000"),
-        create_stripe({ mail, org, files, passwords }, x.color8 .. "20"),
-        create_stripe({ gimp, record, lutris, steam }, x.color8 .. "40"),
-        create_stripe({ networks, night_mode, compositor, restart_awesome }, x.color8 .. "60"),
+        create_stripe({ browser, steam, discord, telegram }, "#00000000"),
+        create_stripe({ mail, disk, files, passwords }, x.color8 .. "20"),
+        create_stripe({ volume, vlc, record, teams }, x.color8 .. "40"),
+        create_stripe({ networks, bluetooth, night_mode, restart_awesome }, x.color8 .. "60"),
         layout = wibox.layout.flex.vertical,
     },
     bg = x.background,

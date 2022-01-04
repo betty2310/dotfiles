@@ -3,6 +3,7 @@ set fish_greeting ""
 # aliases
 alias llt="exa --icons --git -a --tree -s type -I '.git|node_modules|bower_components|build'"
 alias g git
+alias vim="nvim"
 alias fetch="rxfetch"
 alias nv "nvim"
 alias cat="bat"

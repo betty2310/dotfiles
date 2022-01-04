@@ -31,6 +31,11 @@ end
 apps.gimp = function()
     helpers.run_or_raise({ class = "Gimp" }, false, "gimp")
 end
+
+apps.anki = function()
+    helpers.run_or_raise({ class = "Anki" }, false, "anki")
+end
+
 apps.steam = function()
     helpers.run_or_raise({ class = "Steam" }, false, "steam")
 end
@@ -43,6 +48,16 @@ end
 apps.code = function()
     awful.spawn.with_shell "code"
 end
+apps.font = function()
+    awful.spawn.with_shell "font-manager"
+end
+apps.vlc = function()
+    awful.spawn.with_shell "vlc"
+end
+apps.bluetooth = function()
+    awful.spawn.with_shell "blueman-manager"
+end
+
 apps.teams = function()
     awful.spawn.with_shell "teams"
 end
@@ -55,9 +70,15 @@ end
 apps.spotify = function()
     awful.spawn.with_shell "spotify"
 end
+apps.disk = function()
+    awful.spawn.with_shell "baobab"
+end
+apps.mouse = function()
+    awful.spawn.with_shell "solaar"
+end
 
 apps.networks = function()
-    awful.spawn.with_shell "rofi-wifi.sh"
+    awful.spawn.with_shell "nm-applet &"
 end
 apps.passwords = function()
     helpers.run_or_raise({ class = "KeePassXC" }, true, "keepassxc")

@@ -52,6 +52,7 @@ icons.text.by_class = {
     ["battop"] = { symbol = "", color = x.color3 },
     ["wisdom-tree"] = { symbol = "", color = x.color2 },
 
+    ["Anki"] = { symbol = "", color = x.color6 },
     ["KeePassXC"] = { symbol = "", color = x.color1 },
     ["Gucharmap"] = { symbol = "", color = x.color6 },
     ["Pavucontrol"] = { symbol = "", color = x.color2 },

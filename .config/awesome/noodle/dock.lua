@@ -46,6 +46,7 @@ dock_pinned_apps = {
     { class = "Google-chrome", launcher = apps.browser },
     { class = "Thunar", launcher = apps.file_manager },
     { class = "music", launcher = apps.music },
+    { class = "Anki", launcher = apps.anki },
     { class = "firefox", launcher = apps.notion },
     { class = "scratchpad", launcher = apps.scratchpad },
     { class = "Code", launcher = apps.code },
