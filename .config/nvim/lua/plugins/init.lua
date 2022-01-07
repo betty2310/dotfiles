@@ -62,6 +62,7 @@ return packer.startup(function()
 
     -- -- Lint
     use { "folke/lsp-colors.nvim" }
+    --use { "jasonrhansen/lspsaga.nvim", branch = "finder-preview-fixes" }
     use { "tami5/lspsaga.nvim" }
     use { "folke/trouble.nvim" }
     use { "ray-x/lsp_signature.nvim", branch = "neovim-0.6" }

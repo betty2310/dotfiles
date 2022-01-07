@@ -44,3 +44,11 @@ vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
 vim.api.nvim_command [[autocmd FileType python,c,cpp,go,lua set sw=4 ]]
 vim.api.nvim_command [[autocmd FileType python,c,cpp,go,lua set ts=4 ]]
 vim.api.nvim_command [[autocmd FileType python,c,cpp,go,lua set sts=4 ]]
+
+vim.cmd [[
+autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+]]

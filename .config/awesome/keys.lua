@@ -265,16 +265,16 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "/", function()
         awful.spawn.with_shell "~/.config/rofi/launcher.sh"
     end, { description = "rofi launcher", group = "launcher" }),
-
-    awful.key({ superkey }, "i", function()
+    awful.key({ superkey, shiftkey }, "i", function()
         awful.spawn.with_shell "google-chrome-stable"
     end, { description = "google", group = "launcher" }),
-    awful.key({ altkey }, "l", function()
-        awful.spawn.with_shell "~/.config/eww/launch_eww"
-    end, { description = "eww", group = "launcher" }),
-    awful.key({ superkey }, "n", function(c)
+
+    awful.key({ superkey, shiftkey }, "n", function(c)
         awful.spawn.with_shell 'firefox "https://www.notion.so/bettyyy/0be326627ef74713b1b895e6af6d2c23"'
     end, { description = "notion", group = "launcher" }),
+    awful.key({ superkey, shiftkey }, "a", function(c)
+        awful.spawn.with_shell "anki"
+    end, { description = "anki", group = "launcher" }),
 
     -- Run
     awful.key({ superkey }, "r", function()

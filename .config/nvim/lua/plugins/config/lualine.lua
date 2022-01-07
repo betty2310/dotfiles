@@ -157,13 +157,18 @@ ins_left {
     color = { fg = colors.fg1, bg = colors.bg1 },
 }
 
-ins_left { "location", icon = "", color = { fg = colors.fg1, bg = colors.bg1 }, cond = conditions.hide_in_width }
+ins_left {
+    "location",
+    icon = "",
+    color = { fg = colors.fg1, bg = colors.bg1 },
+    cond = conditions.hide_in_width,
+}
 
 ins_left {
     "progress",
     icon = "",
     color = { fg = colors.fg1, bg = colors.bg1, gui = "bold" },
-    cond = conditions.hide_in_width,
+    -- cond = conditions.hide_in_width,
 }
 
 ins_left {

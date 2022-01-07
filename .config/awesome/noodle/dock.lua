@@ -260,7 +260,11 @@ local function generate_dock_icon(c, bg, fg, symbol)
 
             -- Create icon prefix
             local i = class_icons[class] or class_icons["_"]
-            local prefix = "<span font_family='icomoon' foreground='" .. i.color .. "'>" .. i.symbol .. "</span>"
+            local prefix = "<span font_family='Font Awesome 6 Pro Solid' foreground='"
+                .. i.color
+                .. "'>"
+                .. i.symbol
+                .. "</span>"
 
             -- Generate input for rofi
             -- Each line corresponds to 1 client
@@ -283,7 +287,7 @@ local function generate_dock_icon(c, bg, fg, symbol)
             awful.spawn.easy_async_with_shell(
                 'echo "'
                     .. rofi_input
-                    .. '" | rofi -format d -markup-rows -i -matching fuzzy -dmenu -p " Pick window:"',
+                    .. '" | rofi -theme ~/.config/rofi/nord/nord.rasi -format d -markup-rows -i -matching fuzzy -dmenu -p " Pick window:"',
                 function(out, _, __, exit_code)
                     -- If user did not cancel rofi
                     if exit_code == 0 then

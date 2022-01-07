@@ -1,14 +1,3 @@
---[[
-   ___       ___       ___       ___       ___       ___       ___
-  /\  \     /\__\     /\  \     /\  \     /\  \     /\__\     /\  \
- /::\  \   /:/\__\   /::\  \   /::\  \   /::\  \   /::L_L_   /::\  \
-/::\:\__\ /:/:/\__\ /::\:\__\ /\:\:\__\ /:/\:\__\ /:/L:\__\ /::\:\__\
-\/\::/  / \::/:/  / \:\:\/  / \:\:\/__/ \:\/:/  / \/_/:/  / \:\:\/  /
-  /:/  /   \::/  /   \:\/  /   \::/  /   \::/  /    /:/  /   \:\/  /
-  \/__/     \/__/     \/__/     \/__/     \/__/     \/__/     \/__/
-
--- >> The file that binds everything together.
---]]
 local themes = {
     "manta", -- 1 --
     "lovelace", -- 2 --
@@ -629,6 +618,7 @@ awful.rules.rules = {
             class = {
                 "Nemo",
                 "Thunar",
+                "Org.gnome.Nautilus",
             },
         },
         except_any = {
@@ -888,28 +878,16 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "underlords",
-                "lt-love",
-                "portal2_linux",
-                "deadcells",
-                "csgo_linux64",
-                "EtG.x86_64",
-                "factorio",
-                "dota2",
-                "Terraria.bin.x86",
-                "dontstarve_steam",
                 "Wine",
-                "trove.exe",
                 "wisdom-tree",
                 "Anki",
+                "teams",
             },
             instance = {
-                "love.exe",
-                "synthetik.exe",
-                "pathofexile_x64steam.exe",
                 "leagueclient.exe",
                 "glyphclientapp.exe",
                 "wisdom-tree",
+                "teams",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[2] },
@@ -921,12 +899,8 @@ awful.rules.rules = {
             class = {
                 "discord",
                 "TelegramDesktop",
-                "Signal",
                 "Slack",
-                "TeamSpeak 3",
                 "zoom",
-                "weechat",
-                "6cord",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[5] },

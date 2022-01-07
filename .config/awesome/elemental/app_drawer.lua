@@ -19,7 +19,7 @@ local function create_button(symbol, color, hover_color, cmd, key)
         markup = helpers.colorize_text(symbol, color),
         align = "center",
         valign = "center",
-        font = "Font Awesome 6 Pro Solid 50",
+        font = "Font Awesome 6 Pro Solid 40",
         forced_width = dpi(180),
         forced_height = dpi(200),
         widget = wibox.widget.textbox,

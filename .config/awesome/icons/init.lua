@@ -89,6 +89,7 @@ icons.text.by_class = {
     ["Gimp-2.10"] = { symbol = "", color = x.color3 },
     ["Inkscape"] = { symbol = "", color = x.color2 },
     ["Gpick"] = { symbol = "", color = x.color6 },
+    ["sensors"] = { symbol = "", color = x.color1 },
 
     -- Default
     ["_"] = { symbol = "", color = x.color7 .. "99" },
