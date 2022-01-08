@@ -73,7 +73,7 @@ local month = wibox.widget {
 }
 
 local function update_month()
-    month.markup = helpers.colorize_text(month.text:upper(), x.foreground .. "25")
+    month.markup = helpers.colorize_text(month.text, x.foreground .. "25")
 end
 
 update_month()

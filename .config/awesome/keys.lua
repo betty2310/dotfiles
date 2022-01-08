@@ -7,6 +7,8 @@ local decorations = require "decorations"
 local icons = require "icons"
 
 local helpers = require "helpers"
+local hotkeys_popup = require "awful.hotkeys_popup"
+require "awful.hotkeys_popup.keys"
 
 local keys = {}
 
@@ -86,6 +88,8 @@ keys.desktopbuttons = gears.table.join(
 
 -- {{{ Key bindings
 keys.globalkeys = gears.table.join(
+
+    awful.key({ altkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
     -- Focus client by direction (hjkl keys)
     awful.key({ superkey }, "j", function()
         awful.client.focus.bydirection "down"
@@ -446,10 +450,6 @@ keys.globalkeys = gears.table.join(
         app_drawer_show()
     end, { description = "App drawer", group = "custom" }),
 
-    -- Pomodoro timer
-    awful.key({ superkey }, ".", function()
-        awful.spawn.with_shell "pomodoro"
-    end, { description = "pomodoro", group = "launcher" }),
     -- Spawn file manager
     awful.key({ superkey }, "F2", apps.file_manager, { description = "file manager", group = "launcher" }),
     -- Spawn music client
@@ -458,10 +458,6 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "F4", function()
         awful.spawn "visualizer"
     end, { description = "cava", group = "launcher" }),
-    -- Spawn ncmpcpp in a terminal, with a special visualizer config
-    awful.key({ superkey, shiftkey }, "F4", function()
-        awful.spawn(user.terminal .. " -e 'ncmpcpp -c ~/.config/ncmpcpp/config_visualizer -s visualizer'")
-    end, { description = "ncmpcpp", group = "launcher" }),
     -- Network dialog: nmapplet rofi frontend
     awful.key({ superkey }, "F11", function()
         awful.spawn "networks-rofi"
@@ -474,18 +470,10 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "b", function()
         wibars_toggle()
     end, { description = "show or hide wibar(s)", group = "awesome" }),
-    -- Markdown input scratchpad (I for input)
-    -- For quickly typing markdown comments and pasting them in
-    -- the browser
-    -- awful.key({ superkey }, "i", apps.markdown_input, { description = "markdown scratchpad", group = "launcher" }),
-    -- Editor
-    awful.key({ superkey }, "e", apps.editor, { description = "editor", group = "launcher" }),
     -- Quick edit file
     awful.key({ superkey, shiftkey }, "e", function()
         awful.spawn.with_shell "rofi_edit"
     end, { description = "quick edit file", group = "launcher" }),
-    -- Rofi youtube search and playlist selector
-    awful.key({ superkey }, "y", apps.youtube, { description = "youtube search and play", group = "launcher" }),
     -- Spawn file manager
     awful.key({ superkey, shiftkey }, "f", apps.file_manager, { description = "file manager", group = "launcher" }),
     -- Process monitor

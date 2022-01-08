@@ -125,7 +125,6 @@ user = {
     coronavirus_country = "vietnam",
 }
 -- ===================================================================
-
 -- Jit
 --pcall(function() jit.on() end)
 
