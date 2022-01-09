@@ -24,6 +24,7 @@ return packer.startup(function()
         config = require "plugins.config.bufferline",
     }
     use { "folke/which-key.nvim" }
+    use { "petertriho/nvim-scrollbar", config = require "plugins.config.scrollbar" }
 
     -- Coding utilities
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = require "plugins.config.treesitter" }

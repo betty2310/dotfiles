@@ -8,10 +8,12 @@ format =  "on [$hostname](bold red) "
 trim_at = ".companyname.com"
 disabled = true
 
-
 [character]
-success_symbol = "[➜](bold cyan)"
-error_symbol = "[✗](bold red)"
+    error_symbol = "[](bold red)"
+    success_symbol = "[](bold green)"
+    vicmd_symbol = "[](bold yellow)"
+    format = "$symbol [|](bold bright-black) "
+
 
 
 [package]
@@ -52,15 +54,6 @@ symbol = "卑"
 
 [golang]
 symbol = "ﳑ "
-
-[directory]
-format = "[$read_only]($read_only_style)[$path]($style) "
-read_only = "  "
-read_only_style = "yellow"
-style = "bold green"
-truncation_length = 1
-truncation_symbol = "~/"
-home_symbol = "~"
 
 [custom.docker]
 command = "docker version -f '{{.Server.Version}}' 2>/dev/null"

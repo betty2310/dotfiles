@@ -83,6 +83,7 @@ icons.text.by_class = {
     ["Blueman-manager"] = { symbol = "", color = x.color6 },
     -- File managers
     ["Thunar"] = { symbol = "", color = x.color3 },
+    ["Org.gnome.Nautilus"] = { symbol = "", color = x.color3 },
     ["Nemo"] = { symbol = "", color = x.color3 },
     ["files"] = { symbol = "", color = x.color3 },
 

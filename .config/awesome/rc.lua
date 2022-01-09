@@ -66,7 +66,7 @@ user = {
     floating_terminal = "kitty -1",
     browser = "google-chrome-stable",
     --browser = "firefox",
-    file_manager = "thunar",
+    file_manager = "nautilus",
     editor = "kitty -1 --class editor -e nvim",
     email_client = "thunderbird",
     music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
@@ -168,6 +168,10 @@ local naughty = require "naughty"
 -- Load theme
 local theme_dir = os.getenv "HOME" .. "/.config/awesome/themes/" .. theme .. "/"
 beautiful.init(theme_dir .. "theme.lua")
+
+local bling = require "bling"
+
+bling.module.flash_focus.enable()
 
 -- Error handling
 -- ===================================================================
@@ -519,10 +523,10 @@ awful.rules.rules = {
     {
         rule_any = {
             type = {
-                "dialog",
+                -- "dialog",
             },
             role = {
-                "conversation",
+                -- "conversation",
             },
         },
         callback = function(c)
@@ -635,11 +639,11 @@ awful.rules.rules = {
         end,
     },
 
-    -- Keepass
+    -- Vscode
     {
-        rule_any = { class = { "KeePassXC" } },
+        rule_any = { class = { "Code" } },
         except_any = { name = { "KeePassXC-Browser Confirm Access" }, type = { "dialog" } },
-        properties = { floating = true, width = screen_width * 0.7, height = screen_height * 0.75 },
+        properties = { floating = true, width = screen_width * 0.6, height = screen_height * 0.85 },
     },
 
     -- Scratchpad
