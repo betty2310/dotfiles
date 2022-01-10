@@ -1,11 +1,13 @@
 # 🐧🐧🐧 Hmmmm
 
 ![1](assets/final.png)
+![2](assets/nvim.png)
+
 ### 🚧 Details
 
 ---
 
-* [bspwm](https://github.com/baskerville/bspwm) and [awesomeWM](https://github.com/awesomeWM/awesome): tiling window manager (now I'm use awesome)
+* [awesomeWM](https://github.com/awesomeWM/awesome): window manager 
 * [kitty](https://github.com/kovidgoyal/kitty): terminal emulator 
 * [fish](https://fishshell.com/): smart and user-friendly command line
 shell
@@ -13,7 +15,7 @@ shell
 * [polybar](https://github.com/polybar/polybar): status bar
 * [rofi](https://github.com/davatorium/rofi): Launch apps
 * [nitrogen](https://aur.archlinux.org/packages/nitrogen-git/): For background
-* [picom-jonaburg-git](https://github.com/jonaburg/picom): A lightweight compositor for X11
+* [picom](https://github.com/jonaburg/picom): A lightweight compositor for X11
 * [dunst](https://github.com/dunst-project/dunst): Lightweight and customizable notification daemon
 * [eww](https://github.com/elkowar/eww): ElKowars wacky widgets 
 
