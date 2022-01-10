@@ -7,6 +7,7 @@ return packer.startup(function()
 
     -- UI (Color, statusline, dashboard...)
     use { "rmehri01/onenord.nvim" }
+    -- use { "arcticicestudio/nord-vim" }
     use { "L3MON4D3/LuaSnip" }
     use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }
     use {

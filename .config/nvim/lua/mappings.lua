@@ -29,6 +29,7 @@ wk.register {
         b = { "<cmd>Telescope buffers<cr>", "[Telescope] Find buffers" },
         h = { "<cmd>Telescope help_tags<cr>", "[Telescope] Help tags" },
         m = { "<cmd>Telescope marks<cr>", "[Telescope] Marks" },
+        o = { "<cmd>Telescope oldfiles<cr>", "[Telescope] Old files" },
     },
 
     -- [Trouble.nvim]
