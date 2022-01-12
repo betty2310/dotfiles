@@ -223,7 +223,7 @@ ins_right {
         end
         return msg
     end,
-    icon = "",
+    icon = " ",
     color = { fg = colors.green, bg = colors.bg1, gui = "bold" },
 }
 

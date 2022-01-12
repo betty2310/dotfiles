@@ -21,16 +21,16 @@ scrolling:
 
 font:
   normal:
-    family: Liga SFMono Nerd Font
+    family: Hasklug Nerd Font
     style: Medium
   bold:
-    family: Liga SFMono Nerd Font
-    style: Medium
+    family: Hask Nerd Font
+    style: Bold
   italic:
-    family: Liga SFMono Nerd Font
+    family: Hask Nerd Font
     style: Italic
 
-  size: 12.0
+  size: 11.0
 
   offset:
     x: 1

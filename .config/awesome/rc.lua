@@ -726,6 +726,24 @@ awful.rules.rules = {
             height = screen_height * 0.50,
         },
     },
+    -- Microsoft Teams
+    {
+        rule_any = {
+            class = {
+                "teams",
+            },
+            instance = {
+                "teams",
+            },
+        },
+        properties = {
+            floating = true,
+            width = screen_width * 0.7,
+            height = screen_height * 0.8,
+            screen = 2,
+            tag = awful.screen.focused().tags[3],
+        },
+    },
 
     -- Image viewers
     {
@@ -884,13 +902,11 @@ awful.rules.rules = {
                 "Wine",
                 "wisdom-tree",
                 "Anki",
-                "teams",
             },
             instance = {
                 "leagueclient.exe",
                 "glyphclientapp.exe",
                 "wisdom-tree",
-                "teams",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[2] },
@@ -1149,3 +1165,5 @@ collectgarbage("setstepmul", 1000)
 --     end
 -- end)
 awful.spawn.with_shell "imwheel -kill"
+awful.spawn.with_shell "ulauncher &"
+awful.spawn.with_shell "copyq &"

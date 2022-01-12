@@ -1,9 +1,11 @@
 set fish_greeting ""
 
+# starship prompt
+starship init fish | source
+
 # aliases
 alias llt="exa --icons --git -a --tree -s type -I '.git|node_modules|bower_components|build'"
 alias g git
-alias vim="nvim"
 alias fetch="rxfetch"
 alias nv "nvim"
 alias cat="bat"
@@ -59,8 +61,5 @@ set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --
 # random cool image
 # colorscript -e pacman
 
-# starship prompt
-#starship init fish | source
-#alias rr="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 
 
