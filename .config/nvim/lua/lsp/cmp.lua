@@ -1,5 +1,7 @@
 local ok, cmp = pcall(require, "cmp")
 
+require("luasnip.loaders.from_vscode").lazy_load()
+
 if ok then
     local icons = {
         Text = "",

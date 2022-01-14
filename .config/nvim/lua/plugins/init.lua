@@ -9,6 +9,8 @@ return packer.startup(function()
     use { "rmehri01/onenord.nvim" }
     -- use { "arcticicestudio/nord-vim" }
     use { "L3MON4D3/LuaSnip" }
+    use { "rafamadriz/friendly-snippets" }
+
     use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }
     use {
         "nvim-lualine/lualine.nvim",
@@ -49,6 +51,7 @@ return packer.startup(function()
     use { "windwp/nvim-autopairs", config = require "plugins.config.autopairs" }
     use { "norcalli/nvim-colorizer.lua" }
     use { "karb94/neoscroll.nvim", config = require "plugins.config.neoscroll" }
+    use { "kevinhwang91/nvim-hlslens", config = require "plugins.config.hlslens" }
     use { "liuchengxu/vista.vim" }
     use { "simrat39/symbols-outline.nvim" }
     use {

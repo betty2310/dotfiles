@@ -295,14 +295,14 @@ awful.screen.connect_for_each_screen(function(s)
     local layouts = {
         l.spiral.dwindle,
         l.spiral.dwindle,
-        l.tile,
         l.max,
         l.max,
         l.max,
         l.max,
         l.max,
         l.max,
-        l.tile,
+        l.max,
+        l.max,
         l.max,
     }
 
@@ -603,10 +603,10 @@ awful.rules.rules = {
         properties = { floating = true, width = screen_width * 0.45, height = screen_height * 0.8 },
     },
     -- Zathura
-    {
-        rule_any = { class = { "Zathura" } },
-        properties = { floating = true, width = screen_width * 0.5, height = screen_height * 0.9 },
-    },
+    -- {
+    --     rule_any = { class = { "Zathura" } },
+    --     properties = { floating = true, width = screen_width * 0.5, height = screen_height * 0.9 },
+    -- },
 
     -- Galculator
     {
@@ -1158,12 +1158,14 @@ end)
 
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
+
 -- focus by mouse hover
--- client.connect_signal("mouse::enter", function(c)
---     if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier and awful.client.focus.filter(c) then
---         client.focus = c
---     end
--- end)
+client.connect_signal("mouse::enter", function(c)
+    if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier and awful.client.focus.filter(c) then
+        client.focus = c
+    end
+end)
+
 awful.spawn.with_shell "imwheel -kill"
 awful.spawn.with_shell "ulauncher &"
 awful.spawn.with_shell "copyq &"
