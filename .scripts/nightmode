@@ -1,0 +1,10 @@
+#!/bin/fish
+
+if pgrep redshift
+  pkill redshift
+else
+  echo ON
+  redshift -l 0:0 -t 5500:4500 -r &>/dev/null &
+end
+
+

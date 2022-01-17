@@ -7,7 +7,6 @@ return packer.startup(function()
 
     -- UI (Color, statusline, dashboard...)
     use { "rmehri01/onenord.nvim" }
-    -- use { "arcticicestudio/nord-vim" }
     use { "L3MON4D3/LuaSnip" }
     use { "rafamadriz/friendly-snippets" }
 

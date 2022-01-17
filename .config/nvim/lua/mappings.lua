@@ -16,6 +16,10 @@ wk.register {
     ["<leader>mv"] = { "<cmd>bdelete<cr>", "Close current buffer" },
     -- [run]
     ["<leader>tg"] = { "<cmd>ToggleTerm direction=float<cr>", "[toggleterm] Open floating terminal" },
+    ["<leader>tig"] = {
+        '<cmd>TermExec cmd="tig" go_back=0 direction=float<cr>',
+        "[toggleterm] Call floating tig - GIT TUI",
+    },
     ["<leader>g"] = { '<cmd>TermExec cmd="g++ -Wall % && ./a.out" go_back=0 size=13<cr>', "[C++] Compile an run!!" },
     -- [nvim-tree]
     ["<c-n>"] = { "<cmd>NvimTreeToggle<cr>", "[nvimtree] Toggle" },

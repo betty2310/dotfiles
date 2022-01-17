@@ -13,7 +13,7 @@ if ok then
         },
         rainbow = {
             colors = {
-                colors.magenta,
+                colors.cyan,
                 colors.blue,
                 colors.green,
                 colors.yellow,
