@@ -13,13 +13,10 @@ if ok then
         },
         rainbow = {
             colors = {
-                colors.cyan,
-                colors.blue,
-                colors.green,
-                colors.yellow,
-                colors.cyan,
-                colors.green,
-                colors.blue,
+                "#81A1C1",
+                "#88C0D0",
+                "#8FBCBB",
+                "#A3BE8C",
             },
             enable = true,
             extended_mode = true,

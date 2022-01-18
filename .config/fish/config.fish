@@ -35,7 +35,7 @@ set -U fish_color_error red
 set -U fish_color_comment yellow
 set -U fish_color_quote yellow
 set -gx EDITOR nvim
-set -x TERM xterm-256color
+#set -x TERM xterm-256color
 
 # PATH
 set -gx PATH bin $PATH

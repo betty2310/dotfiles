@@ -26,9 +26,9 @@ onenord.setup {
         WhichKeyFloat = { bg = colors.bg2 },
     },
     custom_colors = {
-        purple = "#88C0D0",
-        yellow = "#88C0D0",
-        orange = "#B48EAD",
-        red = "#EBCB8B",
+        -- purple = "#88C0D0",
+        -- yellow = "#88C0D0",
+        -- orange = "#B48EAD",
+        -- red = "#EBCB8B",
     },
 }
