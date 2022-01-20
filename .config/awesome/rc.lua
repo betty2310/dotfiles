@@ -62,14 +62,14 @@ local exit_screen_theme = exit_screen_themes[2]
 user = {
     -- >> Default applications <<
     -- Check apps.lua for more
-    terminal = "kitty -1",
-    floating_terminal = "kitty -1",
+    terminal = "st",
+    floating_terminal = "st",
     browser = "google-chrome-stable",
     --browser = "firefox",
     file_manager = "nautilus",
-    editor = "kitty -1 --class editor -e nvim",
+    editor = "st -c editor -e nvim",
     email_client = "thunderbird",
-    music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
+    music_client = "st -c music -e ncmpcpp",
 
     -- >> Web Search <<
     -- web_search_cmd = "xdg-open https://duckduckgo.com/?q=",
@@ -566,9 +566,10 @@ awful.rules.rules = {
                 "st-256color",
                 "st",
                 "URxvt",
+                "float",
             },
         },
-        properties = { width = screen_width * 0.45, height = screen_height * 0.5 },
+        properties = { width = screen_width * 0.45, height = screen_height * 0.5, titlebars_enabled = false },
     },
 
     -- Visualizer
@@ -645,7 +646,11 @@ awful.rules.rules = {
         except_any = { name = { "KeePassXC-Browser Confirm Access" }, type = { "dialog" } },
         properties = { floating = true, width = screen_width * 0.6, height = screen_height * 0.85 },
     },
-
+    -- floating_terminal
+    {
+        rule_any = { class = { "float" } },
+        properties = { floating = true, width = screen_width * 0.45, height = screen_height * 0.5 },
+    },
     -- Scratchpad
     {
         rule_any = {

@@ -23,7 +23,7 @@ apps.discord = function()
     helpers.run_or_raise({ class = "discord" }, false, "discord")
 end
 apps.weechat = function()
-    helpers.run_or_raise({ instance = "weechat" }, true, user.terminal .. " --class weechat -e weechat")
+    helpers.run_or_raise({ instance = "weechat" }, true, user.terminal .. " -c weechat -e weechat")
 end
 apps.mail = function()
     helpers.run_or_raise({ instance = "email" }, false, user.email_client, { switchtotag = true })
@@ -87,7 +87,7 @@ apps.volume = function()
     helpers.run_or_raise({ class = "Pavucontrol" }, true, "pavucontrol")
 end
 apps.torrent = function()
-    helpers.run_or_raise({ instance = "torrent" }, true, user.terminal .. " --class torrent -e transmission-remote-cli")
+    helpers.run_or_raise({ instance = "torrent" }, true, user.terminal .. " -c torrent -e transmission-remote-cli")
 end
 
 apps.editor = function()
@@ -138,7 +138,7 @@ apps.music = function()
 end
 
 apps.process_monitor = function()
-    helpers.run_or_raise({ instance = "htop" }, false, user.terminal .. " --class htop -e htop", { switchtotag = true })
+    helpers.run_or_raise({ instance = "htop" }, false, user.terminal .. " -c htop -e htop", { switchtotag = true })
 end
 
 apps.process_monitor_gui = function()
@@ -149,7 +149,7 @@ apps.temperature_monitor = function()
     helpers.run_or_raise(
         { class = "sensors" },
         false,
-        user.terminal .. " --class sensors -e watch sensors",
+        user.terminal .. " -c sensors -e watch sensors",
         { switchtotag = true, tag = mouse.screen.tags[5] }
     )
 end
@@ -158,7 +158,7 @@ apps.battery_monitor = function()
     helpers.run_or_raise(
         { class = "battop" },
         false,
-        user.terminal .. " --class battop -e battop",
+        user.terminal .. " -c battop -e battop",
         { switchtotag = true, tag = mouse.screen.tags[5] }
     )
 end
@@ -166,12 +166,12 @@ end
 apps.markdown_input = function()
     helpers.scratchpad(
         { instance = "markdown_input" },
-        user.terminal .. " --class markdown_input -e nvim -c 'startinsert' /tmp/scratchpad.md",
+        user.terminal .. " -c markdown_input -e nvim -c 'startinsert' /tmp/scratchpad.md",
         nil
     )
 end
 apps.tree = function()
-    helpers.scratchpad({ instance = "tree" }, user.terminal .. " --class wisdom-tree -e wisdom-tree", nil)
+    helpers.scratchpad({ instance = "tree" }, user.terminal .. " -c wisdom-tree -e wisdom-tree", nil)
 end
 
 -- Scratchpad terminal with tmux (see bin/scratchpad)

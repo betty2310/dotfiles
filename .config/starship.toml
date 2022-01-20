@@ -1,3 +1,6 @@
+add_newline = true
+line_break.disabled = true
+
 [directory]
 format = "[$read_only]($read_only_style)[ ](blue)[$path]($style) "
 truncation_length = 2
@@ -7,7 +10,10 @@ truncation_symbol = "/"
 read_only = " "
 read_only_style = "red"
 home_symbol =""
-
+[character]
+error_symbol = "[ ](red)"
+success_symbol = "[ ](green)"
+vicmd_symbol = "[ ](yellow)"
 
 [package]
 symbol = " "

@@ -57,7 +57,7 @@ theme.border_radius = dpi(6)
 theme.titlebars_enabled = true
 theme.titlebar_size = dpi(35)
 theme.titlebar_title_enabled = false
-theme.titlebar_font = "sans bold 9"
+theme.titlebar_font = "JetBrains Mono Nerd Font 10"
 -- Window title alignment: left, right, center
 theme.titlebar_title_align = "center"
 -- Titlebar position: top, bottom, left, right
@@ -65,7 +65,7 @@ theme.titlebar_position = "top"
 theme.titlebar_bg = x.background
 -- theme.titlebar_bg_focus = x.color12
 -- theme.titlebar_bg_normal = x.color8
-theme.titlebar_fg_focus = x.background
+theme.titlebar_fg_focus = x.foreground
 theme.titlebar_fg_normal = x.color8
 --theme.titlebar_fg = x.color7
 
@@ -420,7 +420,7 @@ theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme = "/usr/share/icons/Numix"
+theme.icon_theme = "/usr/share/icons/Papirus-Dark-Maia"
 
 return theme
 

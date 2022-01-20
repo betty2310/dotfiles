@@ -26,6 +26,27 @@ local mode_color = {
     ["!"] = colors.red,
     t = colors.red,
 }
+local alias = {
+    n = "NORMAL גּ ",
+    i = "INSERT הּ ",
+    c = "COMMAND בּ ",
+    V = "VISUAL  ",
+    [""] = "VISUAL  ",
+    v = "VISUAL  ",
+    R = "REPLACE הּ ",
+    no = "no",
+    s = "SELECT הּ ",
+    [""] = " ",
+    ic = "ic",
+    Rv = "Rv",
+    cv = "cv",
+    ce = "ce",
+    r = "R",
+    rm = "RM",
+    ["r?"] = "r?",
+    ["!"] = "!",
+    t = "TERMINAL  ",
+}
 
 local conditions = {
     buffer_not_empty = function()
@@ -116,6 +137,7 @@ ins_left {
     color = { fg = colors.test, bg = colors.bg1 },
     padding = 0,
 }
+
 ins_left {
     -- mode component
     function()
@@ -133,13 +155,6 @@ ins_left {
     padding = 0,
 }
 
--- ins_left {
---     "filetype",
---     colored = true,
---     icon_only = true,
---     color = { fg = colors.bg1, bg = colors.bg1 },
--- }
---
 ins_left {
     "filename",
     cond = conditions.buffer_not_empty or conditions.hide_in_width,
@@ -227,6 +242,13 @@ ins_right {
     color = { fg = colors.green, bg = colors.bg1, gui = "bold" },
 }
 
+ins_right {
+    "filetype",
+    colored = false,
+    icon_only = false,
+    color = { fg = colors.yellow, bg = colors.bg1 },
+}
+
 -- Add components to right sections
 ins_right {
     "o:encoding",
@@ -249,14 +271,12 @@ ins_right {
         return powerline.left
     end,
     color = { fg = colors.test, bg = colors.bg1 },
-    cond = conditions.check_git_workspace,
     padding = 0,
 }
 
 ins_right {
     "branch",
     icon = "",
-    cond = conditions.check_git_workspace,
     color = { fg = colors.magenta, bg = colors.test, gui = "bold" },
 }
 

@@ -16,6 +16,14 @@ return packer.startup(function()
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
         config = require "plugins.config.lualine",
     }
+    -- use {
+    --     "glepnir/galaxyline.nvim",
+    --     branch = "main",
+    --     -- your statusline
+    --     config = require "plugins.config.galaxyline",
+    --     -- some optional icons
+    --     requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    -- }
     use {
         "goolord/alpha-nvim",
         config = require "plugins.config.alpha",

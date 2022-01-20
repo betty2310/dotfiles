@@ -1,8 +1,8 @@
-local awful = require("awful")
-local beautiful = require("beautiful")
-local helpers = require("helpers")
-local gears = require("gears")
-local wibox = require("wibox")
+local awful = require "awful"
+local beautiful = require "beautiful"
+local helpers = require "helpers"
+local gears = require "gears"
+local wibox = require "wibox"
 
 -- Disable popup tooltip on titlebar button hover
 awful.titlebar.enable_tooltip = false
@@ -39,14 +39,14 @@ end
 function decorations.enable_rounding()
     -- Apply rounded corners to clients if needed
     if beautiful.border_radius and beautiful.border_radius > 0 then
-        client.connect_signal("manage", function (c, startup)
+        client.connect_signal("manage", function(c, startup)
             if not c.fullscreen and not c.maximized then
                 c.shape = helpers.rrect(beautiful.border_radius)
             end
         end)
 
         -- Fullscreen and maximized clients should not have rounded corners
-        local function no_round_corners (c)
+        local function no_round_corners(c)
             if c.fullscreen or c.maximized then
                 c.shape = gears.shape.rectangle
             else
@@ -64,17 +64,50 @@ function decorations.enable_rounding()
 end
 
 local button_commands = {
-    ['close'] = { fun = function(c) c:kill() end, track_property = nil } ,
-    ['maximize'] = { fun = function(c) c.maximized = not c.maximized; c:raise() end, track_property = "maximized" },
-    ['minimize'] = { fun = function(c) c.minimized = true end },
-    ['sticky'] = { fun = function(c) c.sticky = not c.sticky; c:raise() end, track_property = "sticky" },
-    ['ontop'] = { fun = function(c) c.ontop = not c.ontop; c:raise() end, track_property = "ontop" },
-    ['floating'] = { fun = function(c) c.floating = not c.floating; c:raise() end, track_property = "floating" },
+    ["close"] = {
+        fun = function(c)
+            c:kill()
+        end,
+        track_property = nil,
+    },
+    ["maximize"] = {
+        fun = function(c)
+            c.maximized = not c.maximized
+            c:raise()
+        end,
+        track_property = "maximized",
+    },
+    ["minimize"] = {
+        fun = function(c)
+            c.minimized = true
+        end,
+    },
+    ["sticky"] = {
+        fun = function(c)
+            c.sticky = not c.sticky
+            c:raise()
+        end,
+        track_property = "sticky",
+    },
+    ["ontop"] = {
+        fun = function(c)
+            c.ontop = not c.ontop
+            c:raise()
+        end,
+        track_property = "ontop",
+    },
+    ["floating"] = {
+        fun = function(c)
+            c.floating = not c.floating
+            c:raise()
+        end,
+        track_property = "floating",
+    },
 }
 
 -- >> Helper functions for generating simple window buttons
 -- Generates a button using an AwesomeWM widget
-decorations.button = function (c, shape, color, unfocused_color, hover_color, size, margin, cmd)
+decorations.button = function(c, shape, color, unfocused_color, hover_color, size, margin, cmd)
     local button = wibox.widget {
         forced_height = size,
         forced_width = size,
@@ -83,7 +116,7 @@ decorations.button = function (c, shape, color, unfocused_color, hover_color, si
         -- border_color = unfocused_color,
         -- border_width = dpi(2),
         shape = shape,
-        widget = wibox.container.background()
+        widget = wibox.container.background(),
     }
 
     -- Instead of adding spacing between the buttons, we add margins
@@ -94,22 +127,20 @@ decorations.button = function (c, shape, color, unfocused_color, hover_color, si
         margins = margin,
         widget = wibox.container.margin(),
     }
-    button_widget:buttons(gears.table.join(
-        awful.button({ }, 1, function ()
-            button_commands[cmd].fun(c)
-        end)
-    ))
+    button_widget:buttons(gears.table.join(awful.button({}, 1, function()
+        button_commands[cmd].fun(c)
+    end)))
 
     local p = button_commands[cmd].track_property
     -- Track client property if needed
     if p then
-        c:connect_signal("property::"..p, function ()
+        c:connect_signal("property::" .. p, function()
             button.bg = c[p] and color .. "40" or color
         end)
-        c:connect_signal("focus", function ()
+        c:connect_signal("focus", function()
             button.bg = c[p] and color .. "40" or color
         end)
-        button_widget:connect_signal("mouse::leave", function ()
+        button_widget:connect_signal("mouse::leave", function()
             if c == client.focus then
                 button.bg = c[p] and color .. "40" or color
             else
@@ -117,29 +148,83 @@ decorations.button = function (c, shape, color, unfocused_color, hover_color, si
             end
         end)
     else
-        button_widget:connect_signal("mouse::leave", function ()
+        button_widget:connect_signal("mouse::leave", function()
             if c == client.focus then
                 button.bg = color
             else
                 button.bg = unfocused_color
             end
         end)
-        c:connect_signal("focus", function ()
+        c:connect_signal("focus", function()
             button.bg = color
         end)
     end
-    button_widget:connect_signal("mouse::enter", function ()
+    button_widget:connect_signal("mouse::enter", function()
         button.bg = hover_color
     end)
-    c:connect_signal("unfocus", function ()
+    c:connect_signal("unfocus", function()
         button.bg = unfocused_color
     end)
 
     return button_widget
 end
+-- Generates a button from a text symbol
+decorations.text = function(c, symbol, font, color, unfocused_color, hover_color, size, margin, cmd)
+    local button = wibox.widget {
+        align = "center",
+        valign = "center",
+        font = font,
+        -- Initialize with the "unfocused" color
+        markup = helpers.colorize_text(symbol, unfocused_color),
+        -- Increase the width of the textbox in order to make it easier to click. It does not affect the size of the symbol itself.
+        forced_width = dpi(100),
+        widget = wibox.widget.textbox,
+    }
+
+    button:buttons(gears.table.join(awful.button({}, 1, function()
+        button_commands[cmd].fun(c)
+    end)))
+
+    local p = button_commands[cmd].track_property
+    -- Track client property if needed
+    if p then
+        c:connect_signal("property::" .. p, function()
+            button.markup = helpers.colorize_text(symbol, c[p] and color .. "40" or color)
+        end)
+        c:connect_signal("focus", function()
+            button.markup = helpers.colorize_text(symbol, c[p] and color .. "40" or color)
+        end)
+        button:connect_signal("mouse::leave", function()
+            if c == client.focus then
+                button.markup = helpers.colorize_text(symbol, c[p] and color .. "40" or color)
+            else
+                button.markup = helpers.colorize_text(symbol, unfocused_color)
+            end
+        end)
+    else
+        button:connect_signal("mouse::leave", function()
+            if c == client.focus then
+                button.markup = helpers.colorize_text(symbol, color)
+            else
+                button.markup = helpers.colorize_text(symbol, unfocused_color)
+            end
+        end)
+        c:connect_signal("focus", function()
+            button.markup = helpers.colorize_text(symbol, color)
+        end)
+    end
+    button:connect_signal("mouse::enter", function()
+        button.markup = helpers.colorize_text(symbol, hover_color)
+    end)
+    c:connect_signal("unfocus", function()
+        button.markup = helpers.colorize_text(symbol, unfocused_color)
+    end)
+
+    return button
+end
 
 -- Generates a button from a text symbol
-decorations.text_button = function (c, symbol, font, color, unfocused_color, hover_color, size, margin, cmd)
+decorations.text_button = function(c, symbol, font, color, unfocused_color, hover_color, size, margin, cmd)
     local button = wibox.widget {
         align = "center",
         valign = "center",
@@ -148,25 +233,23 @@ decorations.text_button = function (c, symbol, font, color, unfocused_color, hov
         markup = helpers.colorize_text(symbol, unfocused_color),
         -- Increase the width of the textbox in order to make it easier to click. It does not affect the size of the symbol itself.
         forced_width = size + margin * 2,
-        widget = wibox.widget.textbox
+        widget = wibox.widget.textbox,
     }
 
-    button:buttons(gears.table.join(
-        awful.button({ }, 1, function ()
-            button_commands[cmd].fun(c)
-        end)
-    ))
+    button:buttons(gears.table.join(awful.button({}, 1, function()
+        button_commands[cmd].fun(c)
+    end)))
 
     local p = button_commands[cmd].track_property
     -- Track client property if needed
     if p then
-        c:connect_signal("property::"..p, function ()
+        c:connect_signal("property::" .. p, function()
             button.markup = helpers.colorize_text(symbol, c[p] and color .. "40" or color)
         end)
-        c:connect_signal("focus", function ()
+        c:connect_signal("focus", function()
             button.markup = helpers.colorize_text(symbol, c[p] and color .. "40" or color)
         end)
-        button:connect_signal("mouse::leave", function ()
+        button:connect_signal("mouse::leave", function()
             if c == client.focus then
                 button.markup = helpers.colorize_text(symbol, c[p] and color .. "40" or color)
             else
@@ -174,21 +257,21 @@ decorations.text_button = function (c, symbol, font, color, unfocused_color, hov
             end
         end)
     else
-        button:connect_signal("mouse::leave", function ()
+        button:connect_signal("mouse::leave", function()
             if c == client.focus then
                 button.markup = helpers.colorize_text(symbol, color)
             else
                 button.markup = helpers.colorize_text(symbol, unfocused_color)
             end
         end)
-        c:connect_signal("focus", function ()
+        c:connect_signal("focus", function()
             button.markup = helpers.colorize_text(symbol, color)
         end)
     end
-    button:connect_signal("mouse::enter", function ()
+    button:connect_signal("mouse::enter", function()
         button.markup = helpers.colorize_text(symbol, hover_color)
     end)
-    c:connect_signal("unfocus", function ()
+    c:connect_signal("unfocus", function()
         button.markup = helpers.colorize_text(symbol, unfocused_color)
     end)
 
@@ -199,7 +282,7 @@ end
 function decorations.init(theme_name)
     require("decorations.themes." .. theme_name)
     -- Custom decorations for specific clients
-    require("decorations.mpd")
+    require "decorations.mpd"
 end
 
 return decorations

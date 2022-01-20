@@ -27,8 +27,9 @@ icons.text.by_class = {
     ["Alacritty"] = { symbol = "", color = x.color5 },
     ["Termite"] = { symbol = "", color = x.color5 },
     ["URxvt"] = { symbol = "", color = x.color5 },
-    ["st"] = { symbol = "", color = x.color5 },
-    ["st-256color"] = { symbol = "", color = x.color5 },
+    ["St"] = { symbol = "", color = x.color5 },
+    ["St-256color"] = { symbol = "", color = x.color5 },
+    ["float"] = { symbol = "", color = x.color5 },
 
     -- Image viewers
     ["feh"] = { symbol = "", color = x.color6 },

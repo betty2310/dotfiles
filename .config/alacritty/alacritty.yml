@@ -21,20 +21,20 @@ scrolling:
 
 font:
   normal:
-    family: Hasklug Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Medium
   bold:
-    family: Hask Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Bold
   italic:
-    family: Hask Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Italic
 
-  size: 11.0
+  size: 10.0
 
   offset:
-    x: 1
-    y: 1
+    x: 0
+    y: 0
 
   glyph_offset:
     x: 0
