@@ -604,10 +604,10 @@ awful.rules.rules = {
         properties = { floating = true, width = screen_width * 0.45, height = screen_height * 0.8 },
     },
     -- Zathura
-    -- {
-    --     rule_any = { class = { "Zathura" } },
-    --     properties = { floating = true, width = screen_width * 0.5, height = screen_height * 0.9 },
-    -- },
+    {
+        rule_any = { class = { "Zathura" } },
+        properties = { floating = true, width = screen_width * 0.5, height = screen_height * 0.9 },
+    },
 
     -- Galculator
     {
@@ -731,6 +731,19 @@ awful.rules.rules = {
             height = screen_height * 0.50,
         },
     },
+    -- Microsoft Edge
+    {
+        rule_any = {
+            class = {
+                "Microsoft-edge",
+            },
+        },
+        properties = {
+            screen = 2,
+            tag = awful.screen.focused().tags[2],
+        },
+    },
+
     -- Microsoft Teams
     {
         rule_any = {

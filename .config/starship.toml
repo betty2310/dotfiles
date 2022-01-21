@@ -4,12 +4,12 @@ line_break.disabled = true
 [directory]
 format = "[$read_only]($read_only_style)[ ](blue)[$path]($style) "
 truncation_length = 2
-truncate_to_repo = true # truncates directory to root folder if in github repo
+truncate_to_repo = true                                             # truncates directory to root folder if in github repo
 style = "#4C566A"
 truncation_symbol = "/"
 read_only = " "
 read_only_style = "red"
-home_symbol =""
+home_symbol = ""
 [character]
 error_symbol = "[ ](red)"
 success_symbol = "[ ](green)"
@@ -28,9 +28,9 @@ symbol = " "
 format = "via [ $version](bold yellow) "
 
 [git_branch]
-symbol= " "
+symbol = " "
 format = "on [$symbol$branch]($style) "
-style	= "bold green"
+style = "bold green"
 
 [cmake]
 format = "via [卑$version](bold #B48EAD) "
@@ -44,3 +44,13 @@ files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
 style = "blue bold"
 symbol = " v"
 format = "via [$symbol$output]($style) "
+
+[git_status]
+style = "bold red"
+ahead = '[  ](bold yellow)'
+behind = '[  ](bold yellow)'
+untracked = '[ ? ](bold yellow)'
+modified = '[ ! ](bold red)'
+staged = '[ + ](bold green)'
+renamed = '[ » ](white)'
+deleted = '[  ](bold red)'

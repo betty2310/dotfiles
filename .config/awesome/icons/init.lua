@@ -74,6 +74,8 @@ icons.text.by_class = {
     ["Godot"] = { symbol = "", color = x.color4 },
     ["Spotify"] = { symbol = "", color = x.color2 },
     ["Code"] = { symbol = "", color = x.color4 },
+    ["Microsoft-edge"] = { symbol = "", color = x.color9 },
+    ["pdf"] = { symbol = "", color = x.color9 },
     ["Microsoft Teams - Preview"] = { symbol = "", color = x.color1 },
     ["Font-manager"] = { symbol = "", color = x.color9 },
     ["Solaar"] = { symbol = "", color = x.color9 },

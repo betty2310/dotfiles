@@ -51,6 +51,7 @@ dock_pinned_apps = {
     { class = "scratchpad", launcher = apps.scratchpad },
     { class = "Code", launcher = apps.code },
     { class = "wisdom-tree", launcher = apps.tree },
+    { class = "Microsoft-edge", launcher = apps.pdf },
 }
 
 ----------------------------------------------------------------------------

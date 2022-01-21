@@ -12,11 +12,15 @@ local apps = {}
 apps.browser = function()
     awful.spawn(user.browser, { switchtotag = true })
 end
+
 apps.file_manager = function()
     awful.spawn(user.file_manager, { floating = true })
 end
 apps.telegram = function()
     awful.spawn.with_shell "google-chrome-stable 'https://chat.zalo.me/'"
+end
+apps.pdf = function()
+    awful.spawn.with_shell "microsoft-edge-stable"
 end
 apps.discord = function()
     -- Run or raise Discord app

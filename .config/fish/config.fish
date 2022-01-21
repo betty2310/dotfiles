@@ -7,7 +7,7 @@ starship init fish | source
 alias llt="exa --icons --git -a --tree -s type -I '.git|node_modules|bower_components|build'"
 alias g git
 alias fetch="rxfetch"
-alias nv "nvim"
+alias vi "nvim"
 alias cat="bat"
 alias ls="logo-ls -XD"
 alias ll="logo-ls -XDlh"
@@ -53,6 +53,8 @@ set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
 set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --theme=ansi" --layout=reverse --height=50% --info=inline --border --margin=1 --padding=1'
+
+alias yo="git add -A && git commit -m (curl -s 'whatthecommit.com/index.txt')"
 
 #auto run tmux
 #if status is-interactive
