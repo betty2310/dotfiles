@@ -33,7 +33,18 @@ return packer.startup(function()
         requires = { "kyazdani42/nvim-web-devicons" },
         config = require "plugins.config.bufferline",
     }
-    use { "folke/which-key.nvim" }
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup {
+                icons = {
+                    breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
+                    separator = " ", -- symbol used between a key and it's label
+                    group = "+", -- symbol prepended to a group
+                },
+            }
+        end,
+    }
     use { "petertriho/nvim-scrollbar", config = require "plugins.config.scrollbar" }
 
     -- Coding utilities
@@ -112,5 +123,11 @@ return packer.startup(function()
             "nvim-lua/plenary.nvim",
         },
         config = require "plugins.config.gitsigns",
+    }
+    -- test case
+    use {
+        "xeluxee/competitest.nvim",
+        requires = "MunifTanjim/nui.nvim",
+        config = require "plugins.config.competitest",
     }
 end)

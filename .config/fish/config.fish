@@ -8,6 +8,7 @@ alias llt="exa --icons --git -a --tree -s type -I '.git|node_modules|bower_compo
 alias g git
 alias fetch="rxfetch"
 alias vi "nvim"
+alias nv "nvim"
 alias cat="bat"
 alias ls="logo-ls -XD"
 alias ll="logo-ls -XDlh"

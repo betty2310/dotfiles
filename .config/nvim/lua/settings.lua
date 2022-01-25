@@ -52,4 +52,9 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=1
 highlight cursorLineNr guifg=#EBCb8B
+hi CompetiTestRunning cterm=bold     gui=bold
+hi CompetiTestDone    cterm=none     gui=none
+hi CompetiTestCorrect ctermfg=green  guifg=#A3BE8C
+hi CompetiTestWarning ctermfg=yellow guifg=#D08770
+hi CompetiTestWrong   ctermfg=red    guifg=#BF616A
 ]]

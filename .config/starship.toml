@@ -1,12 +1,12 @@
 add_newline = true
-line_break.disabled = true
+line_break.disabled = false
 
 [directory]
 format = "[$read_only]($read_only_style)[ ](blue)[$path]($style) "
-truncation_length = 2
+truncation_length = 5
 truncate_to_repo = true                                             # truncates directory to root folder if in github repo
 style = "#4C566A"
-truncation_symbol = "/"
+truncation_symbol = "../"
 read_only = " "
 read_only_style = "red"
 home_symbol = ""
@@ -19,7 +19,7 @@ vicmd_symbol = "[ ](yellow)"
 symbol = " "
 
 [nodejs]
-symbol = " "
+format = "via [ $version](bold yellow) "
 
 [python]
 symbol = " "
@@ -28,7 +28,7 @@ symbol = " "
 format = "via [ $version](bold yellow) "
 
 [git_branch]
-symbol = " "
+symbol = " "
 format = "on [$symbol$branch]($style) "
 style = "bold green"
 
@@ -47,10 +47,13 @@ format = "via [$symbol$output]($style) "
 
 [git_status]
 style = "bold red"
-ahead = '[  ](bold yellow)'
-behind = '[  ](bold yellow)'
-untracked = '[ ? ](bold yellow)'
-modified = '[ ! ](bold red)'
-staged = '[ + ](bold green)'
-renamed = '[ » ](white)'
-deleted = '[  ](bold red)'
+ahead = '[  $count](bold green)'
+behind = '[  $count](bold green)'
+untracked = '[  $count](bold yellow)'
+modified = '[  $count](bold #D08770)'
+staged = '[  $count](bold green)'
+renamed = '[  $count](bold white)'
+deleted = '[ $count](bold red)'
+conflicted = '[ﮗ $count](bold cyan)'
+diverged = '[↕ ${ahead_count}⇣${behind_count}](bold cyan)'
+stashed = '[ﰩ $count](bold yellow)'

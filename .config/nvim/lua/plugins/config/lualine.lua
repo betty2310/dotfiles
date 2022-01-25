@@ -26,27 +26,6 @@ local mode_color = {
     ["!"] = colors.red,
     t = colors.red,
 }
-local alias = {
-    n = "NORMAL גּ ",
-    i = "INSERT הּ ",
-    c = "COMMAND בּ ",
-    V = "VISUAL  ",
-    [""] = "VISUAL  ",
-    v = "VISUAL  ",
-    R = "REPLACE הּ ",
-    no = "no",
-    s = "SELECT הּ ",
-    [""] = " ",
-    ic = "ic",
-    Rv = "Rv",
-    cv = "cv",
-    ce = "ce",
-    r = "R",
-    rm = "RM",
-    ["r?"] = "r?",
-    ["!"] = "!",
-    t = "TERMINAL  ",
-}
 
 local conditions = {
     buffer_not_empty = function()
@@ -127,7 +106,7 @@ ins_left {
     end,
     icons_enabled = true,
     color = "LualineViMode",
-    padding = { right = 1, left = 1 },
+    padding = { right = 2, left = 1 },
 }
 
 ins_left {

@@ -628,7 +628,7 @@ awful.rules.rules = {
         except_any = {
             type = { "dialog" },
         },
-        properties = { floating = true, width = screen_width * 0.45, height = screen_height * 0.55 },
+        properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.60 },
     },
 
     -- Screenruler
