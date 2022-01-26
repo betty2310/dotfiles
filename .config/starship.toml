@@ -10,10 +10,11 @@ truncation_symbol = "../"
 read_only = " "
 read_only_style = "red"
 home_symbol = ""
+
 [character]
-error_symbol = "[ ](red)"
-success_symbol = "[ ](green)"
-vicmd_symbol = "[ ](yellow)"
+error_symbol = "[ ](red)"
+success_symbol = "[ ](green)"
+vicmd_symbol = "[ ](yellow)"
 
 [package]
 symbol = " "

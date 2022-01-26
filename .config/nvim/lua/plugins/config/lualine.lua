@@ -50,8 +50,8 @@ local config = {
         component_separators = "",
         section_separators = "",
         theme = {
-            normal = { c = { fg = colors.fg1, bg = colors.bg } },
-            inactive = { c = { fg = colors.fg1, bg = colors.bg } },
+            normal = { c = { fg = colors.fg1, bg = colors.extra } },
+            inactive = { c = { fg = colors.fg1, bg = colors.extra } },
         },
     },
     sections = {
@@ -106,7 +106,7 @@ ins_left {
     end,
     icons_enabled = true,
     color = "LualineViMode",
-    padding = { right = 2, left = 1 },
+    padding = { right = 1, left = 1 },
 }
 
 ins_left {
@@ -133,7 +133,6 @@ ins_left {
     color = { fg = colors.white, bg = colors.bg1 },
     padding = 0,
 }
-
 ins_left {
     "filename",
     cond = conditions.buffer_not_empty or conditions.hide_in_width,

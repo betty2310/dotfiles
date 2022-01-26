@@ -63,7 +63,7 @@ alias yo="git add -A && git commit -m (curl -s 'whatthecommit.com/index.txt')"
 #    exec tmux
 #end
 # random cool image
-# colorscript -e pacman
+#colorscript -r
 
 
 

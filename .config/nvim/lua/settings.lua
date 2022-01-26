@@ -57,4 +57,5 @@ hi CompetiTestDone    cterm=none     gui=none
 hi CompetiTestCorrect ctermfg=green  guifg=#A3BE8C
 hi CompetiTestWarning ctermfg=yellow guifg=#D08770
 hi CompetiTestWrong   ctermfg=red    guifg=#BF616A
+hi Normal guibg=NONE ctermbg=NONE
 ]]
