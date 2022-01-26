@@ -269,6 +269,9 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "/", function()
         awful.spawn.with_shell "~/.config/rofi/launcher.sh"
     end, { description = "rofi launcher", group = "launcher" }),
+    awful.key({ superkey, shiftkey }, "/", function()
+        awful.spawn.with_shell "dmenu_run -fn 'JetBrainsMono Nerd Font-9'  -p search -class films -sb '#EBCB8B' -sf '#2E3440'"
+    end, { description = "dmenu run", group = "launcher" }),
     awful.key({ superkey, shiftkey }, "i", function()
         awful.spawn.with_shell "google-chrome-stable"
     end, { description = "google", group = "launcher" }),
@@ -335,9 +338,6 @@ keys.globalkeys = gears.table.join(
         helpers.volume_control(5)
     end, { description = "raise volume", group = "volume" }),
 
-    -- Screenkey toggle
-    awful.key({ superkey }, "F12", apps.screenkey, { description = "raise volume", group = "volume" }),
-
     -- Microphone (V for voice)
     awful.key({ superkey }, "v", function()
         awful.spawn.with_shell "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
@@ -388,15 +388,6 @@ keys.globalkeys = gears.table.join(
         awful.spawn.with_shell "mpvc toggle"
     end, { description = "mpv toggle pause/play", group = "media" }),
 
-    awful.key({ superkey }, "F8", function()
-        awful.spawn.with_shell "mpvc quit"
-    end, { description = "mpv quit", group = "media" }),
-    awful.key({ superkey }, "F7", function()
-        awful.spawn.with_shell "freeze firefox"
-    end, { description = "send STOP signal to all firefox processes", group = "other" }),
-    awful.key({ superkey, shiftkey }, "F7", function()
-        awful.spawn.with_shell "freeze -u firefox"
-    end, { description = "send CONT signal to all firefox processes", group = "other" }),
     awful.key({ superkey, shiftkey }, "p", function()
         apps.scratchpad()
     end, { description = "scratchpad", group = "launcher" }),
@@ -404,6 +395,12 @@ keys.globalkeys = gears.table.join(
         awful.spawn.with_shell "code"
     end, { description = "open VScode", group = "launcher" }),
 
+    awful.key({ superkey }, "F12", function()
+        awful.spawn.with_shell "farge --no-preview --notify --expire-time 2000"
+    end, { description = "color picker !!", group = "launcher" }),
+    awful.key({ superkey }, "F7", function()
+        awful.spawn.with_shell "notflix"
+    end, { description = "netflix and chill!!", group = "launcher" }),
     -- Max layout
     -- Single tap: Set max layout
     -- Double tap: Also disable floating for ALL visible clients in the tag
@@ -458,10 +455,6 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "F4", function()
         awful.spawn "visualizer"
     end, { description = "cava", group = "launcher" }),
-    -- Network dialog: nmapplet rofi frontend
-    awful.key({ superkey }, "F11", function()
-        awful.spawn "networks-rofi"
-    end, { description = "spawn network dialog", group = "launcher" }),
     -- Toggle sidebar
     awful.key({ superkey }, "o", function()
         sidebar_toggle()
@@ -471,7 +464,7 @@ keys.globalkeys = gears.table.join(
         wibars_toggle()
     end, { description = "show or hide wibar(s)", group = "awesome" }),
     -- Quick edit file
-    awful.key({ superkey, shiftkey }, "e", function()
+    awful.key({ superkey }, "F9", function()
         awful.spawn.with_shell "rofi_edit"
     end, { description = "quick edit file", group = "launcher" }),
     -- Spawn file manager
