@@ -1,0 +1,4 @@
+#! /bin/bash
+
+cd ~/Pictures/Screenshots
+sxiv "$(ls -t)"

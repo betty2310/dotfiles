@@ -87,7 +87,7 @@ user = {
         videos = os.getenv "XDG_VIDEOS_DIR" or "~/Videos",
         -- Make sure the directory exists so that your screenshots
         -- are not lost
-        screenshots = os.getenv "XDG_SCREENSHOTS_DIR" or "~/Pictures/Screenshots",
+        screenshots = "~/Pictures/Screenshots",
     },
 
     -- >> Sidebar <<

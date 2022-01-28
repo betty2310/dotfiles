@@ -8,7 +8,7 @@
  */
 
 configuration {
-  font: "Liga SFMono Nerd Font Medium 12";
+  font: "JetBrainsMono Nerd Font Medium 12";
 
   drun {
     display-name: "";

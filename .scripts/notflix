@@ -61,7 +61,7 @@ notify-send "🔍 Searching Magnet seeds 🧲"
 url=$(head -n $LINE $cachedir/links.bw | tail -n +$LINE)
 fullURL="${baseurl}${url}/"
 gg=$(echo "$url" | cut -d\/ -f4)
-google-chrome-stable "$gg"
+echo "$gg" | xclip -selection c
 
 # Requesting page for magnet link
 curl -s $fullURL >$cachedir/tmp.html

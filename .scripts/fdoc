@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Rofi menu for quickly editing a file in some directory
+# Requires ripgrep
+# I use it for editing dotfiles in my ~/.config directory
+
+# Directory to search in
+dir="$HOME/Documents"
+
+# Change directory so that the paths are shorter in rofi
+cd "$dir" || exit
+choice="$(rg --files --color=never --ignore-file "$ignore_file" | dmenu -i -l 15 -class films -p 'Documents: ' -fn 'Noto Sans JP-9' -sb '#A3BE8C' -sf '#2E3440' -o 0.9)"
+
+if [[ -z "${choice// /}" ]]; then
+	exit 1
+fi
+
+zathura "$choice"
