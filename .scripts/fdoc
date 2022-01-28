@@ -13,5 +13,20 @@ choice="$(rg --files --color=never --ignore-file "$ignore_file" | dmenu -i -l 15
 if [[ -z "${choice// /}" ]]; then
 	exit 1
 fi
-
-zathura "$choice"
+echo "$choice"
+if [ -f "$choice" ]; then
+	case "$choice" in
+	*.m4a) xdg-open "$choice" ;;
+	*.pdf) zathura "$choice" ;;
+	*.pptx) xdg-open "$choice" ;;
+	*.tar) tar xf "$choice" ;;
+	*.tbz2) tar xjf "$choice" ;;
+	*.tgz) tar xzf "$choice" ;;
+	*.zip) unzip "$choice" ;;
+	*.Z) uncompress "$choice" ;;
+	*.7z) 7z x "$choice" ;;
+	*) echo "'$choice' cannot open" ;;
+	esac
+else
+	echo "'$choice' is not a valid file"
+fi
