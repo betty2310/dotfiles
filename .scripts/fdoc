@@ -1,11 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/sh
 # Rofi menu for quickly editing a file in some directory
 # Requires ripgrep
 # I use it for editing dotfiles in my ~/.config directory
 
 # Directory to search in
 dir="$HOME/Documents"
-
 # Change directory so that the paths are shorter in rofi
 cd "$dir" || exit
 choice="$(rg --files --color=never --ignore-file "$ignore_file" | dmenu -i -l 15 -class films -p 'Documents: ' -fn 'Noto Sans JP-9' -sb '#A3BE8C' -sf '#2E3440' -o 0.9)"
@@ -13,20 +12,30 @@ choice="$(rg --files --color=never --ignore-file "$ignore_file" | dmenu -i -l 15
 if [[ -z "${choice// /}" ]]; then
 	exit 1
 fi
+
 echo "$choice"
+
 if [ -f "$choice" ]; then
 	case "$choice" in
-	*.m4a) xdg-open "$choice" ;;
+	*.m4a | "mp3") xdg-open "$choice" ;;
 	*.pdf) zathura "$choice" ;;
-	*.pptx) xdg-open "$choice" ;;
-	*.tar) tar xf "$choice" ;;
-	*.tbz2) tar xjf "$choice" ;;
-	*.tgz) tar xzf "$choice" ;;
-	*.zip) unzip "$choice" ;;
-	*.Z) uncompress "$choice" ;;
-	*.7z) 7z x "$choice" ;;
-	*) echo "'$choice' cannot open" ;;
+	*.pptx | "ppt") wpp "$choice" ;;
+	*.xlsx | *.xls | *.csv)
+		et "$choice"
+		;;
+	*.mp4 | *.mkv | *.gif)
+		vlc "$choice"
+		;;
+	*.jpg | *.jpeg | *.png)
+		sxiv "$choice"
+		;;
+	*.doc | *.docx)
+		wps "$choice"
+		;;
+	*)
+		notify-send "📛 Cannot open this file "$choice"."
+		;;
 	esac
 else
-	echo "'$choice' is not a valid file"
+	notify-send "'$choice' is not a valid file"
 fi

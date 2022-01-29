@@ -333,6 +333,9 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "F12", function()
         awful.spawn.with_shell "farge --no-preview --notify --expire-time 2000"
     end, { description = "color picker !!", group = "launcher" }),
+    awful.key({ superkey }, "F10", function()
+        awful.spawn.with_shell "class"
+    end, { description = "show class of program !!", group = "launcher" }),
     awful.key({ superkey }, "F7", function()
         awful.spawn.with_shell "notflix"
     end, { description = "netflix and chill!!", group = "launcher" }),

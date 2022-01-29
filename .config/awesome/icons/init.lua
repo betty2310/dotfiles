@@ -84,6 +84,8 @@ icons.text.by_class = {
     ["qBittorrent"] = { symbol = "", color = x.color1 },
     ["WebTorrent"] = { symbol = "", color = x.color1 },
     ["Blueman-manager"] = { symbol = "", color = x.color6 },
+    ["Visualizer"] = { symbol = "", color = x.color2 },
+    ["Typora"] = { symbol = "", color = x.color3 },
     -- File managers
     ["Thunar"] = { symbol = "", color = x.color3 },
     ["Org.gnome.Nautilus"] = { symbol = "", color = x.color3 },
