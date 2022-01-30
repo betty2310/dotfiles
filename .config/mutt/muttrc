@@ -1,0 +1,111 @@
+# vim: filetype=neomuttrc
+source /usr/local/share/mutt-wizard/mutt-wizard.muttrc
+source /home/betty/.config/mutt/accounts/huynhduongsh1@gmail.com.muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/betty/.config/mutt/accounts/huynhduongsh1@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to huynhduongsh1@gmail.com"
+
+# mutt color scheme
+
+color	normal		default default             # default colours
+color   index       brightblue default ~N              # new messages
+color   index       red default ~F            # flagged messages
+color   index       blue default ~T             # tagged messages
+color   index       cyan default ~D             # deleted messages
+color	body		brightyellow default    (https?|ftp)://[\-\.+,/%~_:?&=\#a-zA-Z0-9]+
+color	body		brightgreen default     [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color	attachment	magenta default             # attachments
+color	signature	brightwhite default         # sigs
+color   search      brightred black             # highlight results
+
+color	indicator	brightyellow default        # currently highlighted message
+color	error		red default                 # error messages
+color	status		white cyan                  # status line
+color	tree		brightblack default         # thread tree
+color   tilde       cyan default                # blank line padding
+
+color	hdrdefault	black cyan                  # default headers
+color   header      brightwhite cyan "^From:"
+color   header      brightwhite cyan "^Subject:"
+
+color	quoted		cyan default                # quote colours
+color   quoted1     brightcyan default
+color   quoted2     blue default
+color   quoted3     green default
+color   quoted4     yellow default
+color   quoted5     red default
+
+color	body	    green default           "^gpg: Good signature from"
+color	body	    brightred default		"^gpg: Bad signature from"
+color	body	    brightred default		"^gpg: BAD signature from"
+color	body	    brightred default		"^gpg: Note: This key has expired!"
+color	body	    brightyellow default	"^gpg: WARNING: This key is not certified with a trusted signature!"
+color	body	    brightyellow default	"^gpg:          There is no indication that the signature belongs to the owner."
+color	body	    brightyellow default	"^gpg: can't handle these multiple signatures"
+color	body	    brightyellow default	"^gpg: signature verification suppressed"
+color	body	    brightyellow default	"^gpg: invalid node with packet of type"
+
+set editor = "nvim"
+
+set my_name = "Betty"
+set imap_check_subscribed
+
+# Set preffered view modes
+auto_view text/html text/calendar application/ics # view html automatically
+alternative_order text/html text/plain text/enriched text/*
+
+
+# main options
+set envelope_from
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set forward_quote                    # include message in forwards
+set text_flowed
+unset sig_dashes                     # no dashes before sig
+unset mime_forward                   # forward attachments as part of body
+unset help                           # No help bar at the top of index
+# set status_on_top                    # Status bar on top of index
+set tmpdir = /tmp/ # where to keep temp files
+
+unset confirmappend      # don't ask, just do!
+set quit                 # don't ask, just do!!
+unset mark_old           # read/new is good enough for me
+set beep_new             # bell on new mails
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+set timeout = 0
+
+# status bar, date format, finding stuff etc.
+set status_chars = " *%A"
+set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%>─%?p?( %p postponed )?"
+set date_format = "%d.%m.%Y %H:%M"
+set sort = threads
+set sort_aux = reverse-last-date-received
+set uncollapse_jump
+set sort_re
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+set send_charset = "utf-8:iso-8859-1:us-ascii"
+set charset = "utf-8"
+set arrow_cursor = "no" # Change `color indicator` depending
+
+# Pager View Options
+set pager_index_lines = 10  # Shows 10 lines of index when pager is active
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+unset markers
+
+set mailcap_path = ~/.config/mutt/mailcap
+set header_cache = "~/.cache/mutt"
+set message_cachedir = "~/.cache/mutt"
+
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/betty/.config/mutt/accounts/huynh.dh2310@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to huynh.dh2310@gmail.com"
+macro index,pager i3 '<sync-mailbox><enter-command>source /home/betty/.config/mutt/accounts/huynh.dh205087@sis.hust.edu.vn.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to huynh.dh205087@sis.hust.edu.vn"
