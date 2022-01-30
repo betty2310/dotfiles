@@ -9,7 +9,6 @@ local icons = require "icons"
 local helpers = require "helpers"
 local hotkeys_popup = require "awful.hotkeys_popup"
 require "awful.hotkeys_popup.keys"
-
 local keys = {}
 
 -- Mod keys
@@ -89,7 +88,7 @@ keys.desktopbuttons = gears.table.join(
 -- {{{ Key bindings
 keys.globalkeys = gears.table.join(
 
-    awful.key({ altkey }, "h", hotkeys_popup.show_help, { description = "HELP ME PLS!!!", group = "awesome" }),
+    awful.key({ altkey }, "f", hotkeys_popup.show_help, { description = "HELP ME PLS!!!", group = "awesome" }),
     -- Focus client by direction (hjkl keys)
     awful.key({ superkey }, "j", function()
         awful.client.focus.bydirection "down"
@@ -103,6 +102,14 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "l", function()
         awful.client.focus.bydirection "right"
     end, { description = "focus right", group = "client" }),
+
+    -- focus screen (monitor) direction
+    awful.key({ altkey }, "h", function()
+        awful.screen.focus(2)
+    end, { description = "focus the next screen", group = "screen" }),
+    awful.key({ altkey }, "l", function()
+        awful.screen.focus(1)
+    end, { description = "focus the previous screen", group = "screen" }),
 
     -- Layout
     -- Single tap: Set max layout
@@ -342,6 +349,16 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "F11", function()
         awful.spawn.with_shell "fdoc"
     end, { description = "open Document!", group = "launcher" }),
+
+    awful.key(
+        { ctrlkey, shiftkey },
+        "Escape",
+        apps.process_monitor,
+        { description = "process monitor", group = "launcher" }
+    ),
+
+    awful.key({ superkey }, "F5", apps.mail, { description = "open email client!", group = "launcher" }),
+
     -- Dashboard
     awful.key({ superkey }, "F1", function()
         if dashboard_show then
@@ -406,6 +423,9 @@ keys.clientkeys = gears.table.join(
         end)
     end),
 
+    awful.key({ superkey }, "m", function(c)
+        c:move_to_screen()
+    end, { description = "move running now client to next screen", group = "screen" }),
     -- Relative move client
     awful.key({ superkey, shiftkey, ctrlkey }, "j", function(c)
         c:relative_move(0, dpi(20), 0, 0)

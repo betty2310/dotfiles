@@ -68,7 +68,7 @@ user = {
     --browser = "firefox",
     file_manager = "nautilus",
     editor = "st -c editor -e nvim",
-    email_client = "thunderbird",
+    email_client = "st -c email -e neomutt",
     music_client = "st -c music -e ncmpcpp",
 
     -- >> Web Search <<
@@ -1176,11 +1176,14 @@ collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 
 -- focus by mouse hover
-client.connect_signal("mouse::enter", function(c)
-    if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier and awful.client.focus.filter(c) then
-        client.focus = c
-    end
-end)
+-- client.connect_signal("mouse::enter", function(c)
+--     if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier and awful.client.focus.filter(c) then
+--         client.focus = c
+--     end
+-- end)
+
+-- delete tmux hotkeys from help popup
+package.loaded["awful.hotkeys_popup.keys.tmux"] = {}
 
 awful.spawn.with_shell "imwheel -kill"
 awful.spawn.with_shell "ulauncher &"
