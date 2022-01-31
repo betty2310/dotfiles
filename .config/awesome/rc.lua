@@ -1026,7 +1026,7 @@ awful.rules.rules = {
         except_any = {
             type = { "dialog" },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[10] },
+        properties = { screen = 2, tag = awful.screen.focused().tags[10] },
     },
 }
 -- (Rules end here) ..................................................
@@ -1182,7 +1182,6 @@ collectgarbage("setstepmul", 1000)
 --     end
 -- end)
 
--- delete tmux hotkeys from help popup
 package.loaded["awful.hotkeys_popup.keys.tmux"] = {}
 
 awful.spawn.with_shell "imwheel -kill"

@@ -44,6 +44,7 @@ set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.bin $PATH
 set -gx PATH ~/.scripts $PATH
+set -gx PATH /usr/local/texlive/2021/bin/x86_64-linux/ $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH

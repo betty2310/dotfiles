@@ -11,8 +11,8 @@ map("n", "<Down>", "<cmd>echom 'ﮧ Use j bro!'<cr>")
 wk.register {
 
     -- [bufferline] Moving arround buffer tab
-    ["[b"] = { "<cmd>BufferLineCycleNext<cr>", "Go next buffer" },
-    ["]b"] = { "<cmd>BufferLineCyclePrev<cr>", "Go previous buffer" },
+    ["<leader>n"] = { "<cmd>bn<cr>", "Go next buffer" },
+    ["<leader>p"] = { "<cmd>bp<cr>", "Go previous buffer" },
     ["<leader>mv"] = { "<cmd>bdelete<cr>", "Close current buffer" },
     -- [run]
     ["<leader>tg"] = { "<cmd>ToggleTerm direction=float<cr>", "[toggleterm] Open floating terminal" },

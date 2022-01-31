@@ -16,23 +16,20 @@ return packer.startup(function()
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
         config = require "plugins.config.lualine",
     }
-    -- use {
-    --     "glepnir/galaxyline.nvim",
-    --     branch = "main",
-    --     -- your statusline
-    --     config = require "plugins.config.galaxyline",
-    --     -- some optional icons
-    --     requires = { "kyazdani42/nvim-web-devicons", opt = true },
-    -- }
+    use {
+        "noib3/nvim-cokeline",
+        requires = "kyazdani42/nvim-web-devicons", -- If you want devicons
+        config = require "plugins.config.coke",
+    }
     use {
         "goolord/alpha-nvim",
         config = require "plugins.config.alpha",
     }
-    use {
-        "akinsho/bufferline.nvim",
-        requires = { "kyazdani42/nvim-web-devicons" },
-        config = require "plugins.config.bufferline",
-    }
+    -- use {
+    --     "akinsho/bufferline.nvim",
+    --     requires = { "kyazdani42/nvim-web-devicons" },
+    --     config = require "plugins.config.bufferline",
+    -- }
     use {
         "folke/which-key.nvim",
         config = function()

@@ -9,6 +9,7 @@ local icons = require "icons"
 local helpers = require "helpers"
 local hotkeys_popup = require "awful.hotkeys_popup"
 require "awful.hotkeys_popup.keys"
+
 local keys = {}
 
 -- Mod keys
@@ -87,7 +88,6 @@ keys.desktopbuttons = gears.table.join(
 
 -- {{{ Key bindings
 keys.globalkeys = gears.table.join(
-
     awful.key({ altkey }, "f", hotkeys_popup.show_help, { description = "HELP ME PLS!!!", group = "awesome" }),
     -- Focus client by direction (hjkl keys)
     awful.key({ superkey }, "j", function()
