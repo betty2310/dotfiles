@@ -1,4 +1,5 @@
 cp -r ~/.config/nvim/ /home/betty/ghq/github.com/betty2310/dotifles/.config
+cp -r ~/.config/fontconfig/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/polybar/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/eww/ /home/betty/ghq/github.com/betty2310/dotifles/.config
 cp -r ~/.config/dunst/ /home/betty/ghq/github.com/betty2310/dotifles/.config
