@@ -6,7 +6,7 @@ return packer.startup(function()
     use { "lewis6991/impatient.nvim" }
 
     -- UI (Color, statusline, dashboard...)
-    use { "rmehri01/onenord.nvim" }
+    use { "betty2310/onenord.nvim" }
     use { "L3MON4D3/LuaSnip" }
     use { "rafamadriz/friendly-snippets" }
 
@@ -32,15 +32,6 @@ return packer.startup(function()
     -- }
     use {
         "folke/which-key.nvim",
-        config = function()
-            require("which-key").setup {
-                icons = {
-                    breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-                    separator = " ", -- symbol used between a key and it's label
-                    group = "+", -- symbol prepended to a group
-                },
-            }
-        end,
     }
     use { "petertriho/nvim-scrollbar", config = require "plugins.config.scrollbar" }
 
@@ -83,7 +74,14 @@ return packer.startup(function()
     -- -- Lint
     use { "folke/lsp-colors.nvim" }
     --use { "jasonrhansen/lspsaga.nvim", branch = "finder-preview-fixes" }
-    use { "tami5/lspsaga.nvim" }
+    use {
+        "tami5/lspsaga.nvim",
+        branch = "nvim6.0",
+        config = function()
+            lspsaga.setup { rename_prompt_prefix = "הּ" }
+        end,
+    }
+    use { "kosayoda/nvim-lightbulb", config = require "plugins.config.lightbulb" }
     use { "folke/trouble.nvim" }
     use { "ray-x/lsp_signature.nvim", branch = "neovim-0.6" }
 

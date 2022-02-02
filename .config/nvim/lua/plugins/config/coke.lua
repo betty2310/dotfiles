@@ -10,7 +10,7 @@ cokeline.setup {
             filetype = "NvimTree",
             components = {
                 {
-                    text = "  🌳NvimTree  ",
+                    text = "  🌳 NvimTree  ",
                     hl = {
                         fg = colors.yellow,
                         bg = colors.bg,
@@ -30,7 +30,6 @@ cokeline.setup {
         focused = {
             fg = colors.magenta,
             bg = "NONE",
-            style = "bold",
         },
         unfocused = {
             fg = colors.bg3,
@@ -81,7 +80,10 @@ cokeline.setup {
             end,
             hl = {
                 style = function(buffer)
-                    return buffer.is_focused and "bold" or nil
+                    if buffer.is_focused then
+                        return "underline"
+                    end
+                    return nil
                 end,
             },
         },

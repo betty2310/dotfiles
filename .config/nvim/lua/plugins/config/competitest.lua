@@ -81,5 +81,4 @@ require("competitest").setup {
     input_name = "input",
     output_name = "output",
     testcases_files_format = "$(FNOEXT)_$(INOUT)$(TCNUM).txt",
-    testcases_compare_method = "squish",
 }
