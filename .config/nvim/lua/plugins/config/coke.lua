@@ -76,7 +76,7 @@ cokeline.setup {
         },
         {
             text = function(buffer)
-                return buffer.filename .. " "
+                return buffer.filename .. ""
             end,
             hl = {
                 style = function(buffer)
@@ -89,7 +89,7 @@ cokeline.setup {
         },
         {
             text = function(buffer)
-                return buffer.is_modified and " " or ""
+                return buffer.is_modified and "  " or ""
             end,
             hl = {
                 fg = function(buffer)
