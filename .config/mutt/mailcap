@@ -1,10 +1,11 @@
 # HTML
-text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -dump -width=1024 %s; nametemplate=%s.html; copiousoutput;
+text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -dump -width=512 %s; nametemplate=%s.html; copiousoutput;
 text/plain; nvim %s
 
 #PDFs
-application/pdf; /usr/bin/zathura %s pdf
+application/pdf; zathura %s pdf
 
 #Images
-image/png; /usr/bin/feh %s
-image/jpeg; /usr/bin/feh %s
+image/png; feh %s
+image/jpeg; feh %s
+image/jpg; feh %s
