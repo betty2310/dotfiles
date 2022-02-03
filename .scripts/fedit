@@ -21,7 +21,7 @@ echo "$ignore" >"$ignore_file"
 
 # Change directory so that the paths are shorter in rofi
 cd "$dir" || exit
-choice="$(rg --files --color=never --ignore-file "$ignore_file" | fzf -e --prompt="הּ " --preview "bat --color=always {1} --theme=ansi" --layout=reverse --height=50% --info=inline --border --margin=1 --padding=1)"
+choice="$(rg --files --color=never --ignore-file "$ignore_file" | fzf -e --prompt="הּ " --preview "bat --color=always {1} --theme=Nord" --layout=reverse --height=50% --info=inline --border --margin=1 --padding=1)"
 # If the search is cancelled by the user (e.g. Escape button)
 if [[ -z "${choice// /}" ]]; then
 	exit 1

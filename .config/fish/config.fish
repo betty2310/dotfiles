@@ -55,10 +55,12 @@ set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
 #set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --theme=ansi" --layout=reverse --height=50% --info=inline --border --margin=1 --padding=1'
-set -x FZF_DEFAULT_OPTS '--color=fg:#e5e9f0,bg:#2d333e,hl:#81a1c1
-    --color=fg+:#e5e9f0,bg+:#2d333e,hl+:#81a1c1
+set -x FZF_DEFAULT_OPTS '--prompt="הּ "
+    --color=hl:#81a1c1
+    --color=hl+:#BF616A
     --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
-    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b --layout=reverse --border --margin=1 --padding=1'
+
 alias yo="git add -A && git commit -m (curl -s 'whatthecommit.com/index.txt')"
 
 #auto run tmux
@@ -68,6 +70,3 @@ alias yo="git add -A && git commit -m (curl -s 'whatthecommit.com/index.txt')"
 #end
 # random cool image
 #colorscript -r
-
-
-
