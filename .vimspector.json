@@ -1,0 +1,30 @@
+{
+  "configurations": {
+    "C - Launch": {
+      "adapter": "vscode-cpptools",
+      "filetypes": ["cpp", "c", "objc", "rust"],
+      "configuration": {
+        "name": "Cpp: Launch current file",
+        "type": "cppdbg",
+        "request": "launch",
+        "externalConsole": true,
+        "logging": {
+          "engineLogging": true
+        },
+        "stopOnEntry": true,
+        "stopAtEntry": false,
+        "debugOptions": [],
+        "MIMode": "gdb",
+        "cwd": "${cwd}",
+        "program": "${fileDirname}/${fileBasenameNoExtension}",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ]
+      }
+    }
+  }
+}
