@@ -127,8 +127,5 @@ return packer.startup(function()
     }
 
     -- debug
-    use { "mfussenegger/nvim-dap" } --config = require "plugins.config.dap" }
-    use "Pocco81/DAPInstall.nvim"
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
-    use { "theHamsta/nvim-dap-virtual-text" }
+    use { "puremourning/vimspector", config = require "plugins.config.dap" }
 end)
