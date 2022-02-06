@@ -466,12 +466,12 @@ keys.clientkeys = gears.table.join(
     -- F for focused view
     awful.key({ superkey, ctrlkey }, "f", function(c)
         helpers.float_and_resize(c, screen_width * 0.7, screen_height * 0.75)
-    end, { description = "focus mode", group = "client" }),
+    end, { description = "resize client to focus mode", group = "client" }),
 
     -- N for normal size (good for terminals)
     awful.key({ superkey, ctrlkey }, "n", function(c)
         helpers.float_and_resize(c, screen_width * 0.45, screen_height * 0.5)
-    end, { description = "normal mode", group = "client" }),
+    end, { description = "resize client to normal mode (small than focus)", group = "client" }),
 
     -- Close client
     awful.key({ superkey }, "q", function(c)
@@ -493,6 +493,15 @@ keys.clientkeys = gears.table.join(
     awful.key({ superkey, shiftkey }, "Up", function(c)
         c.opacity = c.opacity + 0.1
     end, { description = "increase client opacity", group = "client" }),
+
+    -- toggle client on top
+    awful.key({ altkey }, "t", function(c)
+        c.ontop = not c.ontop
+    end, { description = "toggle keep on top", group = "client" }),
+
+    awful.key({ altkey, shiftkey }, "t", function(c)
+        c.sticky = not c.sticky
+    end, { description = "toggle sticky", group = "client" }),
 
     -- Minimize
     awful.key({ superkey }, "Down", function(c)

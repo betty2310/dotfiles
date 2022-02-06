@@ -234,12 +234,15 @@ ins_right {
     cond = conditions.hide_in_width,
     color = { fg = colors.fg1, bg = colors.bg1 },
 }
+
 ins_right {
-    -- mode component
     function()
-        -- auto change color according to neovims mode
-        vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg1)
-        return " "
+        local b = vim.api.nvim_get_current_buf()
+        if next(vim.treesitter.highlighter.active[b]) then
+            vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg1)
+            return "綠"
+        end
+        return ""
     end,
     color = "LualineMode",
 }

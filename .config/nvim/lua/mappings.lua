@@ -8,26 +8,35 @@ map("n", "<Right>", "<cmd>echom 'ﮧ Use l bro!'<cr>")
 map("n", "<Up>", "<cmd>echom 'ﮧ Use k bro!'<cr>")
 map("n", "<Down>", "<cmd>echom 'ﮧ Use j bro!'<cr>")
 
+local nmap = vim.api.nvim_set_keymap
+
+nmap("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
+nmap("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })
+
+for i = 1, 9 do
+    nmap("n", ("<F%s>"):format(i), ("<Plug>(cokeline-focus-%s)"):format(i), { silent = true })
+    nmap("n", ("<Leader>b%s"):format(i), ("<Plug>(cokeline-switch-%s)"):format(i), { silent = true })
+end
 wk.register {
 
-    -- [bufferline] Moving arround buffer tab
-    ["<leader>n"] = { "<cmd>bn<cr>", "Go next buffer" },
-    ["<leader>p"] = { "<cmd>bp<cr>", "Go previous buffer" },
-    ["<leader>mv"] = { "<cmd>bdelete<cr>", "Close current buffer" },
     -- [run]
-    ["<leader>tg"] = { "<cmd>ToggleTerm direction=float<cr>", "[toggleterm] Open floating terminal" },
-    ["<leader>tig"] = {
-        '<cmd>TermExec cmd="tig" go_back=0 direction=float<cr>',
-        "[toggleterm] Call floating tig - GIT TUI",
+    ["<leader>t"] = {
+        name = "  TERMINAL",
+        f = { "<cmd>ToggleTerm direction=float<cr>", "[toggleterm] Open floating terminal" },
+        t = {
+            '<cmd>TermExec cmd="tig" go_back=0 direction=float<cr>',
+            "[toggleterm] Call floating tig - GIT TUI",
+        },
+        g = { '<cmd>TermExec cmd="c %" go_back=0 size=13<cr>', "[C++] Compile an run!!" },
     },
-    ["<leader>g"] = { '<cmd>TermExec cmd="g++ -Wall % && ./a.out" go_back=0 size=13<cr>', "[C++] Compile an run!!" },
+
     -- [nvim-tree]
     ["<c-n>"] = { "<cmd>NvimTreeToggle<cr>", "[nvimtree] Toggle" },
     ["<leader>r"] = { "<cmd>NvimTreeRefresh<cr>", "[nvimtree] Refresh" },
 
     -- [Telescope]
     ["<leader>f"] = {
-        name = "+file",
+        name = "  FILE",
         f = { "<cmd>Telescope find_files<cr>", "[Telescope] Find File" },
         g = { "<cmd>Telescope live_grep<cr>", "[Telescope] Find File by grep" },
         b = { "<cmd>Telescope buffers<cr>", "[Telescope] Find buffers" },
@@ -35,9 +44,13 @@ wk.register {
         m = { "<cmd>Telescope marks<cr>", "[Telescope] Marks" },
         o = { "<cmd>Telescope oldfiles<cr>", "[Telescope] Old files" },
     },
-
+    ["<leader>d"] = {
+        name = "  Debug",
+        i = { "<Plug>VimspectorBalloonEval<cr>", "[Debug] Hover" },
+    },
     -- [Trouble.nvim]
     ["<leader>x"] = {
+        name = "  TROUBLE",
         x = { "<cmd>Trouble<cr>", "[Trouble] Show trouble list" },
         w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "[Trouble] Show LSP workspace diagnostic" },
         d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "[Trouble] Show LSP Document diagnostic" },
@@ -54,13 +67,23 @@ wk.register {
 
     -- [lspsaga]
     ["K"] = { "<cmd>Lspsaga hover_doc<CR>", "[SAGA] Hover doc" },
-    ["<leader>ls"] = {
+    ["<leader>l"] = {
+        name = "   SAGA",
         n = { "<cmd>Lspsaga diagnostic_jump_next<cr>", "[SAGA] Diagnostic jump next" },
         p = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "[SAGA] Diagnostic jump previous" },
         d = { "<cmd>Lspsaga preview_definition<cr>", "[SAGA] Preview definition" },
         f = { "<cmd>Lspsaga lsp_finder<cr>", "[SAGA] LSP Finder" },
         c = { "<cmd>Lspsaga code_action<cr>", "[SAGA] Code Action" },
+        r = { "<cmd>Lspsaga rename<cr>", "[SAGA] Rename" },
     },
-    ["<leader>rn"] = { "<cmd>Lspsaga rename<cr>", "[SAGA] Rename" },
+    ["<leader>b"] = {
+        name = " ﬘ BUFFER",
+    },
+    ["<leader>w"] = {
+        name = "  LSP",
+    },
+    ["<leader>g"] = {
+        name = "  GIT",
+    },
 }
 wk.setup {}

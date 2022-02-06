@@ -51,6 +51,8 @@ return packer.startup(function()
         requires = { "nvim-lua/plenary.nvim" },
         config = require "plugins.config.telescope",
     }
+    use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
+
     use { "blackCauldron7/surround.nvim", config = require "plugins.config.surround" }
     use { "lukas-reineke/indent-blankline.nvim", config = require "plugins.config.indent" }
     use { "akinsho/toggleterm.nvim", config = require "plugins.config.toggleterm" }

@@ -1,4 +1,5 @@
 local utils = require "utils"
+local colors = require("utils").colors
 
 -- Disable ~ character in empty lines
 vim.cmd [[set fcs=eob:\ ]]
@@ -59,4 +60,7 @@ hi CompetiTestCorrect ctermfg=green  guifg=#A3BE8C
 hi CompetiTestWarning ctermfg=yellow guifg=#D08770
 hi CompetiTestWrong   ctermfg=red    guifg=#BF616A
 hi Normal guibg=NONE ctermbg=NONE
+hi TelescopePreviewTitle guibg=#a3be8c guifg=#2e3440 gui=italic
+hi TelescopePromptTitle guibg=#bf616a guifg=#2e3440 gui=italic
+hi TelescopeResultsTitle guibg=#ebcb8b guifg=#2e3440 gui=italic
 ]]

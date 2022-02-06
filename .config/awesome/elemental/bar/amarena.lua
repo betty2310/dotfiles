@@ -59,23 +59,23 @@ local tag_colors_focused = {
     x.color5,
     x.color6,
     x.color7,
-    x.color8,
+    x.color4,
     x.color9,
     x.color10,
     x.color11,
 }
 
 local tag_colors_occupied = {
-    x.color1 .. "45",
-    x.color5 .. "45",
-    x.color4 .. "45",
-    x.color6 .. "45",
-    x.color2 .. "45",
-    x.color3 .. "45",
-    x.color1 .. "45",
-    x.color5 .. "45",
-    x.color4 .. "45",
-    x.color6 .. "45",
+    x.color2 .. "35",
+    x.color3 .. "35",
+    x.color4 .. "35",
+    x.color5 .. "35",
+    x.color6 .. "35",
+    x.color7 .. "35",
+    x.color4 .. "35",
+    x.color9 .. "35",
+    x.color10 .. "35",
+    x.color11 .. "35",
 }
 
 -- Helper function that updates a taglist item

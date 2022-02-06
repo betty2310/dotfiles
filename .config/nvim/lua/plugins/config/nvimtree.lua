@@ -32,13 +32,14 @@ if ok then
         default = "",
         symlink = "",
         git = {
-            unstaged = "✗",
-            staged = "✓",
+            deleted = "  ",
+            ignored = " ◌ ",
+            renamed = "",
+            staged = "  ",
             unmerged = "",
-            renamed = "➜",
-            untracked = "★",
-            deleted = "",
-            ignored = "◌",
+            unstaged = "  ",
+            untracked = "★ ",
+            modified = "",
         },
         folder = {
             arrow_open = "",
@@ -69,7 +70,7 @@ if ok then
             ignore_list = {},
         },
         git = {
-            enable = false,
+            enable = true,
         },
         filters = {
             dotfiles = false,

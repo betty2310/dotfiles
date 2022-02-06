@@ -638,12 +638,6 @@ awful.rules.rules = {
         end,
     },
 
-    -- Vscode
-    {
-        rule_any = { class = { "Code" } },
-        except_any = { name = { "KeePassXC-Browser Confirm Access" }, type = { "dialog" } },
-        properties = { floating = true, width = screen_width * 0.6, height = screen_height * 0.85 },
-    },
     -- floating_terminal
     {
         rule_any = { class = { "float" } },
@@ -898,9 +892,7 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "Code",
-                "scratchpad",
-                -- "qutebrowser",
+                "qutebrowser",
             },
         },
         except_any = {

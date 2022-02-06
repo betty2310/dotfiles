@@ -28,7 +28,7 @@ if ok then
         Struct = "פּ",
         Event = "",
         Operator = "",
-        TypeParameter = "",
+        TypeParameter = "",
     }
 
     cmp.setup {

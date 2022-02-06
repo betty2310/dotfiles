@@ -8,7 +8,7 @@ alt + F10
   sh ~/.scripts/bluetooth.sh
 # Open Terminal
 alt + Return
-  kitty
+  st
 
 # Open Terminal in floating mode
 alt + shift + Return

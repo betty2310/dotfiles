@@ -32,9 +32,11 @@ local app_config = {
     ["Spotify"] = { icon = "", title = true },
     ["mpv"] = { icon = "", title = true },
     ["keyboard"] = { icon = "", title = false },
-    ["email"] = { icon = "", title = true },
+    ["mail"] = { icon = "", title = true },
+    ["neomutt"] = { icon = "", title = true },
+    ["mutt"] = { icon = "", title = true },
     ["teams"] = { icon = "", title = true },
-    ["Baobab"] = { icon = "", title = true },
+    ["baobab"] = { icon = "", title = true },
 }
 
 local urgency_color = {
@@ -168,5 +170,3 @@ naughty.connect_signal("request::display", function(n)
         },
     }
 end)
-
--- naughty.disconnect_signal("request::display", naughty.default_notification_handler)
