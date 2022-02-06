@@ -25,11 +25,6 @@ return packer.startup(function()
         "goolord/alpha-nvim",
         config = require "plugins.config.alpha",
     }
-    -- use {
-    --     "akinsho/bufferline.nvim",
-    --     requires = { "kyazdani42/nvim-web-devicons" },
-    --     config = require "plugins.config.bufferline",
-    -- }
     use {
         "folke/which-key.nvim",
     }
@@ -52,8 +47,7 @@ return packer.startup(function()
         config = require "plugins.config.telescope",
     }
     use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-
-    use { "blackCauldron7/surround.nvim", config = require "plugins.config.surround" }
+    use { "machakann/vim-sandwich" }
     use { "lukas-reineke/indent-blankline.nvim", config = require "plugins.config.indent" }
     use { "akinsho/toggleterm.nvim", config = require "plugins.config.toggleterm" }
     use { "windwp/nvim-autopairs", config = require "plugins.config.autopairs" }
@@ -66,7 +60,7 @@ return packer.startup(function()
         "max397574/better-escape.nvim",
         config = require "plugins.config.escape",
     }
-    use { "ggandor/lightspeed.nvim" }
+    use "ggandor/lightspeed.nvim"
     use { "iamcco/markdown-preview.nvim" }
 
     -- LSP

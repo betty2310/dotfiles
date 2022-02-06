@@ -95,6 +95,7 @@ icons.text.by_class = {
     ["Inkscape"] = { symbol = "", color = x.color2 },
     ["Gpick"] = { symbol = "", color = x.color6 },
     ["sensors"] = { symbol = "", color = x.color1 },
+    ["et"] = { symbol = "", color = x.color2 },
 
     -- Default
     ["_"] = { symbol = "", color = x.color7 .. "99" },

@@ -12,9 +12,10 @@ local nmap = vim.api.nvim_set_keymap
 
 nmap("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
 nmap("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })
+nmap("n", "f", "<Plug>Lightspeed_s", { silent = true })
+nmap("n", "F", "<Plug>Lightspeed_S", { silent = true })
 
 for i = 1, 9 do
-    nmap("n", ("<F%s>"):format(i), ("<Plug>(cokeline-focus-%s)"):format(i), { silent = true })
     nmap("n", ("<Leader>b%s"):format(i), ("<Plug>(cokeline-switch-%s)"):format(i), { silent = true })
 end
 wk.register {

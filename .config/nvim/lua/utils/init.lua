@@ -37,7 +37,7 @@ _M.colors = {
     magenta = "#b48ead",
     pink = "#FFA19F",
     blue_light = "#81A1C1",
-    cyan_light = "8FBCBB",
+    cyan_light = "#8FBCBB",
 }
 
 _M.signs = { Error = "", Warn = "", Hint = "", Info = "" }
