@@ -37,8 +37,8 @@ icons.text.by_class = {
 
     -- General
     ["TelegramDesktop"] = { symbol = "", color = x.color4 },
-    ["Firefox"] = { symbol = "", color = x.foreground .. "99" },
-    ["firefox"] = { symbol = "", color = x.foreground },
+    ["Firefox"] = { symbol = "", color = x.foreground .. "99" },
+    ["firefox"] = { symbol = "", color = x.foreground },
     ["Nightly"] = { symbol = "", color = x.color4 },
     ["Google-chrome"] = { symbol = "", color = x.color1 },
     ["Steam"] = { symbol = "", color = x.color6 },
@@ -63,7 +63,7 @@ icons.text.by_class = {
     ["Qemu-system-x86_64"] = { symbol = "", color = x.color3 },
     ["Wine"] = { symbol = "", color = x.color1 },
     ["markdown_input"] = { symbol = "", color = x.color2 },
-    ["scratchpad"] = { symbol = "", color = x.color9 },
+    ["scratchpad"] = { symbol = "", color = x.color9 },
     ["weechat"] = { symbol = "", color = x.foreground },
     ["discord"] = { symbol = "", color = x.color4 },
     ["6cord"] = { symbol = "", color = x.color3 },
@@ -72,14 +72,14 @@ icons.text.by_class = {
     ["libreoffice-impress"] = { symbol = "", color = x.color1 },
     ["Godot"] = { symbol = "", color = x.color4 },
     ["Spotify"] = { symbol = "", color = x.color2 },
-    ["Code"] = { symbol = "", color = x.color4 },
-    ["Microsoft-edge"] = { symbol = "", color = x.color9 },
+    ["Code"] = { symbol = "", color = x.color4 },
+    ["Microsoft-edge"] = { symbol = "", color = x.color3 },
     ["pdf"] = { symbol = "", color = x.color9 },
     ["Microsoft Teams - Preview"] = { symbol = "", color = x.color1 },
     ["Font-manager"] = { symbol = "", color = x.color9 },
     ["Solaar"] = { symbol = "", color = x.color9 },
     ["Pamac-manager"] = { symbol = "", color = x.color2 },
-    ["Baobab"] = { symbol = "", color = x.foreground .. "99" },
+    ["Baobab"] = { symbol = "", color = x.foreground .. "99" },
     ["qBittorrent"] = { symbol = "", color = x.color1 },
     ["WebTorrent"] = { symbol = "", color = x.color1 },
     ["Blueman-manager"] = { symbol = "", color = x.color6 },
@@ -87,7 +87,7 @@ icons.text.by_class = {
     ["Typora"] = { symbol = "", color = x.color3 },
     -- File managers
     ["Thunar"] = { symbol = "", color = x.color3 },
-    ["Org.gnome.Nautilus"] = { symbol = "", color = x.color3 },
+    ["Org.gnome.Nautilus"] = { symbol = "", color = x.color3 },
     ["Nemo"] = { symbol = "", color = x.color3 },
     ["files"] = { symbol = "", color = x.color3 },
 
@@ -98,7 +98,7 @@ icons.text.by_class = {
     ["et"] = { symbol = "", color = x.color2 },
 
     -- Default
-    ["_"] = { symbol = "", color = x.color7 .. "99" },
+    ["_"] = { symbol = "", color = x.color4 },
 }
 
 -- Available icons

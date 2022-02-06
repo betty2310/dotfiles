@@ -48,9 +48,9 @@ dock_pinned_apps = {
     { class = "music", launcher = apps.music },
     { class = "Anki", launcher = apps.anki },
     { class = "firefox", launcher = apps.notion },
+    { class = "wisdom-tree", launcher = apps.tree },
     { class = "scratchpad", launcher = apps.scratchpad },
     { class = "Code", launcher = apps.code },
-    { class = "wisdom-tree", launcher = apps.tree },
     { class = "Microsoft-edge", launcher = apps.pdf },
 }
 
