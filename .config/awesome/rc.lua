@@ -647,11 +647,9 @@ awful.rules.rules = {
     {
         rule_any = {
             instance = {
-                "scratchpad",
                 "markdown_input",
             },
             class = {
-                "scratchpad",
                 "markdown_input",
             },
         },

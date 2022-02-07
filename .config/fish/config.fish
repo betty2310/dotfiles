@@ -9,6 +9,7 @@ alias g git
 alias fetch="rxfetch"
 alias vi "nvim"
 alias nv "nvim"
+alias cl="clear"
 alias cat="bat"
 alias ls="logo-ls -XD"
 alias ll="logo-ls -XDlh"
