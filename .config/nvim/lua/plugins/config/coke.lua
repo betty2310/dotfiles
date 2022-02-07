@@ -49,7 +49,7 @@ cokeline.setup {
             end,
             hl = {
                 style = function(buffer)
-                    return buffer.is_focused and "bold" or nil
+                    return buffer.is_focused and "italic" or nil
                 end,
             },
         },
@@ -81,7 +81,7 @@ cokeline.setup {
             hl = {
                 style = function(buffer)
                     if buffer.is_focused then
-                        return "underline"
+                        return "italic"
                     end
                     return nil
                 end,
