@@ -302,7 +302,7 @@ keys.globalkeys = gears.table.join(
 
     -- Prompt
     awful.key({ superkey }, "/", function()
-        awful.spawn.with_shell "~/.config/rofi/launcher.sh"
+        awful.spawn.with_shell "rofi -show drun -theme applications -show-icons"
     end, { description = "rofi launcher", group = "launcher" }),
     awful.key({ superkey, shiftkey }, "/", function()
         awful.spawn.with_shell "dmenu_run -fn 'JetBrainsMono Nerd Font-9'  -p search -class films -sb '#EBCB8B' -sf '#2E3440'"

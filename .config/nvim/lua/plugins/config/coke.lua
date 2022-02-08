@@ -47,11 +47,6 @@ cokeline.setup {
             text = function(buffer)
                 return buffer.index .. " "
             end,
-            hl = {
-                style = function(buffer)
-                    return buffer.is_focused and "italic" or nil
-                end,
-            },
         },
         {
             text = function(buffer)
@@ -78,14 +73,6 @@ cokeline.setup {
             text = function(buffer)
                 return buffer.filename .. ""
             end,
-            hl = {
-                style = function(buffer)
-                    if buffer.is_focused then
-                        return "italic"
-                    end
-                    return nil
-                end,
-            },
         },
         {
             text = function(buffer)
