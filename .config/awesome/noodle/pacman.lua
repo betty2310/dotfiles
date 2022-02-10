@@ -6,7 +6,7 @@ local gears = require "gears"
 local xresources = require "beautiful.xresources"
 local helpers = require "helpers"
 local stroke = x.color2
-local bg = "#333946"
+local bg = "#313744"
 
 local bar_shape = function()
     return function(cr, width, height)

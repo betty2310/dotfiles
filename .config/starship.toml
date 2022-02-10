@@ -9,14 +9,10 @@ format = '[$time](#4C566A)'
 time_format = "%T"
 
 [directory]
-format = "[$read_only]($read_only_style)[ ](blue)[$path]($style) "
-truncation_length = 5
-truncate_to_repo = true
-style = "#4C566A"
-truncation_symbol = "../"
+format = "[$read_only](red)[ ](blue)[$path](bold italic #4C566A) "
 read_only = " "
-read_only_style = "red"
-home_symbol = ""
+fish_style_pwd_dir_length = 1
+truncation_length = 4
 
 [character]
 error_symbol = "[ ](red)"

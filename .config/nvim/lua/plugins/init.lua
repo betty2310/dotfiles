@@ -2,7 +2,12 @@ local packer = require "plugins.packerInit"
 local use = packer.use
 
 return packer.startup(function()
-    use { "wbthomason/packer.nvim" }
+    use {
+        "wbthomason/packer.nvim",
+        cond = function()
+            return not vim.g.vscode
+        end,
+    }
     use { "lewis6991/impatient.nvim" }
 
     -- UI (Color, statusline, dashboard...)
@@ -24,6 +29,9 @@ return packer.startup(function()
     use {
         "goolord/alpha-nvim",
         config = require "plugins.config.alpha",
+        cond = function()
+            return not vim.g.vscode
+        end,
     }
     use {
         "folke/which-key.nvim",
@@ -62,7 +70,7 @@ return packer.startup(function()
     }
     use "ggandor/lightspeed.nvim"
     use { "iamcco/markdown-preview.nvim" }
-
+    use { "p00f/clangd_extensions.nvim" }
     -- LSP
     use { "neovim/nvim-lspconfig" }
     use { "williamboman/nvim-lsp-installer" }

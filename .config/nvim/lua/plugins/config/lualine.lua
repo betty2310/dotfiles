@@ -32,11 +32,19 @@ local conditions = {
     end,
     hide_in_width = function()
         local squeeze_width = vim.fn.winwidth(0) / 2
+        if squeeze_width > 40 then
+            return true
+        end
+        return false
+    end,
+    hide_in_width_1 = function()
+        local squeeze_width = vim.fn.winwidth(0) / 2
         if squeeze_width > 60 then
             return true
         end
         return false
     end,
+
     check_git_workspace = function()
         local filepath = vim.fn.expand "%:p:h"
         local gitdir = vim.fn.finddir(".git", filepath .. ";")
@@ -45,6 +53,7 @@ local conditions = {
 }
 
 local config = {
+    extensions = { "nvim-tree", "nerdtree" },
     options = {
         component_separators = "",
         section_separators = "",
@@ -128,7 +137,6 @@ ins_left {
 
 ins_left {
     "filename",
-    cond = conditions.buffer_not_empty or conditions.hide_in_width,
     color = { fg = colors.magenta, bg = colors.bg },
     path = 0,
     symbols = {
@@ -180,7 +188,7 @@ ins_left {
     -- mode component
     function()
         -- auto change color according to neovims mode
-        vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
+        vim.api.nvim_command("hi! LualineMode guifg=" .. colors.yellow .. " guibg=" .. colors.bg)
         return ""
     end,
     cond = conditions.buffer_not_empty and conditions.hide_in_width,
@@ -196,7 +204,7 @@ ins_left {
 }
 ins_left {
     function()
-        return ""
+        return " "
     end,
     color = { fg = colors.magenta, bg = colors.bg },
     cond = conditions.buffer_not_empty and conditions.hide_in_width,
@@ -205,7 +213,7 @@ ins_left {
 
 ins_right {
     function()
-        local msg = "No Active Lsp"
+        local msg = "No Active"
         local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
         local clients = vim.lsp.get_active_clients()
         if next(clients) == nil then
@@ -219,36 +227,39 @@ ins_right {
         end
         return msg
     end,
+    cond = conditions.hide_in_width,
     icon = " ",
     color = { fg = colors.green, bg = colors.bg },
-}
-
-ins_right {
-    "filetype",
-    colored = false,
-    icon_only = false,
-    color = { fg = colors.yellow, bg = colors.bg },
-}
-ins_right {
-    function()
-        local b = vim.api.nvim_get_current_buf()
-        if next(vim.treesitter.highlighter.active[b]) then
-            vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
-            return "🍀"
-        end
-        return "No Ts"
-    end,
-    color = "LualineMode",
 }
 
 -- Add components to right sections
 ins_right {
     "o:encoding",
     fmt = string.upper,
-    cond = conditions.hide_in_width,
-    color = { fg = colors.fg, bg = colors.bg },
+    cond = conditions.hide_in_width_1,
+    color = { fg = colors.fg1, bg = colors.bg },
 }
-
+ins_right {
+    "fileformat",
+    symbols = {
+        unix = "🐧 UNIX", -- e712
+        dos = " DOS", -- e70f
+        mac = " MAC", -- e711
+    },
+    cond = conditions.hide_in_width_1,
+    color = { fg = colors.fg1, bg = colors.bg },
+}
+ins_right {
+    function()
+        local b = vim.api.nvim_get_current_buf()
+        if next(vim.treesitter.highlighter.active[b]) then
+            vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
+            return " "
+        end
+        return "No Ts"
+    end,
+    color = "LualineMode",
+}
 ins_right {
     "branch",
     icon = "",

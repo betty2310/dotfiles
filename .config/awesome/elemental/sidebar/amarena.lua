@@ -539,9 +539,9 @@ sidebar:setup {
                     expand = "none",
                     layout = wibox.layout.align.horizontal,
                 },
-                helpers.vertical_pad(dpi(20)),
+                helpers.vertical_pad(dpi(30)),
                 day_of_the_week,
-                helpers.vertical_pad(dpi(25)),
+                helpers.vertical_pad(dpi(30)),
                 {
                     nil,
                     cute_battery_face,
@@ -555,7 +555,7 @@ sidebar:setup {
         },
         { ----------- MIDDLE GROUP -----------
             {
-                helpers.vertical_pad(dpi(20)),
+                helpers.vertical_pad(dpi(30)),
                 weather,
                 helpers.vertical_pad(dpi(10)),
                 -- {
@@ -596,11 +596,11 @@ sidebar:setup {
                 helpers.vertical_pad(dpi(40)),
                 quote,
                 layout = wibox.layout.fixed.vertical,
-                helpers.vertical_pad(dpi(60)),
+                helpers.vertical_pad(dpi(30)),
                 pacman,
             },
             shape = helpers.prrect(beautiful.sidebar_border_radius, false, true, false, false),
-            bg = x.color0 .. "66",
+            bg = "#313744",
             widget = wibox.container.background,
         },
         { ----------- BOTTOM GROUP -----------
@@ -626,12 +626,12 @@ sidebar:setup {
                 bottom = dpi(30),
                 widget = wibox.container.margin,
             },
-            bg = x.color0 .. "66",
+            bg = "#313744",
             widget = wibox.container.background,
         },
         layout = wibox.layout.align.vertical,
     },
     shape = helpers.prrect(beautiful.sidebar_border_radius, false, true, false, false),
-    bg = beautiful.sidebar_bg or beautiful.wibar_bg or "#111111",
+    bg = "#2b313c",
     widget = wibox.container.background,
 }
