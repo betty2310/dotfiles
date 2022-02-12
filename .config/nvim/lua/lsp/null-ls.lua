@@ -10,7 +10,6 @@ if ok then
                 only_local = "node_modules/.bin",
             },
             diagnostics.flake8,
-
             formatting.prettierd,
             formatting.stylua,
             formatting.clang_format,
@@ -18,8 +17,10 @@ if ok then
             formatting.gofmt,
             formatting.rustfmt,
             formatting.taplo,
-            formatting.shfmt,
-            formatting.trim_whitespace,
+            formatting.shfmt.with {
+                filetypes = { "sh", "bash", "zsh", "fish" },
+            },
+            -- formatting.trim_whitespace,
         },
 
         on_attach = function(client)

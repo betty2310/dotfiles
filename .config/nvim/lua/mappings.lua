@@ -1,14 +1,14 @@
 local ok, wk = pcall(require, "which-key")
 local utils = require "utils"
 local map = utils.map
+local nmap = vim.api.nvim_set_keymap
 
 -- Disable move by arrow keys
+
 map("n", "<Left>", "<cmd>echom 'ﮧ Use h bro!'<cr>")
 map("n", "<Right>", "<cmd>echom 'ﮧ Use l bro!'<cr>")
 map("n", "<Up>", "<cmd>echom 'ﮧ Use k bro!'<cr>")
 map("n", "<Down>", "<cmd>echom 'ﮧ Use j bro!'<cr>")
-
-local nmap = vim.api.nvim_set_keymap
 
 nmap("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
 nmap("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })

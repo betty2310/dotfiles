@@ -1,12 +1,8 @@
 local packer = require "plugins.packerInit"
 local use = packer.use
-
 return packer.startup(function()
     use {
         "wbthomason/packer.nvim",
-        cond = function()
-            return not vim.g.vscode
-        end,
     }
     use { "lewis6991/impatient.nvim" }
 
@@ -29,9 +25,6 @@ return packer.startup(function()
     use {
         "goolord/alpha-nvim",
         config = require "plugins.config.alpha",
-        cond = function()
-            return not vim.g.vscode
-        end,
     }
     use {
         "folke/which-key.nvim",
@@ -68,16 +61,16 @@ return packer.startup(function()
         "max397574/better-escape.nvim",
         config = require "plugins.config.escape",
     }
-    use "ggandor/lightspeed.nvim"
+    use {
+        "ggandor/lightspeed.nvim",
+    }
     use { "iamcco/markdown-preview.nvim" }
-    use { "p00f/clangd_extensions.nvim" }
     -- LSP
     use { "neovim/nvim-lspconfig" }
     use { "williamboman/nvim-lsp-installer" }
 
     -- -- Lint
     use { "folke/lsp-colors.nvim" }
-    --use { "jasonrhansen/lspsaga.nvim", branch = "finder-preview-fixes" }
     use {
         "tami5/lspsaga.nvim",
         branch = "nvim6.0",
@@ -85,7 +78,6 @@ return packer.startup(function()
             lspsaga.setup { rename_prompt_prefix = "הּ" }
         end,
     }
-    use { "kosayoda/nvim-lightbulb", config = require "plugins.config.lightbulb" }
     use { "folke/trouble.nvim" }
     use { "ray-x/lsp_signature.nvim", branch = "neovim-0.6" }
 

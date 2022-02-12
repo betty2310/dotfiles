@@ -8,22 +8,19 @@ local colors = require("utils").colors
 
 onenord.setup {
     borders = true,
-    fade_nc = false,
-    italics = {
-        comments = true,
-        strings = false,
-        keywords = false,
-        functions = false,
-        variables = false,
+    fade_nc = true,
+    styles = {
+        comments = "italic", -- Style that is applied to comments: see `highlight-args` for options
+        strings = "NONE", -- Style that is applied to strings: see `highlight-args` for options
+        keywords = "NONE", -- Style that is applied to keywords: see `highlight-args` for options
+        functions = "NONE",
+        variables = "NONE", -- Style that is applied to variables: see `highlight-args` for options
+        diagnostics = "NONE",
     },
     disable = {
-        background = false,
-        cursorline = false,
-        eob_lines = true,
-    },
-    custom_highlights = {
-        NvimTreeNormal = { fg = colors.fg, bg = colors.bg },
-        WhichKeyFloat = { bg = colors.bg2 },
+        background = true,
+        cursorline = true,
+        eob_lines = false,
     },
     custom_colors = {
         -- purple = "#88C0D0",

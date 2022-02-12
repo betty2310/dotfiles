@@ -1,6 +1,5 @@
 require "theme"
-require "settings"
-require "plugins"
 require "lsp"
 require "mappings"
-require "impatient"
+require "plugins"
+require "settings"

@@ -172,6 +172,16 @@ ins_left {
 }
 ins_left {
     function()
+        local b = vim.api.nvim_get_current_buf()
+        if next(vim.treesitter.highlighter.active[b]) then
+            return " "
+        end
+        return "No Ts"
+    end,
+    color = { fg = colors.green, bg = colors.bg },
+}
+ins_left {
+    function()
         return "%="
     end,
 }
@@ -242,23 +252,12 @@ ins_right {
 ins_right {
     "fileformat",
     symbols = {
-        unix = "🐧 UNIX", -- e712
+        unix = "🐧", -- e712
         dos = " DOS", -- e70f
         mac = " MAC", -- e711
     },
     cond = conditions.hide_in_width_1,
     color = { fg = colors.fg1, bg = colors.bg },
-}
-ins_right {
-    function()
-        local b = vim.api.nvim_get_current_buf()
-        if next(vim.treesitter.highlighter.active[b]) then
-            vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
-            return " "
-        end
-        return "No Ts"
-    end,
-    color = "LualineMode",
 }
 ins_right {
     "branch",

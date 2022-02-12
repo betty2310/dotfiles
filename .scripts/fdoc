@@ -7,7 +7,7 @@
 dir="$HOME/Documents"
 # Change directory so that the paths are shorter in rofi
 cd "$dir" || exit
-choice="$(rg --files --color=never --ignore-file "$ignore_file" | rofi -dmenu -theme generic)"
+choice="$(rg --files --color=never --ignore-file "$ignore_file" | rofi -i -dmenu -theme generic)"
 
 if [[ -z "${choice// /}" ]]; then
 	exit 1

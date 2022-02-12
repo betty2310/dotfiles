@@ -37,6 +37,7 @@ set -U fish_color_comment yellow
 set -U fish_color_quote yellow
 set -gx EDITOR nvim
 #set -x TERM xterm-256color
+set -g man_bold -o green
 
 # PATH
 set -gx PATH bin $PATH
@@ -48,7 +49,6 @@ set -gx PATH /usr/local/texlive/2021/bin/x86_64-linux/ $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
-
 
 # Go
 set -g GOPATH $HOME/go $PATH

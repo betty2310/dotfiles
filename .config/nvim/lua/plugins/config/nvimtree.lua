@@ -1,86 +1,121 @@
 local ok, nvimtree = pcall(require, "nvim-tree")
 
-if ok then
-    local signs = require("utils").signs
+if not ok then
+    return
+end
 
-    vim.g.nvim_tree_root_folder_modifier = ":t"
-    vim.g.nvim_tree_quit_on_open = 1
-    vim.g.nvim_tree_indent_markers = 1
-    vim.g.nvim_tree_side = "left"
-    vim.g.nvim_tree_width = 30
-    vim.g.nvim_tree_window_picker_exclude = {
-        filetype = {
-            "packer",
-            "qf",
-        },
-        buftype = {
-            "terminal",
-        },
-    }
-    vim.g.nvim_tree_special_files = {
-        ["README.md"] = 0,
-        ["Makefile"] = 0,
-        ["MAKEFILE"] = 0,
-    }
-    vim.g.nvim_tree_show_icons = {
-        git = 0,
-        folders = 1,
-        files = 1,
-        folder_arrows = 0,
-    }
-    vim.g.nvim_tree_icons = {
-        default = "",
-        symlink = "",
-        git = {
-            deleted = "  ",
-            ignored = " ◌ ",
-            renamed = "",
-            staged = "  ",
-            unmerged = "",
-            unstaged = "  ",
-            untracked = "★ ",
-            modified = "",
-        },
-        folder = {
-            arrow_open = "",
-            arrow_closed = "",
-            default = "",
-            open = "",
-            empty = "",
-            empty_open = "",
-            symlink = "",
-            symlink_open = "",
-        },
-        lsp = {
+local signs = require("utils").signs
+
+vim.g.nvim_tree_window_picker_exclude = {
+    filetype = {
+        "packer",
+        "qf",
+    },
+    buftype = {
+        "terminal",
+    },
+}
+vim.g.nvim_tree_special_files = {
+    ["README.md"] = 0,
+    ["Makefile"] = 0,
+    ["MAKEFILE"] = 0,
+}
+vim.g.nvim_tree_show_icons = {
+    git = 1,
+    folders = 1,
+    files = 1,
+    folder_arrows = 0,
+}
+vim.g.nvim_tree_icons = {
+    default = "",
+    symlink = "",
+    git = {
+        unstaged = "x",
+        staged = "v",
+        unmerged = "",
+        renamed = "r",
+        untracked = "★",
+        deleted = "",
+        ignored = "◌",
+    },
+    folder = {
+        arrow_open = "",
+        arrow_closed = "",
+        default = "",
+        open = "",
+        empty = "",
+        empty_open = "",
+        symlink = "",
+        symlink_open = "",
+    },
+}
+
+nvimtree.setup {
+    disable_netrw = true,
+    hijack_netrw = true,
+    open_on_setup = false,
+    ignore_ft_on_setup = {},
+    auto_close = true,
+    open_on_tab = false,
+    hijack_cursor = false,
+    update_cwd = false,
+    update_to_buf_dir = {
+        enable = true,
+        auto_open = true,
+    },
+    diagnostics = {
+        enable = false,
+        icons = {
             hint = signs.Hint,
             info = signs.Info,
             warning = signs.Warning,
             error = signs.Error,
         },
-    }
-
-    nvimtree.setup {
-        update_to_buf_dir = {
-            enable = true,
-            auto_open = true,
+    },
+    update_focused_file = {
+        enable = false,
+        update_cwd = false,
+        ignore_list = {},
+    },
+    system_open = {
+        cmd = nil,
+        args = {},
+    },
+    filters = {
+        dotfiles = false,
+        custom = {
+            ".git",
         },
-        update_focused_file = {
-            enable = true,
-            update_cwd = true,
-            ignore_list = {},
+    },
+    git = {
+        enable = true,
+        ignore = false,
+        timeout = 500,
+    },
+    view = {
+        width = 30,
+        height = 30,
+        hide_root_folder = true,
+        side = "left",
+        auto_resize = false,
+        mappings = {
+            custom_only = false,
+            list = {},
         },
-        git = {
-            enable = true,
+        number = false,
+        relativenumber = false,
+        signcolumn = "yes",
+    },
+    trash = {
+        cmd = "trash",
+        require_confirm = true,
+    },
+    actions = {
+        change_dir = {
+            global = false,
         },
-        filters = {
-            dotfiles = false,
-            custom = {
-                ".git",
-            },
+        open_file = {
+            quit_on_open = true,
         },
-        view = {
-            hide_root_folder = true,
-            auto_resize = true,
-        },
-    }
-end
+    },
+}
