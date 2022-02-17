@@ -40,7 +40,7 @@ _M.colors = {
     cyan_light = "#8FBCBB",
 }
 
-_M.signs = { Error = "", Warn = "", Hint = "", Info = "" }
+_M.signs = { Error = "", Warn = "", Hint = "", Info = "" }
 
 _M.powerline = {
     circle = {

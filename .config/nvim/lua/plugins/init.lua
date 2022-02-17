@@ -95,14 +95,16 @@ return packer.startup(function()
     use { "saadparwaiz1/cmp_luasnip" }
     use { "hrsh7th/cmp-calc" }
 
-    -- -- Formatter and Linting
-    use {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-            require("null-ls").setup()
-        end,
-        requires = { "nvim-lua/plenary.nvim" },
-    }
+    -- Formatter and Linting
+    -- use {
+    --     "jose-elias-alvarez/null-ls.nvim",
+    --     config = function()
+    --         require("null-ls").setup()
+    --     end,
+    --     requires = { "nvim-lua/plenary.nvim" },
+    -- } Seem like now it error, so remind me 5 months
+
+    use { "mhartington/formatter.nvim" }
 
     -- Tmux
     use { "aserowy/tmux.nvim", config = require "plugins.config.tmux" }

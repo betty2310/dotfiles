@@ -25,6 +25,25 @@ local mode_color = {
     ["!"] = colors.red,
     t = colors.red,
 }
+local mode_color_1 = {
+    n = colors.blue_light,
+    i = colors.green,
+    v = colors.red,
+    c = colors.red,
+    no = colors.green,
+    s = colors.green,
+    [""] = colors.green,
+    ic = colors.green,
+    R = colors.red,
+    Rv = colors.red,
+    cv = colors.red,
+    ce = colors.red,
+    r = colors.blue_light,
+    rm = colors.blue_light,
+    ["r?"] = colors.blue,
+    ["!"] = colors.red,
+    t = colors.red,
+}
 
 local conditions = {
     buffer_not_empty = function()
@@ -162,7 +181,7 @@ ins_left {
 ins_left {
     "diagnostics",
     sources = { "nvim_diagnostic" },
-    symbols = { error = " ", warn = " ", info = " " },
+    symbols = { error = " ", warn = " ", info = " ", hint = " " },
     color = { bg = colors.bg },
     diagnostics_color = {
         color_error = { fg = colors.red },
@@ -198,7 +217,7 @@ ins_left {
     -- mode component
     function()
         -- auto change color according to neovims mode
-        vim.api.nvim_command("hi! LualineMode guifg=" .. colors.yellow .. " guibg=" .. colors.bg)
+        vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color_1[vim.fn.mode()] .. " guibg=" .. colors.bg)
         return ""
     end,
     cond = conditions.buffer_not_empty and conditions.hide_in_width,

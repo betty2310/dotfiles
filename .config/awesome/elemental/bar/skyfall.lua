@@ -31,6 +31,7 @@ local update_taglist = function(item, tag, index)
     end
 end
 
+mytextclock = wibox.widget.textclock()
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(function(s)
     s.mytaglist = awful.widget.taglist {
@@ -40,9 +41,9 @@ awful.screen.connect_for_each_screen(function(s)
         widget_template = {
             widget = wibox.widget.textbox,
             create_callback = function(self, tag, index, _)
-                self.align = "center"
-                self.valign = "center"
-                self.forced_width = dpi(25)
+                -- self.align = "center"
+                -- self.valign = "center"
+                self.forced_width = dpi(22)
                 self.font = beautiful.taglist_text_font
 
                 update_taglist(self, tag, index)
@@ -53,7 +54,22 @@ awful.screen.connect_for_each_screen(function(s)
         },
         buttons = keys.taglist_buttons,
     }
-
+    s.mypromptbox = awful.widget.prompt()
+    s.mylayoutbox = awful.widget.layoutbox(s)
+    s.mylayoutbox:buttons(gears.table.join(
+        awful.button({}, 1, function()
+            awful.layout.inc(1)
+        end),
+        awful.button({}, 3, function()
+            awful.layout.inc(-1)
+        end),
+        awful.button({}, 4, function()
+            awful.layout.inc(1)
+        end),
+        awful.button({}, 5, function()
+            awful.layout.inc(-1)
+        end)
+    ))
     -- Create a system tray widget
     s.systray = wibox.widget.systray()
 
@@ -61,9 +77,9 @@ awful.screen.connect_for_each_screen(function(s)
     -- Hidden by default. Can be toggled with a keybind.
     s.traybox = wibox { visible = false, ontop = true, shape = helpers.rrect(beautiful.border_radius), type = "dock" }
     s.traybox.width = dpi(120)
-    s.traybox.height = beautiful.wibar_height - beautiful.screen_margin * 4
-    s.traybox.x = s.geometry.width - beautiful.screen_margin * 2 - s.traybox.width
-    s.traybox.y = s.geometry.height - s.traybox.height - beautiful.screen_margin * 2
+    s.traybox.height = dpi(30) --beautiful.wibar_height - beautiful.screen_margin * 4
+    s.traybox.x = dpi(1410) --s.geometry.width - beautiful.screen_margin * 2 - s.traybox.width
+    s.traybox.y = dpi(25) --s.geometry.height - s.traybox.height - beautiful.screen_margin * 2
     -- s.traybox.y = s.geometry.height - s.traybox.height - s.traybox.height / 2
     s.traybox.bg = beautiful.bg_systray
     s.traybox:setup {
@@ -83,17 +99,10 @@ awful.screen.connect_for_each_screen(function(s)
         s.traybox.visible = false
     end)
 
-    -- Create text weather widget
-    local text_weather = require "noodle.text_weather"
-    local weather_widget_icon = text_weather:get_all_children()[1]
-    weather_widget_icon.font = "JetBrainsMono Nerd Font 11"
-    local weather_widget_text = text_weather:get_all_children()[2]
-    weather_widget_text.font = "sans 9"
-
     -- Create a window control widget
     local close_button = wibox.widget.textbox()
-    close_button.font = "JetBrainsMono Nerd Font 11"
-    close_button.markup = helpers.colorize_text("", x.color1)
+    close_button.font = "JetBrainsMono Nerd Font 8"
+    close_button.markup = helpers.colorize_text("  ", x.color1)
     close_button:buttons(gears.table.join(awful.button({}, 1, function()
         if client.focus then
             client.focus:kill()
@@ -105,26 +114,26 @@ awful.screen.connect_for_each_screen(function(s)
             client.focus.maximized = not client.focus.maximized
         end
     end)))
-    maximize_button.font = "Typicons 11"
-    maximize_button.markup = helpers.colorize_text("", x.color5)
+    maximize_button.font = "JetBrainsMono Nerd Font 8"
+    maximize_button.markup = helpers.colorize_text(" ", x.color11)
     local minimize_button = wibox.widget.textbox()
     minimize_button:buttons(gears.table.join(awful.button({}, 1, function()
         if client.focus then
             client.focus.minimized = true
         end
     end)))
-    minimize_button.font = "Typicons 11"
-    minimize_button.markup = helpers.colorize_text("", x.color6)
+    minimize_button.font = "JetBrainsMono Nerd Font 8"
+    minimize_button.markup = helpers.colorize_text(" ", x.color2)
 
     local window_buttons = wibox.widget {
-        minimize_button,
-        maximize_button,
         close_button,
+        maximize_button,
+        minimize_button,
         { -- Padding
             spacing = dpi(6),
             layout = wibox.layout.fixed.horizontal,
         },
-        spacing = dpi(12),
+        spacing = dpi(6),
         layout = wibox.layout.fixed.horizontal,
     }
     window_buttons:buttons(gears.table.join(
@@ -154,12 +163,13 @@ awful.screen.connect_for_each_screen(function(s)
             { -- Some padding
                 layout = wibox.layout.fixed.horizontal,
             },
-            text_weather,
+            window_buttons,
             spacing = dpi(12),
             layout = wibox.layout.fixed.horizontal,
         },
         s.mytaglist,
-        window_buttons,
+        s.mylayoutbox,
+        mytextclock,
         expand = "none",
         layout = wibox.layout.align.horizontal,
     }
@@ -171,7 +181,7 @@ traybox_activator = wibox {
     x = s.geometry.width - 1,
     y = s.geometry.height - beautiful.wibar_height,
     height = beautiful.wibar_height,
-    width = 1,
+    width = 10,
     opacity = 0,
     visible = true,
     bg = beautiful.wibar_bg,

@@ -247,7 +247,7 @@ awful.screen.connect_for_each_screen(function(s)
             widget = wibox.container.margin,
         },
         bg = beautiful.bg_systray,
-        shape = helpers.rrect(beautiful.border_radius),
+        shape = helpers.rrect(beautiful.border_radius_tray),
         widget = wibox.container.background,
     }
     awful.placement.bottom_right(s.traybox, { margins = beautiful.useless_gap * 2 })

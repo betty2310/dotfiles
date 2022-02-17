@@ -15,7 +15,7 @@ local decoration_themes = {
     "ephemeral", -- 3 -- Text-generated titlebar buttons
 }
 local decoration_theme = decoration_themes[3]
--- ===================================================================
+
 -- Statusbar themes. Multiple bars can be declared in each theme.
 local bar_themes = {
     "manta", -- 1 -- Taglist, client counter, date, time, layout
@@ -238,9 +238,10 @@ screen_height = awful.screen.focused().geometry.height
 -- ===================================================================
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.floating,
-    awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.floating,
+    awful.layout.suit.tile,
+    awful.layout.suit.max,
     --awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
@@ -1171,9 +1172,3 @@ collectgarbage("setstepmul", 1000)
 --         client.focus = c
 --     end
 -- end)
-
-package.loaded["awful.hotkeys_popup.keys.tmux"] = {}
-
-awful.spawn.with_shell "imwheel -kill"
-awful.spawn.with_shell "ulauncher &"
-awful.spawn.with_shell "copyq &"

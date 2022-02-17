@@ -121,13 +121,13 @@ if ok then
     }
 
     -- Auto format on save
-    -- vim.api.nvim_exec(
-    --     [[
-    --     augroup FormatAutogroup
-    --     autocmd!
-    --     autocmd BufWritePost * FormatWrite
-    --     augroup END
-    --     ]],
-    --     true
-    -- )
+    vim.api.nvim_exec(
+        [[
+        augroup FormatAutogroup
+        autocmd!
+        autocmd BufWritePost * FormatWrite
+        augroup END
+        ]],
+        true
+    )
 end

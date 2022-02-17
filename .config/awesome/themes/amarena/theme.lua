@@ -31,7 +31,7 @@ theme.bg_normal = x.color0
 theme.bg_focus = x.color8
 theme.bg_urgent = x.color8
 theme.bg_minimize = x.color8
-theme.bg_systray = x.background
+theme.bg_systray = "#262b33"
 
 theme.fg_normal = x.color8
 theme.fg_focus = x.color4
@@ -51,6 +51,7 @@ theme.border_normal = x.background
 theme.border_focus = x.background
 -- Rounded corners
 theme.border_radius = dpi(6)
+theme.border_radius_tray = dpi(12)
 
 -- Titlebars
 -- (Titlebar items can be customized in titlebars.lua)
@@ -122,15 +123,15 @@ theme.separator_fg = x.color8
 
 -- Wibar(s)
 -- Keep in mind that these settings could be ignored by the bar theme
-theme.wibar_position = "bottom"
-theme.wibar_height = dpi(45)
-theme.wibar_fg = x.background
-theme.wibar_bg = x.foreground
---theme.wibar_opacity = 0.7
+theme.wibar_position = "top"
+theme.wibar_height = dpi(50)
+theme.wibar_bg = x.background
+theme.wibar_fg = x.foreground
+theme.wibar_opacity = 0.8
 theme.wibar_border_color = x.color0
 theme.wibar_border_width = dpi(0)
-theme.wibar_border_radius = dpi(0)
-theme.wibar_width = dpi(380)
+theme.wibar_border_radius = dpi(3)
+theme.wibar_width = dpi(1530)
 
 theme.prefix_fg = x.color8
 
@@ -204,67 +205,67 @@ for i = 1, ntags do
 end
 
 -- Noodle Text Taglist
-theme.taglist_text_font = "monospace 25"
+theme.taglist_text_font = "Material Design Icons 10"
 -- theme.taglist_text_font = "sans bold 15"
-theme.taglist_text_empty = { "", "", "", "", "", "", "", "", "", "" }
-theme.taglist_text_occupied = { "", "", "", "", "", "", "", "", "", "" }
-theme.taglist_text_focused = { "o", "o", "o", "o", "o", "o", "o", "o", "o", "o" }
+theme.taglist_text_empty = { "", "", "", "", "", "", "", "", "", "" }
+theme.taglist_text_occupied = { "", "", "", "", "", "", "", "", "", "" }
+theme.taglist_text_focused = { "󰮯", "󰮯", "󰮯", "󰮯", "󰮯", "󰮯", "󰮯", "󰮯", "󰮯", "󰮯" }
 -- theme.taglist_text_focused  = {"","","","","","","","","",""}
 theme.taglist_text_urgent = { "+", "+", "+", "+", "+", "+", "+", "+", "+", "+" }
 -- theme.taglist_text_urgent   = {"","","","","","","","","",""}
 -- theme.taglist_text_urgent   = {"","","","","","","","","",""}
 
 theme.taglist_text_color_empty = {
-    x.background .. "22",
-    x.background .. "22",
-    x.background .. "22",
-    x.background .. "22",
-    x.background .. "22",
-    x.background .. "22",
-    x.background .. "22",
-    x.background .. "22",
-    x.background .. "22",
-    x.background .. "22",
+    "#4C566A",
+    "#4C566A",
+    "#4C566A",
+    "#4C566A",
+    "#4C566A",
+    "#4C566A",
+    "#4C566A",
+    "#4C566A",
+    "#4C566A",
+    "#4C566A",
 }
 -- theme.taglist_text_color_occupied  = { x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0" }
 -- theme.taglist_text_color_focused  = { x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0" }
 -- theme.taglist_text_color_urgent  = { x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground }
 
 theme.taglist_text_color_occupied = {
-    x.color1 .. "99",
-    x.color2 .. "99",
-    x.color3 .. "99",
-    x.color4 .. "99",
-    x.color5 .. "99",
-    x.color6 .. "99",
-    x.color1 .. "99",
-    x.color2 .. "99",
-    x.color3 .. "99",
-    x.color4 .. "99",
+    x.color2,
+    x.color2,
+    x.color2,
+    x.color2,
+    x.color2,
+    x.color2,
+    x.color2,
+    x.color2,
+    x.color2,
+    x.color2,
 }
 theme.taglist_text_color_focused = {
-    x.color9,
-    x.color10,
     x.color11,
-    x.color12,
-    x.color13,
-    x.color14,
-    x.color9,
-    x.color10,
     x.color11,
-    x.color12,
+    x.color11,
+    x.color11,
+    x.color11,
+    x.color11,
+    x.color11,
+    x.color11,
+    x.color11,
+    x.color11,
 }
 theme.taglist_text_color_urgent = {
-    x.background,
-    x.background,
-    x.background,
-    x.background,
-    x.background,
-    x.background,
-    x.background,
-    x.background,
-    x.background,
-    x.background,
+    x.color1,
+    x.color1,
+    x.color1,
+    x.color1,
+    x.color1,
+    x.color1,
+    x.color1,
+    x.color1,
+    x.color1,
+    x.color1,
 }
 -- theme.taglist_text_color_urgent   = { x.color9, x.color10, x.color11, x.color12, x.color13, x.color14, x.color9, x.color10, x.color11, x.color12 }
 
