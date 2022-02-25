@@ -296,8 +296,8 @@ awful.screen.connect_for_each_screen(function(s)
     local layouts = {
         l.spiral.dwindle,
         l.spiral.dwindle,
-        l.max,
-        l.max,
+        l.spiral.dwindle,
+        l.spiral.dwindle,
         l.max,
         l.max,
         l.max,
@@ -405,18 +405,6 @@ awful.rules.rules = {
         properties = { floating = true, titlebars_enabled = false },
     },
 
-    -- TODO why does Chromium always start up floating in AwesomeWM?
-    -- Temporary fix until I figure it out
-    {
-        rule_any = {
-            class = {
-                "Chromium-browser",
-                "Chromium",
-            },
-        },
-        properties = { floating = false },
-    },
-
     -- Fullscreen clients
     {
         rule_any = {
@@ -436,18 +424,6 @@ awful.rules.rules = {
         },
         properties = { fullscreen = true },
     },
-
-    -- -- Unfocusable clients (unless clicked with the mouse)
-    -- -- If you want to prevent focusing even when clicking them, you need to
-    -- -- modify the left click client mouse bind in keys.lua
-    -- {
-    --     rule_any = {
-    --         class = {
-    --             "scratchpad"
-    --         },
-    --     },
-    --     properties = { focusable = false }
-    -- },
 
     -- Centered clients
     {
@@ -477,47 +453,6 @@ awful.rules.rules = {
         properties = { placement = centered_client_placement },
     },
 
-    -- Titlebars OFF (explicitly)
-    {
-        rule_any = {
-            instance = {
-                "install league of legends (riot client live).exe",
-                "gw2-64.exe",
-                "battle.net.exe",
-                "riotclientservices.exe",
-                "leagueclientux.exe",
-                "riotclientux.exe",
-                "leagueclient.exe",
-                "^editor$",
-                "markdown_input",
-            },
-            class = {
-                "qutebrowser",
-                "Sublime_text",
-                "Subl3",
-                --"discord",
-                --"TelegramDesktop",
-                "firefox",
-                "Nightly",
-                "Steam",
-                "Lutris",
-                "Chromium",
-                "^editor$",
-                "markdown_input",
-                -- "Thunderbird",
-            },
-            type = {
-                "splash",
-            },
-            name = {
-                "^discord.com is sharing your screen.$", -- Discord (running in browser) screen sharing popup
-            },
-        },
-        callback = function(c)
-            decorations.hide(c)
-        end,
-    },
-
     -- Titlebars ON (explicitly)
     {
         rule_any = {
@@ -530,27 +465,6 @@ awful.rules.rules = {
         },
         callback = function(c)
             decorations.show(c)
-        end,
-    },
-
-    -- "Needy": Clients that steal focus when they are urgent
-    {
-        rule_any = {
-            class = {
-                "TelegramDesktop",
-                "firefox",
-                "Nightly",
-            },
-            type = {
-                "dialog",
-            },
-        },
-        callback = function(c)
-            c:connect_signal("property::urgent", function()
-                if c.urgent then
-                    c:jump_to()
-                end
-            end)
         end,
     },
 
@@ -630,15 +544,6 @@ awful.rules.rules = {
         properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.60 },
     },
 
-    -- Screenruler
-    {
-        rule_any = { class = { "Screenruler" } },
-        properties = { border_width = 0, floating = true, ontop = true, titlebars_enabled = false },
-        callback = function(c)
-            awful.placement.centered(c, { honor_padding = true, honor_workarea = true })
-        end,
-    },
-
     -- floating_terminal
     {
         rule_any = { class = { "float" } },
@@ -710,6 +615,7 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
+                "SimpleScreenRecorder",
                 "music",
             },
             instance = {
@@ -772,47 +678,6 @@ awful.rules.rules = {
         end,
     },
 
-    -- Dragon drag and drop utility
-    {
-        rule_any = {
-            class = {
-                "Dragon-drag-and-drop",
-                "Dragon",
-            },
-        },
-        properties = {
-            floating = true,
-            ontop = true,
-            sticky = true,
-            width = screen_width * 0.3,
-        },
-        callback = function(c)
-            awful.placement.bottom_right(c, {
-                honor_padding = true,
-                honor_workarea = true,
-                margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
-            })
-        end,
-    },
-
-    -- Magit window
-    {
-        rule = { instance = "Magit" },
-        properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.6 },
-    },
-
-    -- Steam guard
-    {
-        rule = { name = "Steam Guard - Computer Authorization Required" },
-        properties = { floating = true },
-        -- Such a stubborn window, centering it does not work
-        -- callback = function (c)
-        --     gears.timer.delayed_call(function()
-        --         awful.placement.centered(c,{honor_padding = true, honor_workarea=true})
-        --     end)
-        -- end
-    },
-
     -- MPV
     {
         rule = { class = "mpv" },
@@ -824,10 +689,21 @@ awful.rules.rules = {
                 c.ontop = true
                 c.width = screen_width * 0.30
                 c.height = screen_height * 0.35
-                awful.placement.bottom_right(c, {
+                awful.placement.top_right(c, {
                     honor_padding = true,
                     honor_workarea = true,
-                    margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
+                    margins = { top = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
+                })
+            end
+            if awful.layout.get(awful.screen.focused()) == awful.layout.suit.spiral.dwindle then
+                c.floating = true
+                c.ontop = true
+                c.width = screen_width * 0.30
+                c.height = screen_height * 0.35
+                awful.placement.top_right(c, {
+                    honor_padding = true,
+                    honor_workarea = true,
+                    margins = { top = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
                 })
             end
 
@@ -901,6 +777,42 @@ awful.rules.rules = {
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[1] },
     },
+    -- Google Picture-in-Picture
+    {
+        rule = { name = "Picture in picture" },
+        properties = {},
+        callback = function(c)
+            -- Make it floating, sticky and move it out of the way if the current tag is maximized
+            if awful.layout.get(awful.screen.focused()) == awful.layout.suit.max then
+                c.floating = true
+                c.sticky = true
+                c.width = screen_width * 0.30
+                c.height = screen_height * 0.35
+                awful.placement.bottom_right(c, {
+                    honor_padding = true,
+                    honor_workarea = true,
+                    margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
+                })
+            end
+            if awful.layout.get(awful.screen.focused()) == awful.layout.suit.spiral.dwindle then
+                c.floating = true
+                c.sticky = true
+                c.width = screen_width * 0.2
+                c.height = screen_height * 0.2
+                awful.placement.bottom_right(c, {
+                    honor_padding = true,
+                    honor_workarea = true,
+                    margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
+                })
+            end
+
+            c:connect_signal("property::fullscreen", function()
+                if not c.fullscreen then
+                    c.sticky = true
+                end
+            end)
+        end,
+    },
 
     -- Games
     {
@@ -923,6 +835,7 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
+                "SimpleScreenRecorder",
                 "discord",
                 "TelegramDesktop",
                 "Slack",

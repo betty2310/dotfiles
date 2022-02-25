@@ -28,8 +28,8 @@ choice="$(rg --files --color=never --ignore-file "$ignore_file" | dmenu -i -l 10
 
 # If the search is cancelled by the user (e.g. Escape button)
 if [[ -z "${choice// /}" ]]; then
-	exit 1
+  exit 1
 fi
 
 # Edit the selected file
-st -e nvim "$choice"
+st -e code "$choice"

@@ -33,7 +33,7 @@ awful.screen.connect_for_each_screen(function(s)
         style = {
             font = beautiful.tasklist_font,
             -- font = "sans 10 medium",
-            bg = x.color0,
+            bg = "#2E3440",
         },
         layout = {
             layout = wibox.layout.fixed.vertical,
@@ -98,7 +98,7 @@ awful.screen.connect_for_each_screen(function(s)
                 margins = window_switcher_margin,
                 widget = wibox.container.margin,
             },
-            bg = x.color0,
+            bg = "#2E3440",
             shape = helpers.rrect(beautiful.border_radius),
             widget = wibox.container.background,
         },

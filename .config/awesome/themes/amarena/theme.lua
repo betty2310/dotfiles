@@ -27,7 +27,7 @@ theme.font = "SF Pro Display 11"
 -- local cool_color = awesome.xrdb_get_value("", "color16")
 
 theme.bg_dark = x.background
-theme.bg_normal = x.color0
+theme.bg_normal = x.background
 theme.bg_focus = x.color8
 theme.bg_urgent = x.color8
 theme.bg_minimize = x.color8
@@ -147,6 +147,8 @@ theme.prefix_fg = x.color8
 --hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
 --Example:
 --theme.taglist_bg_focus = "#ff0000"
+
+theme.hotkeys_description_font = "sans 8"
 
 --Tasklist
 theme.tasklist_font = "sans medium 8"

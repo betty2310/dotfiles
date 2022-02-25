@@ -19,9 +19,9 @@ local function create_button(symbol, color, hover_color, cmd, key)
         markup = helpers.colorize_text(symbol, color),
         align = "center",
         valign = "center",
-        font = "Font Awesome 6 Pro Solid 40",
-        forced_width = dpi(180),
-        forced_height = dpi(200),
+        font = "Font Awesome 6 Pro Solid 30",
+        forced_width = dpi(90),
+        forced_height = dpi(100),
         widget = wibox.widget.textbox,
     }
 
@@ -62,8 +62,13 @@ local function create_button(symbol, color, hover_color, cmd, key)
     if key then
         keybinds[key] = cmd
     end
-
-    return icon
+    local app = wibox.widget {
+        icon,
+        bg = "#262b33",
+        widget = wibox.container.background,
+        shape = helpers.rrect(dpi(16)),
+    }
+    return app
 end
 
 -- Create app buttons
@@ -86,18 +91,18 @@ local teams = create_button("", x.color6, x.color11, apps.teams, "o")
 local restart_awesome = create_button("", x.color1, x.color12)
 restart_awesome:buttons(gears.table.join(awful.button({}, 1, awesome.restart)))
 
--- Create the widget
-app_drawer = wibox { visible = false, ontop = true, type = "dock" }
-awful.placement.maximize(app_drawer)
-
-app_drawer.bg = "#00000000"
--- app_drawer.bg = beautiful.app_drawer_bg or x.background or "#111111"
-app_drawer.fg = beautiful.app_drawer_fg or x.foreground or "#FEFEFE"
-
+function app_drawer_create(s)
+    app_drawer = wibox { visible = false, ontop = true, type = "dock", screen = s }
+    awful.placement.maximize(app_drawer)
+    app_drawer.bg = "#00000000"
+    -- app_drawer.bg = beautiful.app_drawer_bg or x.background or "#111111"
+    app_drawer.fg = beautiful.app_drawer_fg or x.foreground or "#FEFEFE"
+    return app_drawer
+end
 -- Add app drawer or mask to each screen
 for s in screen do
     if s == screen.primary then
-        s.app_drawer = app_drawer
+        s.app_drawer = app_drawer_create(s)
     else
         s.app_drawer = helpers.screen_mask(s, beautiful.lock_screen_bg or beautiful.exit_screen_bg or x.background)
     end
@@ -164,7 +169,7 @@ app_drawer:buttons(gears.table.join(
 
 local function create_stripe(widgets, bg)
     local buttons = wibox.widget {
-        -- spacing = dpi(20),
+        spacing = dpi(50),
         layout = wibox.layout.fixed.horizontal,
     }
 
@@ -196,13 +201,14 @@ app_drawer:setup {
     {
         -- Stripes
         create_stripe({ browser, steam, discord, telegram }, "#00000000"),
-        create_stripe({ mail, disk, files, passwords }, x.color8 .. "20"),
-        create_stripe({ volume, vlc, record, teams }, x.color8 .. "40"),
-        create_stripe({ networks, bluetooth, night_mode, restart_awesome }, x.color8 .. "60"),
+        create_stripe({ mail, disk, files, passwords }, "#00000000"),
+        create_stripe({ volume, vlc, record, teams }, "#00000000"),
+        create_stripe({ networks, bluetooth, night_mode, restart_awesome }, "#00000000"),
+        create_stripe({ networks, bluetooth, night_mode, restart_awesome }, "#00000000"),
         layout = wibox.layout.flex.vertical,
     },
-    bg = x.background,
-    -- bg = x.background.."AA",
+    --bg = x.background,
+    bg = x.background .. "AA",
     -- bg = "#00000000",
     widget = wibox.container.background,
 }
