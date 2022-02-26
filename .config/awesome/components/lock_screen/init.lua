@@ -24,7 +24,7 @@ lock_screen.init = function()
         end
 
         -- Load the lock_screen element
-        require "elemental.lock_screen"
+        require "components.lock_screen.lock_screen"
     end)
 end
 

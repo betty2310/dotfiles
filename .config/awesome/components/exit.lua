@@ -5,7 +5,6 @@ local beautiful = require "beautiful"
 -- local naughty = require("naughty")
 
 local helpers = require "helpers"
-
 -- Appearance
 -- icomoon symbols
 local icon_font = "icomoon bold 45"
