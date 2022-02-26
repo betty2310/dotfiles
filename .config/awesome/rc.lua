@@ -242,6 +242,10 @@ awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.max,
+    bling.layout.mstab,
+    bling.layout.centered,
+    bling.layout.equalarea,
+    bling.layout.deck,
     --awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
@@ -294,17 +298,16 @@ awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit -- Alias to save time :)
     -- Tag layouts
     local layouts = {
-        l.spiral.dwindle,
-        l.spiral.dwindle,
-        l.spiral.dwindle,
-        l.spiral.dwindle,
-        l.max,
-        l.max,
-        l.max,
-        l.max,
-        l.max,
-        l.max,
-        l.max,
+        bling.layout.mstab,
+        bling.layout.deck,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
     }
 
     -- Tag names

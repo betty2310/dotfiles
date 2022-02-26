@@ -14,27 +14,25 @@ local tip = titlebar_icon_path --alias to save time/space
 local xrdb = xresources.get_current_theme()
 -- local theme = dofile(themes_path.."default/theme.lua")
 local theme = {}
-
 -- Set theme wallpaper.
 -- It won't change anything if you are using feh to set the wallpaper like I do.
-theme.wallpaper = os.getenv "HOME" .. "/.config/awesome/themes/" .. theme_name .. "/wallpaper.jpg"
 
+theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
 -- Set the theme font. This is the font that will be used by default in menus, bars, titlebars etc.
 -- theme.font          = "sans 11"
-theme.font = "SF Pro Display 11"
-
+theme.font = "monospace medium 8"
 -- This is how to get other .Xresources values (beyond colors 0-15, or custom variables)
 -- local cool_color = awesome.xrdb_get_value("", "color16")
 
 theme.bg_dark = x.background
 theme.bg_normal = x.background
-theme.bg_focus = x.color8
+theme.bg_focus = "#262b33"
 theme.bg_urgent = x.color8
 theme.bg_minimize = x.color8
-theme.bg_systray = "#262b33"
+theme.bg_systray = x.background
 
 theme.fg_normal = x.color8
-theme.fg_focus = x.color4
+theme.fg_focus = x.color2
 theme.fg_urgent = x.color9
 theme.fg_minimize = x.color8
 
@@ -51,7 +49,7 @@ theme.border_normal = x.background
 theme.border_focus = x.background
 -- Rounded corners
 theme.border_radius = dpi(6)
-theme.border_radius_tray = dpi(12)
+theme.border_radius_tray = dpi(6)
 
 -- Titlebars
 -- (Titlebar items can be customized in titlebars.lua)
@@ -124,7 +122,7 @@ theme.separator_fg = x.color8
 -- Wibar(s)
 -- Keep in mind that these settings could be ignored by the bar theme
 theme.wibar_position = "top"
-theme.wibar_height = dpi(50)
+theme.wibar_height = dpi(17)
 theme.wibar_bg = x.background
 theme.wibar_fg = x.foreground
 theme.wibar_opacity = 0.8
@@ -154,8 +152,8 @@ theme.hotkeys_description_font = "sans 8"
 theme.tasklist_font = "sans medium 8"
 theme.tasklist_disable_icon = true
 theme.tasklist_plain_task_name = true
-theme.tasklist_bg_focus = x.color0
-theme.tasklist_fg_focus = x.foreground
+theme.tasklist_bg_focus = x.color4
+theme.tasklist_fg_focus = x.background
 theme.tasklist_bg_normal = "#00000000"
 theme.tasklist_fg_normal = x.foreground .. "77"
 theme.tasklist_bg_minimize = "#00000000"
@@ -275,15 +273,15 @@ theme.taglist_text_color_urgent = {
 theme.prompt_fg = x.color12
 
 -- Text Taglist (default)
-theme.taglist_font = "monospace bold 9"
-theme.taglist_bg_focus = x.background
-theme.taglist_fg_focus = x.color12
+theme.taglist_font = "monospace bold 8"
+theme.taglist_bg_focus = x.color2
+theme.taglist_fg_focus = x.background
 theme.taglist_bg_occupied = x.background
-theme.taglist_fg_occupied = x.color8
+theme.taglist_fg_occupied = x.color2
 theme.taglist_bg_empty = x.background
-theme.taglist_fg_empty = x.background
-theme.taglist_bg_urgent = x.background
-theme.taglist_fg_urgent = x.color3
+theme.taglist_fg_empty = x.color8
+theme.taglist_bg_urgent = x.color3
+theme.taglist_fg_urgent = x.background
 theme.taglist_disable_icon = true
 theme.taglist_spacing = dpi(0)
 -- Generate taglist squares:
@@ -424,7 +422,35 @@ theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
 theme.icon_theme = "/usr/share/icons/Papirus-Dark-Maia"
-
+theme.tag_preview_widget_border_radius = 5 -- Border radius of the widget (With AA)
+theme.tag_preview_client_border_radius = 5 -- Border radius of each client in the widget (With AA)
+theme.tag_preview_client_opacity = 1 -- Opacity of each client
+theme.tag_preview_client_bg = "#000000" -- The bg color of each client
+theme.tag_preview_client_border_color = x.background -- The border color of each client
+theme.tag_preview_client_border_width = 0 -- The border width of each client
+theme.tag_preview_widget_bg = "#000000" -- The bg color of the widget
+theme.tag_preview_widget_border_color = x.color2 -- The border color of the widget
+theme.tag_preview_widget_border_width = 2 -- The border width of the widget
+theme.tag_preview_widget_margin = 0
+theme.window_switcher_widget_bg = "#2b313c" -- The bg color of the widget
+theme.window_switcher_widget_border_width = 0 -- The border width of the widget
+theme.window_switcher_widget_border_radius = 2 -- The border radius of the widget
+theme.window_switcher_widget_border_color = "#ffffff" -- The border color of the widget
+theme.window_switcher_clients_spacing = 20 -- The space between each client item
+theme.window_switcher_client_icon_horizontal_spacing = 5 -- The space between client icon and text
+theme.window_switcher_client_width = 150 -- The width of one client widget
+theme.window_switcher_client_height = 250 -- The height of one client widget
+theme.window_switcher_client_margins = 10 -- The margin between the content and the border of the widget
+theme.window_switcher_thumbnail_margins = 10 -- The margin between one client thumbnail and the rest of the widget
+theme.thumbnail_scale = true -- If set to true, the thumbnails fit policy will be set to "fit" instead of "auto"
+theme.window_switcher_name_margins = 10 -- The margin of one clients title to the rest of the widget
+theme.window_switcher_name_valign = "center" -- How to vertically align one clients title
+theme.window_switcher_name_forced_width = 200 -- The width of one title
+theme.window_switcher_name_font = "monospace medium 10" -- The font of all titles
+theme.window_switcher_name_normal_color = x.foreground -- The color of one title if the client is unfocused
+theme.window_switcher_name_focus_color = x.color2 -- The color of one title if the client is focused
+theme.window_switcher_icon_valign = "center" -- How to vertically align the one icon
+theme.window_switcher_icon_width = 0
 return theme
 
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80

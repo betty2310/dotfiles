@@ -66,7 +66,7 @@ local function create_button(symbol, color, hover_color, cmd, key)
         icon,
         bg = "#262b33",
         widget = wibox.container.background,
-        shape = helpers.rrect(dpi(16)),
+        shape = helpers.rrect(dpi(20)),
     }
     return app
 end
@@ -169,7 +169,7 @@ app_drawer:buttons(gears.table.join(
 
 local function create_stripe(widgets, bg)
     local buttons = wibox.widget {
-        spacing = dpi(50),
+        spacing = dpi(60),
         layout = wibox.layout.fixed.horizontal,
     }
 
@@ -200,11 +200,17 @@ app_drawer:setup {
     -- Background
     {
         -- Stripes
-        create_stripe({ browser, steam, discord, telegram }, "#00000000"),
-        create_stripe({ mail, disk, files, passwords }, "#00000000"),
-        create_stripe({ volume, vlc, record, teams }, "#00000000"),
-        create_stripe({ networks, bluetooth, night_mode, restart_awesome }, "#00000000"),
-        create_stripe({ networks, bluetooth, night_mode, restart_awesome }, "#00000000"),
+        create_stripe({ browser, steam, discord, telegram, browser, steam, discord, telegram }, "#00000000"),
+        create_stripe({ mail, disk, files, passwords, mail, disk, files, passwords }, "#00000000"),
+        create_stripe({ volume, vlc, record, teams, volume, vlc, record, teams }, "#00000000"),
+        create_stripe(
+            { networks, bluetooth, night_mode, restart_awesome, networks, bluetooth, night_mode, restart_awesome },
+            "#00000000"
+        ),
+        create_stripe(
+            { networks, bluetooth, night_mode, restart_awesome, networks, bluetooth, night_mode, restart_awesome },
+            "#00000000"
+        ),
         layout = wibox.layout.flex.vertical,
     },
     --bg = x.background,

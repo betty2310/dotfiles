@@ -5,6 +5,7 @@ local beautiful = require "beautiful"
 local apps = require "apps"
 local decorations = require "decorations"
 local icons = require "icons"
+local bling = require "bling"
 
 local helpers = require "helpers"
 local hotkeys_popup = require "awful.hotkeys_popup"
@@ -17,7 +18,20 @@ superkey = "Mod1"
 altkey = "Mod4"
 ctrlkey = "Control"
 shiftkey = "Shift"
+bling.widget.window_switcher.enable {
+    type = "thumbnail", -- set to anything other than "thumbnail" to disable client previews
 
+    -- keybindings (the examples provided are also the default if kept unset)
+    hide_window_switcher_key = "Escape", -- The key on which to close the popup
+    minimize_key = "n", -- The key on which to minimize the selected client
+    unminimize_key = "N", -- The key on which to unminimize all clients
+    kill_client_key = "q", -- The key on which to close the selected client
+    cycle_key = "Tab", -- The key on which to cycle through all clients
+    previous_key = "Left", -- The key on which to select the previous client
+    next_key = "Right", -- The key on which to select the next client
+    vim_previous_key = "h", -- Alternative key on which to select the previous client
+    vim_next_key = "l", -- Alternative key on which to select the next client
+}
 -- {{{ Mouse bindings on desktop
 keys.desktopbuttons = gears.table.join(
     awful.button({}, 1, function()
@@ -114,6 +128,13 @@ keys.globalkeys = gears.table.join(
     -- Layout
     -- Single tap: Set max layout
     -- Double tap: Also disable floating for ALL visible clients in the tag
+    --
+    awful.key({ altkey }, "n", function()
+        awful.layout.inc(1)
+    end, { description = "select next", group = "layout" }),
+    awful.key({ altkey, "Shift" }, "n", function()
+        awful.layout.inc(-1)
+    end, { description = "select previous", group = "layout" }),
     awful.key({ superkey }, "'", function()
         awful.layout.set(awful.layout.suit.max)
         helpers.single_double_tap(nil, function()
@@ -147,7 +168,8 @@ keys.globalkeys = gears.table.join(
 
     -- Window switcher
     awful.key({ superkey }, "Tab", function()
-        window_switcher_show(awful.screen.focused())
+        awesome.emit_signal "bling::window_switcher::turn_on"
+        -- window_switcher_show(awful.screen.focused())
     end, { description = "activate window switcher", group = "client" }),
 
     -- Gaps

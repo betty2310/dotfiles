@@ -1,18 +1,18 @@
-local gears = require "gears"
-local beautiful = require "beautiful"
+local gears = require("gears")
+local beautiful = require("beautiful")
 
-local op = beautiful.flash_focus_start_opacity or 0.7
-local stp = beautiful.flash_focus_step or 0.005
+local op = beautiful.flash_focus_start_opacity or 0.6
+local stp = beautiful.flash_focus_step or 0.01
 
 local flashfocus = function(c)
-    if c then
+    if c and #c.screen.clients > 1 then
         c.opacity = op
         local q = op
-        local g = gears.timer {
+        local g = gears.timer({
             timeout = stp,
             call_now = false,
             autostart = true,
-        }
+        })
 
         g:connect_signal("timeout", function()
             if not c.valid then
