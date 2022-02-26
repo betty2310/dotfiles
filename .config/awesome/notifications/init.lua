@@ -1,13 +1,13 @@
-local beautiful = require("beautiful")
-local naughty = require("naughty")
-local menubar = require("menubar")
+local beautiful = require "beautiful"
+local naughty = require "naughty"
+local menubar = require "menubar"
 
 local notifications = {}
 
 -- Notification settings
 -- Icon size
 -- naughty.config.defaults['icon_size'] = beautiful.notification_icon_size
-naughty.config.defaults['border_width'] = beautiful.notification_border_width
+naughty.config.defaults["border_width"] = beautiful.notification_border_width
 
 -- Timeouts
 naughty.config.defaults.timeout = 5
@@ -35,26 +35,27 @@ function notifications.notify_dwim(args, notif)
     return n
 end
 
-function notifications.init(theme_name)
+function notifications.init()
     -- Initialize various notification daemons
-    require("notifications.volume")
-    require("notifications.brightness")
-    require("notifications.battery")
-    require("notifications.mpd")
-    require("notifications.league_of_legends")
-    require("notifications.keyboardlayout")
+    require "notifications.volume"
+    require "notifications.brightness"
+    require "notifications.battery"
+    require "notifications.mpd"
+    require "notifications.league_of_legends"
+    require "notifications.keyboardlayout"
     -- Load theme
-    require("notifications.themes." .. theme_name)
+    require "notifications.lovelace"
 end
 
 -- Handle notification icon
 naughty.connect_signal("request::icon", function(n, context, hints)
     -- Handle other contexts here
-    if context ~= "app_icon" then return end
+    if context ~= "app_icon" then
+        return
+    end
 
     -- Use XDG icon
-    local path = menubar.utils.lookup_icon(hints.app_icon) or
-    menubar.utils.lookup_icon(hints.app_icon:lower())
+    local path = menubar.utils.lookup_icon(hints.app_icon) or menubar.utils.lookup_icon(hints.app_icon:lower())
 
     if path then
         n.icon = path

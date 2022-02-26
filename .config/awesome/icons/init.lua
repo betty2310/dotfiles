@@ -14,7 +14,7 @@ local icons = {}
 icons.image = {}
 icons.text = {}
 
--- TODO Set up weather text icons here instead of in ../noodle/text_weather.lua
+-- TODO Set up weather text icons here instead of in ../widget/text_weather.lua
 -- icons.text.weather = {}
 
 -- Set up text symbols and accent colors to be used in tasklists or docks
@@ -110,6 +110,7 @@ local image_icon_names = {
     "search",
     "volume",
     "muted",
+    "pop",
     "firefox",
     "youtube",
     "reddit",
@@ -157,6 +158,10 @@ local image_icon_names = {
     "reboot",
     "suspend",
     "lock",
+    "medium",
+    "high",
+    "max",
+    "low",
 }
 
 -- Path to icons
@@ -170,9 +175,8 @@ local function set_image_icon(icon_name)
 end
 
 -- Set all the icon variables
-function icons.init(theme_name)
-    -- Set the path to image icons
-    p = gears.filesystem.get_configuration_dir() .. "icons/" .. theme_name .. "/"
+function icons.init()
+    p = gears.filesystem.get_configuration_dir() .. "icons/"
 
     for i = 1, #image_icon_names do
         set_image_icon(image_icon_names[i])
