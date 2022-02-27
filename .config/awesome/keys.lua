@@ -19,18 +19,16 @@ altkey = "Mod4"
 ctrlkey = "Control"
 shiftkey = "Shift"
 bling.widget.window_switcher.enable {
-    type = "thumbnail", -- set to anything other than "thumbnail" to disable client previews
-
-    -- keybindings (the examples provided are also the default if kept unset)
-    hide_window_switcher_key = "Escape", -- The key on which to close the popup
-    minimize_key = "n", -- The key on which to minimize the selected client
-    unminimize_key = "N", -- The key on which to unminimize all clients
-    kill_client_key = "q", -- The key on which to close the selected client
-    cycle_key = "Tab", -- The key on which to cycle through all clients
-    previous_key = "Left", -- The key on which to select the previous client
-    next_key = "Right", -- The key on which to select the next client
-    vim_previous_key = "h", -- Alternative key on which to select the previous client
-    vim_next_key = "l", -- Alternative key on which to select the next client
+    type = "thumbnail",
+    hide_window_switcher_key = "Escape",
+    minimize_key = "n",
+    unminimize_key = "N",
+    kill_client_key = "q",
+    cycle_key = "Tab",
+    previous_key = "Left",
+    next_key = "Right",
+    vim_previous_key = "h",
+    vim_next_key = "l",
 }
 -- {{{ Mouse bindings on desktop
 keys.desktopbuttons = gears.table.join(
@@ -330,6 +328,15 @@ keys.globalkeys = gears.table.join(
         awful.spawn.with_shell "dmenu_run -fn 'JetBrainsMono Nerd Font-9'  -p search -class films -sb '#EBCB8B' -sf '#2E3440'"
     end, { description = "dmenu run", group = "launcher" }),
 
+    -- toggle wibar
+    awful.key({ superkey, shiftkey }, "b", function()
+        for s in screen do
+            s.mywibox.visible = not s.mywibox.visible
+            if s.mybottomwibox then
+                s.mybottomwibox.visible = not s.mybottomwibox.visible
+            end
+        end
+    end, { description = "toggle wibox", group = "awesome" }),
     -- Toggle sidebar
     awful.key({ superkey }, "o", function()
         sidebar_toggle()
@@ -539,7 +546,7 @@ keys.clientkeys = gears.table.join(
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
-local ntags = 10
+local ntags = 3
 for i = 1, ntags do
     keys.globalkeys = gears.table.join(
         keys.globalkeys,
@@ -561,6 +568,54 @@ for i = 1, ntags do
     )
 end
 
+keys.globalkeys = gears.table.join(
+    keys.globalkeys,
+    awful.key({ superkey }, 7, function()
+        helpers.tag_back_and_forth(4)
+    end),
+
+    awful.key({ superkey }, 8, function()
+        helpers.tag_back_and_forth(5)
+    end),
+    awful.key({ superkey }, 9, function()
+        helpers.tag_back_and_forth(6)
+    end),
+    awful.key({ superkey }, 0, function()
+        helpers.tag_back_and_forth(7)
+    end),
+    awful.key({ superkey, shiftkey }, 7, function()
+        if client.focus then
+            local tag = client.focus.screen.tags[4]
+            if tag then
+                client.focus:move_to_tag(tag)
+            end
+        end
+    end),
+    awful.key({ superkey, shiftkey }, 8, function()
+        if client.focus then
+            local tag = client.focus.screen.tags[5]
+            if tag then
+                client.focus:move_to_tag(tag)
+            end
+        end
+    end),
+    awful.key({ superkey, shiftkey }, 9, function()
+        if client.focus then
+            local tag = client.focus.screen.tags[6]
+            if tag then
+                client.focus:move_to_tag(tag)
+            end
+        end
+    end),
+    awful.key({ superkey, shiftkey }, 0, function()
+        if client.focus then
+            local tag = client.focus.screen.tags[7]
+            if tag then
+                client.focus:move_to_tag(tag)
+            end
+        end
+    end)
+)
 -- Mouse buttons on the client (whole window, not just titlebar)
 keys.clientbuttons = gears.table.join(
     awful.button({}, 1, function(c)

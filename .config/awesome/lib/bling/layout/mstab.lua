@@ -11,7 +11,7 @@ local tabbar_disable = beautiful.mstab_bar_disable or false
 local tabbar_ontop = beautiful.mstab_bar_ontop or false
 local tabbar_padding = 10
 local border_radius = 0
-local tabbar_position = beautiful.mstab_tabbar_position or beautiful.tabbar_position or "bottom"
+local tabbar_position = beautiful.mstab_tabbar_position or beautiful.tabbar_position or "top"
 
 local bar_style = beautiful.mstab_tabbar_style or beautiful.tabbar_style or "default"
 local bar = require(tostring(...):match ".*bling" .. ".widget.tabbar." .. bar_style)

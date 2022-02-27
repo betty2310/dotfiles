@@ -12,17 +12,10 @@ local titlebar_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/titlebar
 local taglist_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/taglist/"
 local tip = titlebar_icon_path --alias to save time/space
 local xrdb = xresources.get_current_theme()
--- local theme = dofile(themes_path.."default/theme.lua")
 local theme = {}
--- Set theme wallpaper.
--- It won't change anything if you are using feh to set the wallpaper like I do.
 
 theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
--- Set the theme font. This is the font that will be used by default in menus, bars, titlebars etc.
--- theme.font          = "sans 11"
 theme.font = "monospace medium 8"
--- This is how to get other .Xresources values (beyond colors 0-15, or custom variables)
--- local cool_color = awesome.xrdb_get_value("", "color16")
 
 theme.bg_dark = x.background
 theme.bg_normal = x.background
@@ -38,21 +31,15 @@ theme.fg_minimize = x.color8
 
 -- Gaps
 theme.useless_gap = dpi(5)
--- This could be used to manually determine how far away from the
--- screen edge the bars / notifications should be.
 theme.screen_margin = dpi(5)
 
--- Borders
 theme.border_width = dpi(0)
--- theme.border_color = x.color0
 theme.border_normal = x.background
 theme.border_focus = x.background
--- Rounded corners
 theme.border_radius = dpi(6)
 theme.border_radius_tray = dpi(6)
 
 -- Titlebars
--- (Titlebar items can be customized in titlebars.lua)
 theme.titlebars_enabled = true
 theme.titlebar_size = dpi(30)
 theme.titlebar_title_enabled = false
@@ -69,12 +56,6 @@ theme.titlebar_fg_normal = x.color8
 --theme.titlebar_fg = x.color7
 
 -- Notifications
--- ============================
--- Note: Some of these options are ignored by my custom
--- notification widget_template
--- ============================
--- Position: bottom_left, bottom_right, bottom_middle,
---         top_left, top_right, top_middle
 theme.notification_position = "top_right"
 theme.notification_border_width = dpi(0)
 theme.notification_border_radius = theme.border_radius
@@ -100,16 +81,13 @@ theme.snap_border_width = dpi(3)
 
 -- Tag names
 theme.tagnames = {
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "0",
+    "DEV",
+    "WEB",
+    "TERM",
+    "DOCS",
+    "CHAT",
+    "SYS",
+    "#",
 }
 
 -- Widget separator
@@ -128,8 +106,8 @@ theme.wibar_fg = x.foreground
 theme.wibar_opacity = 0.8
 theme.wibar_border_color = x.color0
 theme.wibar_border_width = dpi(0)
-theme.wibar_border_radius = dpi(3)
-theme.wibar_width = dpi(1530)
+theme.wibar_border_radius = dpi(10)
+theme.wibar_width = dpi(530)
 
 theme.prefix_fg = x.color8
 
@@ -274,14 +252,14 @@ theme.prompt_fg = x.color12
 
 -- Text Taglist (default)
 theme.taglist_font = "monospace bold 8"
-theme.taglist_bg_focus = x.color2
-theme.taglist_fg_focus = x.background
-theme.taglist_bg_occupied = x.background
-theme.taglist_fg_occupied = x.color2
-theme.taglist_bg_empty = x.background
+theme.taglist_bg_focus = "000000"
+theme.taglist_fg_focus = x.color2
+theme.taglist_bg_occupied = "000000"
+theme.taglist_fg_occupied = x.color15
+theme.taglist_bg_empty = "000000"
 theme.taglist_fg_empty = x.color8
-theme.taglist_bg_urgent = x.color3
-theme.taglist_fg_urgent = x.background
+theme.taglist_bg_urgent = "000000"
+theme.taglist_fg_urgent = x.color11
 theme.taglist_disable_icon = true
 theme.taglist_spacing = dpi(0)
 -- Generate taglist squares:

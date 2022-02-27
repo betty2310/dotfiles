@@ -97,63 +97,48 @@ screen_width = awful.screen.focused().geometry.width
 screen_height = awful.screen.focused().geometry.height
 
 awful.layout.layouts = {
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.floating,
-    awful.layout.suit.tile,
-    awful.layout.suit.max,
     bling.layout.mstab,
+    bling.layout.deck,
     bling.layout.centered,
     bling.layout.equalarea,
-    bling.layout.deck,
-    --awful.layout.suit.tile.top,
-    --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.tile.left,
-    --awful.layout.suit.tile.bottom,
-    --awful.layout.suit.max.fullscreen,
-    --awful.layout.suit.corner.nw,
-    --awful.layout.suit.magnifier,
-    --awful.layout.suit.corner.ne,
-    --awful.layout.suit.corner.sw,
-    --awful.layout.suit.corner.se,
+    awful.layout.suit.max,
+    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.tile,
+    awful.layout.suit.floating,
+    -- awful.layout.suit.tile.top,
+    -- awful.layout.suit.fair,
+    -- awful.layout.suit.fair.horizontal,
+    -- awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.corner.nw,
+    -- awful.layout.suit.magnifier,
+    -- awful.layout.suit.corner.ne,
+    -- awful.layout.suit.corner.sw,
+    -- awful.layout.suit.corner.se,
 }
 
 -- Tags
 awful.screen.connect_for_each_screen(function(s)
-    local l = awful.layout.suit -- Alias to save time :)
+    local l = awful.layout.suit
     local layouts = {
         bling.layout.mstab,
         bling.layout.deck,
+        bling.layout.equalarea,
         l.tile,
+        l.floating,
         l.tile,
-        l.tile,
-        l.tile,
-        l.tile,
-        l.tile,
-        l.tile,
+        l.max,
     }
 
-    local tagnames = beautiful.tagnames or { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }
+    local tagnames = beautiful.tagnames
     awful.tag(tagnames, s, layouts)
-    -- Create tags with seperate configuration for each tag
-    -- awful.tag.add(tagnames[1], {
-    --     layout = layouts[1],
-    --     screen = s,
-    --     master_width_factor = 0.6,
-    --     selected = true,
-    -- })
-    -- ...
 end)
 
--- Determines how floating clients should be placed
 local floating_client_placement = function(c)
-    -- If the layout is floating or there are no other visible
-    -- clients, center client
     if awful.layout.get(mouse.screen) ~= awful.layout.suit.floating or #mouse.screen.clients == 1 then
         return awful.placement.centered(c, { honor_padding = true, honor_workarea = true })
     end
-
-    -- Else use this placement
     local p = awful.placement.no_overlap + awful.placement.no_offscreen
     return p(c, { honor_padding = true, honor_workarea = true, margins = beautiful.useless_gap * 2 })
 end
@@ -165,11 +150,9 @@ local centered_client_placement = function(c)
 end
 
 -- Rules
--- ===================================================================
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     {
-        -- All clients will match this rule.
         rule = {},
         properties = {
             border_width = beautiful.border_width,
@@ -342,10 +325,10 @@ awful.rules.rules = {
         properties = { floating = true, width = screen_width * 0.45, height = screen_height * 0.8 },
     },
     -- Zathura
-    {
-        rule_any = { class = { "Zathura" } },
-        properties = { floating = true, width = screen_width * 0.5, height = screen_height * 0.9 },
-    },
+    -- {
+    --     rule_any = { class = { "Zathura" } },
+    --     properties = { floating = true, width = screen_width * 0.5, height = screen_height * 0.9 },
+    -- },
 
     -- Galculator
     {
@@ -395,26 +378,6 @@ awful.rules.rules = {
         },
     },
 
-    -- Markdown input
-    {
-        rule_any = {
-            instance = {
-                "markdown_input",
-            },
-            class = {
-                "markdown_input",
-            },
-        },
-        properties = {
-            skip_taskbar = false,
-            floating = true,
-            ontop = false,
-            minimized = true,
-            sticky = false,
-            width = screen_width * 0.5,
-            height = screen_height * 0.7,
-        },
-    },
     -- tree pomodoro
     {
         rule_any = {
@@ -462,7 +425,7 @@ awful.rules.rules = {
         },
         properties = {
             screen = 2,
-            tag = awful.screen.focused().tags[2],
+            tag = awful.screen.focused().tags[4],
         },
     },
 
@@ -480,8 +443,6 @@ awful.rules.rules = {
             floating = true,
             width = screen_width * 0.7,
             height = screen_height * 0.8,
-            screen = 2,
-            tag = awful.screen.focused().tags[3],
         },
     },
 
@@ -588,11 +549,14 @@ awful.rules.rules = {
     ---------------------------------------------
     -- Start application on specific workspace --
     ---------------------------------------------
-    -- Browsing
+    --
+
+    -- Code
     {
         rule_any = {
             class = {
-                "qutebrowser",
+                "Code",
+                "scratchpad",
             },
         },
         except_any = {
@@ -601,6 +565,21 @@ awful.rules.rules = {
             type = { "dialog" },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[1] },
+    },
+    -- Browsing
+    {
+        rule_any = {
+            class = {
+                "qutebrowser",
+                "Google-chrome",
+            },
+        },
+        except_any = {
+            role = { "GtkFileChooserDialog" },
+            instance = { "Toolkit" },
+            type = { "dialog" },
+        },
+        properties = { screen = 1, tag = awful.screen.focused().tags[2] },
     },
     -- Google Picture-in-Picture
     {
@@ -630,6 +609,17 @@ awful.rules.rules = {
                     margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
                 })
             end
+            if awful.layout.get(awful.screen.focused()) == bling.layout.deck then
+                c.floating = true
+                c.sticky = true
+                c.width = screen_width * 0.2
+                c.height = screen_height * 0.2
+                awful.placement.bottom_right(c, {
+                    honor_padding = true,
+                    honor_workarea = true,
+                    margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
+                })
+            end
 
             c:connect_signal("property::fullscreen", function()
                 if not c.fullscreen then
@@ -639,13 +629,12 @@ awful.rules.rules = {
         end,
     },
 
-    -- Games
+    -- Term
     {
         rule_any = {
             class = {
-                "Wine",
+                "St",
                 "wisdom-tree",
-                "Anki",
             },
             instance = {
                 "leagueclient.exe",
@@ -653,7 +642,21 @@ awful.rules.rules = {
                 "wisdom-tree",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[2] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[3] },
+    },
+    -- Docs
+    {
+        rule_any = {
+            class = {
+                "firefox",
+                "zathuara",
+                "gotop",
+            },
+            instance = {
+                "htop",
+            },
+        },
+        properties = { screen = 1, tag = awful.screen.focused().tags[4] },
     },
 
     -- Chatting
@@ -665,42 +668,21 @@ awful.rules.rules = {
                 "TelegramDesktop",
                 "Slack",
                 "zoom",
+                "teams",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[5] },
     },
-
-    -- Editing
-    {
-        rule_any = {
-            class = {
-                "^editor$",
-                -- "Emacs",
-                -- "Subl3",
-            },
-        },
-        properties = { screen = 1, tag = awful.screen.focused().tags[2] },
-    },
-
     -- System monitoring
     {
         rule_any = {
             class = {
                 "htop",
+                "battop",
+                "gotop",
             },
             instance = {
                 "htop",
-            },
-        },
-        properties = { screen = 1, tag = awful.screen.focused().tags[6] },
-    },
-
-    -- Image editing
-    {
-        rule_any = {
-            class = {
-                "Gimp",
-                "Inkscape",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[6] },
@@ -718,7 +700,7 @@ awful.rules.rules = {
                 "Thunderbird",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[7] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[5] },
     },
 
     -- Game clients/launchers
@@ -733,19 +715,14 @@ awful.rules.rules = {
                 "Steam",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[8] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[7] },
     },
 
-    -- Miscellaneous
     -- All clients that I want out of my way when they are running
     {
         rule_any = {
             class = {
                 "torrent",
-                "Transmission",
-                "Deluge",
-                "VirtualBox Manager",
-                "KeePassXC",
             },
             instance = {
                 "torrent",
@@ -755,38 +732,17 @@ awful.rules.rules = {
         except_any = {
             type = { "dialog" },
         },
-        properties = { screen = 2, tag = awful.screen.focused().tags[10] },
+        properties = { screen = 2, tag = awful.screen.focused().tags[7] },
     },
 }
 -- (Rules end here) ..................................................
--- ===================================================================
 
--- Signals
--- ===================================================================
--- Signal function to execute when a new client appears.
 client.connect_signal("manage", function(c)
-    -- For debugging awful.rules
-    -- print('c.class = '..c.class)
-    -- print('c.instance = '..c.instance)
-    -- print('c.name = '..c.name)
-
-    -- Set every new window as a slave,
-    -- i.e. put it at the end of others instead of setting it master.
     if not awesome.startup then
         awful.client.setslave(c)
     end
-
-    -- if awesome.startup
-    -- and not c.size_hints.user_position
-    -- and not c.size_hints.program_position then
-    --     -- Prevent clients from being unreachable after screen count changes.
-    --     awful.placement.no_offscreen(c)
-    --     awful.placement.no_overlap(c)
-    -- end
 end)
 
--- When a client starts up in fullscreen, resize it to cover the fullscreen a short moment later
--- Fixes wrong geometry when titlebars are enabled
 client.connect_signal("manage", function(c)
     if c.fullscreen then
         gears.timer.delayed_call(function()
@@ -809,9 +765,6 @@ end
 -- Set mouse resize mode (live or after)
 awful.mouse.resize.set_mode "live"
 
--- Restore geometry for floating clients
--- (for example after swapping from tiling mode to floating mode)
--- ==============================================================
 tag.connect_signal("property::layout", function(t)
     for k, c in ipairs(t:clients()) do
         if awful.layout.get(mouse.screen) == awful.layout.suit.floating then
@@ -835,14 +788,6 @@ client.connect_signal("property::geometry", function(c)
     end
 end)
 
--- ==============================================================
--- ==============================================================
-
--- When switching to a tag with urgent clients, raise them.
--- This fixes the issue (visual mismatch) where after switching to
--- a tag which includes an urgent client, the urgent client is
--- unfocused but still covers all other windows (even the currently
--- focused window).
 awful.tag.attached_connect_signal(s, "property::selected", function()
     local urgent_clients = function(c)
         return awful.rules.match(c, { urgent = true })
@@ -859,17 +804,6 @@ client.connect_signal("focus", function(c)
     c:raise()
 end)
 
--- Focus all urgent clients automatically
--- client.connect_signal("property::urgent", function(c)
---     if c.urgent then
---         c.minimized = false
---         c:jump_to()
---     end
--- end)
-
--- Disable ontop when the client is not floating, and restore ontop if needed
--- when the client is floating again
--- I never want a non floating client to be ontop.
 client.connect_signal("property::floating", function(c)
     if c.floating then
         if c.restore_ontop then
@@ -881,22 +815,12 @@ client.connect_signal("property::floating", function(c)
     end
 end)
 
--- Disconnect the client ability to request different size and position
--- Breaks fullscreen and maximized
--- client.disconnect_signal("request::geometry", awful.ewmh.client_geometry_requests)
--- client.disconnect_signal("request::geometry", awful.ewmh.geometry)
-
--- Show the dashboard on login
--- Add `touch /tmp/awesomewm-show-dashboard` to your ~/.xprofile in order to make the dashboard appear on login
 local dashboard_flag_path = "/tmp/awesomewm-show-dashboard"
--- Check if file exists
 awful.spawn.easy_async_with_shell("stat " .. dashboard_flag_path .. " >/dev/null 2>&1", function(_, __, ___, exitcode)
     if exitcode == 0 then
-        -- Show dashboard
         if dashboard_show then
             dashboard_show()
         end
-        -- Delete the file
         awful.spawn.with_shell("rm " .. dashboard_flag_path)
     end
 end)

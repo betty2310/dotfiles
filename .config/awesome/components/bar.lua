@@ -122,34 +122,32 @@ awful.screen.connect_for_each_screen(function(s)
         widget_template = {
             {
                 {
+                    layout = wibox.layout.fixed.vertical,
                     {
                         {
-                            {
-                                id = "index_role",
-                                widget = wibox.widget.textbox,
-                            },
-                            margins = 0,
-                            widget = wibox.container.margin,
+                            id = "text_role",
+                            widget = wibox.widget.textbox,
                         },
-                        shape = gears.shape.circle,
-                        widget = wibox.container.background,
-                    },
-                    {
-                        {
-                            id = "icon_role",
-                            widget = wibox.widget.imagebox,
-                        },
-                        margins = 0,
+                        left = 2,
+                        right = 2,
+                        top = 1,
                         widget = wibox.container.margin,
                     },
                     {
-                        id = "text_role",
-                        widget = wibox.widget.textbox,
+                        {
+                            left = 10,
+                            right = 10,
+                            top = 3,
+                            widget = wibox.container.margin,
+                        },
+                        id = "overline",
+                        bg = "#ffffff",
+                        shape = gears.shape.rectangle,
+                        widget = wibox.container.background,
                     },
-                    layout = wibox.layout.fixed.horizontal,
                 },
-                left = 10,
-                right = 10,
+                left = 5,
+                right = 5,
                 widget = wibox.container.margin,
             },
             id = "background_role",
@@ -178,8 +176,32 @@ awful.screen.connect_for_each_screen(function(s)
                         self.bg = self.backup
                     end
                 end)
+                local focused = false
+                for _, x in pairs(awful.screen.focused().selected_tags) do
+                    if x.index == index then
+                        focused = true
+                        break
+                    end
+                end
+                if focused then
+                    self:get_children_by_id("overline")[1].bg = x.color2 -- focused color
+                else
+                    self:get_children_by_id("overline")[1].bg = "#00000000" -- unfocused color
+                end
             end,
             update_callback = function(self, c3, index, objects) --luacheck: no unused args
+                local focused = false
+                for _, x in pairs(awful.screen.focused().selected_tags) do
+                    if x.index == index then
+                        focused = true
+                        break
+                    end
+                end
+                if focused then
+                    self:get_children_by_id("overline")[1].bg = x.color2
+                else
+                    self:get_children_by_id("overline")[1].bg = "#00000000"
+                end
             end,
         },
         buttons = taglist_buttons,
@@ -226,35 +248,29 @@ awful.screen.connect_for_each_screen(function(s)
     s.mywibox = awful.wibar {
         position = beautiful.wibar_position,
         screen = s,
-        height = beautiful.wibar_height,
+        bg = "#00000000",
+        -- height = beautiful.wibar_height,
+        -- width = beautiful.wibar_width,
+        shape = helpers.rrect(beautiful.wibar_border_radius),
     }
 
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            s.mytaglist,
             {
                 text = " ",
                 widget = wibox.widget.textbox,
             },
+
             s.mylayoutbox,
             {
                 text = " ",
                 widget = wibox.widget.textbox,
             },
-        },
-        s.mytasklist,
-        { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
+            s.mytaglist,
             {
                 text = " ",
-                widget = wibox.widget.textbox,
-            },
-            mytextclock,
-            wibox.widget.systray(),
-            {
-                text = "  ",
                 widget = wibox.widget.textbox,
             },
         },
