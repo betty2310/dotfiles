@@ -85,6 +85,7 @@ require "components.bar"
 require "components.exit"
 require "components.sidebar"
 require "components.dashboard"
+-- require "components.test"
 local lock_screen = require "components.lock_screen"
 lock_screen.init()
 require "components.app_drawer"
@@ -649,7 +650,7 @@ awful.rules.rules = {
         rule_any = {
             class = {
                 "firefox",
-                "zathuara",
+                "Zathura",
                 "gotop",
             },
             instance = {
@@ -663,12 +664,12 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
+                "teams",
                 "SimpleScreenRecorder",
                 "discord",
                 "TelegramDesktop",
                 "Slack",
                 "zoom",
-                "teams",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[5] },

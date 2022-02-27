@@ -101,13 +101,13 @@ theme.separator_fg = x.color8
 -- Keep in mind that these settings could be ignored by the bar theme
 theme.wibar_position = "top"
 theme.wibar_height = dpi(17)
-theme.wibar_bg = x.background
-theme.wibar_fg = x.foreground
+theme.wibar_bg = "#00000000"
+theme.wibar_fg = "#00000000"
 theme.wibar_opacity = 0.8
 theme.wibar_border_color = x.color0
 theme.wibar_border_width = dpi(0)
 theme.wibar_border_radius = dpi(10)
-theme.wibar_width = dpi(530)
+theme.wibar_width = dpi(10)
 
 theme.prefix_fg = x.color8
 
@@ -194,56 +194,44 @@ theme.taglist_text_urgent = { "+", "+", "+", "+", "+", "+", "+", "+", "+", "+" }
 -- theme.taglist_text_urgent   = {"","","","","","","","","",""}
 
 theme.taglist_text_color_empty = {
-    "#4C566A",
-    "#4C566A",
-    "#4C566A",
-    "#4C566A",
-    "#4C566A",
-    "#4C566A",
-    "#4C566A",
-    "#4C566A",
-    "#4C566A",
-    "#4C566A",
+    "#00000000",
+    "#00000000",
+    "#00000000",
+    "#00000000",
+    "#00000000",
+    "#00000000",
+    "#00000000",
 }
 -- theme.taglist_text_color_occupied  = { x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0" }
 -- theme.taglist_text_color_focused  = { x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0", x.foreground.."F0" }
 -- theme.taglist_text_color_urgent  = { x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground, x.foreground }
 
 theme.taglist_text_color_occupied = {
-    x.color2,
-    x.color2,
-    x.color2,
-    x.color2,
-    x.color2,
-    x.color2,
-    x.color2,
-    x.color2,
-    x.color2,
-    x.color2,
+    x.color2 .. "49",
+    x.color11 .. "49",
+    x.color12 .. "49",
+    x.color13 .. "99",
+    x.color6 .. "49",
+    x.color14 .. "49",
+    x.color9 .. "49",
 }
 theme.taglist_text_color_focused = {
+    x.color2,
     x.color11,
-    x.color11,
-    x.color11,
-    x.color11,
-    x.color11,
-    x.color11,
-    x.color11,
-    x.color11,
-    x.color11,
-    x.color11,
+    x.color12,
+    x.color13,
+    x.color6,
+    x.color14,
+    x.color9,
 }
 theme.taglist_text_color_urgent = {
-    x.color1,
-    x.color1,
-    x.color1,
-    x.color1,
-    x.color1,
-    x.color1,
-    x.color1,
-    x.color1,
-    x.color1,
-    x.color1,
+    x.foreground,
+    x.foreground,
+    x.foreground,
+    x.foreground,
+    x.foreground,
+    x.foreground,
+    x.foreground,
 }
 -- theme.taglist_text_color_urgent   = { x.color9, x.color10, x.color11, x.color12, x.color13, x.color14, x.color9, x.color10, x.color11, x.color12 }
 

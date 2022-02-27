@@ -331,7 +331,7 @@ keys.globalkeys = gears.table.join(
     -- toggle wibar
     awful.key({ superkey, shiftkey }, "b", function()
         for s in screen do
-            s.mywibox.visible = not s.mywibox.visible
+            s.taglist_box.visible = not s.taglist_box.visible
             if s.mybottomwibox then
                 s.mybottomwibox.visible = not s.mybottomwibox.visible
             end
