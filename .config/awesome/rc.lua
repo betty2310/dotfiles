@@ -123,11 +123,11 @@ awful.layout.layouts = {
 awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit
     local layouts = {
-        bling.layout.mstab,
         bling.layout.deck,
         bling.layout.equalarea,
+        bling.layout.mstab,
         l.tile,
-        l.floating,
+        l.tile,
         l.tile,
         l.max,
     }
@@ -565,7 +565,7 @@ awful.rules.rules = {
             instance = { "Toolkit" },
             type = { "dialog" },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[1] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[3] },
     },
     -- Browsing
     {
@@ -580,7 +580,7 @@ awful.rules.rules = {
             instance = { "Toolkit" },
             type = { "dialog" },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[2] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[1] },
     },
     -- Google Picture-in-Picture
     {
@@ -643,7 +643,7 @@ awful.rules.rules = {
                 "wisdom-tree",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[3] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[2] },
     },
     -- Docs
     {

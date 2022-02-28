@@ -42,10 +42,12 @@ utils.opt("o", "cmdheight", 1)
 -- Highlight on yank
 vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
 
-vim.api.nvim_command [[autocmd FileType python,c,cpp,go,lua set sw=4 ]]
-vim.api.nvim_command [[autocmd FileType python,c,cpp,go,lua set ts=4 ]]
-vim.api.nvim_command [[autocmd FileType python,c,cpp,go,lua set sts=4 ]]
+utils.setSpacesSize { go = 4, python = 4, rust = 4, cpp = 4, c = 4 }
+
 vim.api.nvim_command [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
+
+-- Disable comment new line
+vim.cmd [[autocmd BufNewFile,BufRead * setlocal formatoptions-=cro]]
 
 vim.cmd [[
 set foldmethod=indent

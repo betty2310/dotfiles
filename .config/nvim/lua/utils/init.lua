@@ -56,5 +56,11 @@ _M.powerline = {
         right = "",
     },
 }
-
+function _M.setSpacesSize(filetypes)
+    for filetype, size in pairs(filetypes) do
+        vim.cmd(string.format("autocmd FileType %s set sw=%s", filetype, size))
+        vim.cmd(string.format("autocmd FileType %s set ts=%s", filetype, size))
+        vim.cmd(string.format("autocmd FileType %s set sts=%s", filetype, size))
+    end
+end
 return _M
