@@ -8,7 +8,6 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-# merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
 
@@ -30,18 +29,5 @@ if [ -f "$usermodmap" ]; then
   xmodmap "$usermodmap"
 fi
 
-# start some nice programs
-
-if [ -d /etc/X11/xinit/xinitrc.d ]; then
-  for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
-    [ -x "$f" ] && . "$f"
-  done
-  unset f
-fi
-# /usr/bin/dropbox &
-ibus-daemon -drx &
-# feh --bg-fill "/home/vu/Pictures/wallpapers/nord.jpg" &
-# ~/.scripts/feh-blur --blur 4 --darken 4 --daemon &
-picom -f &
 xsetroot -cursor_name left_ptr &
 

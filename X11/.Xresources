@@ -56,7 +56,7 @@ URxvt.internalBorder:     22
 *.color8: nord3
 *.color9: nord11
 *.color10: nord14
-*.color11: nord13
+*.color11: nord12
 *.color12: nord9
 *.color13: nord15
 *.color14: nord7
