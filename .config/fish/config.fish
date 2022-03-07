@@ -26,6 +26,15 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias :q='exit'
 
+# alias for searching and installing packages
+alias pacs="pacman -Slq | fzf -m --preview 'bat --color=always --theme=ansi (pacman -Si {1} | psub) (pacman -Fl {1} | psub |  awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
+# alias for searching and installing packages from AUR
+alias yays="yay -Slq | fzf -m --preview 'bat (yay -Si {1} | psub) <(yay -Fl {1} | awk \"{print \$2}\" | psub)' | xargs -ro  yay -S"
+# alias for searching and removing packages from system
+alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
+
+alias mirror-update='sudo reflector --verbose -c Vietnam -c Japan -c Singapore --sort rate --save /etc/pacman.d/mirrorlist'
+
 #color scheme
 
 set -U fish_color_param green
@@ -55,7 +64,7 @@ set -g GOPATH $HOME/go $PATH
 set -gx PATH $GOPATH/bin $PATH
 
 #set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --theme=ansi" --layout=reverse --height=50% --info=inline --border --margin=1 --padding=1'
-set -x FZF_DEFAULT_OPTS '--prompt="הּ "
+set -x FZF_DEFAULT_OPTS '--prompt="הּ " 
     --color=hl:#81a1c1
     --color=hl+:#BF616A
     --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac

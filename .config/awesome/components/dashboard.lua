@@ -107,7 +107,7 @@ user_text.align = "center"
 user_text.valign = "center"
 
 local host_text = wibox.widget.textbox()
-awful.spawn.easy_async_with_shell("hostname", function(out)
+awful.spawn.easy_async_with_shell("cat /proc/sys/kernel/hostname", function(out)
     -- Remove trailing whitespaces
     out = out:gsub("^%s*(.-)%s*$", "%1")
     host_text.markup = helpers.colorize_text("@" .. out, x.color8)

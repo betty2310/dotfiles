@@ -19,3 +19,4 @@ require "core.spotify"
 -- This is useful because some APIs have a limit on the number of calls per hour.
 require "core.coronavirus"
 require "core.weather"
+require "core.sub"

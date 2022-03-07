@@ -44,14 +44,14 @@ local dock_recently_focused = {}
 -- Order matters!
 dock_pinned_apps = {
     { class = "Google-chrome", launcher = apps.browser },
-    { class = "Org.gnome.Nautilus", launcher = apps.file_manager },
+    { class = "files", launcher = apps.file_manager },
     { class = "music", launcher = apps.music },
     { class = "Anki", launcher = apps.anki },
-    { class = "firefox", launcher = apps.notion },
-    { class = "wisdom-tree", launcher = apps.tree },
+    { class = "notion-app-enhanced", launcher = apps.notion },
+    { class = "Spotify", launcher = apps.spotify },
     { class = "scratchpad", launcher = apps.scratchpad },
     { class = "Code", launcher = apps.code },
-    { class = "Microsoft-edge", launcher = apps.pdf },
+    { class = "email", launcher = apps.mail },
 }
 
 ----------------------------------------------------------------------------

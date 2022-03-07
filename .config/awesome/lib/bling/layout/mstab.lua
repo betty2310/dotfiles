@@ -1,7 +1,7 @@
-local awful = require "awful"
-local gears = require "gears"
-local wibox = require "wibox"
-local beautiful = require "beautiful"
+local awful = require("awful")
+local gears = require("gears")
+local wibox = require("wibox")
+local beautiful = require("beautiful")
 
 local mylayout = {}
 
@@ -9,13 +9,24 @@ mylayout.name = "mstab"
 
 local tabbar_disable = beautiful.mstab_bar_disable or false
 local tabbar_ontop = beautiful.mstab_bar_ontop or false
-local tabbar_padding = 10
-local border_radius = 0
-local tabbar_position = beautiful.mstab_tabbar_position or beautiful.tabbar_position or "top"
+local tabbar_padding = beautiful.mstab_bar_padding or "default"
+local border_radius = beautiful.mstab_border_radius
+    or beautiful.border_radius
+    or 0
+local tabbar_position = beautiful.mstab_tabbar_position
+    or beautiful.tabbar_position
+    or "top"
 
-local bar_style = beautiful.mstab_tabbar_style or beautiful.tabbar_style or "default"
-local bar = require(tostring(...):match ".*bling" .. ".widget.tabbar." .. bar_style)
-local tabbar_size = 30
+local bar_style = beautiful.mstab_tabbar_style
+    or beautiful.tabbar_style
+    or "default"
+local bar = require(
+    tostring(...):match(".*bling") .. ".widget.tabbar." .. bar_style
+)
+local tabbar_size = bar.size
+    or beautiful.mstab_bar_height
+    or beautiful.tabbar_size
+    or 40
 local dont_resize_slaves = beautiful.mstab_dont_resize_slaves or false
 
 -- The top_idx is the idx of the slave clients (excluding all master clients)
@@ -35,7 +46,14 @@ tag.connect_signal("property::selected", function(t)
     end
 end)
 
-function update_tabbar(clients, t, top_idx, area, master_area_width, slave_area_width)
+function update_tabbar(
+    clients,
+    t,
+    top_idx,
+    area,
+    master_area_width,
+    slave_area_width
+)
     local s = t.screen
 
     -- create the list of clients for the tabbar
@@ -60,18 +78,19 @@ function update_tabbar(clients, t, top_idx, area, master_area_width, slave_area_
 
     -- if no tabbar exists, create one
     if not s.tabbar then
-        s.tabbar = wibox {
+        s.tabbar = wibox({
             ontop = tabbar_ontop,
             shape = function(cr, width, height)
                 gears.shape.rounded_rect(cr, width, height, border_radius)
             end,
             bg = bar.bg_normal,
             visible = true,
-        }
+        })
 
         -- Change visibility of the tab bar when layout, selected tag or number of clients (visible, master, slave) changes
         local function adjust_visiblity(t)
-            s.tabbar.visible = (#t:clients() - t.master_count > 1) and (t.layout.name == mylayout.name)
+            s.tabbar.visible = (#t:clients() - t.master_count > 1)
+                and (t.layout.name == mylayout.name)
         end
 
         tag.connect_signal("property::selected", function(t)
@@ -112,14 +131,18 @@ function update_tabbar(clients, t, top_idx, area, master_area_width, slave_area_
         s.tabbar.width = tabbar_size
         s.tabbar.height = area.height - 2 * t.gap
     elseif tabbar_position == "right" then
-        s.tabbar.x = area.x + master_area_width + slave_area_width - tabbar_size - t.gap
+        s.tabbar.x = area.x
+            + master_area_width
+            + slave_area_width
+            - tabbar_size
+            - t.gap
         s.tabbar.y = area.y + t.gap
         s.tabbar.width = tabbar_size
         s.tabbar.height = area.height - 2 * t.gap
     end
 
     -- update clientlist
-    s.tabbar:setup { layout = wibox.layout.flex.horizontal, clientlist }
+    s.tabbar:setup({ layout = wibox.layout.flex.horizontal, clientlist })
 end
 
 function mylayout.arrange(p)
@@ -212,7 +235,14 @@ function mylayout.arrange(p)
     end
 
     if not tabbar_disable then
-        update_tabbar(slave_clients, t, t.top_idx, area, master_area_width, slave_area_width)
+        update_tabbar(
+            slave_clients,
+            t,
+            t.top_idx,
+            area,
+            master_area_width,
+            slave_area_width
+        )
     end
 end
 

@@ -10,24 +10,64 @@ local themes_path = gfs.get_themes_dir()
 local layout_icon_path = os.getenv "HOME" .. "/.config/awesome/themes//layout/"
 local titlebar_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/titlebar/"
 local taglist_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/taglist/"
+
 local tip = titlebar_icon_path --alias to save time/space
 local xrdb = xresources.get_current_theme()
 local theme = {}
 
+theme.bg_accent = "#1C1E24"
+theme.xbackground = xrdb.background
+theme.xforeground = xrdb.foreground
+theme.xcolor0 = xrdb.color0
+theme.xcolor1 = xrdb.color1
+theme.xcolor2 = xrdb.color2
+theme.xcolor3 = xrdb.color3
+theme.xcolor4 = xrdb.color4
+theme.xcolor5 = xrdb.color5
+theme.xcolor6 = xrdb.color6
+theme.xcolor7 = xrdb.color7
+theme.xcolor8 = xrdb.foreground
+theme.xcolor9 = xrdb.color9
+theme.xcolor10 = xrdb.color10
+theme.xcolor11 = xrdb.color11
+theme.xcolor12 = xrdb.color12
+theme.xcolor13 = xrdb.color13
+theme.xcolor14 = xrdb.color14
+theme.xcolor15 = xrdb.color15
+
+theme.dash_box_bg = "#313744"
+
+theme.transparent = "#00000000"
 theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
 theme.font = "monospace medium 8"
+theme.font_name = "SF Pro Display "
+theme.icon_font_name = "Material Icons "
 
 theme.bg_dark = x.background
 theme.bg_normal = x.background
 theme.bg_focus = "#262b33"
 theme.bg_urgent = x.color8
 theme.bg_minimize = x.color8
-theme.bg_systray = x.background
+theme.bg_systray = "#262b33"
 
-theme.fg_normal = x.color8
+theme.fg_normal = x.foreground
 theme.fg_focus = x.color2
 theme.fg_urgent = x.color9
 theme.fg_minimize = x.color8
+-- Tooltip
+theme.tooltip_height = dpi(490)
+theme.tooltip_width = dpi(310)
+theme.tooltip_bg = theme.xbackground
+theme.tooltip_box_bg = theme.bg_secondary
+theme.tooltip_fg = x.foreground
+theme.tooltip_box_fg = theme.xcolor8
+theme.tooltip_margin = dpi(15)
+theme.tooltip_box_margin = dpi(10)
+theme.tooltip_gap = dpi(10)
+theme.tooltip_border_radius = dpi(6)
+theme.tooltip_box_border_radius = dpi(5)
+theme.tooltip_border_width = dpi(0)
+theme.tooltip_border_color = theme.xcolor0
 
 -- Gaps
 theme.useless_gap = dpi(5)
@@ -56,6 +96,7 @@ theme.titlebar_fg_normal = x.color8
 --theme.titlebar_fg = x.color7
 
 -- Notifications
+theme.notification_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/start.png")
 theme.notification_position = "top_right"
 theme.notification_border_width = dpi(0)
 theme.notification_border_radius = theme.border_radius

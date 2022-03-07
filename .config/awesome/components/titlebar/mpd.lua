@@ -233,6 +233,52 @@ notifications_button = control_button(c, notifications_symbol, notifications.mpd
 end)
 
 local main_titlebar_size = dpi(50)
+local music_art = wibox.widget {
+    image = gears.filesystem.get_configuration_dir() .. "icons/no_music.png",    
+    resize = true,
+    widget = wibox.widget.imagebox
+}
+
+local music_art_container = wibox.widget{
+    music_art,
+    shape = helpers.rrect(6),
+    widget = wibox.container.background
+}
+
+local name_widget = wibox.widget {
+    markup = 'No players',
+    font = "sans medium 11",
+    align = 'center',
+    valign = 'center',
+    widget = wibox.widget.textbox
+}
+
+local title_widget = wibox.widget {
+    font = "sans medium 11",
+    markup = 'Nothing Playing',
+    align = 'center',
+    valign = 'center',
+    widget = wibox.widget.textbox
+}
+
+local artist_widget = wibox.widget {
+    font = "sans medium 11",
+    markup = 'Nothing Playing',
+    align = 'center',
+    valign = 'center',
+    widget = wibox.widget.textbox
+}
+local playerctl = require("lib.bling").signal.playerctl.lib()
+
+playerctl:connect_signal("metadata", function(_, title, artist, album_path, album, ___, player_name)
+  if player_name == "mpd" then
+        music_art:set_image(gears.surface.load_uncached(album_path))
+        -- Set player name, title and artist widgets
+    name_widget:set_markup_silently(player_name)
+    title_widget:set_markup_silently(title)
+    artist_widget:set_markup_silently(artist)
+  end
+end)
 
 local mpd_create_decoration = function (c)
     -- Main titlebar
@@ -262,6 +308,20 @@ local mpd_create_decoration = function (c)
         left = dpi(10),
         right = dpi(10),
         widget = wibox.container.margin
+    }
+
+    awful.titlebar(c, { position = "right", size = dpi(200), bg = x.background }):setup {
+        nil,
+        {
+            music_art_container,
+            bottom = dpi(20),
+            left = dpi(25),
+            right = dpi(25),
+            widget = wibox.container.margin
+        },
+        nil,
+        expand = "none",
+        layout = wibox.layout.align.vertical
     }
 
     -- Toolbar
@@ -316,7 +376,7 @@ local mpd_create_decoration = function (c)
     end
 
     -- Set custom decoration flags
-    c.custom_decoration = { top = true, left = true }
+    c.custom_decoration = { top = true, left = true ,right = true}
 end
 
 -- Add the titlebar whenever a new music client is spawned

@@ -2,7 +2,7 @@ user = {
     terminal = "st",
     floating_terminal = "st",
     browser = "google-chrome-stable",
-    file_manager = "nautilus",
+    file_manager = "st -c files -e ranger",
     editor = "st -c editor -e nvim",
     email_client = "st -c email -e neomutt",
     music_client = "st -c music -e ncmpcpp",
@@ -61,6 +61,8 @@ local theme_dir = os.getenv "HOME" .. "/.config/awesome/themes/"
 beautiful.init(theme_dir .. "theme.lua")
 
 local bling = require "lib.bling"
+local rubato = require "lib.rubato"
+require "lib.better_resize"
 
 bling.module.flash_focus.enable()
 
@@ -93,6 +95,7 @@ require "components.app_drawer"
 require "components.microphone_overlay"
 
 require "core"
+require "widget.tooltip"
 
 screen_width = awful.screen.focused().geometry.width
 screen_height = awful.screen.focused().geometry.height
@@ -123,9 +126,9 @@ awful.layout.layouts = {
 awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit
     local layouts = {
-        bling.layout.deck,
-        bling.layout.equalarea,
         bling.layout.mstab,
+        bling.layout.equalarea,
+        l.tile,
         l.tile,
         l.tile,
         l.tile,
@@ -344,6 +347,7 @@ awful.rules.rules = {
             class = {
                 "Nemo",
                 "Thunar",
+                "files",
                 "Org.gnome.Nautilus",
             },
         },
@@ -413,7 +417,7 @@ awful.rules.rules = {
         },
         properties = {
             floating = true,
-            width = screen_width * 0.45,
+            width = screen_width * 0.35,
             height = screen_height * 0.50,
         },
     },
@@ -470,32 +474,15 @@ awful.rules.rules = {
         rule = { class = "mpv" },
         properties = {},
         callback = function(c)
-            -- Make it floating, ontop and move it out of the way if the current tag is maximized
-            if awful.layout.get(awful.screen.focused()) == awful.layout.suit.max then
-                c.floating = true
-                c.ontop = true
-                c.width = screen_width * 0.30
-                c.height = screen_height * 0.35
-                awful.placement.top_right(c, {
-                    honor_padding = true,
-                    honor_workarea = true,
-                    margins = { top = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
-                })
-            end
-            if awful.layout.get(awful.screen.focused()) == awful.layout.suit.spiral.dwindle then
-                c.floating = true
-                c.ontop = true
-                c.width = screen_width * 0.30
-                c.height = screen_height * 0.35
-                awful.placement.top_right(c, {
-                    honor_padding = true,
-                    honor_workarea = true,
-                    margins = { top = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
-                })
-            end
-
-            -- Restore `ontop` after fullscreen is disabled
-            -- Sorta tries to fix: https://github.com/awesomeWM/awesome/issues/667
+            c.floating = true
+            c.ontop = true
+            c.width = screen_width * 0.30
+            c.height = screen_height * 0.35
+            awful.placement.top_right(c, {
+                honor_padding = true,
+                honor_workarea = true,
+                margins = { top = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
+            })
             c:connect_signal("property::fullscreen", function()
                 if not c.fullscreen then
                     c.ontop = true
@@ -504,9 +491,6 @@ awful.rules.rules = {
         end,
     },
 
-    -- "Fix" games that minimize on focus loss.
-    -- Usually this can be fixed by launching them with
-    -- SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0 but not all games use SDL
     {
         rule_any = {
             instance = {
@@ -565,7 +549,10 @@ awful.rules.rules = {
             instance = { "Toolkit" },
             type = { "dialog" },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[3] },
+        properties = {
+            screen = 1,
+            --tag = awful.screen.focused().tags[3]
+        },
     },
     -- Browsing
     {
@@ -580,7 +567,10 @@ awful.rules.rules = {
             instance = { "Toolkit" },
             type = { "dialog" },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[1] },
+        properties = {
+            screen = 1,
+            -- tag = awful.screen.focused().tags[1]
+        },
     },
     -- Google Picture-in-Picture
     {
@@ -588,40 +578,15 @@ awful.rules.rules = {
         properties = {},
         callback = function(c)
             -- Make it floating, sticky and move it out of the way if the current tag is maximized
-            if awful.layout.get(awful.screen.focused()) == awful.layout.suit.max then
-                c.floating = true
-                c.sticky = true
-                c.width = screen_width * 0.30
-                c.height = screen_height * 0.35
-                awful.placement.bottom_right(c, {
-                    honor_padding = true,
-                    honor_workarea = true,
-                    margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
-                })
-            end
-            if awful.layout.get(awful.screen.focused()) == awful.layout.suit.spiral.dwindle then
-                c.floating = true
-                c.sticky = true
-                c.width = screen_width * 0.2
-                c.height = screen_height * 0.2
-                awful.placement.bottom_right(c, {
-                    honor_padding = true,
-                    honor_workarea = true,
-                    margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
-                })
-            end
-            if awful.layout.get(awful.screen.focused()) == bling.layout.deck then
-                c.floating = true
-                c.sticky = true
-                c.width = screen_width * 0.2
-                c.height = screen_height * 0.2
-                awful.placement.bottom_right(c, {
-                    honor_padding = true,
-                    honor_workarea = true,
-                    margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
-                })
-            end
-
+            c.floating = true
+            c.sticky = true
+            c.width = screen_width * 0.30
+            c.height = screen_height * 0.35
+            awful.placement.bottom_right(c, {
+                honor_padding = true,
+                honor_workarea = true,
+                margins = { bottom = beautiful.useless_gap * 2, right = beautiful.useless_gap * 2 },
+            })
             c:connect_signal("property::fullscreen", function()
                 if not c.fullscreen then
                     c.sticky = true
@@ -643,7 +608,10 @@ awful.rules.rules = {
                 "wisdom-tree",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[2] },
+        properties = {
+            screen = 1,
+            -- tag = awful.screen.focused().tags[2]
+        },
     },
     -- Docs
     {
@@ -657,7 +625,10 @@ awful.rules.rules = {
                 "htop",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[4] },
+        properties = {
+            screen = 1,
+            -- tag = awful.screen.focused().tags[4]
+        },
     },
 
     -- Chatting

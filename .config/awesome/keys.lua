@@ -6,10 +6,62 @@ local apps = require "apps"
 local decorations = require "components.titlebar"
 local icons = require "icons"
 local bling = require "lib.bling"
+local rubato = require "lib.rubato"
 
 local helpers = require "helpers"
 local hotkeys_popup = require "awful.hotkeys_popup"
 require "awful.hotkeys_popup.keys"
+
+local anim_y = rubato.timed {
+    pos = 1090,
+    rate = 60,
+    easing = rubato.quadratic,
+    intro = 0.1,
+    duration = 0.3,
+    awestore_compat = true, -- this option must be set to true.
+}
+
+local anim_x = rubato.timed {
+    pos = 2070,
+    rate = 60,
+    easing = rubato.quadratic,
+    intro = 0.1,
+    duration = 0.3,
+    awestore_compat = true, -- this option must be set to true.
+}
+
+local discord_scratch = bling.module.scratchpad:new {
+    command = "discord",
+    rule = { instance = "discord" },
+    sticky = false,
+    autoclose = false,
+    floating = true,
+    geometry = { x = 245, y = 85, height = 800, width = 1200 },
+    reapply = true,
+    dont_focus_before_close = false,
+    rubato = { x = anim_x },
+}
+
+local spotify_scratch = bling.module.scratchpad:new {
+    command = "spotify",
+    rule = { instance = "spotify" },
+    sticky = false,
+    autoclose = false,
+    floating = true,
+    geometry = { x = 150, y = 65, height = 660, width = 960 },
+    reapply = true,
+    dont_focus_before_close = false,
+    rubato = { y = anim_y },
+}
+-- Signals
+------------
+
+awesome.connect_signal("scratch::discord", function()
+    discord_scratch:toggle()
+end)
+awesome.connect_signal("scratch::spotify", function()
+    spotify_scratch:toggle()
+end)
 
 local keys = {}
 
@@ -306,6 +358,7 @@ keys.globalkeys = gears.table.join(
 
     -- Toggle tray visibility
     awful.key({ superkey }, "=", function()
+        stats_tooltip_toggle()
         tray_toggle()
     end, { description = "toggle tray visibility", group = "awesome" }),
 
@@ -322,7 +375,7 @@ keys.globalkeys = gears.table.join(
 
     -- Prompt
     awful.key({ superkey }, "/", function()
-        awful.spawn.with_shell "rofi -show drun -theme applications -show-icons"
+        awful.spawn.with_shell "rofi -show drun -show-icons -theme ~/.config/rofi/nord/nord.rasi"
     end, { description = "rofi launcher", group = "launcher" }),
     awful.key({ superkey, shiftkey }, "/", function()
         awful.spawn.with_shell "dmenu_run -fn 'JetBrainsMono Nerd Font-9'  -p search -class films -sb '#EBCB8B' -sf '#2E3440'"
@@ -351,6 +404,13 @@ keys.globalkeys = gears.table.join(
         awful.spawn.with_shell "google-chrome-stable"
     end, { description = "google", group = "launcher" }),
 
+    -- Spotify scratchpad
+    awful.key({ superkey, shiftkey }, "s", function()
+        awesome.emit_signal "scratch::spotify"
+    end, { description = "Toggle music scratchpad", group = "Bling" }),
+    awful.key({ superkey, shiftkey }, "c", function()
+        awesome.emit_signal "scratch::discord"
+    end, { description = "Toggle discord scratchpad", group = "Bling" }),
     awful.key({ superkey, shiftkey }, "n", function(c)
         awful.spawn.with_shell 'firefox "https://www.notion.so/bettyyy/0be326627ef74713b1b895e6af6d2c23"'
     end, { description = "notion", group = "launcher" }),

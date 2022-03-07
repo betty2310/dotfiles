@@ -1,49 +1,58 @@
-local awful = require("awful")
-local wibox = require("wibox")
-local gears = require("gears")
-local beautiful = require("beautiful")
-local naughty = require("naughty")
-local helpers = require("helpers")
-
+local awful = require "awful"
+local wibox = require "wibox"
+local gears = require "gears"
+local beautiful = require "beautiful"
+local naughty = require "naughty"
+local helpers = require "helpers"
 
 if beautiful.notification_border_radius > 0 then
     beautiful.notification_shape = helpers.rrect(beautiful.notification_border_radius)
 end
 
 naughty.connect_signal("request::display", function(n)
+    local appicon = beautiful.notification_icon
+    local time = os.date "%H:%M"
     local actions = wibox.widget {
         notification = n,
         base_layout = wibox.widget {
-            spacing = dpi(5),
-            layout = wibox.layout.flex.horizontal
+            spacing = dpi(8),
+            layout = wibox.layout.flex.horizontal,
         },
         widget_template = {
             {
                 {
                     {
-                        font = "monospace 11 bold",
-                        markup = helpers.colorize_text(" ", x.color4),
-                        widget = wibox.widget.textbox
+
+                        {
+                            font = "monospace 11 bold",
+                            markup = helpers.colorize_text(" ", x.color4),
+                            widget = wibox.widget.textbox,
+                        },
+                        {
+                            id = "text_role",
+                            font = beautiful.notification_font,
+                            widget = wibox.widget.textbox,
+                        },
+
+                        forced_height = dpi(35),
+                        layout = wibox.layout.fixed.horizontal,
                     },
-                    {
-                        id = 'text_role',
-                        font = beautiful.notification_font,
-                        widget = wibox.widget.textbox
-                    },
-                    forced_height = dpi(35),
-                    layout = wibox.layout.fixed.horizontal
+                    left = dpi(6),
+                    right = dpi(6),
+                    widget = wibox.container.margin,
                 },
-                widget = wibox.container.place
+                widget = wibox.container.place,
             },
-            strategy = "min",
-            width = dpi(60),
-            widget = wibox.container.constraint,
+            bg = x.color8 .. "32",
+            forced_height = dpi(25),
+            forced_width = dpi(70),
+            widget = wibox.container.background,
         },
         style = {
             underline_normal = false,
-            underline_selected = true
+            underline_selected = true,
         },
-        widget = naughty.list.actions
+        widget = naughty.list.actions,
     }
 
     naughty.layout.box {
@@ -65,7 +74,7 @@ naughty.connect_signal("request::display", function(n)
                                         {
                                             align = "left",
                                             font = beautiful.notification_font,
-                                            markup = "<b>"..n.title.."</b>",
+                                            markup = "<b>" .. n.title .. "</b>",
                                             widget = wibox.widget.textbox,
                                             -- widget = naughty.widget.title,
                                         },
@@ -73,15 +82,15 @@ naughty.connect_signal("request::display", function(n)
                                             align = "left",
                                             widget = naughty.widget.message,
                                         },
-                                        layout = wibox.layout.fixed.vertical
+                                        layout = wibox.layout.fixed.vertical,
                                     },
                                     expand = "none",
-                                    layout = wibox.layout.align.vertical
+                                    layout = wibox.layout.align.vertical,
                                 },
                                 left = n.icon and beautiful.notification_padding or 0,
                                 widget = wibox.container.margin,
                             },
-                            layout = wibox.layout.align.horizontal
+                            layout = wibox.layout.align.horizontal,
                         },
                         {
                             helpers.vertical_pad(dpi(10)),
@@ -89,12 +98,12 @@ naughty.connect_signal("request::display", function(n)
                                 nil,
                                 actions,
                                 expand = "none",
-                                layout = wibox.layout.align.horizontal
+                                layout = wibox.layout.align.horizontal,
                             },
                             visible = n.actions and #n.actions > 0,
-                            layout = wibox.layout.fixed.vertical
+                            layout = wibox.layout.fixed.vertical,
                         },
-                        layout = wibox.layout.fixed.vertical
+                        layout = wibox.layout.fixed.vertical,
                     },
                     margins = beautiful.notification_padding,
                     widget = wibox.container.margin,
@@ -107,6 +116,6 @@ naughty.connect_signal("request::display", function(n)
             width = beautiful.notification_max_width or dpi(300),
             height = beautiful.notification_max_height or dpi(150),
             widget = wibox.container.constraint,
-        }
+        },
     }
 end)

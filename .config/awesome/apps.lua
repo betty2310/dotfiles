@@ -66,7 +66,7 @@ apps.teams = function()
     awful.spawn.with_shell "teams"
 end
 apps.notion = function()
-    awful.spawn.with_shell 'firefox "https://www.notion.so/bettyyy/0be326627ef74713b1b895e6af6d2c23"'
+    awful.spawn.with_shell "notion-app-enhanced"
 end
 apps.calendar = function()
     awful.spawn.with_shell 'firefox "https://calendar.google.com/calendar/u/0/r"'
@@ -221,7 +221,7 @@ function apps.screenshot(action, delay)
     local screenshot_edit = naughty.action { name = "Edit" }
     local screenshot_delete = naughty.action { name = "Delete" }
     screenshot_open:connect_signal("invoked", function()
-        awful.spawn.with_shell("cd " .. user.dirs.screenshots .. " && sxiv $(ls -t)")
+        awful.spawn.with_shell("cd " .. user.dirs.screenshots .. " && sxiv (ls -1cit | head -n1)")
     end)
     screenshot_copy:connect_signal("invoked", function()
         awful.spawn.with_shell("xclip -selection clipboard -t image/png " .. filename .. " &>/dev/null")

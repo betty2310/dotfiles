@@ -132,8 +132,8 @@ local mpd_buttons = wibox.widget {
 }
 
 -- Add clickable mouse effects on some widgets
-helpers.add_hover_cursor(mpd_next_icon, "hand1")
-helpers.add_hover_cursor(mpd_prev_icon, "hand1")
-helpers.add_hover_cursor(mpd_toggle_icon, "hand1")
+-- helpers.add_hover_cursor(mpd_next_icon, "hand1")
+-- helpers.add_hover_cursor(mpd_prev_icon, "hand1")
+-- helpers.add_hover_cursor(mpd_toggle_icon, "hand1")
 
 return mpd_buttons

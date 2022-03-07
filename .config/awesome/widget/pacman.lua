@@ -68,27 +68,27 @@ local pomodoro = wibox.widget {
 
     {
         go1,
-        right = dpi(140),
+        right = dpi(150),
         widget = wibox.container.margin(),
     },
     {
         go0,
-        right = dpi(120),
+        right = dpi(130),
         widget = wibox.container.margin(),
     },
     {
         go2,
-        right = dpi(100),
+        right = dpi(110),
         widget = wibox.container.margin(),
     },
     {
         go3,
-        right = dpi(80),
+        right = dpi(90),
         widget = wibox.container.margin(),
     },
     {
         go4,
-        right = dpi(50),
+        right = dpi(100),
         widget = wibox.container.margin(),
     },
 
