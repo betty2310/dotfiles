@@ -6,22 +6,18 @@ end
 
 local signs = require("utils").signs
 
-vim.g.nvim_tree_window_picker_exclude = {
-    filetype = {
-        "packer",
-        "qf",
-    },
-    buftype = {
-        "terminal",
-    },
-}
-vim.g.nvim_tree_special_files = {
-    ["README.md"] = 0,
-    ["Makefile"] = 0,
-    ["MAKEFILE"] = 0,
-}
+-- vim.g.nvim_tree_window_picker_exclude = {
+--     filetype = {
+--         "packer",
+--         "qf",
+--     },
+--     buftype = {
+--         "terminal",
+--     },
+-- }
+vim.g.nvim_tree_special_files = {}
 vim.g.nvim_tree_show_icons = {
-    git = 1,
+    git = 0,
     folders = 1,
     files = 1,
     folder_arrows = 0,
@@ -30,10 +26,10 @@ vim.g.nvim_tree_icons = {
     default = "",
     symlink = "",
     git = {
-        unstaged = "x",
-        staged = "v",
+        unstaged = "✗",
+        staged = "✓",
         unmerged = "",
-        renamed = "r",
+        renamed = "➜",
         untracked = "★",
         deleted = "",
         ignored = "◌",
@@ -83,12 +79,10 @@ nvimtree.setup {
     },
     filters = {
         dotfiles = false,
-        custom = {
-            ".git",
-        },
+        custom = {},
     },
     git = {
-        enable = true,
+        enable = false,
         ignore = false,
         timeout = 500,
     },

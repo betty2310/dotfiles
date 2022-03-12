@@ -17,7 +17,7 @@ styles.header = {
     bg_color = x.color1 .. "00",
     -- markup   = function(t) return '<b>' .. t .. '</b>' end,
     markup = function(t)
-        return '<span font_desc="sans bold 22">' .. t .. "</span>"
+        return '<span font_desc="sans bold 20">' .. t .. "</span>"
     end,
 }
 styles.weekday = {

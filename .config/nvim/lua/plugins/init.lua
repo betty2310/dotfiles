@@ -54,7 +54,6 @@ return packer.startup(function()
     use { "windwp/nvim-autopairs", config = require "plugins.config.autopairs" }
     use { "norcalli/nvim-colorizer.lua" }
     use { "karb94/neoscroll.nvim", config = require "plugins.config.neoscroll" }
-    use { "kevinhwang91/nvim-hlslens", config = require "plugins.config.hlslens" }
     use { "liuchengxu/vista.vim" }
     use { "simrat39/symbols-outline.nvim" }
     use {
@@ -96,13 +95,13 @@ return packer.startup(function()
     use { "hrsh7th/cmp-calc" }
 
     -- Formatter and Linting
-    -- use {
-    --     "jose-elias-alvarez/null-ls.nvim",
-    --     config = function()
-    --         require("null-ls").setup()
-    --     end,
-    --     requires = { "nvim-lua/plenary.nvim" },
-    -- } Seem like now it error, so remind me 5 months
+    use {
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+            require("null-ls").setup()
+        end,
+        requires = { "nvim-lua/plenary.nvim" },
+    } -- Seem like now it error, so remind me 5 months
 
     use { "mhartington/formatter.nvim" }
 

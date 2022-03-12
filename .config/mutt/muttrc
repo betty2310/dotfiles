@@ -1,4 +1,9 @@
 # vim: filetype=neomuttrc
-source /usr/local/share/mutt-wizard/mutt-wizard.muttrc
+source /usr/share/mutt-wizard/mutt-wizard.muttrc
+source /home/betty/.config/mutt/accounts/1-huynhduongsh1@gmail.com.muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/betty/.config/mutt/accounts/1-huynhduongsh1@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to huynhduongsh1@gmail.com"
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/betty/.config/mutt/accounts/2-huynh.dh2310@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to huynh.dh2310@gmail.com"
+macro index,pager i3 '<sync-mailbox><enter-command>source /home/betty/.config/mutt/accounts/3-Huynh.DH205087@sis.hust.edu.vn.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to Huynh.DH205087@sis.hust.edu.vn"
+
 source ~/.config/mutt/settings
 source ~/.config/mutt/colors

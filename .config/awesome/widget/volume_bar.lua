@@ -26,7 +26,7 @@ local volume_bar = wibox.widget {
     widget = wibox.widget.progressbar,
 }
 
-awesome.connect_signal("core::volume", function(volume, muted)
+awesome.connect_signal("signal::volume", function(volume, muted)
     local bg_color
     if muted then
         fill_color = muted_color

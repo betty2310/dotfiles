@@ -1,11 +1,10 @@
 function fish_user_key_bindings
-  # peco
-  bind \cr _fzf_search_history # Bind for peco select history to Ctrl+R
-  bind \ct frepo #
+bind \cr _fzf_search_history
+bind \ct frepo
+bind \ce fedit
 
-  # vim-like
-  bind \cn forward-word
-  bind \cb backward-word
+bind \cn forward-word
+bind \cb backward-word
 
-  bind \cx kill-word
+bind \cx kill-word
 end

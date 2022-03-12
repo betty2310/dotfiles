@@ -1,6 +1,6 @@
-local helpers = require("helpers")
-local icons = require("icons")
-local notifications = require("notifications")
+local helpers = require "helpers"
+local icons = require "icons"
+local notifications = require "notifications"
 
 -- Helper variables
 local charger_first_time = true
@@ -14,7 +14,7 @@ local battery_current = 100
 local battery_full_threshold = 96
 
 -- Full / Low / Critical notifications
-awesome.connect_signal("core::battery", function(battery)
+awesome.connect_signal("signal::battery", function(battery)
     local message
     local icon
     local timeout
@@ -27,33 +27,36 @@ awesome.connect_signal("core::battery", function(battery)
         icon = icons.image.battery
         if battery <= user.battery_threshold_critical and not battery_critical_already_notified then
             battery_critical_already_notified = true
-            message = "CRITICAL"
-            -- message = helpers.colorize_text("CRITICAL", x.color9)
+            -- message = "CRITICAL"
+            message = helpers.colorize_text("CRITICAL", x.color9)
             timeout = 0
         elseif battery <= user.battery_threshold_low and not battery_low_already_notified then
             battery_low_already_notified = true
-            message = "Low"
-            -- message = helpers.colorize_text("Low", x.color11)
+            -- message = "Low"
+            message = helpers.colorize_text("Low", x.color11)
             timeout = 6
         end
     else
         icon = icons.image.battery_charging
         if battery > battery_full_threshold and not battery_full_already_notified then
             battery_full_already_notified = true
-            message = "Full"
-            -- message = helpers.colorize_text("Full", x.color10)
+            -- message = "Full"
+            message = helpers.colorize_text("Full", x.color10)
             timeout = 6
         end
     end
 
     -- If message has been initialized, then we need to send a notification
     if message then
-        notif = notifications.notify_dwim({ title = "Battery", message = message, icon = icon, timeout = timeout, app_name = "battery" }, notif)
+        notif = notifications.notify_dwim(
+            { title = "Battery", message = message, icon = icon, timeout = timeout, app_name = "battery" },
+            notif
+        )
     end
 end)
 
 -- Charger notifications
-awesome.connect_signal("core::charger", function(plugged)
+awesome.connect_signal("signal::charger", function(plugged)
     charger_plugged = plugged
     local message
     local icon
@@ -74,6 +77,9 @@ awesome.connect_signal("core::charger", function(plugged)
     if charger_first_time then
         charger_first_time = false
     else
-        notif = notifications.notify_dwim({ title = "Charger", message = message, icon = icon, timeout = 3, app_name = "charger" }, notif)
+        notif = notifications.notify_dwim(
+            { title = "Charger", message = message, icon = icon, timeout = 3, app_name = "charger" },
+            notif
+        )
     end
 end)

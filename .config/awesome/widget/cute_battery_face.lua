@@ -139,7 +139,7 @@ local cute_battery_face = wibox.widget {
 }
 
 local last_value = 100
-awesome.connect_signal("core::battery", function(value)
+awesome.connect_signal("signal::battery", function(value)
     -- Update bar
     battery_bar.value = value
     last_value = value
@@ -162,7 +162,7 @@ awesome.connect_signal("core::battery", function(value)
     battery_bar.background_color = color.."44"
 end)
 
-awesome.connect_signal("core::charger", function(plugged)
+awesome.connect_signal("signal::charger", function(plugged)
     local color
     if plugged then
         charging_icon.visible = true

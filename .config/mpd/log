@@ -400,3 +400,349 @@ Mar 07 16:55 : mixer: Failed to set mixer for 'pulse audio': disconnected
 Mar 07 16:55 : mixer: Failed to set mixer for 'pulse audio': disconnected
 Mar 07 16:55 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 07 17:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:02 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:11 : player: played "Closer_Lyric_ft._Halsey-[PT2_F-1esPk].mp3"
+Mar 07 18:17 : config: option 'device' on line 21 was not recognized
+Mar 07 18:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:17 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 07 18:18 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:19 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 07 18:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:35 : update: added /Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3
+Mar 07 18:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:36 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 07 18:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:41 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:41 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 07 18:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 07 18:47 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 07 20:22 : config: option 'device' on line 21 was not recognized
+Mar 07 23:45 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 07 23:46 : config: option 'device' on line 21 was not recognized
+Mar 07 23:46 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 08 00:16 : config: option 'device' on line 21 was not recognized
+Mar 08 00:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:23 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:27 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:27 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:27 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:27 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:27 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:27 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:28 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 08 00:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:32 : player: played "Rolling_in_the_Deep_Official_Music_Video-[rYEDA3JcQqw].mp3"
+Mar 08 00:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:38 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 08 00:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 08 00:40 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:40 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:51 : player: played "Someone_Like_You_Vietsub-[sj25Ar9VRqE].mp3"
+Mar 08 00:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:56 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 08 00:56 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 00:56 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:56 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:56 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:56 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:56 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:56 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:56 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 00:56 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 01:01 : player: played "Perfect_Official_Music_Video-[2Vv-BfVoq4g].mp3"
+Mar 08 01:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 01:01 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 08 06:31 : config: option 'device' on line 21 was not recognized
+Mar 08 07:13 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 08 07:13 : config: option 'device' on line 21 was not recognized
+Mar 08 09:33 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 08 18:51 : config: option 'device' on line 21 was not recognized
+Mar 08 20:08 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 08 23:03 : config: option 'device' on line 21 was not recognized
+Mar 08 23:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 23:07 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 08 23:07 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 08 23:27 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 08 23:29 : config: option 'device' on line 21 was not recognized
+Mar 08 23:37 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 08 23:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 08 23:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 08 23:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 08 23:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 08 23:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 08 23:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 08 23:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 23:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 23:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 08 23:48 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 08 23:48 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 11:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 11:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 12:42 : config: option 'device' on line 21 was not recognized
+Mar 09 13:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 13:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 13:45 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 09 13:47 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 13:47 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 09 13:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 13:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 13:47 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 13:47 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 13:48 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 09 14:04 : player: played "Sugar_Official_Music_Video-[09R8_2nJtjg].mp3"
+Mar 09 16:01 : config: option 'device' on line 21 was not recognized
+Mar 09 17:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:07 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:07 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:12 : player: played "Sugar_Official_Music_Video-[09R8_2nJtjg].mp3"
+Mar 09 17:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:15 : player: played "Anh_ch_C_n_Gi_Nhi_u_Ngoai_Em_ft._V_._Thanh_ng_M_V-[KdrbBJNFwGw].mp3"
+Mar 09 17:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:16 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:16 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:16 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:20 : player: played "MORE_ft._Madison_Beer_G_I-DLE_Lexie_Liu_Jaira_Burns_Seraphine_Official_Music_Video-[3VTkBuxU4yk].mp3"
+Mar 09 17:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:26 : player: played "Dusk_Till_Dawn_Official_Video_ft._Sia-[tt2k8PGm-TI].mp3"
+Mar 09 17:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:31 : player: played "Trung_Quan_Idol_Lyrics-[xq9KpBCFuXs].mp3"
+Mar 09 17:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:32 : player: played "Happier_Official_Music_Video-[iWZmdoY1aTE].mp3"
+Mar 09 17:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:32 : player: played "When_We_Were_Young_Live_at_The_Church_Studios-[DDWKuo3gXMQ].mp3"
+Mar 09 17:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:35 : player: played "Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3"
+Mar 09 17:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 09 17:38 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:38 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:38 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:38 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:38 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 17:38 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 20:26 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 20:26 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 20:26 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 20:26 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 09 21:06 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 09 22:12 : player: played "Roar_Official-[CevxZvSJLk8].mp3"
+Mar 10 10:46 : config: option 'device' on line 21 was not recognized
+Mar 10 14:50 : player: played "Roar_Official-[CevxZvSJLk8].mp3"
+Mar 10 18:03 : config: option 'device' on line 21 was not recognized
+Mar 10 18:40 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 10 18:44 : player: played "Roar_Official-[CevxZvSJLk8].mp3"
+Mar 10 23:34 : config: option 'device' on line 21 was not recognized
+Mar 11 13:04 : player: played "Roar_Official-[CevxZvSJLk8].mp3"
+Mar 11 17:56 : config: option 'device' on line 21 was not recognized
+Mar 11 20:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 20:26 : player: played "Roar_Official-[CevxZvSJLk8].mp3"
+Mar 11 20:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:30 : player: played "Shake_It_Off-[nfWlot6h_JM].mp3"
+Mar 11 20:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:34 : player: played "Say_You_Won_t_Let_Go-[0yW7w8F2TVA].mp3"
+Mar 11 20:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:37 : player: played "Believer-[7wtfhZwyrcc].mp3"
+Mar 11 20:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:41 : player: played "God_s_Country_Official_Music_Video-[ZEWGyyLiqY4].mp3"
+Mar 11 20:41 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:44 : player: played "Wavin_Flag_Coca-Cola_Celebration_Mix-[WTJSt4wP2ME].mp3"
+Mar 11 20:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:49 : player: played "Perfect_Official_Music_Video-[2Vv-BfVoq4g].mp3"
+Mar 11 20:49 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:54 : player: played "Sugar_Official_Music_Video-[09R8_2nJtjg].mp3"
+Mar 11 20:54 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 20:59 : player: played "Taylor_Swift_exile_feat._Bon_Iver_Official_Lyric_Video-[osdoLjUNFnA].mp3"
+Mar 11 20:59 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:03 : player: played "Rolling_in_the_Deep_Official_Music_Video-[rYEDA3JcQqw].mp3"
+Mar 11 21:03 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:07 : player: played "We_Don_t_Talk_Anymore_feat._Selena_Gomez_Official_Video-[3AtDnEC4zak].mp3"
+Mar 11 21:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:11 : player: played "Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3"
+Mar 11 21:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:16 : player: played "Castle_On_The_Hill_Official_Music_Video-[K0ibBPhiaG0].mp3"
+Mar 11 21:16 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:20 : player: played "See_You_Again_ft._Charlie_Puth_Official_Video_Furious_7_Soundtrack-[RgKAFK5djSk].mp3"
+Mar 11 21:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:23 : player: played "Galway_Girl_Official_Music_Video-[87gWaABqGYs].mp3"
+Mar 11 21:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:27 : player: played "Closer_Lyric_ft._Halsey-[PT2_F-1esPk].mp3"
+Mar 11 21:27 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:31 : player: played "Happier_Official_Music_Video-[iWZmdoY1aTE].mp3"
+Mar 11 21:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 11 21:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 21:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 21:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 21:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 21:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 21:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:09 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 22:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 11 23:57 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:14 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:14 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:14 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:14 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:15 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:16 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:16 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:16 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:16 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:17 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 12 00:24 : player: played "Anh_ch_C_n_Gi_Nhi_u_Ngoai_Em_ft._V_._Thanh_ng_M_V-[KdrbBJNFwGw].mp3"
+Mar 12 08:18 : config: option 'device' on line 21 was not recognized
+Mar 12 09:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 09:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 09:35 : player: played "Closer_Lyric_ft._Halsey-[PT2_F-1esPk].mp3"
+Mar 12 09:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 09:37 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 09:39 : player: played "ONG_KI_M_EM_V_._Original-[NLBTbCfR-Fg].mp3"
+Mar 12 09:39 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 09:39 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 09:44 : player: played "Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3"
+Mar 12 09:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 09:49 : player: played "Hanh_tinh_song_song_V_._Official_Audio-[Bmo4PSbB8E8].mp3"
+Mar 12 09:49 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 09:53 : player: played "Perfect_Official_Music_Video-[2Vv-BfVoq4g].mp3"
+Mar 12 09:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 09:57 : player: played "Bad_Blood_ft._Kendrick_Lamar-[QcIy9NiNbmo].mp3"
+Mar 12 09:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 10:02 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 10:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 10:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 10:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 10:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 10:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 10:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 10:57 : player: played "Andiez-[dLQe4qEfVJw].mp3"
+Mar 12 14:08 : config: option 'device' on line 21 was not recognized
+Mar 12 14:36 : player: played "Andiez-[dLQe4qEfVJw].mp3"
+Mar 12 16:16 : config: option 'device' on line 21 was not recognized
+Mar 12 16:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 16:17 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:20 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:20 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:20 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:20 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:20 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 16:20 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 17:05 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 17:05 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 12 17:05 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 17:40 : output: Failed to play on "pulse audio" (pulse): suspended

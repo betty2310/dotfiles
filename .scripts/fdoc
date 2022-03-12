@@ -4,16 +4,14 @@
 # I use it for editing dotfiles in my ~/.config directory
 
 # Directory to search in
-dir="$HOME/Documents"
+dir="$HOME/Music/"
 # Change directory so that the paths are shorter in rofi
 cd "$dir" || exit
-choice="$(rg --files --color=never --ignore-file "$ignore_file" | rofi -i -dmenu -theme generic)"
+choice="$(rg --files --color=never --ignore-file "$ignore_file" | rofi -i -dmenu -theme ~/.config/rofi/nord/nord.rasi)"
 
 if [[ -z "${choice// /}" ]]; then
 	exit 1
 fi
-
-echo "$choice"
 
 if [ -f "$choice" ]; then
 	case "$choice" in
@@ -25,6 +23,9 @@ if [ -f "$choice" ]; then
 		;;
 	*.mp4 | *.mkv | *.gif)
 		vlc "$choice"
+		;;
+	*.mp3 | *.mkv | *.gif)
+		mpv "$choice"
 		;;
 	*.jpg | *.jpeg | *.png)
 		sxiv "$choice"

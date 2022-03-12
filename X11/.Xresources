@@ -65,3 +65,4 @@ URxvt.internalBorder:     22
 *.color17: nord1
 *.color18: nord2
 *.color19: nord3
+*.color20: nord10

@@ -24,7 +24,7 @@ local temperature_bar = wibox.widget{
   widget        = wibox.widget.progressbar,
 }
 
-awesome.connect_signal("core::temperature", function(value)
+awesome.connect_signal("signal::temperature", function(value)
     temperature_bar.value = value
 end)
 

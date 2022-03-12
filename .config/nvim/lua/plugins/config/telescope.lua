@@ -59,5 +59,5 @@ if ok then
         },
     }
     require("telescope").load_extension "fzf"
-    require("telescope").load_extension "opener"
+    --require("telescope").load_extension "opener"
 end

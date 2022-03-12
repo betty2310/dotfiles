@@ -27,7 +27,7 @@ local spotify_widget = wibox.widget {
 }
 
 -- Subcribe to spotify updates
-awesome.connect_signal("core::spotify", function(artist, title, status)
+awesome.connect_signal("signal::spotify", function(artist, title, status)
     -- Do whatever you want with artist, title, status
     -- ...
     spotify_artist.text = artist

@@ -30,7 +30,7 @@ local mpd_song = wibox.widget{
 
 local artist_fg
 local artist_bg
-awesome.connect_signal("core::mpd", function(artist, title, status)
+awesome.connect_signal("signal::mpd", function(artist, title, status)
     if status == "paused" then
         artist_fg = paused_color
         title_fg = paused_color

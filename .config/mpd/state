@@ -3,8 +3,8 @@ audio_device_state:1:My ALSA Device
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
 state: pause
-current: 0
-time: 32.066000
+current: 40
+time: 51.861000
 random: 1
 repeat: 1
 single: 0
@@ -17,4 +17,53 @@ playlist_begin
 1:Something_Just_Like_This_Lyric-[FM7MFYoylVs].mp3
 2:cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3
 3:Rolling_in_the_Deep_Official_Music_Video-[rYEDA3JcQqw].mp3
+4:When_We_Were_Young_Live_at_The_Church_Studios-[DDWKuo3gXMQ].mp3
+5:Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3
+6:Yeu_ng_kho_qua_thi_CH_Y_V_KHOC_V_I_ANH_Official_Music_Video_Genshin_Impact-[EBpp2VTSI2Q].mp3
+7:Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3
+8:Someone_Like_You_Vietsub-[sj25Ar9VRqE].mp3
+9:Wavin_Flag_Coca-Cola_Celebration_Mix-[WTJSt4wP2ME].mp3
+10:God_s_Country_Official_Music_Video-[ZEWGyyLiqY4].mp3
+11:Stitches_Official_Video-[VbfpW0pbvaU].mp3
+12:Treat_You_Better-[lY2yjAdbvdQ].mp3
+13:Andiez-[dLQe4qEfVJw].mp3
+14:Anh_ch_C_n_Gi_Nhi_u_Ngoai_Em_ft._V_._Thanh_ng_M_V-[KdrbBJNFwGw].mp3
+15:Dusk_Till_Dawn_Official_Video_ft._Sia-[tt2k8PGm-TI].mp3
+16:In_My_Blood-[36tggrpRoTI].mp3
+17:Hanh_tinh_song_song_V_._Official_Audio-[Bmo4PSbB8E8].mp3
+18:MORE_ft._Madison_Beer_G_I-DLE_Lexie_Liu_Jaira_Burns_Seraphine_Official_Music_Video-[3VTkBuxU4yk].mp3
+19:Say_You_Won_t_Let_Go-[0yW7w8F2TVA].mp3
+20:Shape_of_You_Official_Music_Video-[JGwWNGJdvx8].mp3
+21:Trung_Quan_Idol_Lyrics-[xq9KpBCFuXs].mp3
+22:Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3
+23:V_._Original-[8TszjrFJOe0].mp3
+24:You_Spin_Me_Round_Feat._Silver_Letomi-[b4JfmlpAdRM].mp3
+25:Bad_Blood_ft._Kendrick_Lamar-[QcIy9NiNbmo].mp3
+26:Believer-[7wtfhZwyrcc].mp3
+27:Blank_Space-[e-ORhEE9VVg].mp3
+28:Kill_This_Love_M_V-[2S24-y0Ij3Y].mp3
+29:Castle_On_The_Hill_Official_Music_Video-[K0ibBPhiaG0].mp3
+30:Counting_Stars_Official_Music_Video-[hT_nvWreIhg].mp3
+31:Dark_Horse_Official_ft._Juicy_J-[0KSOMA3QBU0].mp3
+32:ONG_KI_M_EM_V_._Original-[NLBTbCfR-Fg].mp3
+33:Demons_Official_Video-[mWRsgZuwf_8].mp3
+34:Taylor_Swift_exile_feat._Bon_Iver_Official_Lyric_Video-[osdoLjUNFnA].mp3
+35:Galway_Girl_Official_Music_Video-[87gWaABqGYs].mp3
+36:Happier_Official_Music_Video-[iWZmdoY1aTE].mp3
+37:L_LUNG_V_._Original-[F5tS5m86bOI].mp3
+38:Look_What_You_Made_Me_Do-[3tmd-ClpJxA].mp3
+39:Love_Yourself_Live_At_Jingle_Bell_Ball_2015-[5V_FQa363Y0].mp3
+40:Natural-[0I647GU3Jsc].mp3
+41:Perfect_Official_Music_Video-[2Vv-BfVoq4g].mp3
+42:Photograph_Official_Music_Video-[nSDgHBxUbVQ].mp3
+43:Roar_Official-[CevxZvSJLk8].mp3
+44:Safe_Sound_feat._The_Civil_Wars_The_Hunger_Games_-_Songs_From_District_12_And_Beyond-[RzhAS_GnJIc].mp3
+45:See_You_Again_ft._Charlie_Puth_Official_Video_Furious_7_Soundtrack-[RgKAFK5djSk].mp3
+46:Shake_It_Off-[nfWlot6h_JM].mp3
+47:Sugar_Official_Music_Video-[09R8_2nJtjg].mp3
+48:Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3
+49:Radioactive-[ktvTqknDobU].mp3
+50:Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3
+51:We_Don_t_Talk_Anymore_feat._Selena_Gomez_Official_Video-[3AtDnEC4zak].mp3
+52:You_Belong_With_Me-[VuNIsY6JdUw].mp3
 playlist_end

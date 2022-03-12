@@ -2,9 +2,9 @@
 
 if pgrep redshift
   pkill redshift
+  notify-send "Night mode" "Deactivated!" -i ~/.config/awesome/icons/cat3.png
 else
   echo ON
+  notify-send "Night mode" "Activated!" -i ~/.config/awesome/icons/cat3.png
   redshift -l 0:0 -t 5500:4500 -r &>/dev/null &
 end
-
-

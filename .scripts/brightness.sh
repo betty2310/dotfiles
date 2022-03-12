@@ -79,7 +79,7 @@ function dunsty_boi {
 
   # Send notification thing
   #dunstify -i $icon_name -r ${ID} -a {APPNAME} -h string:fgcolor:${color} -h string:frcolor:${color} $(bar_thingy)
-  dunstify -h string:fgcolor:#2c2e3e '      ' -i $icon_name -r ${ID} -a ${APPNAME} "<span foreground='${color}' font_desc='UbuntuMono Nerd Font 22'><b>Brightness</b></span>\n<span foreground='${color}' font_desc='Source Code Pro 24'><b>$(bar_thingy)</b></span>"
+  dunstify -h string:fgcolor:#2c2e3e '      ' -i $icon_name -r ${ID} -a ${APPNAME} "<span foreground='${color}' font_desc='monospace 12'><b>Brightness</b></span>\n<span foreground='${color}' font_desc='sans 24'><b>$(bar_thingy)</b></span>"
 }
 
 # Main function thingy

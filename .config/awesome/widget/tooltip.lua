@@ -74,7 +74,7 @@ end)
 
 -- Battery
 local batt_text = wibox.widget {
-    markup = helpers.colorize_text("Battery", x.background),
+    markup = helpers.colorize_text("Battery", x.foreground),
     font = beautiful.font_name .. "8",
     valign = "center",
     widget = wibox.widget.textbox,
@@ -91,7 +91,7 @@ local batt_bar = wibox.widget {
     max_value = 100,
     value = 20,
     background_color = beautiful.transparent,
-    color = beautiful.xcolor0,
+    color = x.color0,
     widget = wibox.widget.progressbar,
 }
 
@@ -126,13 +126,13 @@ end)
 
 awesome.connect_signal("widget::battery", function()
     local b = batt_val
-    local fill_color = beautiful.bg_accent
+    local fill_color = x.color2
 
     if batt_charger then
-        fill_color = x.color2
+        fill_color = x.color4
     else
         if batt_val <= 15 then
-            fill_color = beautiful.xcolor1 .. "33"
+            fill_color = x.color1
         end
     end
 

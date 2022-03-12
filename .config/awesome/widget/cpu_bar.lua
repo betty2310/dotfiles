@@ -25,7 +25,7 @@ local cpu_bar = wibox.widget{
     widget        = wibox.widget.progressbar,
 }
 
-awesome.connect_signal("core::cpu", function(value)
+awesome.connect_signal("signal::cpu", function(value)
     -- Use this if you want to display usage percentage
     -- cpu_bar.value = value
     -- Use this if you want to display idle percentage

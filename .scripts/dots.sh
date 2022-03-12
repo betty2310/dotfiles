@@ -1,12 +1,46 @@
-cp -r ~/.config/nvim/ /home/betty/ghq/github.com/betty2310/dotifles/.config
-cp -r ~/.config/fontconfig/ /home/betty/ghq/github.com/betty2310/dotifles/.config
-cp -r ~/.config/picom/ /home/betty/ghq/github.com/betty2310/dotifles/.config
-cp -r ~/.config/fish/ /home/betty/ghq/github.com/betty2310/dotifles/.config
-cp -r ~/.config/awesome/ /home/betty/ghq/github.com/betty2310/dotifles/.config
-cp -r ~/.config/sxhkd/ /home/betty/ghq/github.com/betty2310/dotifles/.config
-cp -r ~/.scripts/ /home/betty/ghq/github.com/betty2310/dotifles/
-cp ~/.config/starship.toml /home/betty/ghq/github.com/betty2310/dotifles/.config
-cd /home/betty/ghq/github.com/betty2310/dotifles
-DATE=$(date)
+#!/bin/sh
+
+sameLine="\e[1A\e[K"
+
+echo "🛑 Clearing configurations directory..."
+rm -rf ~/ghq/github.com/betty2310/dotfiles/.config/
+# creating it again for backup.
+sleep 1
+echo -e "$sameLine✅ Configurations directory cleared."
+sleep 1
+
+echo -e "$sameLine🏁 Starting backup..."
+sleep 1
+mkdir ~/ghq/github.com/betty2310/dotfiles/.config
+cp -a ~/.config/awesome/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/bat/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/btop/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/cava/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/fish/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/kitty/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/mpd/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/mpv/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/mutt/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/ncmpcpp/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/neofetch/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/nvim/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/picom/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/ranger/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/zathura/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp ~/.config/starship.toml ~/ghq/github.com/betty2310/dotfiles/.config/
+
+rm -rf ~/ghq/github.com/betty2310/dotfiles/.scripts/*
+cp ~/.scripts/* ~/ghq/github.com/betty2310/dotfiles/.scripts/
+
+rm -rf ~/ghq/github.com/betty2310/dotfiles/X11/*
+cp ~/.xprofile ~/ghq/github.com/betty2310/dotfiles/X11/
+cp ~/.Xresources ~/ghq/github.com/betty2310/dotfiles/X11/
+cp ~/.xinitrc ~/ghq/github.com/betty2310/dotfiles/X11/
+#git add .
+timestamp() {
+	date +"%d-%m-%Y at %T"
+}
+cd ~/ghq/github.com/betty2310/dotfiles/
 git add .
-git commit -m "auto update ${DATE}"
+git commit -m "automatic update: $(timestamp)"
+echo -e "$sameLine🎉 Backup finished! You can review & commit your changes."

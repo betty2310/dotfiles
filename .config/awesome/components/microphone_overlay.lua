@@ -31,7 +31,7 @@ microphone_overlay:setup {
     widget = indicator
 }
 
-awesome.connect_signal("core::microphone", function(muted)
+awesome.connect_signal("signal::microphone", function(muted)
     indicator.markup = helpers.colorize_text(microphone_icon, muted and muted_color or active_color)
 end)
 

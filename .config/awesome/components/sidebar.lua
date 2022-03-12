@@ -320,9 +320,8 @@ local create_tooltip = function(w)
 
     return tooltip
 end
-
 local brightness_tooltip = create_tooltip(brightness_bar)
-awesome.connect_signal("core::brightness", function(value)
+awesome.connect_signal("signal::brightness", function(value)
     brightness_tooltip.markup = "Your screen is <span foreground='"
         .. beautiful.brightness_bar_active_color
         .. "'><b>"
@@ -330,8 +329,22 @@ awesome.connect_signal("core::brightness", function(value)
         .. "%</b></span> bright"
 end)
 
+local dot = wibox.widget {
+    markup = "",
+    font = beautiful.font_name,
+    widget = wibox.widget.textbox,
+}
+local date_tooltip = create_tooltip(dot)
+awesome.connect_signal("signal::date", function(value)
+    date_tooltip.markup = "<span foreground='"
+        .. beautiful.brightness_bar_active_color
+        .. "'><b>"
+        .. value
+        .. "%</b></span>"
+end)
+
 local cpu_tooltip = create_tooltip(cpu_bar)
-awesome.connect_signal("core::cpu", function(value)
+awesome.connect_signal("signal::cpu", function(value)
     cpu_tooltip.markup = "You are using <span foreground='"
         .. beautiful.cpu_bar_active_color
         .. "'><b>"
@@ -340,7 +353,7 @@ awesome.connect_signal("core::cpu", function(value)
 end)
 
 local ram_tooltip = create_tooltip(ram_bar)
-awesome.connect_signal("core::ram", function(value, _)
+awesome.connect_signal("signal::ram", function(value, _)
     ram_tooltip.markup = "You are using <span foreground='"
         .. beautiful.ram_bar_active_color
         .. "'><b>"
@@ -349,7 +362,7 @@ awesome.connect_signal("core::ram", function(value, _)
 end)
 
 local volume_tooltip = create_tooltip(volume_bar)
-awesome.connect_signal("core::volume", function(value, muted)
+awesome.connect_signal("signal::volume", function(value, muted)
     volume_tooltip.markup = "The volume is at <span foreground='"
         .. beautiful.volume_bar_active_color
         .. "'><b>"
@@ -364,7 +377,7 @@ awesome.connect_signal("core::volume", function(value, muted)
 end)
 
 local temperature_tooltip = create_tooltip(temperature_bar)
-awesome.connect_signal("core::temperature", function(value)
+awesome.connect_signal("signal::temperature", function(value)
     temperature_tooltip.markup = "Your CPU temperature is at <span foreground='"
         .. beautiful.temperature_bar_active_color
         .. "'><b>"
@@ -373,7 +386,7 @@ awesome.connect_signal("core::temperature", function(value)
 end)
 
 local battery_tooltip = create_tooltip(cute_battery_face)
-awesome.connect_signal("core::battery", function(value)
+awesome.connect_signal("signal::battery", function(value)
     battery_tooltip.markup = "Your battery is at <span foreground='"
         .. beautiful.battery_bar_active_color
         .. "'><b>"
@@ -428,15 +441,15 @@ local pomo = wibox.widget {
 local quote = require "widget.quote"
 
 -- Add clickable mouse effects on some widgets
--- helpers.add_hover_cursor(cpu, "hand1")
--- helpers.add_hover_cursor(ram, "hand1")
--- helpers.add_hover_cursor(temperature, "hand1")
--- helpers.add_hover_cursor(volume, "hand1")
--- helpers.add_hover_cursor(brightness, "hand1")
--- helpers.add_hover_cursor(mpd_song, "hand1")
--- helpers.add_hover_cursor(search, "xterm")
--- helpers.add_hover_cursor(cute_battery_face, "hand1@")
--- helpers.add_hover_cursor(pacman, "hand1")
+helpers.add_hover_cursor(cpu, "hand1")
+helpers.add_hover_cursor(ram, "hand1")
+helpers.add_hover_cursor(temperature, "hand1")
+helpers.add_hover_cursor(volume, "hand1")
+helpers.add_hover_cursor(brightness, "hand1")
+helpers.add_hover_cursor(mpd_song, "hand1")
+helpers.add_hover_cursor(cute_battery_face, "hand1")
+helpers.add_hover_cursor(pacman, "hand1")
+helpers.add_hover_cursor(dotw, "hand1")
 
 -- Create the sidebar
 sidebar = wibox { visible = false, ontop = true, type = "dock", screen = screen.primary }
@@ -694,11 +707,12 @@ playerctl:connect_signal("playback_status", function(_, playing, __)
 end)
 
 playerctl:connect_signal("position", function(pos, length)
-    local pos_now = tostring(os.date("!%M:%S", math.floor(pos)))
-    local pos_length = tostring(os.date("!%M:%S", math.floor(length)))
-    local pos_markup = pos_now .. " / " .. pos_length
-
-    music_pos.markup = helpers.colorize_text(pos_markup, x.foreground)
+    if player_name == "mpd" then
+        local pos_now = tostring(os.date("!%M:%S", math.floor(interval_sec)))
+        local pos_length = tostring(os.date("!%M:%S", math.floor(length_sec)))
+        local pos_markup = pos_now .. helpers.colorize_text(" / " .. pos_length, beautiful.xcolor8)
+        music_pos:set_markup_silently(pos_markup)
+    end
 end)
 
 local music_boxed = create_boxed_widget(music, dpi(220), dpi(170))

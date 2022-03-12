@@ -1,15 +1,16 @@
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
+export QT_STYLE_OVERRIDE=kvantum
+lxpolkit &
 fcitx5 &
 picom --experimental-backends &
-[ ! -s ~/.config/mpd/pid ] && mpd
 nitrogen --restore &
-ulauncher &
 nm-applet &
+ulauncher &
+sleep 3 && copyq &
 imwheel --kill
-solaar pair
+mpd-mpris &
 xset -dpms
 xset s off
 xset r rate 300 50
-

@@ -10,7 +10,7 @@ local disk = wibox.widget{
     widget = wibox.widget.textbox
 }
 
-awesome.connect_signal("core::disk", function (used, total)
+awesome.connect_signal("signal::disk", function (used, total)
     disk.markup = tostring(total - used) .. "GB free"
 end)
 

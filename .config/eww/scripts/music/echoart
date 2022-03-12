@@ -1,4 +1,0 @@
-sh ~/.config/eww/scripts/music/getart
-echo "$HOME/Pictures/Test/cover.png"
-
-

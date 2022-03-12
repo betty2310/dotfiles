@@ -97,6 +97,7 @@ icons.text.by_class = {
     ["Gpick"] = { symbol = "", color = x.color6 },
     ["sensors"] = { symbol = "", color = x.color1 },
     ["et"] = { symbol = "", color = x.color2 },
+    ["copyq"] = { symbol = "", color = x.color2 },
 
     -- Default
     ["_"] = { symbol = "", color = x.color4 },
@@ -129,6 +130,7 @@ local image_icon_names = {
     "terminal",
     "mail",
     "music",
+    "cat4",
     "temperature",
     "battery",
     "battery_charging",

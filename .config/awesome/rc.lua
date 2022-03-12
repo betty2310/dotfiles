@@ -83,19 +83,17 @@ local decorations = require "components.titlebar"
 decorations.init()
 local helpers = require "helpers"
 
+F = {}
 require "components.bar"
 require "components.exit"
 require "components.sidebar"
 require "components.dashboard"
--- require "components.test"
+require "components.action"
 local lock_screen = require "components.lock_screen"
 lock_screen.init()
-require "components.app_drawer"
--- require "elemental.window_switcher"
+-- require "components.app_drawer"
 require "components.microphone_overlay"
-
-require "core"
-require "widget.tooltip"
+require "signal"
 
 screen_width = awful.screen.focused().geometry.width
 screen_height = awful.screen.focused().geometry.height
@@ -165,7 +163,7 @@ awful.rules.rules = {
             raise = true,
             keys = keys.clientkeys,
             buttons = keys.clientbuttons,
-            -- screen = awful.screen.preferred,
+            screen = awful.screen.preferred,
             screen = awful.screen.focused,
             size_hints_honor = false,
             honor_workarea = true,
@@ -183,7 +181,6 @@ awful.rules.rules = {
         rule_any = {
             instance = {
                 "DTA", -- Firefox addon DownThemAll.
-                "copyq", -- Includes session name in class.
                 "floating_terminal",
                 "riotclientux.exe",
                 "leagueclientux.exe",
@@ -249,6 +246,7 @@ awful.rules.rules = {
                 "music",
                 "markdown_input",
                 "scratchpad",
+                "copyq",
                 "wisdom-tree",
             },
             instance = {
@@ -387,9 +385,11 @@ awful.rules.rules = {
     {
         rule_any = {
             instance = {
+                "copyq",
                 "wisdom-tree",
             },
             class = {
+                "copyq",
                 "wisdom-tree",
             },
         },
@@ -417,7 +417,7 @@ awful.rules.rules = {
         },
         properties = {
             floating = true,
-            width = screen_width * 0.35,
+            width = screen_width * 0.45,
             height = screen_height * 0.50,
         },
     },
@@ -622,7 +622,7 @@ awful.rules.rules = {
                 "gotop",
             },
             instance = {
-                "htop",
+                "btop",
             },
         },
         properties = {
@@ -649,12 +649,12 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "htop",
+                "btop",
                 "battop",
                 "gotop",
             },
             instance = {
-                "htop",
+                "btop",
             },
         },
         properties = { screen = 1, tag = awful.screen.focused().tags[6] },

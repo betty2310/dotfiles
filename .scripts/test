@@ -1,0 +1,11 @@
+dir="$HOME/Music/"
+# Change directory so that the paths are shorter in rofi
+cd "$dir" || exit
+choice="$(rofi -show filebrowser -theme ~/.config/rofi/nord/nord.rasi)"
+if [[ -z "${choice// /}" ]]; then
+	exit 1
+fi
+
+choice="$dir$choice"
+mpv "$choice"
+

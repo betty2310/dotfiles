@@ -24,7 +24,7 @@ local ram_bar = wibox.widget{
     widget        = wibox.widget.progressbar,
 }
 
-awesome.connect_signal("core::ram", function(used, total)
+awesome.connect_signal("signal::ram", function(used, total)
     local used_ram_percentage = (used / total) * 100
     ram_bar.value = used_ram_percentage
 end)

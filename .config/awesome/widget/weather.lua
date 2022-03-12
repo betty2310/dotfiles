@@ -55,7 +55,7 @@ local weather_icons = {
     ["_"] = icons.image.whatever,
 }
 
-awesome.connect_signal("core::weather", function(temperature, description, icon_code)
+awesome.connect_signal("signal::weather", function(temperature, description, icon_code)
     if weather_icons[icon_code] then
         weather_icon.image = weather_icons[icon_code]
     else

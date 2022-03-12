@@ -15,7 +15,6 @@ local tip = titlebar_icon_path --alias to save time/space
 local xrdb = xresources.get_current_theme()
 local theme = {}
 
-theme.bg_accent = "#1C1E24"
 theme.xbackground = xrdb.background
 theme.xforeground = xrdb.foreground
 theme.xcolor0 = xrdb.color0
@@ -96,7 +95,7 @@ theme.titlebar_fg_normal = x.color8
 --theme.titlebar_fg = x.color7
 
 -- Notifications
-theme.notification_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/start.png")
+theme.notification_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/cat2.png")
 theme.notification_position = "top_right"
 theme.notification_border_width = dpi(0)
 theme.notification_border_radius = theme.border_radius
@@ -428,36 +427,33 @@ theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme = "/usr/share/icons/Papirus-Dark-Maia"
-theme.tag_preview_widget_border_radius = 5 -- Border radius of the widget (With AA)
-theme.tag_preview_client_border_radius = 5 -- Border radius of each client in the widget (With AA)
-theme.tag_preview_client_opacity = 1 -- Opacity of each client
-theme.tag_preview_client_bg = "#000000" -- The bg color of each client
-theme.tag_preview_client_border_color = x.background -- The border color of each client
-theme.tag_preview_client_border_width = 0 -- The border width of each client
-theme.tag_preview_widget_bg = "#000000" -- The bg color of the widget
-theme.tag_preview_widget_border_color = x.color2 -- The border color of the widget
-theme.tag_preview_widget_border_width = 2 -- The border width of the widget
-theme.tag_preview_widget_margin = 0
-theme.window_switcher_widget_bg = "#2b313c" -- The bg color of the widget
+-- theme.icon_theme = "/usr/share/icons/Nordzy-dark"
+theme.window_switcher_widget_bg = "#262b33" -- The bg color of the widget
 theme.window_switcher_widget_border_width = 0 -- The border width of the widget
-theme.window_switcher_widget_border_radius = 2 -- The border radius of the widget
+theme.window_switcher_widget_border_radius = 3 -- The border radius of the widget
 theme.window_switcher_widget_border_color = "#ffffff" -- The border color of the widget
 theme.window_switcher_clients_spacing = 20 -- The space between each client item
-theme.window_switcher_client_icon_horizontal_spacing = 5 -- The space between client icon and text
-theme.window_switcher_client_width = 150 -- The width of one client widget
+theme.window_switcher_client_icon_horizontal_spacing = 10 -- The space between client icon and text
+theme.window_switcher_client_width = 200 -- The width of one client widget
 theme.window_switcher_client_height = 250 -- The height of one client widget
-theme.window_switcher_client_margins = 10 -- The margin between the content and the border of the widget
-theme.window_switcher_thumbnail_margins = 10 -- The margin between one client thumbnail and the rest of the widget
+theme.window_switcher_client_margins = 5 -- The margin between the content and the border of the widget
+theme.window_switcher_thumbnail_margins = 5 -- The margin between one client thumbnail and the rest of the widget
 theme.thumbnail_scale = true -- If set to true, the thumbnails fit policy will be set to "fit" instead of "auto"
-theme.window_switcher_name_margins = 10 -- The margin of one clients title to the rest of the widget
-theme.window_switcher_name_valign = "center" -- How to vertically align one clients title
+theme.window_switcher_name_margins = 5 -- The margin of one clients title to the rest of the widget
+theme.window_switcher_name_valign = "left" -- How to vertically align one clients title
 theme.window_switcher_name_forced_width = 200 -- The width of one title
-theme.window_switcher_name_font = "monospace medium 10" -- The font of all titles
-theme.window_switcher_name_normal_color = x.foreground -- The color of one title if the client is unfocused
+theme.window_switcher_name_font = "sans medium 10" -- The font of all titles
+theme.window_switcher_name_normal_color = "#5d6a82"
 theme.window_switcher_name_focus_color = x.color2 -- The color of one title if the client is focused
 theme.window_switcher_icon_valign = "center" -- How to vertically align the one icon
-theme.window_switcher_icon_width = 0
+theme.window_switcher_icon_width = dpi(0)
+
+theme.layout_floating = gears.color.recolor_image(themes_path .. "default/layouts/floatingw.png", theme.fg_normal)
+theme.layout_tile = gears.color.recolor_image(themes_path .. "default/layouts/tilew.png", theme.fg_normal)
+theme.layout_max = gears.color.recolor_image(themes_path .. "default/layouts/maxw.png", theme.fg_normal)
+theme.layout_tilebottom = gears.color.recolor_image(themes_path .. "default/layouts/tilebottomw.png", theme.fg_normal)
+theme.layout_spiral = gears.color.recolor_image(themes_path .. "default/layouts/spiralw.png", theme.fg_normal)
+theme.layout_dwindle = gears.color.recolor_image(themes_path .. "default/layouts/dwindle.png", theme.fg_normal)
 return theme
 
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80

@@ -53,6 +53,19 @@ local spotify_scratch = bling.module.scratchpad:new {
     dont_focus_before_close = false,
     rubato = { y = anim_y },
 }
+
+local term = bling.module.scratchpad:new {
+    command = "kitty --class=scratch",
+    rule = { instance = "scratch" },
+    sticky = true,
+    autoclose = false,
+    floating = true,
+    geometry = { x = 150, y = 65, height = 300, width = 500 },
+    reapply = true,
+    rubato = { y = anim_y },
+    dont_focus_before_close = false,
+}
+
 -- Signals
 ------------
 
@@ -63,6 +76,9 @@ awesome.connect_signal("scratch::spotify", function()
     spotify_scratch:toggle()
 end)
 
+awesome.connect_signal("scratch::term", function()
+    term:toggle()
+end)
 local keys = {}
 
 -- Mod keys
@@ -109,11 +125,11 @@ keys.desktopbuttons = gears.table.join(
 
     -- Right click - Show app drawer
     -- awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({}, 3, function()
-        if app_drawer_show then
-            app_drawer_show()
-        end
-    end),
+    -- awful.button({}, 3, function()
+    --     if app_drawer_show then
+    --         app_drawer_show()
+    --     end
+    -- end),
 
     -- Middle button - Toggle dashboard
     awful.button({}, 2, function()
@@ -281,6 +297,11 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "Return", function()
         awful.spawn(user.terminal)
     end, { description = "open a terminal", group = "launcher" }),
+
+    awful.key({ altkey }, "Return", function()
+        awesome.emit_signal "scratch::term"
+    end),
+
     -- Spawn floating terminal
     awful.key({ superkey, shiftkey }, "Return", function()
         awful.spawn.with_shell "st -c float"
@@ -333,7 +354,10 @@ keys.globalkeys = gears.table.join(
     awful.key({}, "XF86AudioRaiseVolume", function()
         helpers.volume_control(5)
     end, { description = "raise volume", group = "volume" }),
-
+    -- clipboard manager keybingdings like windows
+    awful.key({ altkey }, "v", function()
+        awful.spawn.with_shell "copyq show"
+    end, { description = "show clipboard", group = "launcher" }),
     -- Microphone (V for voice)
     awful.key({ superkey }, "v", function()
         awful.spawn.with_shell "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
@@ -347,18 +371,22 @@ keys.globalkeys = gears.table.join(
     -- Screenshots
     awful.key({}, "Print", function()
         apps.screenshot "full"
-    end, { description = "take full screenshot", group = "screenshots" }),
+    end, { description = "take full screenshot", group = "Screenshot and record" }),
     awful.key({ altkey, ctrlkey }, "s", function()
         apps.screenshot "selection"
-    end, { description = "select area to capture", group = "screenshots" }),
+    end, { description = "select area to capture", group = "Screenshot and record" }),
     awful.key({ altkey, shiftkey }, "s", function()
         -- like window
         apps.screenshot "clipboard"
-    end, { description = "select area to copy to clipboard", group = "screenshots" }),
+    end, { description = "select area to copy to clipboard", group = "Screenshot and record" }),
+
+    -- Record
+    awful.key({ altkey }, "r", function()
+        apps.record()
+    end, { description = "Recording", group = "Screenshot and record" }),
 
     -- Toggle tray visibility
     awful.key({ superkey }, "=", function()
-        stats_tooltip_toggle()
         tray_toggle()
     end, { description = "toggle tray visibility", group = "awesome" }),
 
@@ -378,7 +406,7 @@ keys.globalkeys = gears.table.join(
         awful.spawn.with_shell "rofi -show drun -show-icons -theme ~/.config/rofi/nord/nord.rasi"
     end, { description = "rofi launcher", group = "launcher" }),
     awful.key({ superkey, shiftkey }, "/", function()
-        awful.spawn.with_shell "dmenu_run -fn 'JetBrainsMono Nerd Font-9'  -p search -class films -sb '#EBCB8B' -sf '#2E3440'"
+        awful.spawn.with_shell "dmenu_run -fn 'JetBrainsMono Nerd Font-9'  -p  -class films -sb '#EBCB8B' -sf '#2E3440'"
     end, { description = "dmenu run", group = "launcher" }),
 
     -- toggle wibar
@@ -412,7 +440,7 @@ keys.globalkeys = gears.table.join(
         awesome.emit_signal "scratch::discord"
     end, { description = "Toggle discord scratchpad", group = "Bling" }),
     awful.key({ superkey, shiftkey }, "n", function(c)
-        awful.spawn.with_shell 'firefox "https://www.notion.so/bettyyy/0be326627ef74713b1b895e6af6d2c23"'
+        apps.notion()
     end, { description = "notion", group = "launcher" }),
 
     awful.key({ superkey, shiftkey }, "a", function(c)
@@ -455,10 +483,14 @@ keys.globalkeys = gears.table.join(
         end
     end, { description = "dashboard", group = "awesome" }),
 
+    awful.key({ superkey }, "p", function()
+        F.action.toggle()
+    end, { description = "notif", group = "awesome" }),
+
     -- App drawer
-    awful.key({ superkey }, "a", function()
-        app_drawer_show()
-    end, { description = "App drawer", group = "awesome" }),
+    -- awful.key({ superkey }, "a", function()
+    --     app_drawer_show()
+    -- end, { description = "App drawer", group = "awesome" }),
 
     -- Spawn file manager
     awful.key({ superkey }, "F2", apps.file_manager, { description = "file manager", group = "launcher" }),

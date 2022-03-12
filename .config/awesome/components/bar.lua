@@ -3,6 +3,7 @@ local gears = require "gears"
 local wibox = require "wibox"
 local beautiful = require "beautiful"
 local bling = require "lib.bling"
+local rubato = require "lib.rubato"
 
 local helpers = require "helpers"
 local keys = require "keys"
@@ -103,7 +104,6 @@ awful.screen.connect_for_each_screen(function(s)
         -- width = dpi(6),
         bg = "#00000000",
     }
-
     s.taglist_box:setup {
         widget = s.mytaglist,
     }
@@ -202,7 +202,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the tray box
     s.traybox = wibox {
         screen = s,
-        width = dpi(150),
+        width = dpi(250),
         height = dpi(50),
         bg = "#00000000",
         visible = false,

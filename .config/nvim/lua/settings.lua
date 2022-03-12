@@ -38,13 +38,13 @@ utils.opt("o", "shiftround", true)
 utils.opt("o", "shortmess", vim.o.shortmess .. "c")
 utils.opt("o", "mouse", "a")
 utils.opt("o", "cmdheight", 1)
-
+vim.o.signcolumn = "yes"
 -- Highlight on yank
 vim.cmd "au TextYankPost * lua vim.highlight.on_yank {on_visual = false}"
 
-utils.setSpacesSize { go = 4, python = 4, rust = 4, cpp = 4, c = 4 }
+utils.setSpacesSize { go = 4, python = 4, rust = 4, cpp = 4, c = 4, lua = 4 }
 
-vim.api.nvim_command [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
+--vim.api.nvim_command [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
 
 -- Disable comment new line
 vim.cmd [[autocmd BufNewFile,BufRead * setlocal formatoptions-=cro]]

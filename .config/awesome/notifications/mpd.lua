@@ -13,11 +13,7 @@ local send_mpd_notif = function(artist, song, paused)
     if first_time then
         first_time = false
     else
-        if
-            paused
-            or (sidebar and sidebar.visible)
-            or (client.focus and (client.focus.instance == "music" or client.focus.class == "music"))
-        then
+        if paused or (client.focus and (client.focus.instance == "music" or client.focus.class == "music")) then
             -- Sidebar and already shows mpd info, so
             -- destroy notification if it exists
             -- Also destroy it if music pauses
@@ -25,14 +21,14 @@ local send_mpd_notif = function(artist, song, paused)
                 notif:destroy()
             end
         else
-            -- Since the core::mpd signal is also emitted when seeking, only
+            -- Since the signal::mpd signal is also emitted when seeking, only
             -- send a notification when the song and artist are different than
             -- before.
             if artist ~= old_artist and song ~= old_song then
                 notif = notifications.notify_dwim({
                     title = "Now playing:",
                     message = "<b>" .. song .. "</b> <br /> by <b>" .. artist .. "</b>",
-                    icon = icons.image.music,
+                    icon = icons.image.cat4,
                     timeout = timeout,
                     app_name = "mpd",
                 }, notif)
@@ -45,11 +41,11 @@ end
 
 -- Allow dynamically toggling mpd notifications
 notifications.mpd.enable = function()
-    awesome.connect_signal("core::mpd", send_mpd_notif)
+    awesome.connect_signal("signal::mpd", send_mpd_notif)
     notifications.mpd.enabled = true
 end
 notifications.mpd.disable = function()
-    awesome.disconnect_signal("core::mpd", send_mpd_notif)
+    awesome.disconnect_signal("signal::mpd", send_mpd_notif)
     notifications.mpd.enabled = false
 end
 notifications.mpd.toggle = function()

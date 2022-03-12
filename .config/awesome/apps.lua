@@ -105,7 +105,7 @@ end
 
 local night_mode_notif
 apps.night_mode = function()
-    local cmd = "nightmode"
+    local cmd = "nightmode_"
     awful.spawn.easy_async_with_shell(cmd, function(out)
         local message = out:match "ON" and "Activated!" or "Deactivated!"
         night_mode_notif = notifications.notify_dwim(
@@ -142,7 +142,7 @@ apps.music = function()
 end
 
 apps.process_monitor = function()
-    helpers.run_or_raise({ instance = "htop" }, false, user.terminal .. " -c htop -e htop", { switchtotag = true })
+    helpers.run_or_raise({ instance = "btop" }, false, user.terminal .. " -c btop -e btop", { switchtotag = true })
 end
 
 apps.process_monitor_gui = function()

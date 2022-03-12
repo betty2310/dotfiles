@@ -90,7 +90,7 @@ local weather_icons = {
     ["_"] = { icon = whatever_icon, color = x.color2 },
 }
 
-awesome.connect_signal("core::weather", function(temperature, description, icon_code)
+awesome.connect_signal("signal::weather", function(temperature, description, icon_code)
     local icon
     local color
     if weather_icons[icon_code] then

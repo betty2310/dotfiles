@@ -17,6 +17,7 @@ alias lla="logo-ls -a -XDlh"
 alias ide="tmux split-window -v -p 30"
 alias za="zathura"
 alias dots="~/.scripts/dots.sh"
+alias pls="sudo"
 
 # navigation
 alias ..='cd ..'
@@ -64,7 +65,7 @@ set -g GOPATH $HOME/go $PATH
 set -gx PATH $GOPATH/bin $PATH
 
 #set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --theme=ansi" --layout=reverse --height=50% --info=inline --border --margin=1 --padding=1'
-set -x FZF_DEFAULT_OPTS '--prompt="הּ " 
+set -x FZF_DEFAULT_OPTS '--prompt="הּ "
     --color=hl:#81a1c1
     --color=hl+:#BF616A
     --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
@@ -80,8 +81,9 @@ alias yo="git add -A && git commit -m (curl -s 'whatthecommit.com/index.txt')"
 # random cool image
 #colorscript -r
 function fish_title
-    set -q argv[1]; 
+    set -q argv[1];
     # Looks like ~/d/fish: git log
     # or /e/apt: fish
     echo (fish_prompt_pwd_dir_length=1 prompt_pwd) [$argv];
 end
+thefuck --alias | source

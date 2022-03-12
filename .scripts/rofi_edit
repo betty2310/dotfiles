@@ -32,4 +32,4 @@ if [[ -z "${choice// /}" ]]; then
 fi
 
 # Edit the selected file
-st -e code "$choice"
+st -e nvim "$choice"

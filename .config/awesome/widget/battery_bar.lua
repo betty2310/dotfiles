@@ -24,7 +24,7 @@ local battery_bar = wibox.widget{
   widget        = wibox.widget.progressbar,
 }
 
-awesome.connect_signal("core::battery", function(value)
+awesome.connect_signal("signal::battery", function(value)
     battery_bar.value = value
 end)
 

@@ -92,7 +92,7 @@ local music_playing_colors = {
 }
 local last_color = music_playing_colors[1]
 
-awesome.connect_signal("core::mpd", function(artist, title, paused)
+awesome.connect_signal("signal::mpd", function(artist, title, paused)
     local accent, small_note_color
     if paused then
         accent = x.foreground .. "33"
@@ -132,8 +132,8 @@ local mpd_buttons = wibox.widget {
 }
 
 -- Add clickable mouse effects on some widgets
--- helpers.add_hover_cursor(mpd_next_icon, "hand1")
--- helpers.add_hover_cursor(mpd_prev_icon, "hand1")
--- helpers.add_hover_cursor(mpd_toggle_icon, "hand1")
+helpers.add_hover_cursor(mpd_next_icon, "hand1")
+helpers.add_hover_cursor(mpd_prev_icon, "hand1")
+helpers.add_hover_cursor(mpd_toggle_icon, "hand1")
 
 return mpd_buttons

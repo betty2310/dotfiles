@@ -24,7 +24,7 @@ local brightness_bar = wibox.widget{
     widget        = wibox.widget.progressbar,
 }
 
-awesome.connect_signal("core::brightness", function (value)
+awesome.connect_signal("signal::brightness", function (value)
     brightness_bar.value = value
 end)
 
