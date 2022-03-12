@@ -48,9 +48,9 @@ if ok then
                 vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
 
                 vim_item.menu = ({
-                    buffer = "⌈BUFFER⌋",
                     nvim_lsp = "⌈LSP⌋",
                     nvim_lua = "⌈LUA⌋",
+                    buffer = "⌈BUFFER⌋",
                     path = "⌈PATH⌋",
                     luasnip = "⌈SNIPPET⌋",
                     calc = "⌈CALC⌋",

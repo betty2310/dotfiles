@@ -50,4 +50,4 @@ timestamp() {
 cd ~/ghq/github.com/betty2310/dotfiles/
 git add .
 git commit -m "⭐ feat(*): automatic update: $(timestamp)"
-echo -e "$sameLine🎉 Backup finished! You can review & commit your changes."
+echo -e "$sameLine🎉 Backup finished! You can push to remote on github.com."

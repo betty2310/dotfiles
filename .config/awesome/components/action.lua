@@ -96,12 +96,12 @@ end)
 
 local function action_show()
     action.visible = true
-    slide:set(1410)
+    slide:set(1420)
     action_status = false
 end
 
 local function action_hide()
-    slide:set(2000)
+    slide:set(1900)
     action_status = true
 end
 
