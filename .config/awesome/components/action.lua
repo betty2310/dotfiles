@@ -75,7 +75,7 @@ local action = awful.popup {
 }
 
 local slide = rubato.timed {
-    pos = 2000,
+    pos = 1420,
     rate = 60,
     intro = 0.3,
     duration = 0.8,
@@ -101,7 +101,7 @@ local function action_show()
 end
 
 local function action_hide()
-    slide:set(1900)
+    slide:set(1920)
     action_status = true
 end
 

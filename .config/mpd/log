@@ -895,3 +895,8 @@ Mar 12 18:39 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 12 18:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
 Mar 12 18:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
 Mar 12 18:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 12 20:07 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 12 23:36 : config: option 'device' on line 21 was not recognized
+Mar 12 23:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 13 00:02 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 13 09:16 : config: option 'device' on line 21 was not recognized
