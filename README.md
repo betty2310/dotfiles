@@ -31,7 +31,9 @@ This is my personal collection of configuration files.
 + **Colorscheme**: [nord](https://www.nordtheme.com/)
 + **File Manager**: [Ranger](https://github.com/ranger/ranger) with [icons](https://github.com/alexanderjeurissen/ranger_devicons)
 + **Launcher**: [rofi](https://github.com/davatorium/rofi/) and [Ulauncher](https://ulauncher.io/)
-</br> </br> </br> </br>
++ **Compositor**: [Picom](https://github.com/Arian8j2/picom-jonaburg-fix) 
+
+</br> </br> 
 ## :star: Setup
 
 Here are the instructions you should follow to replicate my AwesomeWM setup.
@@ -106,7 +108,7 @@ I use <kbd>super</kbd> AKA alt key as my main modifier.
 | <kbd>super + f</kbd> | Toggle fullscreen |
 | <kbd>super + UpArrow</kbd> | Toggle Maximize |
 | <kbd>super + DownArrow</kbd> | Minimize |
-| <kbd>Alt + Tab</kbd> | toggle window switcher |
+| <kbd>super + Tab</kbd> | toggle window switcher |
 | <kbd>super + c</kbd> | Center floating client |
 | <kbd>super + u</kbd> | Jump to urgent client (or back to last tag if there is no such client) |
 | <kbd>super + b</kbd> | Toggle bar |
