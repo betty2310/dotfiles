@@ -9,6 +9,7 @@ require "signal.disk"
 require "signal.volume"
 require "signal.microphone"
 require "signal.mpd"
+require "signal.kanji"
 require "signal.brightness"
 require "signal.spotify"
 

@@ -34,7 +34,7 @@ alias yays="yay -Slq | fzf -m --preview 'bat (yay -Si {1} | psub) <(yay -Fl {1} 
 # alias for searching and removing packages from system
 alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 
-alias mirror-update='sudo reflector --verbose -c Vietnam -c Japan -c Singapore --sort rate --save /etc/pacman.d/mirrorlist'
+alias mirror-update='sudo reflector -c Vietnam -c Japan -c Singapore -c India -a 12 --sort rate --save /etc/pacman.d/mirrorlist'
 
 #color scheme
 

@@ -1,0 +1,1 @@
+shuf -n 1 ~/Documents/Kanji/doc.txt
