@@ -924,3 +924,11 @@ Mar 14 12:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
 Mar 14 12:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
 Mar 14 13:09 : player: played "Natural-[0I647GU3Jsc].mp3"
 Mar 14 14:59 : config: option 'device' on line 21 was not recognized
+Mar 14 16:27 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 14 16:30 : config: option 'device' on line 21 was not recognized
+Mar 14 17:23 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 14 17:25 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 14 17:25 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 14 17:25 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 14 17:28 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 14 17:44 : config: option 'device' on line 21 was not recognized
