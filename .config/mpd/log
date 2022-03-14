@@ -900,3 +900,27 @@ Mar 12 23:36 : config: option 'device' on line 21 was not recognized
 Mar 12 23:37 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 13 00:02 : player: played "Natural-[0I647GU3Jsc].mp3"
 Mar 13 09:16 : config: option 'device' on line 21 was not recognized
+Mar 13 10:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 13 10:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 13 10:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 13 10:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 13 10:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 13 10:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 13 10:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 13 10:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 13 10:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 13 10:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 13 10:48 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 13 10:49 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 13 13:06 : player: played "Photograph_Official_Music_Video-[nSDgHBxUbVQ].mp3"
+Mar 13 13:08 : config: option 'device' on line 21 was not recognized
+Mar 13 13:29 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 13 22:13 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 13 22:14 : config: option 'device' on line 21 was not recognized
+Mar 13 22:36 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 14 09:23 : config: option 'device' on line 21 was not recognized
+Mar 14 12:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 14 12:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 14 12:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 14 13:09 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 14 14:59 : config: option 'device' on line 21 was not recognized

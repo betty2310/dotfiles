@@ -1,10 +1,10 @@
-sw_volume: 100
+sw_volume: 99
 audio_device_state:1:My ALSA Device
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
 state: pause
 current: 40
-time: 124.513000
+time: 5.679000
 random: 1
 repeat: 1
 single: 0

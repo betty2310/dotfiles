@@ -2,7 +2,10 @@ local awful = require "awful"
 local beautiful = require "beautiful"
 local gears = require "gears"
 local wibox = require "wibox"
+local apps = require "apps"
 local helpers = require "helpers"
+local naughty = require "naughty"
+local icons = require "icons"
 
 local wifi = wibox.widget {
     {
@@ -35,7 +38,7 @@ wifi:buttons {
             icon = icons.image.screenshot,
         }
         apps.screenshot("full", 5)
-    end)
+    end),
 }
 
 return wifi

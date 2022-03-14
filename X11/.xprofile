@@ -1,9 +1,11 @@
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
+export XMODIFIERS="@im=fcitx5"
+export XMODIFIER="@im=fcitx5"
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export DefaultIMModule=fcitx5
 export QT_STYLE_OVERRIDE=kvantum
-lxpolkit &
 fcitx5 &
+lxpolkit &
 picom --experimental-backends &
 nitrogen --restore &
 nm-applet &

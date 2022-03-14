@@ -125,7 +125,7 @@ awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit
     local layouts = {
         bling.layout.mstab,
-        bling.layout.equalarea,
+        l.max,
         l.tile,
         l.tile,
         l.tile,
@@ -399,8 +399,8 @@ awful.rules.rules = {
             ontop = false,
             minimized = true,
             sticky = false,
-            width = screen_width * 0.5,
-            height = screen_height * 0.7,
+            width = screen_width * 0.4,
+            height = screen_height * 0.5,
         },
     },
 
@@ -488,6 +488,15 @@ awful.rules.rules = {
                     c.ontop = true
                 end
             end)
+        end,
+    },
+
+    -- Anki
+    {
+        rule = { class = "Anki" },
+        properties = {},
+        callback = function(c)
+            c.opacity = 0.9
         end,
     },
 
@@ -599,7 +608,7 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "St",
+                "Anki",
                 "wisdom-tree",
             },
             instance = {
@@ -610,7 +619,7 @@ awful.rules.rules = {
         },
         properties = {
             screen = 1,
-            -- tag = awful.screen.focused().tags[2]
+            tag = awful.screen.focused().tags[2],
         },
     },
     -- Docs
