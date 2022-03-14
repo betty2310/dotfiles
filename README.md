@@ -32,7 +32,7 @@ This is my personal collection of configuration files.
 + **File Manager**: [Ranger](https://github.com/ranger/ranger) with [icons](https://github.com/alexanderjeurissen/ranger_devicons)
 + **Launcher**: [rofi](https://github.com/davatorium/rofi/) and [Ulauncher](https://ulauncher.io/)
 + **Compositor**: [Picom](https://github.com/Arian8j2/picom-jonaburg-fix) 
-+ [*see more screenshots*](https://github.com/betty2310/dotfiles/wiki/Screenshots)
++ [*see more screenshots*](https://github.com/betty2310/dotfiles/wiki/Showcase)
 </br> </br> 
 ## :star: Setup
 
