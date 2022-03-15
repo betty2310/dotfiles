@@ -256,23 +256,36 @@ local bookmarks = wibox.widget({
 local bookmarks_box = create_boxed_widget(bookmarks, dpi(200), dpi(300), x.background)
 
 -- Fortune
-local fortune_command = "kanji | head -n1 | xargs"
+local fortune_command = "kanji"
 local fortune_update_interval = 60
 -- local fortune_command = "fortune -n 140 -s computers"
 local kanji_text = wibox.widget({
-    font = "sans 12",
+    font = "sans 36",
     text = "loading your Kanji now ...",
     widget = wibox.widget.textbox,
 })
 
+local han_text = wibox.widget({
+    font = "sans 15",
+    text = "...",
+    widget = wibox.widget.textbox,
+})
+local viet_text = wibox.widget({
+    font = "sans 12",
+    text = "...",
+    widget = wibox.widget.textbox,
+})
 local update_fortune = function()
-    awful.spawn.easy_async_with_shell(fortune_command, function(out)
+    awful.spawn.easy_async_with_shell(fortune_command, function(stdout)
         -- Remove trailing whitespaces
-        kanji = out:gsub("^%s*(.-)%s*$", "%1")
-
+        -- kanji = out:gsub("^%s*(.-)%s*$", "%1")
+        kanji = stdout:match("^KANJI@(.*)@HAN")
+        han = stdout:match("@HAN@(.*)@VIET")
+        viet = stdout:match("@VIET@(.*)@END")
         kanji_text.markup = helpers.colorize_text(kanji, x.color4)
+        han_text.markup = helpers.colorize_text(han, x.color2)
+        viet_text.markup = helpers.colorize_text(viet, x.foreground)
     end)
-    
 end
 
 gears.timer({
@@ -285,8 +298,14 @@ gears.timer({
 
 local fortune_widget = wibox.widget({
     {
-        nil,
         kanji_text,
+        helpers.horizontal_pad(dpi(30)),
+        {
+            han_text,
+            helpers.vertical_pad(dpi(10)),
+            viet_text,
+            layout = wibox.layout.align.vertical,
+        },
         layout = wibox.layout.align.horizontal,
     },
     margins = box_gap * 4,

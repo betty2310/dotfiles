@@ -1,1 +1,1 @@
-shuf -n 1 ~/Documents/Kanji/doc.txt
+kanji_convert "$(shuf -n 1 ~/Documents/Kanji/doc.txt | head -n1 | xargs)"

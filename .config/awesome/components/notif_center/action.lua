@@ -1,40 +1,40 @@
-local awful = require "awful"
-local beautiful = require "beautiful"
-local gears = require "gears"
-local naughty = require "naughty"
-local rubato = require "lib.rubato"
-local helpers = require "helpers"
-local wibox = require "wibox"
+local awful = require("awful")
+local beautiful = require("beautiful")
+local gears = require("gears")
+local naughty = require("naughty")
+local rubato = require("lib.rubato")
+local helpers = require("helpers")
+local wibox = require("wibox")
 
 F.action = {}
 
-local notifs = require "components.dashboard.notif"
-local actions = wibox.widget {
+local notifs = require("components.notif_center.notif")
+local actions = wibox.widget({
     {
         {
             {
-                { widget = require "components.dashboard.controls.clip" },
-                { widget = require "components.dashboard.controls.shot" },
-                { widget = require "components.dashboard.controls.rec" },
-                { widget = require "components.dashboard.controls.save" },
+                { widget = require("components.notif_center.controls.clip") },
+                { widget = require("components.notif_center.controls.shot") },
+                { widget = require("components.notif_center.controls.rec") },
+                { widget = require("components.notif_center.controls.save") },
                 layout = wibox.layout.flex.horizontal,
                 spacing = 30,
             },
 
             {
-                { widget = require "components.dashboard.controls.wifi" },
-                { widget = require "components.dashboard.controls.bluetooth" },
-                { widget = require "components.dashboard.controls.dnd" },
-                { widget = require "components.dashboard.controls.night_light" },
+                { widget = require("components.notif_center.controls.wifi") },
+                { widget = require("components.notif_center.controls.bluetooth") },
+                { widget = require("components.notif_center.controls.dnd") },
+                { widget = require("components.notif_center.controls.night_light") },
                 layout = wibox.layout.flex.horizontal,
                 spacing = 30,
             },
             {
                 {
-                    widget = require "components.dashboard.controls.vol_slider",
+                    widget = require("components.notif_center.controls.vol_slider"),
                 },
                 {
-                    widget = require "components.dashboard.controls.bri_slider",
+                    widget = require("components.notif_center.controls.bri_slider"),
                 },
                 layout = wibox.layout.flex.vertical,
                 spacing = 30,
@@ -51,9 +51,9 @@ local actions = wibox.widget {
     shape = helpers.rrect(dpi(5)),
     widget = wibox.container.background,
     bg = "#2b313c",
-}
+})
 
-local action = awful.popup {
+local action = awful.popup({
     widget = {
         widget = wibox.container.margin,
         margins = 30,
@@ -72,9 +72,9 @@ local action = awful.popup {
     bg = x.background,
     border_color = x.foreground,
     border_width = 0,
-}
+})
 
-local slide = rubato.timed {
+local slide = rubato.timed({
     pos = 1420,
     rate = 60,
     intro = 0.3,
@@ -84,7 +84,7 @@ local slide = rubato.timed {
     subscribed = function(pos)
         action.x = pos
     end,
-}
+})
 
 local action_status = false
 

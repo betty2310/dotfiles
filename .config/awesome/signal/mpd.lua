@@ -11,32 +11,30 @@
 local awful = require("awful")
 
 local function emit_info()
-    awful.spawn.easy_async_with_shell("sh -c 'mpc -f ARTIST@%artist%@TITLE@%title%@FILE@%file%@'",
-        function(stdout)
-            local artist = stdout:match('^ARTIST@(.*)@TITLE')
-            local title = stdout:match('@TITLE@(.*)@FILE')
-            local status = stdout:match('\n%[(.*)%]')
+    awful.spawn.easy_async_with_shell("sh -c 'mpc -f ARTIST@%artist%@TITLE@%title%@FILE@%file%@'", function(stdout)
+        local artist = stdout:match("^ARTIST@(.*)@TITLE")
+        local title = stdout:match("@TITLE@(.*)@FILE")
+        local status = stdout:match("\n%[(.*)%]")
 
-            if not artist or artist == "" then
-              artist = "N/A"
-            end
-            if not title or title == "" then
-              title = stdout:match('@FILE@(.*)@')
-              if not title or title == "" then
-                  title = "N/A"
-              end
-            end
-
-            local paused
-            if status == "playing" then
-                paused = false
-            else
-                paused = true
-            end
-
-            awesome.emit_signal("signal::mpd", artist, title, paused)
+        if not artist or artist == "" then
+            artist = "N/A"
         end
-    )
+        if not title or title == "" then
+            title = stdout:match("@FILE@(.*)@")
+            if not title or title == "" then
+                title = "N/A"
+            end
+        end
+
+        local paused
+        if status == "playing" then
+            paused = false
+        else
+            paused = true
+        end
+
+        awesome.emit_signal("signal::mpd", artist, title, paused)
+    end)
 end
 
 -- Run once to initialize widgets
@@ -49,24 +47,25 @@ local mpd_script = [[
   ']]
 
 -- Kill old mpc idleloop player process
-awful.spawn.easy_async_with_shell("ps x | grep \"mpc idleloop player\" | grep -v grep | awk '{print $1}' | xargs kill", function ()
-    -- Emit song info with each line printed
-    awful.spawn.with_line_callback(mpd_script, {
-        stdout = function()
-            emit_info()
-        end
-    })
-end)
+awful.spawn.easy_async_with_shell(
+    "ps x | grep \"mpc idleloop player\" | grep -v grep | awk '{print $1}' | xargs kill",
+    function()
+        -- Emit song info with each line printed
+        awful.spawn.with_line_callback(mpd_script, {
+            stdout = function()
+                emit_info()
+            end,
+        })
+    end
+)
 
 ----------------------------------------------------------
 
 -- MPD Volume
 local function emit_volume_info()
-    awful.spawn.easy_async_with_shell("mpc volume | awk '{print substr($2, 1, length($2)-1)}'",
-        function(stdout)
-            awesome.emit_signal("signal::mpd_volume", tonumber(stdout))
-        end
-    )
+    awful.spawn.easy_async_with_shell("mpc volume | awk '{print substr($2, 1, length($2)-1)}'", function(stdout)
+        awesome.emit_signal("signal::mpd_volume", tonumber(stdout))
+    end)
 end
 
 -- Run once to initialize widgets
@@ -83,14 +82,17 @@ local mpd_volume_script = [[
   "]]
 
 -- Kill old mpc idleloop mixer process
-awful.spawn.easy_async_with_shell("ps x | grep \"mpc idleloop mixer\" | grep -v grep | awk '{print $1}' | xargs kill", function ()
-    -- Emit song info with each line printed
-    awful.spawn.with_line_callback(mpd_volume_script, {
-        stdout = function()
-            emit_volume_info()
-        end
-    })
-end)
+awful.spawn.easy_async_with_shell(
+    "ps x | grep \"mpc idleloop mixer\" | grep -v grep | awk '{print $1}' | xargs kill",
+    function()
+        -- Emit song info with each line printed
+        awful.spawn.with_line_callback(mpd_volume_script, {
+            stdout = function()
+                emit_volume_info()
+            end,
+        })
+    end
+)
 
 local mpd_options_script = [[
   sh -c "
@@ -98,24 +100,25 @@ local mpd_options_script = [[
   "]]
 
 local function emit_options_info()
-    awful.spawn.easy_async_with_shell("mpc | tail -1",
-        function(stdout)
-            local loop = stdout:match('repeat: (.*)')
-            local random = stdout:match('random: (.*)')
-            awesome.emit_signal("signal::mpd_options", loop:sub(1, 2) == "on", random:sub(1, 2) == "on")
-        end
-    )
+    awful.spawn.easy_async_with_shell("mpc | tail -1", function(stdout)
+        local loop = stdout:match("repeat: (.*)")
+        local random = stdout:match("random: (.*)")
+        awesome.emit_signal("signal::mpd_options", loop:sub(1, 2) == "on", random:sub(1, 2) == "on")
+    end)
 end
 
 -- Run once to initialize widgets
 emit_options_info()
 
 -- Kill old mpc idleloop options process
-awful.spawn.easy_async_with_shell("ps x | grep \"mpc idleloop options\" | grep -v grep | awk '{print $1}' | xargs kill", function ()
-    -- Emit song info with each line printed
-    awful.spawn.with_line_callback(mpd_options_script, {
-        stdout = function()
-            emit_options_info()
-        end
-    })
-end)
+awful.spawn.easy_async_with_shell(
+    "ps x | grep \"mpc idleloop options\" | grep -v grep | awk '{print $1}' | xargs kill",
+    function()
+        -- Emit song info with each line printed
+        awful.spawn.with_line_callback(mpd_options_script, {
+            stdout = function()
+                emit_options_info()
+            end,
+        })
+    end
+)
