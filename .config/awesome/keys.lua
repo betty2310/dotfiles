@@ -1,36 +1,36 @@
-local awful = require "awful"
-local naughty = require "naughty"
-local gears = require "gears"
-local beautiful = require "beautiful"
-local apps = require "apps"
-local decorations = require "components.titlebar"
-local icons = require "icons"
-local bling = require "lib.bling"
-local rubato = require "lib.rubato"
+local awful = require("awful")
+local naughty = require("naughty")
+local gears = require("gears")
+local beautiful = require("beautiful")
+local apps = require("apps")
+local decorations = require("components.titlebar")
+local icons = require("icons")
+local bling = require("lib.bling")
+local rubato = require("lib.rubato")
 
-local helpers = require "helpers"
-local hotkeys_popup = require "awful.hotkeys_popup"
-require "awful.hotkeys_popup.keys"
+local helpers = require("helpers")
+local hotkeys_popup = require("awful.hotkeys_popup")
+require("awful.hotkeys_popup.keys")
 
-local anim_y = rubato.timed {
+local anim_y = rubato.timed({
     pos = 1090,
     rate = 60,
     easing = rubato.quadratic,
     intro = 0.1,
     duration = 0.3,
     awestore_compat = true, -- this option must be set to true.
-}
+})
 
-local anim_x = rubato.timed {
+local anim_x = rubato.timed({
     pos = 2070,
     rate = 60,
     easing = rubato.quadratic,
     intro = 0.1,
     duration = 0.3,
     awestore_compat = true, -- this option must be set to true.
-}
+})
 
-local discord_scratch = bling.module.scratchpad:new {
+local discord_scratch = bling.module.scratchpad:new({
     command = "discord",
     rule = { instance = "discord" },
     sticky = false,
@@ -40,9 +40,9 @@ local discord_scratch = bling.module.scratchpad:new {
     reapply = true,
     dont_focus_before_close = false,
     rubato = { x = anim_x },
-}
+})
 
-local spotify_scratch = bling.module.scratchpad:new {
+local spotify_scratch = bling.module.scratchpad:new({
     command = "spotify",
     rule = { instance = "spotify" },
     sticky = false,
@@ -52,9 +52,9 @@ local spotify_scratch = bling.module.scratchpad:new {
     reapply = true,
     dont_focus_before_close = false,
     rubato = { y = anim_y },
-}
+})
 
-local term = bling.module.scratchpad:new {
+local term = bling.module.scratchpad:new({
     command = "kitty --class=scratch",
     rule = { instance = "scratch" },
     sticky = true,
@@ -64,7 +64,7 @@ local term = bling.module.scratchpad:new {
     reapply = true,
     rubato = { y = anim_y },
     dont_focus_before_close = false,
-}
+})
 
 -- Signals
 ------------
@@ -86,7 +86,7 @@ superkey = "Mod1"
 altkey = "Mod4"
 ctrlkey = "Control"
 shiftkey = "Shift"
-bling.widget.window_switcher.enable {
+bling.widget.window_switcher.enable({
     type = "thumbnail",
     hide_window_switcher_key = "Escape",
     minimize_key = "n",
@@ -97,12 +97,12 @@ bling.widget.window_switcher.enable {
     next_key = "Right",
     vim_previous_key = "h",
     vim_next_key = "l",
-}
+})
 -- {{{ Mouse bindings on desktop
 keys.desktopbuttons = gears.table.join(
     awful.button({}, 1, function()
         -- Single tap
-        awesome.emit_signal "elemental::dismiss"
+        awesome.emit_signal("elemental::dismiss")
         naughty.destroy_all_notifications()
         if mymainmenu then
             mymainmenu:hide()
@@ -125,11 +125,9 @@ keys.desktopbuttons = gears.table.join(
 
     -- Right click - Show app drawer
     -- awful.button({ }, 3, function () mymainmenu:toggle() end),
-    -- awful.button({}, 3, function()
-    --     if app_drawer_show then
-    --         app_drawer_show()
-    --     end
-    -- end),
+    awful.button({}, 3, function()
+        F.action.toggle()
+    end),
 
     -- Middle button - Toggle dashboard
     awful.button({}, 2, function()
@@ -171,16 +169,16 @@ keys.globalkeys = gears.table.join(
     awful.key({ altkey }, "f", hotkeys_popup.show_help, { description = "HELP ME PLS!!!", group = "awesome" }),
     -- Focus client by direction (hjkl keys)
     awful.key({ superkey }, "j", function()
-        awful.client.focus.bydirection "down"
+        awful.client.focus.bydirection("down")
     end, { description = "focus down", group = "client" }),
     awful.key({ superkey }, "k", function()
-        awful.client.focus.bydirection "up"
+        awful.client.focus.bydirection("up")
     end, { description = "focus up", group = "client" }),
     awful.key({ superkey }, "h", function()
-        awful.client.focus.bydirection "left"
+        awful.client.focus.bydirection("left")
     end, { description = "focus left", group = "client" }),
     awful.key({ superkey }, "l", function()
-        awful.client.focus.bydirection "right"
+        awful.client.focus.bydirection("right")
     end, { description = "focus right", group = "client" }),
 
     -- focus screen (monitor) direction
@@ -234,7 +232,7 @@ keys.globalkeys = gears.table.join(
 
     -- Window switcher
     awful.key({ superkey }, "Tab", function()
-        awesome.emit_signal "bling::window_switcher::turn_on"
+        awesome.emit_signal("bling::window_switcher::turn_on")
         -- window_switcher_show(awful.screen.focused())
     end, { description = "activate window switcher", group = "client" }),
 
@@ -299,12 +297,12 @@ keys.globalkeys = gears.table.join(
     end, { description = "open a terminal", group = "launcher" }),
 
     awful.key({ altkey }, "Return", function()
-        awesome.emit_signal "scratch::term"
+        awesome.emit_signal("scratch::term")
     end),
 
     -- Spawn floating terminal
     awful.key({ superkey, shiftkey }, "Return", function()
-        awful.spawn.with_shell "st -c float"
+        awful.spawn.with_shell("st -c float")
     end, { description = "spawn floating terminal", group = "launcher" }),
 
     -- Reload Awesome
@@ -315,33 +313,18 @@ keys.globalkeys = gears.table.join(
         exit_screen_show()
     end, { description = "quit awesome", group = "awesome" }),
 
-    -- Run
-    awful.key({ superkey }, "r", function()
-        -- Not all sidebars have a prompt
-        if sidebar_activate_prompt then
-            sidebar_activate_prompt "run"
-        end
-    end, { description = "activate sidebar run prompt", group = "awesome" }),
-    -- Web search
-    awful.key({ superkey }, "g", function()
-        -- Not all sidebars have a prompt
-        if sidebar_activate_prompt then
-            sidebar_activate_prompt "web_search"
-        end
-    end, { description = "activate sidebar web search prompt", group = "awesome" }),
-
     -- Dismiss notifications and elements that connect to the dismiss signal
     awful.key({ ctrlkey }, "space", function()
-        awesome.emit_signal "elemental::dismiss"
+        awesome.emit_signal("elemental::dismiss")
         naughty.destroy_all_notifications()
     end, { description = "dismiss notification", group = "notifications" }),
 
     -- Brightness
     awful.key({}, "XF86MonBrightnessDown", function()
-        awful.spawn.with_shell "light -U 10"
+        awful.spawn.with_shell("light -U 10")
     end, { description = "decrease brightness", group = "brightness" }),
     awful.key({}, "XF86MonBrightnessUp", function()
-        awful.spawn.with_shell "light -A 10"
+        awful.spawn.with_shell("light -A 10")
     end, { description = "increase brightness", group = "brightness" }),
 
     -- Volume Control with volume keys
@@ -356,11 +339,11 @@ keys.globalkeys = gears.table.join(
     end, { description = "raise volume", group = "volume" }),
     -- clipboard manager keybingdings like windows
     awful.key({ altkey }, "v", function()
-        awful.spawn.with_shell "copyq show"
+        awful.spawn.with_shell("copyq show")
     end, { description = "show clipboard", group = "launcher" }),
     -- Microphone (V for voice)
     awful.key({ superkey }, "v", function()
-        awful.spawn.with_shell "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+        awful.spawn.with_shell("pactl set-source-mute @DEFAULT_SOURCE@ toggle")
     end, { description = "(un)mute microphone", group = "volume" }),
 
     -- Microphone overlay
@@ -370,14 +353,14 @@ keys.globalkeys = gears.table.join(
 
     -- Screenshots
     awful.key({}, "Print", function()
-        apps.screenshot "full"
+        apps.screenshot("full")
     end, { description = "take full screenshot", group = "Screenshot and record" }),
     awful.key({ altkey, ctrlkey }, "s", function()
-        apps.screenshot "selection"
+        apps.screenshot("selection")
     end, { description = "select area to capture", group = "Screenshot and record" }),
     awful.key({ altkey, shiftkey }, "s", function()
         -- like window
-        apps.screenshot "clipboard"
+        apps.screenshot("clipboard")
     end, { description = "select area to copy to clipboard", group = "Screenshot and record" }),
 
     -- Record
@@ -392,21 +375,23 @@ keys.globalkeys = gears.table.join(
 
     -- Media keys
     awful.key({ superkey }, "Right", function()
-        awful.spawn.with_shell "mpc -q next"
+        awful.spawn.with_shell("mpc -q next")
     end, { description = "next song", group = "media" }),
     awful.key({ superkey }, "Left", function()
-        awful.spawn.with_shell "mpc -q prev"
+        awful.spawn.with_shell("mpc -q prev")
     end, { description = "previous song", group = "media" }),
     awful.key({ superkey, ctrlkey }, "space", function()
-        awful.spawn.with_shell "mpc -q toggle"
+        awful.spawn.with_shell("mpc -q toggle")
     end, { description = "toggle pause/play", group = "media" }),
 
     -- Prompt
     awful.key({ superkey }, "/", function()
-        awful.spawn.with_shell "rofi -show drun -show-icons -theme ~/.config/rofi/nord/nord.rasi"
+        awful.spawn.with_shell("rofi -show drun -show-icons -theme ~/.config/rofi/nord/nord.rasi")
     end, { description = "rofi launcher", group = "launcher" }),
     awful.key({ superkey, shiftkey }, "/", function()
-        awful.spawn.with_shell "dmenu_run -fn 'JetBrainsMono Nerd Font-9'  -p  -class films -sb '#EBCB8B' -sf '#2E3440'"
+        awful.spawn.with_shell(
+            "dmenu_run -fn 'JetBrainsMono Nerd Font-9'  -p  -class films -sb '#EBCB8B' -sf '#2E3440'"
+        )
     end, { description = "dmenu run", group = "launcher" }),
 
     -- toggle wibar
@@ -429,42 +414,42 @@ keys.globalkeys = gears.table.join(
     end, { description = "show or hide wibar(s)", group = "awesome" }),
 
     awful.key({ superkey, shiftkey }, "i", function()
-        awful.spawn.with_shell "google-chrome-stable"
+        awful.spawn.with_shell("google-chrome-stable")
     end, { description = "google", group = "launcher" }),
 
     -- Spotify scratchpad
     awful.key({ superkey, shiftkey }, "s", function()
-        awesome.emit_signal "scratch::spotify"
+        awesome.emit_signal("scratch::spotify")
     end, { description = "Toggle music scratchpad", group = "Bling" }),
     awful.key({ superkey, shiftkey }, "c", function()
-        awesome.emit_signal "scratch::discord"
+        awesome.emit_signal("scratch::discord")
     end, { description = "Toggle discord scratchpad", group = "Bling" }),
     awful.key({ superkey, shiftkey }, "n", function(c)
         apps.notion()
     end, { description = "notion", group = "launcher" }),
 
     awful.key({ superkey, shiftkey }, "a", function(c)
-        awful.spawn.with_shell "anki"
+        awful.spawn.with_shell("anki")
     end, { description = "anki", group = "launcher" }),
 
     awful.key({ superkey, shiftkey }, "p", function()
         apps.scratchpad()
     end, { description = "scratchpad", group = "launcher" }),
     awful.key({ superkey, shiftkey }, "o", function()
-        awful.spawn.with_shell "code"
+        awful.spawn.with_shell("code")
     end, { description = "open VScode", group = "launcher" }),
 
     awful.key({ superkey }, "F12", function()
-        awful.spawn.with_shell "farge --no-preview --notify --expire-time 2000"
+        awful.spawn.with_shell("farge --no-preview --notify --expire-time 2000")
     end, { description = "color picker !!", group = "launcher" }),
     awful.key({ superkey }, "F10", function()
-        awful.spawn.with_shell "class"
+        awful.spawn.with_shell("class")
     end, { description = "show class of program !!", group = "launcher" }),
     awful.key({ superkey }, "F7", function()
-        awful.spawn.with_shell "notflix"
+        awful.spawn.with_shell("notflix")
     end, { description = "netflix and chill!!", group = "launcher" }),
     awful.key({ superkey }, "F11", function()
-        awful.spawn.with_shell "fdoc"
+        awful.spawn.with_shell("fdoc")
     end, { description = "open Document!", group = "launcher" }),
 
     awful.key(
@@ -498,11 +483,11 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "F3", apps.music, { description = "music client", group = "launcher" }),
     -- Spawn cava in a terminal
     awful.key({ superkey }, "F4", function()
-        awful.spawn "visualizer"
+        awful.spawn("visualizer")
     end, { description = "cava", group = "launcher" }),
     -- Quick edit file
     awful.key({ superkey }, "F9", function()
-        awful.spawn.with_shell "rofi_edit"
+        awful.spawn.with_shell("rofi_edit")
     end, { description = "quick edit file", group = "launcher" }),
     -- Spawn file manager
     awful.key({ superkey, shiftkey }, "f", apps.file_manager, { description = "file manager", group = "launcher" })

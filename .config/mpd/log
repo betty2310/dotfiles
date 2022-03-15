@@ -936,3 +936,19 @@ Mar 14 21:00 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_T
 Mar 14 21:01 : config: option 'device' on line 21 was not recognized
 Mar 14 23:58 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
 Mar 15 08:32 : config: option 'device' on line 21 was not recognized
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 15 15:52 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 15 15:52 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 15:56 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 16:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 15 16:33 : config: option 'device' on line 21 was not recognized

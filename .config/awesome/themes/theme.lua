@@ -1,15 +1,15 @@
-local awful = require "awful"
-local wibox = require "wibox"
-local gears = require "gears"
+local awful = require("awful")
+local wibox = require("wibox")
+local gears = require("gears")
 local theme_name = "amarena"
-local theme_assets = require "beautiful.theme_assets"
-local xresources = require "beautiful.xresources"
+local theme_assets = require("beautiful.theme_assets")
+local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
-local gfs = require "gears.filesystem"
+local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
-local layout_icon_path = os.getenv "HOME" .. "/.config/awesome/themes//layout/"
-local titlebar_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/titlebar/"
-local taglist_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/taglist/"
+local layout_icon_path = os.getenv("HOME") .. "/.config/awesome/themes//layout/"
+local titlebar_icon_path = os.getenv("HOME") .. "/.config/awesome/themes/titlebar/"
+local taglist_icon_path = os.getenv("HOME") .. "/.config/awesome/themes/taglist/"
 
 local tip = titlebar_icon_path --alias to save time/space
 local xrdb = xresources.get_current_theme()
@@ -37,7 +37,7 @@ theme.xcolor15 = xrdb.color15
 theme.dash_box_bg = "#313744"
 
 theme.transparent = "#00000000"
-theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
+theme.wallpaper = os.getenv("HOME") .. "/Pictures/bg.jpg"
 theme.font = "monospace medium 8"
 theme.font_name = "SF Pro Display "
 theme.icon_font_name = "Material Icons "
@@ -47,8 +47,7 @@ theme.bg_normal = x.background
 theme.bg_focus = "#262b33"
 theme.bg_urgent = x.color8
 theme.bg_minimize = x.color8
-theme.bg_systray = "#262b33"
-
+theme.bg_systray = x.background
 theme.fg_normal = x.foreground
 theme.fg_focus = x.color2
 theme.fg_urgent = x.color9
@@ -191,7 +190,7 @@ theme.sidebar_position = "left" -- left or right
 theme.sidebar_width = dpi(320)
 theme.sidebar_x = 0
 theme.sidebar_y = 0
-theme.sidebar_border_radius = dpi(40)
+theme.sidebar_border_radius = dpi(15)
 -- theme.sidebar_border_radius = theme.border_radius
 
 -- Dashboard
