@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img src="https://github.com/betty2310/file/blob/main/awesome/ghost.png?raw=true" alt="img" class="center" align="center" width="200px"> 
+    <img src="https://github.com/betty2310/file/blob/main/awesome/ghost.png?raw=true" alt="img" class="center" align="center" width="200px">
 </p>
 <p align="center">
     <b>🐧 Betty's configuration files 🐧</b>
@@ -19,7 +19,7 @@
 
 <p/>
 </br></br>
-<img src="https://github.com/betty2310/file/blob/main/awesome/out.png?raw=true" alt="img" align="right" width="400px"> 
+<img src="https://github.com/betty2310/file/blob/main/awesome/out.png?raw=true" alt="img" align="right" width="400px">
 
 This is my personal collection of configuration files.
 
@@ -30,13 +30,13 @@ This is my personal collection of configuration files.
 + **OS**: Arch Linux
 + **Shell**: [fish](https://fishshell.com/)
 + **Terminal**: [st](https://st.suckless.org/) 💙 and [my config](https://github.com/betty2310/st)
-+ **Editor**: [Neovim](https://github.com/neovim/neovim/) 💙 config included!
++ **Editor**: [Neovim](https://github.com/neovim/neovim/) 💙 and [my config](https://github.com/betty2310/nvim-backup)
 + **Colorscheme**: [nord](https://www.nordtheme.com/)
 + **File Manager**: [Ranger](https://github.com/ranger/ranger) with [icons](https://github.com/alexanderjeurissen/ranger_devicons)
 + **Launcher**: [rofi](https://github.com/davatorium/rofi/) and [Ulauncher](https://ulauncher.io/)
-+ **Compositor**: [Picom](https://github.com/Arian8j2/picom-jonaburg-fix) 
++ **Compositor**: [Picom](https://github.com/Arian8j2/picom-jonaburg-fix)
 + [*see more screenshots*](https://github.com/betty2310/dotfiles/wiki/Showcase)
-</br> </br> 
+</br> </br>
 ## :star: Setup
 
 Here are the instructions you should follow to replicate my AwesomeWM setup.
@@ -118,10 +118,10 @@ I use <kbd>super</kbd> AKA alt key as my main modifier.
 | <kbd>super + =</kbd> | Toggle tray |
 | <kbd>super + p</kbd> | Toggle notif center |
 
-*... And many many more.* 
+*... And many many more.*
 You can press <kbd>windowkey + f</kbd> to show help keybindings default of Awesomewm
 ## :hugs: :hugs: And special thanks to:
-* [Elenapan](https://github.com/elenapan/dotfiles) for awesomeWM's config. 
+* [Elenapan](https://github.com/elenapan/dotfiles) for awesomeWM's config.
 * [Thanhvule0310](https://github.com/thanhvule0310/dotfiles) for bspwm, neovim, polybar,... I'm newbie to Linux and his dotfiles help me so lot.
 * [Nord](https://www.nordtheme.com/) for colorsheme that very suitable for me.
 * [Bling](https://github.com/BlingCorp/bling) and [Rubato](https://github.com/andOrlando/rubato).
