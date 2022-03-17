@@ -952,3 +952,95 @@ Mar 15 15:52 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 15 15:56 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 15 16:29 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 15 16:33 : config: option 'device' on line 21 was not recognized
+Mar 15 20:09 : player: played "Roar_Official-[CevxZvSJLk8].mp3"
+Mar 16 10:47 : config: option 'device' on line 21 was not recognized
+Mar 16 11:34 : update: added /Old Town Road.mp3
+Mar 16 11:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 16 11:34 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 12:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 16 12:34 : update: added /Leave the Light On.mp3
+Mar 16 12:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 16 12:34 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 12:34 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 12:34 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 12:34 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 14:50 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 14:50 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 14:50 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 14:50 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 15:47 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 16 16:02 : player: played "AMV_Leave_a_light_on_Vietsub_lyrics-[iudEfcbhb10].mp3"
+Mar 16 16:08 : config: option 'device' on line 21 was not recognized
+Mar 16 16:41 : player: played "AMV_Leave_a_light_on_Vietsub_lyrics-[iudEfcbhb10].mp3"
+Mar 16 16:42 : config: option 'device' on line 21 was not recognized
+Mar 16 16:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 16 16:56 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 16 16:56 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 16 22:11 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 16 23:21 : config: option 'device' on line 21 was not recognized
+Mar 17 13:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 13:42 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 17 13:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 13:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:46 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:49 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 13:49 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 13:49 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:49 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:49 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:49 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:49 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 13:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 13:56 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:00 : player: played "Rolling_in_the_Deep_Official_Music_Video-[rYEDA3JcQqw].mp3"
+Mar 17 14:00 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:04 : player: played "Rolling_in_the_Deep_Official_Music_Video-[rYEDA3JcQqw].mp3"
+Mar 17 14:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 17 14:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:11 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 17 14:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:15 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 17 14:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:18 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 17 14:18 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:22 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 17 14:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:22 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 17 14:22 : player: played "Andiez-[dLQe4qEfVJw].mp3"
+Mar 17 14:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:22 : mixer: Failed to set mixer for 'pulse audio': disconnected

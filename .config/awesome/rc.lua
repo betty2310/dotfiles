@@ -7,13 +7,13 @@ user = {
     email_client = "st -c email -e neomutt",
     music_client = "st -c music -e ncmpcpp",
     web_search_cmd = "https://www.google.com/search?q=",
-    profile_picture = os.getenv("HOME") .. "/.config/awesome/profile.png",
+    profile_picture = os.getenv "HOME" .. "/.config/awesome/profile.png",
     dirs = {
-        downloads = os.getenv("XDG_DOWNLOAD_DIR") or "~/Downloads",
-        documents = os.getenv("XDG_DOCUMENTS_DIR") or "~/Documents",
-        music = os.getenv("XDG_MUSIC_DIR") or "~/Music",
-        pictures = os.getenv("XDG_PICTURES_DIR") or "~/Pictures",
-        videos = os.getenv("XDG_VIDEOS_DIR") or "~/Videos",
+        downloads = os.getenv "XDG_DOWNLOAD_DIR" or "~/Downloads",
+        documents = os.getenv "XDG_DOCUMENTS_DIR" or "~/Documents",
+        music = os.getenv "XDG_MUSIC_DIR" or "~/Music",
+        pictures = os.getenv "XDG_PICTURES_DIR" or "~/Pictures",
+        videos = os.getenv "XDG_VIDEOS_DIR" or "~/Videos",
         screenshots = "~/Pictures/Screenshots",
     },
     sidebar = {
@@ -28,7 +28,7 @@ user = {
     weather_units = "metric",
     coronavirus_country = "vietnam",
 }
-local beautiful = require("beautiful")
+local beautiful = require "beautiful"
 local xrdb = beautiful.xresources.get_current_theme()
 dpi = beautiful.xresources.apply_dpi
 x = {
@@ -52,48 +52,48 @@ x = {
     color15 = xrdb.color15,
 }
 
-local gears = require("gears")
-local awful = require("awful")
-require("awful.autofocus")
-local naughty = require("naughty")
+local gears = require "gears"
+local awful = require "awful"
+require "awful.autofocus"
+local naughty = require "naughty"
 
-local theme_dir = os.getenv("HOME") .. "/.config/awesome/themes/"
+local theme_dir = os.getenv "HOME" .. "/.config/awesome/themes/"
 beautiful.init(theme_dir .. "theme.lua")
 
-local bling = require("lib.bling")
-local rubato = require("lib.rubato")
-require("lib.better_resize")
+local bling = require "lib.bling"
+local rubato = require "lib.rubato"
+require "lib.better_resize"
 
 bling.module.flash_focus.enable()
 
 naughty.connect_signal("request::display_error", function(message, startup)
-    naughty.notification({
+    naughty.notification {
         urgency = "critical",
         title = "Oops, an error happened" .. (startup and " during startup!" or "!"),
         message = message,
-    })
+    }
 end)
 
-local icons = require("icons")
+local icons = require "icons"
 icons.init()
-local keys = require("keys")
-local notifications = require("notifications")
+local keys = require "keys"
+local notifications = require "notifications"
 notifications.init()
-local decorations = require("components.titlebar")
+local decorations = require "components.titlebar"
 decorations.init()
-local helpers = require("helpers")
+local helpers = require "helpers"
 
 F = {}
-require("components.bar")
-require("components.exit")
-require("components.sidebar")
-require("components.dashboard")
-require("components.notif_center.action")
-local lock_screen = require("components.lock_screen")
+require "components.bar"
+require "components.exit"
+require "components.sidebar"
+require "components.dashboard"
+require "components.notif_center.action"
+local lock_screen = require "components.lock_screen"
 lock_screen.init()
 -- require "components.app_drawer"
-require("components.microphone_overlay")
-require("signal")
+require "components.microphone_overlay"
+require "signal"
 
 screen_width = awful.screen.focused().geometry.width
 screen_height = awful.screen.focused().geometry.height
@@ -577,7 +577,7 @@ awful.rules.rules = {
             type = { "dialog" },
         },
         properties = {
-            screen = 1,
+            -- screen = 2,
             -- tag = awful.screen.focused().tags[1]
         },
     },
@@ -744,7 +744,7 @@ if beautiful.border_width > 0 then
 end
 
 -- Set mouse resize mode (live or after)
-awful.mouse.resize.set_mode("live")
+awful.mouse.resize.set_mode "live"
 
 tag.connect_signal("property::layout", function(t)
     for k, c in ipairs(t:clients()) do

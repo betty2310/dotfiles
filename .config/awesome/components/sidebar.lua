@@ -453,7 +453,7 @@ helpers.add_hover_cursor(pacman, "hand1")
 helpers.add_hover_cursor(dotw, "hand1")
 
 -- Create the sidebar
-sidebar = wibox({ visible = false, ontop = true, type = "normal", screen = screen.primary })
+sidebar = wibox({ visible = false, ontop = true, type = "dock", screen = screen.primary })
 sidebar.bg = "#00000000" -- For anti aliasing
 sidebar.fg = beautiful.sidebar_fg or beautiful.wibar_fg or "#FFFFFF"
 sidebar.opacity = beautiful.sidebar_opacity or 1
@@ -475,42 +475,68 @@ sidebar:buttons(gears.table.join(
     end)
 ))
 
-local slide = rubato.timed({
-    pos = dpi(-400),
-    rate = 60,
-    intro = 0.2,
-    duration = 0.5,
-    easing = rubato.quadratic,
-    awestore_compat = true,
-    subscribed = function(pos)
-        sidebar.x = pos
-    end,
-})
-local sidebar_status = false
+-- local slide = rubato.timed({
+--     pos = dpi(-400),
+--     rate = 60,
+--     intro = 0.2,
+--     duration = 0.4,
+--     easing = rubato.quadratic,
+--     awestore_compat = true,
+--     subscribed = function(pos)
+--         sidebar.x = pos
+--     end,
+-- })
+-- local sidebar_status = false
+--
+-- slide.ended:subscribe(function()
+--     if sidebar_status then
+--         sidebar.visible = false
+--     end
+-- end)
+--
+-- local function sidebar_show()
+--     sidebar.visible = true
+--     slide:set(0)
+--     sidebar_status = false
+-- end
+--
+-- local function sidebar_hide()
+--     slide:set(-400)
+--     sidebar_status = true
+-- end
+--
+-- sidebar_toggle = function()
+--     if sidebar.visible then
+--         sidebar_hide()
+--     else
+--         sidebar_show()
+--     end
+-- end
 
-slide.ended:subscribe(function()
-    if sidebar_status then
-        sidebar.visible = false
-    end
-end)
-
-local function sidebar_show()
+sidebar_show = function()
     sidebar.visible = true
-    slide:set(0)
-    sidebar_status = false
 end
 
-local function sidebar_hide()
-    slide:set(-400)
-    sidebar_status = true
+sidebar_hide = function()
+    -- Do not hide it if prompt is active
+    if not prompt_is_active() then
+        sidebar.visible = false
+    end
 end
 
 sidebar_toggle = function()
     if sidebar.visible then
         sidebar_hide()
     else
-        sidebar_show()
+        sidebar.visible = true
     end
+end
+
+-- Hide sidebar when mouse leaves
+if user.sidebar.hide_on_mouse_leave then
+    sidebar:connect_signal("mouse::leave", function()
+        sidebar_hide()
+    end)
 end
 -- Hide sidebar when mouse leaves
 if user.sidebar.hide_on_mouse_leave then
@@ -532,7 +558,7 @@ if user.sidebar.show_on_mouse_screen_edge then
     })
     sidebar_activator.height = sidebar.height
     sidebar_activator:connect_signal("mouse::enter", function()
-        sidebar_show()
+        sidebar.visible = true
     end)
 
     if beautiful.sidebar_position == "right" then

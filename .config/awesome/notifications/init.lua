@@ -42,7 +42,7 @@ function notifications.init()
     require "notifications.battery"
     require "notifications.mpd"
     require "notifications.league_of_legends"
-    require "notifications.keyboardlayout"
+    -- require "notifications.keyboardlayout"
     -- Load theme
     require "notifications.lovelace"
 end

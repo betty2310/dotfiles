@@ -1,15 +1,15 @@
-local awful = require("awful")
-local wibox = require("wibox")
-local gears = require("gears")
+local awful = require "awful"
+local wibox = require "wibox"
+local gears = require "gears"
 local theme_name = "amarena"
-local theme_assets = require("beautiful.theme_assets")
-local xresources = require("beautiful.xresources")
+local theme_assets = require "beautiful.theme_assets"
+local xresources = require "beautiful.xresources"
 local dpi = xresources.apply_dpi
-local gfs = require("gears.filesystem")
+local gfs = require "gears.filesystem"
 local themes_path = gfs.get_themes_dir()
-local layout_icon_path = os.getenv("HOME") .. "/.config/awesome/themes//layout/"
-local titlebar_icon_path = os.getenv("HOME") .. "/.config/awesome/themes/titlebar/"
-local taglist_icon_path = os.getenv("HOME") .. "/.config/awesome/themes/taglist/"
+local layout_icon_path = os.getenv "HOME" .. "/.config/awesome/themes//layout/"
+local titlebar_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/titlebar/"
+local taglist_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/taglist/"
 
 local tip = titlebar_icon_path --alias to save time/space
 local xrdb = xresources.get_current_theme()
@@ -33,11 +33,12 @@ theme.xcolor12 = xrdb.color12
 theme.xcolor13 = xrdb.color13
 theme.xcolor14 = xrdb.color14
 theme.xcolor15 = xrdb.color15
+theme.darker = "#232731"
 
 theme.dash_box_bg = "#313744"
 
 theme.transparent = "#00000000"
-theme.wallpaper = os.getenv("HOME") .. "/Pictures/bg.jpg"
+theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
 theme.font = "monospace medium 8"
 theme.font_name = "SF Pro Display "
 theme.icon_font_name = "Material Icons "
@@ -190,7 +191,7 @@ theme.sidebar_position = "left" -- left or right
 theme.sidebar_width = dpi(320)
 theme.sidebar_x = 0
 theme.sidebar_y = 0
-theme.sidebar_border_radius = dpi(15)
+theme.sidebar_border_radius = dpi(40)
 -- theme.sidebar_border_radius = theme.border_radius
 
 -- Dashboard
@@ -442,8 +443,8 @@ theme.window_switcher_name_margins = 5 -- The margin of one clients title to the
 theme.window_switcher_name_valign = "left" -- How to vertically align one clients title
 theme.window_switcher_name_forced_width = 200 -- The width of one title
 theme.window_switcher_name_font = "sans medium 10" -- The font of all titles
-theme.window_switcher_name_normal_color = "#5d6a82"
-theme.window_switcher_name_focus_color = x.color2 -- The color of one title if the client is focused
+theme.window_switcher_name_normal_color = x.foreground .. "60" 
+theme.window_switcher_name_focus_color = x.foreground -- The color of one title if the client is focused
 theme.window_switcher_icon_valign = "center" -- How to vertically align the one icon
 theme.window_switcher_icon_width = dpi(0)
 
