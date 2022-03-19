@@ -1,13 +1,13 @@
-local awful = require("awful")
-local beautiful = require("beautiful")
-local gears = require("gears")
-local naughty = require("naughty")
-local rubato = require("lib.rubato")
-local helpers = require("helpers")
-local wibox = require("wibox")
-local icons = require("icons")
-local apps = require("apps")
-local keygrabber = require("awful.keygrabber")
+local awful = require "awful"
+local beautiful = require "beautiful"
+local gears = require "gears"
+local naughty = require "naughty"
+local rubato = require "lib.rubato"
+local helpers = require "helpers"
+local wibox = require "wibox"
+local icons = require "icons"
+local apps = require "apps"
+local keygrabber = require "awful.keygrabber"
 
 local box_gap = dpi(6)
 
@@ -20,7 +20,7 @@ local function create_boxed_widget(widget_to_be_boxed, width, height, bg_color)
     -- box_container.shape = helpers.prrect(20, true, true, true, true)
     -- box_container.shape = helpers.prrect(30, true, true, false, true)
 
-    local boxed_widget = wibox.widget({
+    local boxed_widget = wibox.widget {
         -- Add margins
         {
             -- Add background color
@@ -43,12 +43,12 @@ local function create_boxed_widget(widget_to_be_boxed, width, height, bg_color)
         margins = box_gap,
         color = "#FF000000",
         widget = wibox.container.margin,
-    })
+    }
 
     return boxed_widget
 end
 
-local disk_arc = wibox.widget({
+local disk_arc = wibox.widget {
     start_angle = 3 * math.pi / 2,
     min_value = 0,
     max_value = 100,
@@ -61,41 +61,41 @@ local disk_arc = wibox.widget({
     bg = x.color8 .. "55",
     colors = { "#5E81AC" },
     widget = wibox.container.arcchart,
-})
+}
 
-local disk_hover_text_value = wibox.widget({
+local disk_hover_text_value = wibox.widget {
     align = "center",
     valign = "center",
     font = "sans medium 10",
     widget = wibox.widget.textbox(),
-})
-local disk_hover_text = wibox.widget({
+}
+local disk_hover_text = wibox.widget {
     disk_hover_text_value,
     {
         align = "center",
         valign = "center",
         font = "sans medium 10",
-        widget = wibox.widget.textbox("free"),
+        widget = wibox.widget.textbox "free",
     },
     spacing = dpi(2),
     visible = false,
     layout = wibox.layout.fixed.vertical,
-})
+}
 
 awesome.connect_signal("signal::disk", function(used, total)
     disk_arc.value = used * 100 / total
     disk_hover_text_value.markup = helpers.colorize_text(tostring(helpers.round(total - used, 1)) .. "G", x.color4)
 end)
 
-local disk_icon = wibox.widget({
+local disk_icon = wibox.widget {
     align = "center",
     valign = "center",
     font = "icomoon 22",
     markup = helpers.colorize_text("", x.color3),
     widget = wibox.widget.textbox(),
-})
+}
 
-local disk = wibox.widget({
+local disk = wibox.widget {
     {
         nil,
         disk_hover_text,
@@ -106,7 +106,7 @@ local disk = wibox.widget({
     disk_arc,
     top_only = false,
     layout = wibox.layout.stack,
-})
+}
 
 local disk_box = create_boxed_widget(disk, dpi(50), dpi(100), x.background)
 
@@ -120,11 +120,11 @@ disk_box:connect_signal("mouse::leave", function()
 end)
 
 -- Calendar
-local calendar = require("widget.calendar")
+local calendar = require "widget.calendar"
 -- Update calendar whenever dashboard is shown
 dashboard:connect_signal("property::visible", function()
     if dashboard.visible then
-        calendar.date = os.date("*t")
+        calendar.date = os.date "*t"
     end
 end)
 
@@ -134,44 +134,44 @@ local calendar_box = create_boxed_widget(calendar, dpi(150), dpi(250), "#313744"
 local fortune_command = "kanji"
 local fortune_update_interval = 60
 -- local fortune_command = "fortune -n 140 -s computers"
-local kanji_text = wibox.widget({
+local kanji_text = wibox.widget {
     font = "sans 30",
     text = "loading your Kanji now ...",
     widget = wibox.widget.textbox,
-})
+}
 
-local han_text = wibox.widget({
+local han_text = wibox.widget {
     font = "sans 13",
     text = "...",
     widget = wibox.widget.textbox,
-})
-local viet_text = wibox.widget({
+}
+local viet_text = wibox.widget {
     font = "sans 10",
     text = "...",
     widget = wibox.widget.textbox,
-})
+}
 local update_fortune = function()
     awful.spawn.easy_async_with_shell(fortune_command, function(stdout)
         -- Remove trailing whitespaces
         -- kanji = out:gsub("^%s*(.-)%s*$", "%1")
-        kanji = stdout:match("^KANJI@(.*)@HAN")
-        han = stdout:match("@HAN@(.*)@VIET")
-        viet = stdout:match("@VIET@(.*)@END")
+        kanji = stdout:match "^KANJI@(.*)@HAN"
+        han = stdout:match "@HAN@(.*)@VIET"
+        viet = stdout:match "@VIET@(.*)@END"
         kanji_text.markup = helpers.colorize_text(kanji, x.color4)
         han_text.markup = helpers.colorize_text(han, x.color2)
         viet_text.markup = helpers.colorize_text(viet, x.foreground)
     end)
 end
 
-gears.timer({
+gears.timer {
     autostart = true,
     timeout = fortune_update_interval,
     single_shot = false,
     call_now = true,
     callback = update_fortune,
-})
+}
 
-local fortune_widget = wibox.widget({
+local fortune_widget = wibox.widget {
     {
         kanji_text,
         helpers.horizontal_pad(dpi(30)),
@@ -186,7 +186,7 @@ local fortune_widget = wibox.widget({
     margins = box_gap * 4,
     color = "#00000000",
     widget = wibox.container.margin,
-})
+}
 
 local fortune_box = create_boxed_widget(fortune_widget, dpi(230), dpi(100), "#313744")
 fortune_box:buttons(gears.table.join(
@@ -201,7 +201,7 @@ awful.widget.watch("sh -c 'uptime -p | sed 's/^...//''", 60, function(_, stdout)
     local out = stdout:gsub("^%s*(.-)%s*$", "%1")
     uptime_text.text = out
 end)
-local uptime = wibox.widget({
+local uptime = wibox.widget {
     {
         align = "center",
         valign = "center",
@@ -217,7 +217,7 @@ local uptime = wibox.widget({
     },
     spacing = dpi(10),
     layout = wibox.layout.fixed.horizontal,
-})
+}
 
 local uptime_box = create_boxed_widget(uptime, dpi(200), dpi(20), x.background)
 
@@ -229,12 +229,12 @@ uptime_box:buttons(gears.table.join(awful.button({}, 1, function()
 end)))
 helpers.add_hover_cursor(uptime_box, "hand1")
 
-local notification_state = wibox.widget({
+local notification_state = wibox.widget {
     align = "center",
     valign = "center",
     font = "icomoon 20",
-    widget = wibox.widget.textbox(""),
-})
+    widget = wibox.widget.textbox "",
+}
 local function update_notification_state_icon()
     if naughty.suspended then
         notification_state.markup = helpers.colorize_text(notification_state.text, x.color8)
@@ -254,13 +254,13 @@ notification_state_box:buttons(gears.table.join(
 
 helpers.add_hover_cursor(notification_state_box, "hand1")
 
-local nightlight = wibox.widget({
+local nightlight = wibox.widget {
     align = "center",
     valign = "center",
     font = "Font Awesome 6 Pro Solid 20",
     markup = helpers.colorize_text("", x.color4),
     widget = wibox.widget.textbox(),
-})
+}
 
 local nightlight_box = create_boxed_widget(nightlight, dpi(65), dpi(50), x.background)
 nightlight_box:buttons(gears.table.join(awful.button({}, 1, function()
@@ -268,39 +268,39 @@ nightlight_box:buttons(gears.table.join(awful.button({}, 1, function()
 end)))
 
 helpers.add_hover_cursor(nightlight_box, "hand1")
-local screenshot = wibox.widget({
+local screenshot = wibox.widget {
     align = "center",
     valign = "center",
     font = "icomoon 20",
     markup = helpers.colorize_text("", x.color2),
     widget = wibox.widget.textbox(),
-})
+}
 local screenshot_box = create_boxed_widget(screenshot, dpi(65), dpi(50), x.background)
 screenshot_box:buttons(gears.table.join(
     -- Left click - Take screenshot
     awful.button({}, 1, function()
-        apps.screenshot("full")
+        apps.screenshot "full"
     end),
     -- Right click - Take screenshot in 5 seconds
     awful.button({}, 3, function()
-        naughty.notify({
+        naughty.notify {
             title = "Say cheese!",
             text = "Taking shot in 5 seconds",
             timeout = 4,
             icon = icons.image.screenshot,
-        })
+        }
         apps.screenshot("full", 5)
     end)
 ))
 
 helpers.add_hover_cursor(screenshot_box, "hand1")
-local screenrec = wibox.widget({
+local screenrec = wibox.widget {
     align = "center",
     valign = "center",
     font = "Font Awesome 6 Pro Solid 18",
     markup = helpers.colorize_text("", x.color5),
     widget = wibox.widget.textbox(),
-})
+}
 local screenrec_box = create_boxed_widget(screenrec, dpi(65), dpi(50), x.background)
 screenrec_box:buttons(gears.table.join(
     -- Left click - Take screenshot
@@ -309,22 +309,22 @@ screenrec_box:buttons(gears.table.join(
     end),
     -- Right click - Take screenshot in 5 seconds
     awful.button({}, 3, function()
-        naughty.notify({
+        naughty.notify {
             title = "Open Screen apps!",
             text = "What r u doing?",
             timeout = 1,
             icon = icons.image.screenshot,
-        })
-        awful.spawn.with_shell("simplescreenrecorder")
+        }
+        awful.spawn.with_shell "simplescreenrecorder"
     end)
 ))
 helpers.add_hover_cursor(screenrec_box, "hand1")
 
 F.action = {}
 
-local notifs = require("components.notif_center.notif")
+local notifs = require "components.notif_center.notif"
 
-local action = awful.popup({
+local action = awful.popup {
     widget = {
         widget = wibox.container.margin,
         margins = 30,
@@ -361,19 +361,19 @@ local action = awful.popup({
     bg = x.background,
     border_color = x.foreground,
     border_width = 0,
-})
+}
 
-local slide = rubato.timed({
-    pos = 1920,
+local slide = rubato.timed {
+    pos = 1080,
     rate = 60,
-    intro = 0.2,
-    duration = 0.6,
+    intro = 0.3,
+    duration = 0.8,
     easing = rubato.quadratic,
     awestore_compat = true,
     subscribed = function(pos)
-        action.x = pos
+        action.y = pos
     end,
-})
+}
 
 local action_status = false
 
@@ -385,12 +385,12 @@ end)
 
 local function action_show()
     action.visible = true
-    slide:set(1420)
+    slide:set(0)
     action_status = false
 end
 
 local function action_hide()
-    slide:set(1920)
+    slide:set(1080)
     action_status = true
 end
 
