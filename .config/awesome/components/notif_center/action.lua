@@ -364,14 +364,14 @@ local action = awful.popup {
 }
 
 local slide = rubato.timed {
-    pos = 1080,
+    pos = 1920,
     rate = 60,
     intro = 0.3,
     duration = 0.8,
     easing = rubato.quadratic,
     awestore_compat = true,
     subscribed = function(pos)
-        action.y = pos
+        action.x = pos
     end,
 }
 
@@ -385,12 +385,12 @@ end)
 
 local function action_show()
     action.visible = true
-    slide:set(0)
+    slide:set(1420)
     action_status = false
 end
 
 local function action_hide()
-    slide:set(1080)
+    slide:set(1920)
     action_status = true
 end
 

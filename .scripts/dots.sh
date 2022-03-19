@@ -30,6 +30,7 @@ cp -a ~/.config/nvim/ ~/ghq/github.com/betty2310/dotfiles/.config/
 cp -a ~/.config/picom/ ~/ghq/github.com/betty2310/dotfiles/.config/
 cp -a ~/.config/ranger/ ~/ghq/github.com/betty2310/dotfiles/.config/
 cp -a ~/.config/zathura/ ~/ghq/github.com/betty2310/dotfiles/.config/
+cp -a ~/.config/fontconfig/ ~/ghq/github.com/betty2310/dotfiles/.config/
 cp ~/.config/starship.toml ~/ghq/github.com/betty2310/dotfiles/.config/
 
 echo -e "$sameLine🚩 Backup your scripts..."

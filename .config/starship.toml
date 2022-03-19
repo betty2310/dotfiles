@@ -9,7 +9,7 @@ format = '[$time](#4C566A)'
 time_format = "%T"
 
 [directory]
-format = "[$read_only](red)[ ](blue)[$path](italic #4C566A) "
+format = "[$read_only](red)[ ](blue)[$path](bold italic #4C566A) "
 read_only = " "
 fish_style_pwd_dir_length = 1
 truncation_length = 4
