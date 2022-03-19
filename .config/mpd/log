@@ -1044,3 +1044,81 @@ Mar 17 14:22 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 17 14:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
 Mar 17 14:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
 Mar 17 14:22 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:26 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 17 14:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:29 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 17 14:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 17 14:42 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:42 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:42 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:42 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:42 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:42 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 17 14:59 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 17 17:48 : config: option 'device' on line 21 was not recognized
+Mar 17 20:18 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 10:16 : config: option 'device' on line 21 was not recognized
+Mar 18 14:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:19 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 14:22 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:25 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:28 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:32 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:35 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:39 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:39 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:42 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:45 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:49 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:49 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:52 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:55 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:55 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 14:59 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 14:59 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 15:02 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 15:02 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 15:05 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 15:05 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 15:09 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 15:09 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 15:12 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 15:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 15:16 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 15:16 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 15:19 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 15:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 15:22 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 18 15:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 18 15:25 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 15:25 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 15:26 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 15:26 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 18 19:10 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 19 10:44 : config: option 'device' on line 21 was not recognized
+Mar 19 11:33 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 19 11:33 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 19 11:34 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 19 11:34 : output: Failed to play on "pulse audio" (pulse): suspended
