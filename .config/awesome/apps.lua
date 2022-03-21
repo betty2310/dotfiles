@@ -17,7 +17,7 @@ apps.file_manager = function()
     awful.spawn(user.file_manager, { floating = true })
 end
 apps.telegram = function()
-    awful.spawn.with_shell "google-chrome-stable 'https://chat.zalo.me/'"
+    awful.spawn.with_shell "telegram"
 end
 apps.pdf = function()
     awful.spawn.with_shell "microsoft-edge-stable"

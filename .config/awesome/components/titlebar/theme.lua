@@ -31,6 +31,7 @@ client.connect_signal("request::titlebars", function(c)
             -- awful.titlebar.widget.closebutton(c),
 
             -- Generated buttons
+            helpers.horizontal_pad(dpi(10)),
             decorations.button(
                 c,
                 gen_button_shape,
@@ -67,14 +68,14 @@ client.connect_signal("request::titlebars", function(c)
 
             layout = wibox.layout.fixed.horizontal,
         },
-        {
-            {
-                align = "center",
-                font = "Cartograph CF Regular Italic",
-                widget = awful.titlebar.widget.titlewidget(c),
-            },
-            layout = wibox.layout.flex.horizontal,
-        },
+        -- {
+        --     {
+        --         align = "center",
+        --         font = "Cartograph CF Regular Italic",
+        --         widget = awful.titlebar.widget.titlewidget(c),
+        --     },
+        --     layout = wibox.layout.flex.horizontal,
+        -- },
 
         layout = wibox.layout.align.horizontal,
     }

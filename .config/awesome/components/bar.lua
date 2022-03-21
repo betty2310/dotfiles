@@ -1,16 +1,16 @@
-local awful = require("awful")
-local gears = require("gears")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
-local bling = require("lib.bling")
-local rubato = require("lib.rubato")
+local awful = require "awful"
+local gears = require "gears"
+local wibox = require "wibox"
+local beautiful = require "beautiful"
+local bling = require "lib.bling"
+local rubato = require "lib.rubato"
 
-local helpers = require("helpers")
-local keys = require("keys")
+local helpers = require "helpers"
+local keys = require "keys"
 
 local dock_autohide_delay = 0.5 -- seconds
 
-local dock = require("widget.dock")
+local dock = require "widget.dock"
 local dock_placement = function(w)
     return awful.placement.bottom(w)
 end
@@ -67,8 +67,52 @@ local update_taglist = function(item, tag, index)
     end
 end
 
+local ll = awful.widget.layoutlist {
+    base_layout = wibox.widget {
+        spacing = 5,
+        forced_num_cols = 2,
+        layout = wibox.layout.grid.vertical,
+    },
+    widget_template = {
+        {
+            {
+                id = "icon_role",
+                forced_height = 30,
+                forced_width = 30,
+                widget = wibox.widget.imagebox,
+            },
+            margins = 6,
+            widget = wibox.container.margin,
+        },
+        id = "background_role",
+        forced_width = 40,
+        forced_height = 40,
+        shape = helpers.rrect(beautiful.border_radius_tray),
+        widget = wibox.container.background,
+    },
+}
+helpers.add_hover_cursor(ll, "hand1")
+
+local layout_popup = awful.popup {
+    widget = wibox.widget {
+        ll,
+        margins = 6,
+        widget = wibox.container.margin,
+    },
+    border_color = beautiful.border_color,
+    border_width = beautiful.border_width,
+    ontop = true,
+    visible = false,
+    shape = helpers.rrect(beautiful.border_radius_tray),
+}
+
+awful.placement.bottom_right(layout_popup, {
+    honor_workarea = true,
+    margins = { right = dpi(277), bottom = dpi(200) },
+})
+
 awful.screen.connect_for_each_screen(function(s)
-    s.mytaglist = awful.widget.taglist({
+    s.mytaglist = awful.widget.taglist {
         screen = s,
         filter = awful.widget.taglist.filter.all,
         buttons = keys.taglist_buttons,
@@ -90,10 +134,10 @@ awful.screen.connect_for_each_screen(function(s)
                 update_taglist(self, tag, index)
             end,
         },
-    })
+    }
 
     -- Create the taglist wibox
-    s.taglist_box = awful.wibar({
+    s.taglist_box = awful.wibar {
         screen = s,
         visible = true,
         ontop = false,
@@ -103,12 +147,12 @@ awful.screen.connect_for_each_screen(function(s)
         -- position = "left",
         -- width = dpi(6),
         bg = "#00000000",
-    })
-    s.taglist_box:setup({
+    }
+    s.taglist_box:setup {
         widget = s.mytaglist,
-    })
+    }
     -- Create the dock wibox
-    s.dock = awful.popup({
+    s.dock = awful.popup {
         -- Size is dynamic, no need to set it here
         visible = false,
         bg = "#00000000",
@@ -116,7 +160,7 @@ awful.screen.connect_for_each_screen(function(s)
         type = "dock",
         placement = dock_placement,
         widget = dock,
-    })
+    }
     dock_placement(s.dock)
 
     local popup_timer
@@ -132,7 +176,7 @@ awful.screen.connect_for_each_screen(function(s)
     end
 
     -- Initialize wibox activator
-    s.dock_activator = wibox({ screen = s, height = 1, bg = "#00000000", visible = true, ontop = true })
+    s.dock_activator = wibox { screen = s, height = 1, bg = "#00000000", visible = true, ontop = true }
     awful.placement.bottom(s.dock_activator)
     s.dock_activator:connect_signal("mouse::enter", function()
         s.dock.visible = true
@@ -200,18 +244,24 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a system tray widget
     s.systray = wibox.widget.systray()
     -- Create the tray box
-    s.traybox = wibox({
+    s.traybox = wibox {
         screen = s,
         width = dpi(250),
         height = dpi(50),
         bg = "#00000000",
         visible = false,
         ontop = true,
-    })
+    }
+
     s.mylayoutbox = awful.widget.layoutbox(s)
     s.mylayoutbox:buttons(gears.table.join(
         awful.button({}, 1, function()
-            awful.layout.inc(1)
+            if layout_popup.visible == false then
+                layout_popup.visible = true
+            else
+                layout_popup.visible = false
+            end
+            -- awful.layout.inc(1)
         end),
         awful.button({}, 3, function()
             awful.layout.inc(-1)
@@ -223,8 +273,8 @@ awful.screen.connect_for_each_screen(function(s)
             awful.layout.inc(-1)
         end)
     ))
-
-    s.traybox:setup({
+    helpers.add_hover_cursor(s.mylayoutbox, "hand1")
+    s.traybox:setup {
         {
             {
                 s.mylayoutbox,
@@ -239,10 +289,11 @@ awful.screen.connect_for_each_screen(function(s)
         bg = beautiful.bg_systray,
         shape = helpers.rrect(beautiful.border_radius_tray),
         widget = wibox.container.background,
-    })
+    }
     awful.placement.bottom_right(s.traybox, { margins = beautiful.useless_gap * 2 })
     s.traybox:buttons(gears.table.join(awful.button({}, 2, function()
         s.traybox.visible = false
+        layout_popup.visible = false
     end)))
 end)
 
@@ -259,4 +310,5 @@ end
 function tray_toggle()
     local s = awful.screen.focused()
     s.traybox.visible = not s.traybox.visible
+    layout_popup.visible = false
 end

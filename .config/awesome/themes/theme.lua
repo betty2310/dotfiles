@@ -191,7 +191,7 @@ theme.sidebar_position = "left" -- left or right
 theme.sidebar_width = dpi(320)
 theme.sidebar_x = 0
 theme.sidebar_y = 0
-theme.sidebar_border_radius = dpi(40)
+theme.sidebar_border_radius = dpi(10)
 -- theme.sidebar_border_radius = theme.border_radius
 
 -- Dashboard
@@ -443,7 +443,7 @@ theme.window_switcher_name_margins = 5 -- The margin of one clients title to the
 theme.window_switcher_name_valign = "left" -- How to vertically align one clients title
 theme.window_switcher_name_forced_width = 200 -- The width of one title
 theme.window_switcher_name_font = "sans medium 10" -- The font of all titles
-theme.window_switcher_name_normal_color = x.foreground .. "60" 
+theme.window_switcher_name_normal_color = x.foreground .. "60"
 theme.window_switcher_name_focus_color = x.foreground -- The color of one title if the client is focused
 theme.window_switcher_icon_valign = "center" -- How to vertically align the one icon
 theme.window_switcher_icon_width = dpi(0)

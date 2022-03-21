@@ -8,7 +8,7 @@ local beautiful = require "beautiful"
 local dummy_textclock = wibox.widget.textclock "%M"
 dummy_textclock.visible = false
 
-local dotw_initials = { "T2", "T3", "T4", "T5", "T6", "T7", "CN" }
+local dotw_initials = { "月", "火", "水", "木", "金", "土", "日" }
 local dotw_colors = {
     x.color1,
     x.color1,
@@ -24,7 +24,7 @@ local dotw_textboxes = {}
 
 local create_dotw_container = function(text, color)
     local text = wibox.widget.textbox(text)
-    text.font = "sans bold 10"
+    text.font = "sans 14"
     -- text.markup = "<span foreground='" .. x.background .."'>" .. text .. "</span>"
     text.align = "center"
     text.valign = "center"

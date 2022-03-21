@@ -24,7 +24,7 @@ null_ls.setup {
         formatting.shfmt.with {
             filetypes = { "sh", "bash", "zsh" },
         },
-        formatting.trim_whitespace,
+        -- formatting.trim_whitespace,
     },
 
     on_attach = function(client)

@@ -36,7 +36,7 @@ icons.text.by_class = {
     ["Sxiv"] = { symbol = "", color = x.color5 },
 
     -- General
-    ["TelegramDesktop"] = { symbol = "", color = x.color4 },
+    ["TelegramDesktop"] = { symbol = "", color = x.color4 },
     ["Firefox"] = { symbol = "", color = x.foreground .. "99" },
     ["firefox"] = { symbol = "", color = x.foreground },
     ["notion-app-enhanced"] = { symbol = "", color = x.foreground },
@@ -77,7 +77,7 @@ icons.text.by_class = {
     ["Microsoft-edge"] = { symbol = "", color = x.color3 },
     ["pdf"] = { symbol = "", color = x.color9 },
     ["Microsoft Teams - Preview"] = { symbol = "", color = x.color1 },
-    ["Font-manager"] = { symbol = "", color = x.color9 },
+    ["Font-manager"] = { symbol = "", color = x.color9 },
     ["Solaar"] = { symbol = "", color = x.color9 },
     ["Pamac-manager"] = { symbol = "", color = x.color2 },
     ["Baobab"] = { symbol = "", color = x.foreground .. "99" },

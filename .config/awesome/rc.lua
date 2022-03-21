@@ -126,11 +126,11 @@ awful.screen.connect_for_each_screen(function(s)
     local layouts = {
         bling.layout.equalarea,
         bling.layout.deck,
-        l.max,
+        bling.layout.deck,
         l.spiral.dwindle,
         bling.layout.mstab,
         l.spiral.dwindle,
-        l.max,
+        bling.layout.deck,
     }
 
     local tagnames = beautiful.tagnames
@@ -164,7 +164,7 @@ awful.rules.rules = {
             keys = keys.clientkeys,
             buttons = keys.clientbuttons,
             screen = awful.screen.preferred,
-            screen = awful.screen.focused,
+            -- screen = awful.screen.focused,
             size_hints_honor = false,
             honor_workarea = true,
             honor_padding = true,
