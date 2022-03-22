@@ -70,5 +70,5 @@ magnet=$(grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" $cachedir/tmp.html | head 
 # Simple notification
 notify-send "🎥 Enjoy Watching ☺️ "
 
-webtorrent "$magnet" --vlc
+webtorrent "$magnet" --mpv -t "$HOME/Downloads/The.Adam.Project.2022.1080p.NF.WEB-DL.DDP5.1.Atmos.HDR.HEVC-TEPES.vie.srt"
 rm -dRf /tmp/webtorrent

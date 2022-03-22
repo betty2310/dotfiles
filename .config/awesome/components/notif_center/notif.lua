@@ -1,38 +1,39 @@
-local awful = require("awful")
-local gears = require("gears")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
-local naughty = require("naughty")
-local icons = require("icons")
-local helpers = require("helpers")
-local apps = require("apps")
+local awful = require "awful"
+local gears = require "gears"
+local wibox = require "wibox"
+local beautiful = require "beautiful"
+local naughty = require "naughty"
+local icons = require "icons"
+local helpers = require "helpers"
+local apps = require "apps"
 
-local notifs_text = wibox.widget({
-    font = beautiful.font_name .. " Bold 16",
-    markup = "<span foreground='" .. x.color2 .. "'>Notifications</span>",
+local notifs_text = wibox.widget {
+    font = beautiful.font_name .. " Bold 14",
+    markup = "<span foreground='" .. x.foreground .. "'>Notification Center</span>",
     halign = "center",
     widget = wibox.widget.textbox,
-})
+}
 
-local notifs_clear = wibox.widget({
-    markup = "<span foreground='" .. x.color3 .. "'></span>",
-    font = "Font Awesome 6 Pro Solid 8",
+local notifs_clear = wibox.widget {
+    markup = "<span foreground='" .. x.foreground .. "'></span>",
+    font = "Font Awesome 6 Pro Solid 10",
     align = "center",
     valign = "center",
     widget = wibox.widget.textbox,
-})
+}
 
 notifs_clear:buttons(gears.table.join(awful.button({}, 1, function()
     _G.notif_center_reset_notifs_container()
 end)))
 
-local notifs_empty = wibox.widget({
+local notifs_empty = wibox.widget {
     {
         nil,
         {
             nil,
             {
-                markup = "<span foreground='" .. x.foreground .. "'>No Notifications</span>",
+                markup = "<span foreground='" .. x.foreground .. "'>😀 No Notifications</span>",
+                font = "sans 13",
                 align = "center",
                 valign = "center",
                 widget = wibox.widget.textbox,
@@ -43,9 +44,9 @@ local notifs_empty = wibox.widget({
     },
     forced_height = 160,
     widget = wibox.container.background,
-})
+}
 
-local notifs_container = wibox.widget({
+local notifs_container = wibox.widget {
     spacing = 10,
     spacing_widget = {
         {
@@ -61,7 +62,7 @@ local notifs_container = wibox.widget({
     forced_width = 300,
     forced_height = 490,
     layout = wibox.layout.fixed.vertical,
-})
+}
 
 local remove_notifs_empty = true
 
@@ -81,10 +82,10 @@ notif_center_remove_notif = function(box)
 end
 
 local create_notif = function(icon, n, width)
-    local time = os.date("%H:%M")
+    local time = os.date "%H:%M"
     local box = {}
 
-    box = wibox.widget({
+    box = wibox.widget {
         {
             {
                 {
@@ -156,7 +157,7 @@ local create_notif = function(icon, n, width)
         shape = helpers.rrect(dpi(14)),
         bg = "#313744",
         widget = wibox.container.background,
-    })
+    }
 
     box:buttons(gears.table.join(awful.button({}, 1, function()
         _G.notif_center_remove_notif(box)
@@ -199,23 +200,26 @@ naughty.connect_signal("request::display", function(n)
     notifs_container:insert(1, create_notif(appicon, n, width))
 end)
 
-local space = wibox.widget({
+local space = wibox.widget {
     bg = x.background,
     shape = helpers.rrect(dpi(14)),
     widget = wibox.container.background,
-})
-local notifs = wibox.widget({
+}
+local notifs = wibox.widget {
     {
         {
-            nil,
             notifs_text,
+            nil,
+            notifs_clear,
             expand = "none",
             layout = wibox.layout.align.horizontal,
         },
+        left = dpi(10),
+        right = dpi(10),
         layout = wibox.container.margin,
     },
     notifs_container,
     spacing = 20,
     layout = wibox.layout.fixed.vertical,
-})
+}
 return notifs

@@ -25,38 +25,26 @@ end
 
 local weather_widget = require "widget.text_weather"
 local weather_widget_icon = weather_widget:get_all_children()[1]
-weather_widget_icon.font = "icomoon 16"
+weather_widget_icon.font = "icomoon 27"
 weather_widget_icon.align = "center"
 weather_widget_icon.valign = "center"
 local weather_widget_description = weather_widget:get_all_children()[2]
-weather_widget_description.font = "sans medium 14"
+weather_widget_description.font = "sans medium 10"
 local weather_widget_temperature = weather_widget:get_all_children()[3]
-weather_widget_temperature.font = "sans medium 14"
+weather_widget_temperature.font = "sans medium 10"
 
 local weather = wibox.widget {
+    helpers.horizontal_pad(dpi(100)),
+    weather_widget_icon,
     {
-        nil,
         weather_widget_description,
-        expand = "none",
-        layout = wibox.layout.align.horizontal,
+        weather_widget_temperature,
+        layout = wibox.layout.fixed.vertical,
     },
-    {
-        nil,
-        {
-            weather_widget_icon,
-            weather_widget_temperature,
-            spacing = dpi(5),
-            layout = wibox.layout.fixed.horizontal,
-        },
-        expand = "none",
-        layout = wibox.layout.align.horizontal,
-    },
-    spacing = dpi(5),
-    layout = wibox.layout.fixed.vertical,
-    -- nil,
-    -- weather_widget,
-    -- layout = wibox.layout.align.horizontal,
-    -- expand = "none"
+    nil,
+    expand = "none",
+    spacing = dpi(10),
+    layout = wibox.layout.fixed.horizontal,
 }
 
 local temperature_bar = require "widget.temperature_bar"
@@ -176,91 +164,6 @@ mpd_song:buttons(gears.table.join(
     end),
     awful.button({}, 5, function()
         awful.spawn.with_shell "mpc -q next"
-    end)
-))
-
-local search_icon = wibox.widget {
-    font = "icomoon bold 10",
-    align = "center",
-    valign = "center",
-    widget = wibox.widget.textbox(),
-}
-
-local reset_search_icon = function()
-    search_icon.markup = helpers.colorize_text("", x.color3)
-end
-reset_search_icon()
-
-local search_text = wibox.widget {
-    -- markup = helpers.colorize_text("Search", x.color8),
-    align = "center",
-    valign = "center",
-    font = "sans 9",
-    widget = wibox.widget.textbox(),
-}
-
-local search_bar = wibox.widget {
-    shape = gears.shape.rounded_bar,
-    bg = x.color0,
-    widget = wibox.container.background(),
-}
-
-local search = wibox.widget {
-    -- search_bar,
-    {
-        {
-            search_icon,
-            {
-                search_text,
-                bottom = dpi(2),
-                widget = wibox.container.margin,
-            },
-            layout = wibox.layout.fixed.horizontal,
-        },
-        left = dpi(15),
-        widget = wibox.container.margin,
-    },
-    forced_height = dpi(35),
-    forced_width = dpi(200),
-    shape = gears.shape.rounded_bar,
-    bg = x.color0,
-    widget = wibox.container.background(),
-    -- layout = wibox.layout.stack
-}
-
-local function generate_prompt_icon(icon, color)
-    return "<span font='icomoon 10' foreground='" .. color .. "'>" .. icon .. "</span> "
-end
-
-function sidebar_activate_prompt(action)
-    sidebar.visible = true
-    search_icon.visible = false
-    local prompt
-    if action == "run" then
-        prompt = generate_prompt_icon("", x.color2)
-    elseif action == "web_search" then
-        prompt = generate_prompt_icon("", x.color4)
-    end
-    helpers.prompt(action, search_text, prompt, function()
-        search_icon.visible = true
-        if mouse.current_wibox ~= sidebar then
-            sidebar.visible = false
-        end
-    end)
-end
-
-local prompt_is_active = function()
-    -- The search icon is hidden and replaced by other icons
-    -- when the prompt is running
-    return not search_icon.visible
-end
-
-search:buttons(gears.table.join(
-    awful.button({}, 1, function()
-        sidebar_activate_prompt "run"
-    end),
-    awful.button({}, 3, function()
-        sidebar_activate_prompt "web_search"
     end)
 ))
 
@@ -394,52 +297,6 @@ awesome.connect_signal("signal::battery", function(value)
         .. tostring(value)
         .. "%</b></span>"
 end)
-local awmodoro = require "widget.awmodoro"
-local pomodoro = awmodoro.new {
-    minutes = 25,
-    do_notify = true,
-    active_bg_color = x.color0,
-    paused_bg_color = x.color0,
-    fg_color = x.color1,
-    width = dpi(90),
-    height = dpi(20),
-}
-pomodoro:buttons(awful.util.table.join(
-    awful.button({}, 1, function()
-        pomodoro:toggle()
-    end),
-    awful.button({}, 2, function()
-        pomodoro:finish()
-    end),
-    awful.button({}, 3, function()
-        pomodoro:reset()
-    end)
-))
-local charging_icon = wibox.widget {
-    font = "Font Awesome 6 Pro Solid 11",
-    align = "right",
-    markup = helpers.colorize_text(" ", x.color1 .. "90"),
-    widget = wibox.widget.textbox(),
-}
-local pomo = wibox.widget {
-    {
-        pomodoro,
-        shape = helpers.rrect(dpi(16)),
-        border_color = "#333946",
-        border_width = dpi(1),
-        bg = x.color4,
-        widget = wibox.container.background,
-    },
-    -- {
-    --     charging_icon,
-    --     right = dpi(10),
-    --     widget = wibox.container.margin(),
-    -- },
-    top_only = false,
-    layout = wibox.layout.stack,
-}
-
-local quote = require "widget.quote"
 
 -- Add clickable mouse effects on some widgets
 helpers.add_hover_cursor(cpu, "hand1")
@@ -450,7 +307,6 @@ helpers.add_hover_cursor(brightness, "hand1")
 helpers.add_hover_cursor(mpd_song, "hand1")
 helpers.add_hover_cursor(cute_battery_face, "hand1")
 helpers.add_hover_cursor(pacman, "hand1")
-helpers.add_hover_cursor(dotw, "hand1")
 
 -- Create the sidebar
 sidebar = wibox { visible = false, ontop = true, type = "normal", screen = screen.primary }
@@ -466,7 +322,10 @@ if beautiful.sidebar_position == "right" then
 else
     awful.placement.top_left(sidebar)
 end
-awful.placement.maximize_vertically(sidebar, { honor_workarea = true, margins = { top = beautiful.useless_gap * 2 } })
+awful.placement.maximize_vertically(
+    sidebar,
+    { honor_workarea = true, margins = { top = beautiful.useless_gap * 2, bottom = beautiful.useless_gap * 0 } }
+)
 
 sidebar:buttons(gears.table.join(
     -- Middle click - Hide sidebar
@@ -519,9 +378,7 @@ end
 
 sidebar_hide = function()
     -- Do not hide it if prompt is active
-    if not prompt_is_active() then
-        sidebar.visible = false
-    end
+    sidebar.visible = false
 end
 
 sidebar_toggle = function()
@@ -576,193 +433,9 @@ if user.sidebar.show_on_mouse_screen_edge then
         end)
     ))
 end
-local function create_boxed_widget(widget_to_be_boxed, width, height, inner_pad)
-    local box_container = wibox.container.background()
-    box_container.bg = "#313744"
-    box_container.forced_height = height
-    box_container.forced_width = width
-    box_container.shape = helpers.rrect(dpi(12))
-
-    local inner = dpi(0)
-
-    if inner_pad then
-        inner = beautiful.tooltip_box_margin
-    end
-
-    local boxed_widget = wibox.widget {
-        -- Add margins
-        {
-            -- Add background color
-            {
-                -- The actual widget goes here
-                widget_to_be_boxed,
-                margins = inner,
-                widget = wibox.container.margin,
-            },
-            widget = box_container,
-        },
-        margins = beautiful.tooltip_gap / 2,
-        color = "#FF000000",
-        widget = wibox.container.margin,
-    }
-
-    return boxed_widget
-end
-
--- Music
-local music_text = wibox.widget {
-    markup = helpers.colorize_text("Nothing Playing", beautiful.xcolor8),
-    font = "sans medium 8",
-    valign = "center",
-    widget = wibox.widget.textbox,
-}
-
-local music_art = wibox.widget {
-    image = gears.filesystem.get_configuration_dir() .. "icons/pngegg.png",
-    resize = true,
-    opacity = 0.2,
-    halign = "center",
-    valign = "center",
-    widget = wibox.widget.imagebox,
-}
-
-local music_art_container = wibox.widget {
-    music_art,
-    forced_height = dpi(120),
-    forced_width = dpi(120),
-    widget = wibox.container.background,
-}
-
-local filter_color = {
-    type = "linear",
-    from = { 0, 0 },
-    to = { 0, 250 },
-    stops = { { 0, beautiful.dash_box_bg .. "11" }, { 1, beautiful.dash_box_bg } },
-}
-
-local music_art_filter = wibox.widget {
-    {
-        bg = filter_color,
-        forced_height = dpi(120),
-        forced_width = dpi(120),
-        widget = wibox.container.background,
-    },
-    direction = "east",
-    widget = wibox.container.rotate,
-}
-
-local music_title = wibox.widget {
-    markup = "No Title",
-    font = "sans medium 10",
-    valign = "center",
-    widget = wibox.widget.textbox,
-}
-
-local music_artist = wibox.widget {
-    markup = helpers.colorize_text("No Artist", beautiful.xcolor8),
-    font = "sans medium 8",
-    valign = "center",
-    widget = wibox.widget.textbox,
-}
-
-local music_status = wibox.widget {
-    font = "Font Awesome 6 Pro Solid 11",
-    markup = "",
-    align = "right",
-    valign = "bottom",
-    widget = wibox.widget.textbox,
-}
-
-local music_pos = wibox.widget {
-    font = "sans medium 9",
-    markup = helpers.colorize_text("- / -", x.foreground),
-    valign = "center",
-    widget = wibox.widget.textbox,
-}
-
-local music = wibox.widget {
-    {
-        music_art_container,
-        music_art_filter,
-        layout = wibox.layout.stack,
-    },
-    {
-        {
-            {
-                music_text,
-                {
-                    step_function = wibox.container.scroll.step_functions.waiting_nonlinear_back_and_forth,
-                    speed = 50,
-                    {
-                        widget = music_title,
-                    },
-                    -- forced_width = dpi(110),
-                    widget = wibox.container.scroll.horizontal,
-                },
-                {
-                    step_function = wibox.container.scroll.step_functions.waiting_nonlinear_back_and_forth,
-                    speed = 50,
-                    {
-                        widget = music_artist,
-                    },
-                    -- forced_width = dpi(110),
-                    widget = wibox.container.scroll.horizontal,
-                },
-                layout = wibox.layout.fixed.vertical,
-            },
-            nil,
-            {
-                music_pos,
-                nil,
-                music_status,
-                layout = wibox.layout.align.horizontal,
-            },
-            layout = wibox.layout.align.vertical,
-        },
-        margins = beautiful.tooltip_box_margin,
-        widget = wibox.container.margin,
-    },
-    layout = wibox.layout.stack,
-}
-
-local playerctl = require("lib.bling").signal.playerctl.lib()
-playerctl:connect_signal("metadata", function(_, title, artist, album_path, __, ___, ____)
-    if title == "" then
-        title = "No Title"
-    end
-    if artist == "" then
-        artist = "No Artist"
-    end
-    if album_path == "" then
-        album_path = gears.filesystem.get_configuration_dir() .. "icons/no_music.png"
-    end
-
-    music_art:set_image(gears.surface.load_uncached(album_path))
-    music_title:set_markup_silently(title)
-    music_artist:set_markup_silently(helpers.colorize_text(artist, beautiful.xcolor8))
-end)
-
-playerctl:connect_signal("playback_status", function(_, playing, __)
-    if playing then
-        music_text:set_markup_silently(helpers.colorize_text("Now Playing", beautiful.xcolor8))
-        music_status:set_markup_silently " "
-    else
-        music_text:set_markup_silently(helpers.colorize_text("Music", beautiful.xcolor8))
-        music_status:set_markup_silently ""
-    end
-end)
-
-playerctl:connect_signal("position", function(pos, length)
-    if player_name == "mpd" then
-        local pos_now = tostring(os.date("!%M:%S", math.floor(interval_sec)))
-        local pos_length = tostring(os.date("!%M:%S", math.floor(length_sec)))
-        local pos_markup = pos_now .. helpers.colorize_text(" / " .. pos_length, beautiful.xcolor8)
-        music_pos:set_markup_silently(pos_markup)
-    end
-end)
-
-local music_boxed = create_boxed_widget(music, dpi(220), dpi(170))
 -- Item placement
+
+local music_boxed = require "widget.music"
 
 sidebar:setup {
     {
@@ -806,9 +479,9 @@ sidebar:setup {
                         spacing = dpi(5),
                         layout = wibox.layout.fixed.vertical,
                     },
-                    bottom = dpi(30),
-                    left = dpi(20),
-                    right = dpi(20),
+                    bottom = dpi(35),
+                    left = dpi(30),
+                    right = dpi(30),
                     widget = wibox.container.margin,
                 },
 
@@ -827,7 +500,7 @@ sidebar:setup {
                     expand = "none",
                     layout = wibox.layout.align.horizontal,
                 },
-                helpers.vertical_pad(dpi(30)),
+                helpers.vertical_pad(dpi(25)),
                 pacman,
                 layout = wibox.layout.fixed.vertical,
             },

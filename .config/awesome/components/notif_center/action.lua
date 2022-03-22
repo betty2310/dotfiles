@@ -257,8 +257,8 @@ helpers.add_hover_cursor(notification_state_box, "hand1")
 local nightlight = wibox.widget {
     align = "center",
     valign = "center",
-    font = "Font Awesome 6 Pro Solid 20",
-    markup = helpers.colorize_text("", x.color4),
+    font = "Font Awesome 6 Pro Solid 18",
+    markup = helpers.colorize_text("", x.color4),
     widget = wibox.widget.textbox(),
 }
 
@@ -353,15 +353,18 @@ local action = awful.popup {
             layout = wibox.layout.fixed.vertical,
         },
     },
-    placement = function(c)
-        (awful.placement.right + awful.placement.maximize_vertically)(c)
-    end,
     ontop = true,
     visible = false,
     bg = x.background,
     border_color = x.foreground,
     border_width = 0,
 }
+
+awful.placement.top_right(action)
+awful.placement.maximize_vertically(
+    action,
+    { honor_workarea = true, margins = { top = beautiful.useless_gap * 2, bottom = beautiful.useless_gap * 0 } }
+)
 
 local slide = rubato.timed {
     pos = 1920,

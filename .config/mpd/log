@@ -1188,3 +1188,74 @@ Mar 21 11:26 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_T
 Mar 21 11:26 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 21 13:15 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
 Mar 21 14:54 : config: option 'device' on line 21 was not recognized
+Mar 21 20:02 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 21 20:05 : config: option 'device' on line 21 was not recognized
+Mar 21 22:14 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 21 22:14 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 21 23:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 11:08 : player: played "Photograph_Official_Music_Video-[nSDgHBxUbVQ].mp3"
+Mar 22 11:12 : config: option 'device' on line 21 was not recognized
+Mar 22 12:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 12:56 : player: played "Photograph_Official_Music_Video-[nSDgHBxUbVQ].mp3"
+Mar 22 16:02 : config: option 'device' on line 21 was not recognized
+Mar 22 16:05 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:05 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:06 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:06 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:06 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:06 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 22 16:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:15 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 22 16:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:16 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:19 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 22 16:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:23 : update: added /Never Ending Story.mp3
+Mar 22 16:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:29 : player: played "Someone_Like_You_Vietsub-[sj25Ar9VRqE].mp3"
+Mar 22 16:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 16:39 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:48 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:48 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:48 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:48 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:48 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 16:59 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 22 17:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 17:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 22 17:38 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 22 17:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 17:42 : player: played "Look_What_You_Made_Me_Do-[3tmd-ClpJxA].mp3"
+Mar 22 17:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 17:50 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 17:54 : player: played "Someone_Like_You_Vietsub-[sj25Ar9VRqE].mp3"
+Mar 22 17:54 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 17:57 : player: played "Old Town Road.mp3"
+Mar 22 17:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 18:01 : player: played "MORE_ft._Madison_Beer_G_I-DLE_Lexie_Liu_Jaira_Burns_Seraphine_Official_Music_Video-[3VTkBuxU4yk].mp3"
+Mar 22 18:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 18:04 : player: played "Anh_ch_C_n_Gi_Nhi_u_Ngoai_Em_ft._V_._Thanh_ng_M_V-[KdrbBJNFwGw].mp3"
+Mar 22 18:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 18:08 : player: played "You_Belong_With_Me-[VuNIsY6JdUw].mp3"
+Mar 22 18:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 22 18:13 : player: played "Counting_Stars_Official_Music_Video-[hT_nvWreIhg].mp3"
+Mar 22 18:13 : output: Failed to play on "pulse audio" (pulse): suspended

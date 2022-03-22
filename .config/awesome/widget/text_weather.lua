@@ -103,7 +103,7 @@ awesome.connect_signal("signal::weather", function(temperature, description, ico
 
     weather_icon.markup = helpers.colorize_text(icon, color)
     weather_description.markup = description
-    weather_temperature.markup = temperature
+    weather_temperature.markup = temperature .. "°C"
     -- weather_temperature.markup = helpers.colorize_text(tostring(temperature)..weather_temperature_symbol, color)
 end)
 

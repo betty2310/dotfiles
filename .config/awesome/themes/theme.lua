@@ -35,7 +35,7 @@ theme.xcolor14 = xrdb.color14
 theme.xcolor15 = xrdb.color15
 theme.darker = "#232731"
 
-theme.dash_box_bg = "#313744"
+theme.dash_box_bg = x.background
 
 theme.transparent = "#00000000"
 theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"

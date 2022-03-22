@@ -7,21 +7,16 @@
 # Dependencies:
 # dunstify
 
-NAME="Pikachu"
-APPNAME=609
-
 datey=$(date +%H)
-
-if [[ "$datey" -lt 11 ]]; then
-  dunstify -i ~/.config/dunst/icons/screenshot.svg "おはよう" "$NAME!" -u low -a $APPNAME
+quotes=$(motivate --no-colors)
+if [[ "$datey" -lt 12 ]]; then
+	dunstify -i ~/.config/awesome/icons/cat1.png "👋 Good Morning, Betty!" "$quotes" -t 5000
 elif [[ "$datey" -lt 16 ]]; then
-  dunstify -i ~/.config/dunst/icons/d-4.svg "Good Afternoon" "$NAME!" -u low -a $APPNAME
+	dunstify -i ~/.config/awesome/icons/cat1.png "👋 Good Afternoon, Betty!" "$quotes" -t 5000
 elif [[ "$datey" -lt 18 ]]; then
-  dunstify -i ~/.config/dunst/icons/d-6.svg "Good Evening" "$NAME!" -u low -a $APPNAME
-elif [[ "$datey" -lt 22 ]]; then
-  dunstify -i ~/.config/dunst/icons/d-10.svg "Nighty" "$NAME!" -u low -a $APPNAME
+	dunstify -i ~/.config/awesome/icons/cat1.png "👋 Good Evening, Betty!" "$quotes" -t 5000
 elif [[ "$datey" -lt 0 ]]; then
-  dunstify -i ~/.config/dunst/icons/d-12 "Go to sleep" "$NAME!" -u low -a $APPNAME
+	dunstify -i ~/.config/awesome/icons/cat1.png "👋 Good Night, Betty!" "$quotes" -t 5000
 elif [[ "$datey" -lt 3 ]]; then
-  dunstify -i ~/.config/icons/evil.svg "Demons are watching you..." -u low -a $APPNAME
+	dunstify -i ~/.config/awesome/icons/cat1.png "🤚 Go to sleep, Betty!" "$quotes" -t 5000
 fi

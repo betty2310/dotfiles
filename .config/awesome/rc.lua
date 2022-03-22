@@ -9,11 +9,11 @@ user = {
     web_search_cmd = "https://www.google.com/search?q=",
     profile_picture = os.getenv "HOME" .. "/.config/awesome/profile.png",
     dirs = {
-        downloads = os.getenv "XDG_DOWNLOAD_DIR" or "~/Downloads",
-        documents = os.getenv "XDG_DOCUMENTS_DIR" or "~/Documents",
-        music = os.getenv "XDG_MUSIC_DIR" or "~/Music",
-        pictures = os.getenv "XDG_PICTURES_DIR" or "~/Pictures",
-        videos = os.getenv "XDG_VIDEOS_DIR" or "~/Videos",
+        downloads = "~/Downloads",
+        documents = "~/Documents",
+        music = "~/Music",
+        pictures = "~/Pictures",
+        videos = "~/Videos",
         screenshots = "~/Pictures/Screenshots",
     },
     sidebar = {

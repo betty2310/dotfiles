@@ -84,6 +84,6 @@ function fish_title
     set -q argv[1];
     # Looks like ~/d/fish: git log
     # or /e/apt: fish
-    echo (fish_prompt_pwd_dir_length=1 prompt_pwd) [$argv];
+    echo $USER@$hostname: (fish_prompt_pwd_dir_length=1 prompt_pwd) [$argv];
 end
 thefuck --alias | source
