@@ -33,19 +33,59 @@ weather_widget_description.font = "sans medium 10"
 local weather_widget_temperature = weather_widget:get_all_children()[3]
 weather_widget_temperature.font = "sans medium 10"
 
+local function create_boxed_widget(widget_to_be_boxed, width, height, bg_color)
+    local box_container = wibox.container.background()
+    box_container.bg = bg_color
+    box_container.forced_height = height
+    box_container.forced_width = width
+    box_container.shape = helpers.rrect(box_radius)
+    -- box_container.shape = helpers.prrect(20, true, true, true, true)
+    -- box_container.shape = helpers.prrect(30, true, true, false, true)
+
+    local boxed_widget = wibox.widget {
+        -- Add margins
+        {
+            -- Add background color
+            {
+                -- Center widget_to_be_boxed horizontally
+                nil,
+                {
+                    -- Center widget_to_be_boxed vertically
+                    nil,
+                    -- The actual widget goes here
+                    widget_to_be_boxed,
+                    layout = wibox.layout.align.vertical,
+                    expand = "none",
+                },
+                layout = wibox.layout.align.horizontal,
+                expand = "none",
+            },
+            widget = box_container,
+        },
+        margins = box_gap,
+        color = "#FF000000",
+        widget = wibox.container.margin,
+    }
+
+    return boxed_widget
+end
 local weather = wibox.widget {
-    helpers.horizontal_pad(dpi(100)),
-    weather_widget_icon,
     {
-        weather_widget_description,
-        weather_widget_temperature,
-        layout = wibox.layout.fixed.vertical,
+        weather_widget_icon,
+        helpers.horizontal_pad(dpi(15)),
+        {
+            weather_widget_description,
+            weather_widget_temperature,
+            layout = wibox.layout.fixed.vertical,
+        },
+        layout = wibox.layout.align.horizontal,
     },
-    nil,
-    expand = "none",
-    spacing = dpi(10),
-    layout = wibox.layout.fixed.horizontal,
+    left = dpi(30),
+    right = dpi(30),
+    widget = wibox.container.margin,
 }
+
+local weather_box = create_boxed_widget(weather, dpi(50), dpi(50), x.background)
 
 local temperature_bar = require "widget.temperature_bar"
 local temperature = format_progress_bar(temperature_bar)
@@ -73,11 +113,11 @@ brightness:buttons(gears.table.join(
     end),
     -- Scroll up - Increase brightness
     awful.button({}, 4, function()
-        awful.spawn.with_shell "light -A 10"
+        awful.spawn.with_shell "light -A 1"
     end),
     -- Scroll down - Decrease brightness
     awful.button({}, 5, function()
-        awful.spawn.with_shell "light -U 10"
+        awful.spawn.with_shell "light -U 1"
     end)
 ))
 
@@ -470,7 +510,7 @@ sidebar:setup {
         { ----------- MIDDLE GROUP -----------
             {
                 helpers.vertical_pad(dpi(30)),
-                weather,
+                weather_box,
                 helpers.vertical_pad(dpi(30)),
                 {
                     {

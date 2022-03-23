@@ -26,7 +26,7 @@ grep -o '<a href="/torrent/.*</a>' $cachedir/tmp.html |
 
 result_count=$(wc -l $cachedir/titles.bw | awk '{print $1}')
 if [ "$result_count" -lt 1 ]; then
-	notify-send "😔 No Result found. Try again 🔴"
+	notify-send -i "/home/betty/Pictures/icons/netflix.png" "Notflix" "No Result found. Try again "
 	exit 0
 fi
 
@@ -57,7 +57,7 @@ LINE=$(paste -d\  $cachedir/size.bw $cachedir/seedleech.bw $cachedir/titles.bw |
 	cut -d\- -f1 |
 	awk '{$1=$1; print}')
 
-notify-send "🔍 Searching Magnet seeds 🧲"
+notify-send -i "/home/betty/Pictures/icons/netflix.png" "Notflix" "🔍 Searching Magnet seeds."
 url=$(head -n $LINE $cachedir/links.bw | tail -n +$LINE)
 fullURL="${baseurl}${url}/"
 gg=$(echo "$url" | cut -d\/ -f4)
@@ -68,7 +68,11 @@ curl -s $fullURL >$cachedir/tmp.html
 magnet=$(grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" $cachedir/tmp.html | head -n 1)
 
 # Simple notification
-notify-send "🎥 Enjoy Watching ☺️ "
+notify-send -i "/home/betty/Pictures/icons/netflix.png" "Notflix" "🎥 Enjoy Watching ☺️ "
 
-webtorrent "$magnet" --mpv -t "$HOME/Downloads/The.Adam.Project.2022.1080p.NF.WEB-DL.DDP5.1.Atmos.HDR.HEVC-TEPES.vie.srt"
+dir="$HOME/Downloads"
+cd "$dir"
+choice="$(rg --files --color=never | dmenu -i -l 10 -class films -p 'Choose sub file:' -fn 'JetBrainsMono Nerd Font-9' -sb '#A3BE8C' -sf '#2E3440')"
+
+webtorrent "$magnet" --mpv -t "$HOME/Downloads/"$choice""
 rm -dRf /tmp/webtorrent

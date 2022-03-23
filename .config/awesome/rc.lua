@@ -81,7 +81,7 @@ local notifications = require "notifications"
 notifications.init()
 local decorations = require "components.titlebar"
 decorations.init()
-local helpers = require "helpers"
+local helpers = require "helpers" 
 
 F = {}
 require "components.bar"
