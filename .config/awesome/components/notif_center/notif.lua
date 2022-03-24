@@ -36,7 +36,7 @@ local notifs_empty = wibox.widget {
                 widget = wibox.widget.imagebox,
                 image = gears.color.recolor_image(
                     os.getenv "HOME" .. "/.config/awesome/icons/no-notifs.png",
-                    x.foreground
+                    x.foreground .. "88"
                 ),
                 forced_height = 120,
                 forced_width = 120,
@@ -45,7 +45,7 @@ local notifs_empty = wibox.widget {
             },
             helpers.vertical_pad(dpi(20)),
             {
-                markup = "<span foreground='" .. x.foreground .. "'>😀 No Notifications</span>",
+                markup = "<span foreground='" .. x.foreground .. "88" .. "'>😀 No Notifications</span>",
                 font = "sans 13",
                 align = "center",
                 valign = "center",
@@ -131,7 +131,7 @@ local create_notif = function(icon, n, width)
                                         align = "left",
                                         widget = wibox.widget.textbox,
                                     },
-                                    forced_width = 140,
+                                    forced_width = 100,
                                     widget = wibox.container.scroll.horizontal,
                                 },
                                 nil,
@@ -146,13 +146,19 @@ local create_notif = function(icon, n, width)
                                 layout = wibox.layout.align.horizontal,
                             },
                             {
-                                markup = n.message,
-                                font = "sans medium 7",
-                                align = "left",
-                                forced_width = 165,
-                                widget = wibox.widget.textbox,
+
+                                step_function = wibox.container.scroll.step_functions.waiting_nonlinear_back_and_forth,
+                                speed = 50,
+                                {
+                                    markup = n.message,
+                                    font = "sans medium 8",
+                                    align = "left",
+                                    widget = wibox.widget.textbox,
+                                },
+                                forced_width = 50,
+                                widget = wibox.container.scroll.horizontal,
                             },
-                            spacing = 3,
+                            spacing = 5,
                             layout = wibox.layout.fixed.vertical,
                         },
                         expand = "none",

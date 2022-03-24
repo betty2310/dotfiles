@@ -130,70 +130,7 @@ end)
 
 local calendar_box = create_boxed_widget(calendar, dpi(150), dpi(250), "#313744")
 
--- Fortune
-local fortune_command = "kanji"
-local fortune_update_interval = 60
--- local fortune_command = "fortune -n 140 -s computers"
-local kanji_text = wibox.widget {
-    font = "sans 30",
-    text = "loading your Kanji now ...",
-    widget = wibox.widget.textbox,
-}
-
-local han_text = wibox.widget {
-    font = "sans 13",
-    text = "...",
-    widget = wibox.widget.textbox,
-}
-local viet_text = wibox.widget {
-    font = "sans 10",
-    text = "...",
-    widget = wibox.widget.textbox,
-}
-local update_fortune = function()
-    awful.spawn.easy_async_with_shell(fortune_command, function(stdout)
-        -- Remove trailing whitespaces
-        -- kanji = out:gsub("^%s*(.-)%s*$", "%1")
-        kanji = stdout:match "^KANJI@(.*)@HAN"
-        han = stdout:match "@HAN@(.*)@VIET"
-        viet = stdout:match "@VIET@(.*)@END"
-        kanji_text.markup = helpers.colorize_text(kanji, x.color4)
-        han_text.markup = helpers.colorize_text(han, x.color2)
-        viet_text.markup = helpers.colorize_text(viet, x.foreground)
-    end)
-end
-
-gears.timer {
-    autostart = true,
-    timeout = fortune_update_interval,
-    single_shot = false,
-    call_now = true,
-    callback = update_fortune,
-}
-
-local fortune_widget = wibox.widget {
-    {
-        kanji_text,
-        helpers.horizontal_pad(dpi(30)),
-        {
-            han_text,
-            helpers.vertical_pad(dpi(10)),
-            viet_text,
-            layout = wibox.layout.align.vertical,
-        },
-        layout = wibox.layout.align.horizontal,
-    },
-    margins = box_gap * 4,
-    color = "#00000000",
-    widget = wibox.container.margin,
-}
-
-local fortune_box = create_boxed_widget(fortune_widget, dpi(230), dpi(100), "#313744")
-fortune_box:buttons(gears.table.join(
-    -- Left click - New fortune
-    awful.button({}, 1, update_fortune)
-))
-helpers.add_hover_cursor(fortune_box, "hand1")
+local kanji_box = require "widget.kanji"
 -- Uptime
 local uptime_text = wibox.widget.textbox()
 awful.widget.watch("sh -c 'uptime -p | sed 's/^...//''", 60, function(_, stdout)
@@ -332,7 +269,7 @@ local action = awful.popup {
         {
             notifs,
             {
-                fortune_box,
+                kanji_box,
                 disk_box,
                 layout = wibox.layout.align.horizontal,
             },

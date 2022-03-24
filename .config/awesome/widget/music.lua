@@ -51,7 +51,6 @@ local music_text = wibox.widget {
 
 local music_art = wibox.widget {
     image = gears.color.recolor_image(os.getenv "HOME" .. "/.config/awesome/icons/no-notifs.png", x.foreground),
-
     resize = true,
     opacity = 0.2,
     halign = "center",
@@ -70,7 +69,7 @@ local filter_color = {
     type = "linear",
     from = { 0, 0 },
     to = { 0, 300 },
-    stops = { { 0, beautiful.dash_box_bg .. "10" }, { 1, beautiful.dash_box_bg } },
+    stops = { { 0, x.background .. "10" }, { 1, x.background } },
 }
 
 local music_art_filter = wibox.widget {
@@ -182,7 +181,10 @@ playerctl:connect_signal("metadata", function(_, title, artist, album_path, __, 
         artist = "No Artist"
     end
     if album_path == "" then
-        album_path = gears.filesystem.get_configuration_dir() .. "icons/no_music.png"
+        album_path = gears.color.recolor_image(
+            os.getenv "HOME" .. "/.config/awesome/icons/no-notifs.png",
+            x.foreground .. "88"
+        )
     end
 
     music_art:set_image(gears.surface.load_uncached(album_path))
