@@ -50,7 +50,8 @@ local music_text = wibox.widget {
 }
 
 local music_art = wibox.widget {
-    image = gears.filesystem.get_configuration_dir() .. "icons/pngegg.png",
+    image = gears.color.recolor_image(os.getenv "HOME" .. "/.config/awesome/icons/no-notifs.png", x.foreground),
+
     resize = true,
     opacity = 0.2,
     halign = "center",
@@ -60,23 +61,23 @@ local music_art = wibox.widget {
 
 local music_art_container = wibox.widget {
     music_art,
-    forced_height = dpi(120),
-    forced_width = dpi(120),
+    forced_height = dpi(200),
+    forced_width = dpi(200),
     widget = wibox.container.background,
 }
 
 local filter_color = {
     type = "linear",
     from = { 0, 0 },
-    to = { 0, 250 },
-    stops = { { 0, beautiful.dash_box_bg .. "11" }, { 1, beautiful.dash_box_bg } },
+    to = { 0, 300 },
+    stops = { { 0, beautiful.dash_box_bg .. "10" }, { 1, beautiful.dash_box_bg } },
 }
 
 local music_art_filter = wibox.widget {
     {
         bg = filter_color,
-        forced_height = dpi(120),
-        forced_width = dpi(120),
+        forced_height = dpi(200),
+        forced_width = dpi(200),
         widget = wibox.container.background,
     },
     direction = "east",
@@ -119,7 +120,7 @@ local slider = wibox.widget {
     shape = helpers.rrect(beautiful.border_radius),
     background_color = x.color0,
     color = x.color1,
-    value = 25,
+    value = 50,
     max_value = 100,
     widget = wibox.widget.progressbar,
 }

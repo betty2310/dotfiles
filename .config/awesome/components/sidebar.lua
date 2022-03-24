@@ -219,10 +219,10 @@ volume:buttons(gears.table.join(
     awful.button({}, 3, apps.volume),
     -- Scroll - Increase / Decrease volume
     awful.button({}, 4, function()
-        helpers.volume_control(2)
+        awful.spawn.with_shell "amixer -q sset Master 3%+"
     end),
     awful.button({}, 5, function()
-        helpers.volume_control(-2)
+        awful.spawn.with_shell "amixer -q sset Master 3%-"
     end)
 ))
 
@@ -502,16 +502,16 @@ sidebar:setup {
                     layout = wibox.layout.align.horizontal,
                 },
 
-                helpers.vertical_pad(dpi(20)),
+                helpers.vertical_pad(dpi(30)),
                 layout = wibox.layout.fixed.vertical,
             },
             layout = wibox.layout.fixed.vertical,
         },
         { ----------- MIDDLE GROUP -----------
             {
-                helpers.vertical_pad(dpi(30)),
+                helpers.vertical_pad(dpi(25)),
                 weather_box,
-                helpers.vertical_pad(dpi(30)),
+                helpers.vertical_pad(dpi(25)),
                 {
                     {
                         mpd_buttons,

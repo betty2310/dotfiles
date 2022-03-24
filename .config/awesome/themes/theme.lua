@@ -95,7 +95,7 @@ theme.titlebar_fg_normal = x.color8
 --theme.titlebar_fg = x.color7
 
 -- Notifications
-theme.notification_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/cat2.png")
+theme.notification_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/love.png")
 theme.notification_position = "top_right"
 theme.notification_border_width = dpi(0)
 theme.notification_border_radius = theme.border_radius

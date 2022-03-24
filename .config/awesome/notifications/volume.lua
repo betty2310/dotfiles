@@ -26,16 +26,16 @@ awesome.connect_signal("signal::volume", function(percentage, muted)
                 if percentage == 0 then
                     icon = icons.image.muted
                 end
-                if percentage > 0 and percentage <= 45 then
+                if percentage > 0 and percentage <= 35 then
                     icon = icons.image.low
                 end
-                if percentage > 45 and percentage <= 70 then
-                    icon = icons.image.mediumm
+                if percentage > 35 and percentage <= 65 then
+                    icon = icons.image.medium
                 end
-                if percentage > 70 and percentage <= 90 then
+                if percentage > 65 and percentage <= 85 then
                     icon = icons.image.high
                 end
-                if percentage > 90 then
+                if percentage > 85 then
                     icon = icons.image.max
                 end
             end

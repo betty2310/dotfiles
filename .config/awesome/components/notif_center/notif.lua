@@ -31,6 +31,19 @@ local notifs_empty = wibox.widget {
         nil,
         {
             nil,
+            helpers.vertical_pad(dpi(30)),
+            {
+                widget = wibox.widget.imagebox,
+                image = gears.color.recolor_image(
+                    os.getenv "HOME" .. "/.config/awesome/icons/no-notifs.png",
+                    x.foreground
+                ),
+                forced_height = 120,
+                forced_width = 120,
+                valign = "center",
+                halign = "center",
+            },
+            helpers.vertical_pad(dpi(20)),
             {
                 markup = "<span foreground='" .. x.foreground .. "'>😀 No Notifications</span>",
                 font = "sans 13",
@@ -38,11 +51,11 @@ local notifs_empty = wibox.widget {
                 valign = "center",
                 widget = wibox.widget.textbox,
             },
-            layout = wibox.layout.align.vertical,
+            layout = wibox.layout.fixed.vertical,
         },
         layout = wibox.layout.align.horizontal,
     },
-    forced_height = 160,
+    -- forced_height = 200,
     widget = wibox.container.background,
 }
 
