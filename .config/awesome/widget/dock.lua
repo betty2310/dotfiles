@@ -1,13 +1,13 @@
 -- TODO: The functions that create and update the buttons should be decoupled
 -- from the dock logic. This will make it easy to create new dock themes.
-local gears = require("gears")
-local awful = require("awful")
-local wibox = require("wibox")
-local helpers = require("helpers")
-local beautiful = require("beautiful")
-local apps = require("apps")
+local gears = require "gears"
+local awful = require "awful"
+local wibox = require "wibox"
+local helpers = require "helpers"
+local beautiful = require "beautiful"
+local apps = require "apps"
 local cairo = require("lgi").cairo
-local icons = require("icons")
+local icons = require "icons"
 local class_icons = icons.text.by_class
 
 -- TODO: These variables (and more) should ideally be retrieved through `beautiful`
@@ -52,6 +52,7 @@ dock_pinned_apps = {
     { class = "scratchpad", launcher = apps.scratchpad },
     { class = "Code", launcher = apps.code },
     { class = "email", launcher = apps.mail },
+    { class = "obsidian", launcher = apps.obsidian },
 }
 
 ----------------------------------------------------------------------------
@@ -89,7 +90,7 @@ end
 
 -- Cycle windows of the same class
 local function cycle_by_class(class, forward)
-    local clients = helpers.find_clients({ class = class })
+    local clients = helpers.find_clients { class = class }
     local num_clients = #clients
     if num_clients == 0 then
         -- Nothing to do
@@ -132,7 +133,7 @@ end
 
 -- Function that creates a dock icon and attaches buttons to it.
 local function generate_dock_icon(c, bg, fg, symbol)
-    local icon = wibox.widget({
+    local icon = wibox.widget {
         {
             font = item_font,
             markup = helpers.colorize_text(symbol, fg),
@@ -146,7 +147,7 @@ local function generate_dock_icon(c, bg, fg, symbol)
         forced_width = item_size,
         bg = bg,
         widget = wibox.container.background,
-    })
+    }
 
     local indicator_focused = cairo.ImageSurface.create(cairo.Format.ARGB32, item_size, indicator_height)
     local indicator_unfocused = cairo.ImageSurface.create(cairo.Format.ARGB32, item_size, indicator_height)
@@ -159,7 +160,7 @@ local function generate_dock_icon(c, bg, fg, symbol)
     local is_focused = client.focus and (client.focus.class == c.class) and true or false
 
     -- Put everything together
-    local w = wibox.widget({
+    local w = wibox.widget {
         {
             icon,
             {
@@ -198,7 +199,7 @@ local function generate_dock_icon(c, bg, fg, symbol)
         left = item_margin,
         right = item_margin,
         widget = wibox.container.margin,
-    })
+    }
 
     -- Store class here because c will become nil whenever it closes
     local class = c.class
@@ -253,7 +254,7 @@ local function generate_dock_icon(c, bg, fg, symbol)
         -- Right click: Spawn rofi menu that allows picking between all windows
         -- of this class
         awful.button({}, 3, function()
-            local clients = helpers.find_clients({ class = class })
+            local clients = helpers.find_clients { class = class }
             -- Stop if no such client was found
             if #clients == 0 then
                 return
@@ -315,9 +316,9 @@ local function generate_dock_icon(c, bg, fg, symbol)
 end
 
 -- Dock items will be inserted into this layout
-local dock = wibox.widget({
+local dock = wibox.widget {
     layout = wibox.layout.fixed.horizontal,
-})
+}
 
 -- Initialize dock with pinned clients
 for i = 1, #dock_pinned_classes do
@@ -366,7 +367,7 @@ add_client = function(c)
     local handle_class_change
     handle_class_change = function(c)
         c:disconnect_signal("property::class", handle_class_change)
-        remove_client({ class = old_class })
+        remove_client { class = old_class }
         add_client(c)
     end
     c:connect_signal("property::class", handle_class_change)

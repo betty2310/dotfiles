@@ -2584,3 +2584,7 @@ Mar 24 21:45 : exception: Failed to open "My ALSA Device" (alsa); Failed to open
 Mar 24 21:48 : player: played "Natural-[0I647GU3Jsc].mp3"
 Mar 24 21:48 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
 Mar 24 22:19 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 24 23:45 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 25 10:21 : config: option 'device' on line 21 was not recognized
+Mar 25 15:22 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 25 16:23 : config: option 'device' on line 21 was not recognized

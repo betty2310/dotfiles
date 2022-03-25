@@ -81,7 +81,7 @@ local notifications = require "notifications"
 notifications.init()
 local decorations = require "components.titlebar"
 decorations.init()
-local helpers = require "helpers" 
+local helpers = require "helpers"
 
 F = {}
 require "components.bar"
@@ -124,12 +124,12 @@ awful.layout.layouts = {
 awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit
     local layouts = {
-        bling.layout.equalarea,
+        bling.layout.centered,
         bling.layout.deck,
         bling.layout.deck,
-        l.spiral.dwindle,
-        bling.layout.mstab,
-        l.spiral.dwindle,
+        l.max,
+        l.max,
+        l.max,
         bling.layout.deck,
     }
 
@@ -492,13 +492,13 @@ awful.rules.rules = {
     },
 
     -- Anki
-    {
-        rule = { class = "Anki" },
-        properties = {},
-        callback = function(c)
-            c.opacity = 0.9
-        end,
-    },
+    -- {
+    --     rule = { class = "Anki" },
+    --     properties = {},
+    --     callback = function(c)
+    --         c.opacity = 0.8
+    --     end,
+    -- },
 
     {
         rule_any = {

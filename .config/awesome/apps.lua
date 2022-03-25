@@ -40,6 +40,9 @@ apps.anki = function()
     helpers.run_or_raise({ class = "Anki" }, false, "anki")
 end
 
+apps.obsidian = function()
+    helpers.run_or_raise({ class = "obsidian" }, false, "obsidian")
+end
 apps.steam = function()
     helpers.run_or_raise({ class = "Steam" }, false, "steam")
 end

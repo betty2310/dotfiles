@@ -98,6 +98,7 @@ icons.text.by_class = {
     ["sensors"] = { symbol = "", color = x.color1 },
     ["et"] = { symbol = "", color = x.color2 },
     ["copyq"] = { symbol = "", color = x.color2 },
+    ["obsidian"] = { symbol = "", color = x.color13 },
 
     -- Default
     ["_"] = { symbol = "", color = x.color4 },
