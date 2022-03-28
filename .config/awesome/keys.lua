@@ -199,6 +199,7 @@ keys.globalkeys = gears.table.join(
     awful.key({ altkey, "Shift" }, "n", function()
         awful.layout.inc(-1)
     end, { description = "select previous", group = "layout" }),
+
     awful.key({ superkey }, "'", function()
         awful.layout.set(awful.layout.suit.max)
         helpers.single_double_tap(nil, function()

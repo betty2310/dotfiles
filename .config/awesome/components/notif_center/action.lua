@@ -306,8 +306,8 @@ awful.placement.maximize_vertically(
 local slide = rubato.timed {
     pos = 1920,
     rate = 60,
-    intro = 0.3,
-    duration = 0.8,
+    intro = 0.2,
+    duration = 0.5,
     easing = rubato.quadratic,
     awestore_compat = true,
     subscribed = function(pos)

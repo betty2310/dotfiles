@@ -124,7 +124,7 @@ awful.layout.layouts = {
 awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit
     local layouts = {
-        bling.layout.centered,
+        l.spiral.dwindle,
         bling.layout.deck,
         bling.layout.deck,
         l.max,

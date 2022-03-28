@@ -55,6 +55,9 @@ end
 apps.code = function()
     awful.spawn.with_shell "code"
 end
+apps.mars = function()
+    awful.spawn.with_shell "mars-mips"
+end
 apps.font = function()
     awful.spawn.with_shell "font-manager"
 end
@@ -112,7 +115,7 @@ apps.night_mode = function()
     awful.spawn.easy_async_with_shell(cmd, function(out)
         local message = out:match "ON" and "Activated!" or "Deactivated!"
         night_mode_notif = notifications.notify_dwim(
-            { title = "Night mode", message = message, app_name = "night_mode", icon = icons.image.redshift },
+            { title = "Night mode", message = message, app_name = "night_mode", icon = icons.image.nightmode },
             night_mode_notif
         )
     end)

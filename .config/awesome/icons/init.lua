@@ -99,6 +99,7 @@ icons.text.by_class = {
     ["et"] = { symbol = "", color = x.color2 },
     ["copyq"] = { symbol = "", color = x.color2 },
     ["obsidian"] = { symbol = "", color = x.color13 },
+    ["Mars"] = { symbol = "", color = x.color11 },
 
     -- Default
     ["_"] = { symbol = "", color = x.color4 },
@@ -123,6 +124,7 @@ local image_icon_names = {
     "games",
     "files",
     "manual",
+    "nightmode",
     "keyboard",
     "appearance",
     "editor",

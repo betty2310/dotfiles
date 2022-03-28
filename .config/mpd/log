@@ -2588,3 +2588,184 @@ Mar 24 23:45 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7
 Mar 25 10:21 : config: option 'device' on line 21 was not recognized
 Mar 25 15:22 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
 Mar 25 16:23 : config: option 'device' on line 21 was not recognized
+Mar 25 21:05 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 26 11:04 : config: option 'device' on line 21 was not recognized
+Mar 26 12:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 26 12:32 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 12:32 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 12:32 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 12:32 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 12:32 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 12:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 26 12:32 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 26 12:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 26 13:30 : player: played "Love_Yourself_Live_At_Jingle_Bell_Ball_2015-[5V_FQa363Y0].mp3"
+Mar 26 20:15 : config: option 'device' on line 21 was not recognized
+Mar 26 20:18 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 26 20:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:18 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:30 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:31 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 20:36 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:57 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 21:58 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 26 22:58 : player: played "Love_Yourself_Live_At_Jingle_Bell_Ball_2015-[5V_FQa363Y0].mp3"
+Mar 27 09:53 : config: option 'device' on line 21 was not recognized
+Mar 27 11:42 : player: played "Love_Yourself_Live_At_Jingle_Bell_Ball_2015-[5V_FQa363Y0].mp3"
+Mar 27 11:56 : config: option 'device' on line 21 was not recognized
+Mar 27 12:12 : player: played "Love_Yourself_Live_At_Jingle_Bell_Ball_2015-[5V_FQa363Y0].mp3"
+Mar 27 15:20 : config: option 'device' on line 21 was not recognized
+Mar 27 20:43 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 20:43 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:43 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:43 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:43 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:43 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:44 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Mar 27 20:48 : player: played "Love_Yourself_Live_At_Jingle_Bell_Ball_2015-[5V_FQa363Y0].mp3"
+Mar 27 20:48 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 20:53 : player: played "Dusk_Till_Dawn_Official_Video_ft._Sia-[tt2k8PGm-TI].mp3"
+Mar 27 20:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 20:57 : player: played "Stitches_Official_Video-[VbfpW0pbvaU].mp3"
+Mar 27 20:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:01 : player: played "Safe_Sound_feat._The_Civil_Wars_The_Hunger_Games_-_Songs_From_District_12_And_Beyond-[RzhAS_GnJIc].mp3"
+Mar 27 21:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:05 : player: played "MORE_ft._Madison_Beer_G_I-DLE_Lexie_Liu_Jaira_Burns_Seraphine_Official_Music_Video-[3VTkBuxU4yk].mp3"
+Mar 27 21:05 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:10 : player: played "Counting_Stars_Official_Music_Video-[hT_nvWreIhg].mp3"
+Mar 27 21:10 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:15 : player: played "Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3"
+Mar 27 21:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:19 : player: played "You_Spin_Me_Round_Feat._Silver_Letomi-[b4JfmlpAdRM].mp3"
+Mar 27 21:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:23 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 27 21:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:28 : player: played "Taylor_Swift_exile_feat._Bon_Iver_Official_Lyric_Video-[osdoLjUNFnA].mp3"
+Mar 27 21:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 21:32 : player: played "Look_What_You_Made_Me_Do-[3tmd-ClpJxA].mp3"
+Mar 27 21:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 27 22:48 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 27 22:49 : config: option 'device' on line 21 was not recognized
+Mar 27 23:20 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 28 08:27 : config: option 'device' on line 21 was not recognized
+Mar 28 08:39 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 28 08:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 28 08:59 : client: [23] command "close" during idle
+Mar 28 09:03 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 28 09:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 28 09:04 : player: played "Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3"
+Mar 28 09:05 : config: option 'device' on line 21 was not recognized
+Mar 28 09:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 28 09:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 28 09:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 28 09:08 : player: played "Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3"
+Mar 28 10:57 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
+Mar 28 10:59 : config: option 'device' on line 21 was not recognized

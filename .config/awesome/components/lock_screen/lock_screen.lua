@@ -53,13 +53,13 @@ end
 -- Items
 local day_of_the_week = wibox.widget {
     -- Fancy font
-    font = "Meow Script Regular 110",
+    font = "Meow Script Regular 115",
     -- font = "Space Craft 50",
     -- font = "Razed Galerie 70",
     -- font = "A-15-BIT 70",
     -- font = "Kill The Noise 90",
     -- Set forced width in order to keep it from getting cut off
-    forced_width = dpi(1000),
+    forced_width = dpi(1500),
     align = "center",
     valign = "center",
     widget = wibox.widget.textclock(helpers.colorize_text("%A", x.color2)),
@@ -69,7 +69,7 @@ local month = wibox.widget {
     font = "sans 100",
     align = "center",
     valign = "center",
-    widget = wibox.widget.textclock "%B %d",
+    widget = wibox.widget.textclock "%B, %d",
 }
 
 local function update_month()
@@ -260,6 +260,22 @@ lock_screen_box:setup {
                                 forced_height = dpi(5),
                                 forced_width = dpi(5),
                                 shape = gears.shape.circle,
+                                bg = x.color1,
+                                widget = wibox.container.background,
+                            },
+                            -- Small circle
+                            {
+                                forced_height = dpi(5),
+                                forced_width = dpi(5),
+                                shape = gears.shape.circle,
+                                bg = x.color2,
+                                widget = wibox.container.background,
+                            },
+                            -- Small circle
+                            {
+                                forced_height = dpi(5),
+                                forced_width = dpi(5),
+                                shape = gears.shape.circle,
                                 bg = x.color3,
                                 widget = wibox.container.background,
                             },
@@ -272,7 +288,23 @@ lock_screen_box:setup {
                                 bg = x.color3,
                                 widget = wibox.container.background,
                             },
-                            spacing = dpi(4),
+                            -- Small circle
+                            {
+                                forced_height = dpi(5),
+                                forced_width = dpi(5),
+                                shape = gears.shape.circle,
+                                bg = x.color2,
+                                widget = wibox.container.background,
+                            },
+                            -- Small circle
+                            {
+                                forced_height = dpi(5),
+                                forced_width = dpi(5),
+                                shape = gears.shape.circle,
+                                bg = x.color1,
+                                widget = wibox.container.background,
+                            },
+                            spacing = dpi(8),
                             layout = wibox.layout.fixed.horizontal,
                         },
                         expand = "none",

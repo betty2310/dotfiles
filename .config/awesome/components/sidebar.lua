@@ -25,11 +25,11 @@ end
 
 local weather_widget = require "widget.text_weather"
 local weather_widget_icon = weather_widget:get_all_children()[1]
-weather_widget_icon.font = "icomoon 27"
+weather_widget_icon.font = "icomoon 29"
 weather_widget_icon.align = "center"
 weather_widget_icon.valign = "center"
 local weather_widget_description = weather_widget:get_all_children()[2]
-weather_widget_description.font = "sans medium 10"
+weather_widget_description.font = "sans medium 12"
 local weather_widget_temperature = weather_widget:get_all_children()[3]
 weather_widget_temperature.font = "sans medium 10"
 
@@ -85,7 +85,7 @@ local weather = wibox.widget {
     widget = wibox.container.margin,
 }
 
-local weather_box = create_boxed_widget(weather, dpi(50), dpi(50), x.background)
+local weather_box = create_boxed_widget(weather, dpi(50), dpi(40), x.background)
 
 local temperature_bar = require "widget.temperature_bar"
 local temperature = format_progress_bar(temperature_bar)
