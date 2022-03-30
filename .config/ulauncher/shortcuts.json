@@ -1,0 +1,112 @@
+{
+    "4a1d3ad4-02b7-4804-ac9d-043bd250adcd": {
+        "id": "4a1d3ad4-02b7-4804-ac9d-043bd250adcd",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1646268348.4232533
+    },
+    "cd938061-3683-4248-abe1-7fdc84ce4be7": {
+        "id": "cd938061-3683-4248-abe1-7fdc84ce4be7",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1646268348.423292
+    },
+    "719a893c-47e2-441c-8964-468794015cbd": {
+        "id": "719a893c-47e2-441c-8964-468794015cbd",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1646268348.4233167
+    },
+    "0ea9134b-ed22-455c-92f1-22a126b4a633": {
+        "id": "0ea9134b-ed22-455c-92f1-22a126b4a633",
+        "name": "Facebook",
+        "keyword": "fa",
+        "cmd": "https://www.facebook.com/",
+        "icon": "~/Pictures/icons/facebook.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1646930980.3537621
+    },
+    "9c982445-5357-4e34-aff2-aeba7abe9e63": {
+        "id": "9c982445-5357-4e34-aff2-aeba7abe9e63",
+        "name": "Reddit",
+        "keyword": "re",
+        "cmd": "https://www.reddit.com/",
+        "icon": "~/Pictures/icons/reddit.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1646931038.8350723
+    },
+    "a96cb022-8c6f-4de3-9bfb-d1ae83272910": {
+        "id": "a96cb022-8c6f-4de3-9bfb-d1ae83272910",
+        "name": "Github",
+        "keyword": "gh",
+        "cmd": "https://www.reddit.com/",
+        "icon": "~/Pictures/icons/github.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1646931069.740417
+    },
+    "07ad1d64-f288-40e9-87c3-69ff2de1a0c0": {
+        "id": "07ad1d64-f288-40e9-87c3-69ff2de1a0c0",
+        "name": "Youtube",
+        "keyword": "yt",
+        "cmd": "https://www.youtube.com/",
+        "icon": "~/Pictures/icons/youtube.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1646931103.5396593
+    },
+    "9ba3d38e-1d6f-4b55-9f5f-222c98f3dfd2": {
+        "id": "9ba3d38e-1d6f-4b55-9f5f-222c98f3dfd2",
+        "name": "OneDrive",
+        "keyword": "od",
+        "cmd": "https://husteduvn-my.sharepoint.com/personal/huynh_dh205087_sis_hust_edu_vn/_layouts/15/onedrive.aspx",
+        "icon": "~/Pictures/icons/onedrive.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1648032565.9662592
+    },
+    "cb234b4d-94fe-4dbb-b7af-5d6d1b046341": {
+        "id": "cb234b4d-94fe-4dbb-b7af-5d6d1b046341",
+        "name": "Google Drive",
+        "keyword": "gd",
+        "cmd": "https://drive.google.com/drive/u/0/my-drive",
+        "icon": "~/Pictures/icons/google-drive.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1648032635.8739874
+    },
+    "5f0348c7-60a1-4d1b-85c5-e5bfa7e68a77": {
+        "id": "5f0348c7-60a1-4d1b-85c5-e5bfa7e68a77",
+        "name": "Youtube",
+        "keyword": "y",
+        "cmd": "https://www.youtube.com/results?search_query=%s",
+        "icon": "~/Pictures/icons/youtube.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1648034357.3798268
+    },
+    "ffce6cbb-242e-457d-81f3-4de38d8d6ebf": {
+        "id": "ffce6cbb-242e-457d-81f3-4de38d8d6ebf",
+        "name": "Teams",
+        "keyword": "teams",
+        "cmd": "https://teams.microsoft.com/_?culture=en-us&country=WW&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/conversations/Chung?threadId=19:6ExRnwUFG4acJN-0aJSjoq795knCFoO2q2qP7ui6HUI1@thread.tacv2&ctx=channel",
+        "icon": "~/Pictures/icons/icons8-microsoft-teams-2019-144.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1648648127.9872432
+    }
+}
