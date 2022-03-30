@@ -2,6 +2,8 @@ set fish_greeting ""
 
 # starship prompt
 starship init fish | source
+# FUCK
+thefuck --alias | source
 
 # aliases
 alias llt="exa --icons --git -a --tree -s type -I '.git|node_modules|bower_components|build'"
@@ -17,6 +19,7 @@ alias lla="logo-ls -a -XDlh"
 alias ide="tmux split-window -v -p 30"
 alias za="zathura"
 alias dots="~/.scripts/dots.sh"
+alias fm="ranger"
 alias pls="sudo"
 
 # navigation
@@ -86,4 +89,3 @@ function fish_title
     # or /e/apt: [fish]
     echo $USER@$hostname: (fish_prompt_pwd_dir_length=1 prompt_pwd) [$argv];
 end
-thefuck --alias | source

@@ -2769,3 +2769,74 @@ Mar 28 09:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Mar 28 09:08 : player: played "Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3"
 Mar 28 10:57 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
 Mar 28 10:59 : config: option 'device' on line 21 was not recognized
+Mar 28 11:22 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
+Mar 28 12:10 : config: option 'device' on line 21 was not recognized
+Mar 28 12:27 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
+Mar 28 12:28 : config: option 'device' on line 21 was not recognized
+Mar 28 12:39 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
+Mar 28 12:40 : config: option 'device' on line 21 was not recognized
+Mar 28 12:55 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
+Mar 28 13:04 : config: option 'device' on line 21 was not recognized
+Mar 28 13:20 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
+Mar 28 16:57 : config: option 'device' on line 21 was not recognized
+Mar 28 20:35 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 20:38 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 28 20:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 20:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 21:05 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 21:08 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 21:08 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 21:08 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 21:36 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 22:26 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 22:27 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 28 22:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 22:32 : player: played "Taylor_Swift_exile_feat._Bon_Iver_Official_Lyric_Video-[osdoLjUNFnA].mp3"
+Mar 28 22:32 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 28 23:27 : player: played "Look_What_You_Made_Me_Do-[3tmd-ClpJxA].mp3"
+Mar 29 07:42 : config: option 'device' on line 21 was not recognized
+Mar 29 07:46 : player: played "Look_What_You_Made_Me_Do-[3tmd-ClpJxA].mp3"
+Mar 29 07:55 : config: option 'device' on line 21 was not recognized
+Mar 29 08:00 : player: played "Look_What_You_Made_Me_Do-[3tmd-ClpJxA].mp3"
+Mar 29 10:10 : config: option 'device' on line 21 was not recognized
+Mar 29 10:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 29 10:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 29 10:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 29 10:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 29 10:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 29 10:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 29 10:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 29 11:00 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 29 11:00 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 29 12:51 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 29 14:40 : config: option 'device' on line 21 was not recognized
+Mar 29 15:27 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 29 17:56 : config: option 'device' on line 21 was not recognized
+Mar 29 23:13 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 29 23:14 : config: option 'device' on line 21 was not recognized
+Mar 29 23:47 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 30 07:23 : config: option 'device' on line 21 was not recognized
+Mar 30 07:29 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 30 08:21 : config: option 'device' on line 21 was not recognized
+Mar 30 12:40 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 30 15:24 : config: option 'device' on line 21 was not recognized
+Mar 30 16:17 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 30 20:27 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 30 20:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 30 20:31 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 30 20:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 30 20:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 30 20:32 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 30 20:32 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 30 20:32 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 30 20:33 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 30 20:35 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 30 20:36 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Mar 30 20:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 30 20:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 30 20:40 : player: played "God_s_Country_Official_Music_Video-[ZEWGyyLiqY4].mp3"
+Mar 30 20:40 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 30 20:43 : player: played "Natural-[0I647GU3Jsc].mp3"
+Mar 30 20:43 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 30 20:47 : player: played "You_Belong_With_Me-[VuNIsY6JdUw].mp3"
+Mar 30 20:47 : output: Failed to play on "pulse audio" (pulse): suspended
