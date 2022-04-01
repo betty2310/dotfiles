@@ -121,13 +121,12 @@ theme.snap_border_width = dpi(3)
 
 -- Tag names
 theme.tagnames = {
-    "DEV",
-    "WEB",
-    "TERM",
-    "DOCS",
-    "CHAT",
-    "SYS",
-    "#",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
 }
 
 -- Widget separator

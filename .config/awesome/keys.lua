@@ -413,7 +413,7 @@ keys.globalkeys = gears.table.join(
     end, { description = "show or hide wibar(s)", group = "awesome" }),
 
     awful.key({ superkey, shiftkey }, "i", function()
-        awful.spawn.with_shell "google-chrome-stable"
+        apps.browser()
     end, { description = "google", group = "launcher" }),
 
     -- Spotify scratchpad
@@ -428,7 +428,7 @@ keys.globalkeys = gears.table.join(
     end, { description = "notion", group = "launcher" }),
 
     awful.key({ superkey, shiftkey }, "a", function(c)
-        awful.spawn.with_shell "anki"
+        apps.anki()
     end, { description = "anki", group = "launcher" }),
 
     awful.key({ superkey, shiftkey }, "p", function()
@@ -646,20 +646,17 @@ end
 
 keys.globalkeys = gears.table.join(
     keys.globalkeys,
-    awful.key({ superkey }, 7, function()
+    awful.key({ superkey }, 8, function()
         helpers.tag_back_and_forth(4)
     end),
 
-    awful.key({ superkey }, 8, function()
+    awful.key({ superkey }, 9, function()
         helpers.tag_back_and_forth(5)
     end),
-    awful.key({ superkey }, 9, function()
+    awful.key({ superkey }, 0, function()
         helpers.tag_back_and_forth(6)
     end),
-    awful.key({ superkey }, 0, function()
-        helpers.tag_back_and_forth(7)
-    end),
-    awful.key({ superkey, shiftkey }, 7, function()
+    awful.key({ superkey, shiftkey }, 8, function()
         if client.focus then
             local tag = client.focus.screen.tags[4]
             if tag then
@@ -667,7 +664,7 @@ keys.globalkeys = gears.table.join(
             end
         end
     end),
-    awful.key({ superkey, shiftkey }, 8, function()
+    awful.key({ superkey, shiftkey }, 9, function()
         if client.focus then
             local tag = client.focus.screen.tags[5]
             if tag then
@@ -675,17 +672,9 @@ keys.globalkeys = gears.table.join(
             end
         end
     end),
-    awful.key({ superkey, shiftkey }, 9, function()
-        if client.focus then
-            local tag = client.focus.screen.tags[6]
-            if tag then
-                client.focus:move_to_tag(tag)
-            end
-        end
-    end),
     awful.key({ superkey, shiftkey }, 0, function()
         if client.focus then
-            local tag = client.focus.screen.tags[7]
+            local tag = client.focus.screen.tags[6]
             if tag then
                 client.focus:move_to_tag(tag)
             end

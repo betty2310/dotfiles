@@ -37,11 +37,11 @@ apps.gimp = function()
 end
 
 apps.anki = function()
-    helpers.run_or_raise({ class = "Anki" }, false, "anki")
+    helpers.run_or_raise({ class = "Anki" }, true, "anki", { switchtotag = true })
 end
 
 apps.obsidian = function()
-    helpers.run_or_raise({ class = "obsidian" }, false, "obsidian")
+    helpers.run_or_raise({ class = "obsidian" }, true, "obsidian")
 end
 apps.steam = function()
     helpers.run_or_raise({ class = "Steam" }, false, "steam")

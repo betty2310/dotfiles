@@ -71,6 +71,7 @@ naughty.connect_signal("request::display_error", function(message, startup)
         urgency = "critical",
         title = "Oops, an error happened" .. (startup and " during startup!" or "!"),
         message = message,
+        icon = beautiful.notification_icon,
     }
 end)
 
@@ -124,13 +125,12 @@ awful.layout.layouts = {
 awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit
     local layouts = {
+        bling.layout.deck,
+        bling.layout.deck,
         l.spiral.dwindle,
-        bling.layout.deck,
-        bling.layout.deck,
+        bling.layout.mstab,
         l.max,
         l.max,
-        l.max,
-        bling.layout.deck,
     }
 
     local tagnames = beautiful.tagnames
@@ -540,47 +540,6 @@ awful.rules.rules = {
         end,
     },
 
-    ---------------------------------------------
-    -- Start application on specific workspace --
-    ---------------------------------------------
-    --
-
-    -- Code
-    {
-        rule_any = {
-            class = {
-                "Code",
-                "scratchpad",
-            },
-        },
-        except_any = {
-            role = { "GtkFileChooserDialog" },
-            instance = { "Toolkit" },
-            type = { "dialog" },
-        },
-        properties = {
-            screen = 1,
-            --tag = awful.screen.focused().tags[3]
-        },
-    },
-    -- Browsing
-    {
-        rule_any = {
-            class = {
-                "qutebrowser",
-                "Google-chrome",
-            },
-        },
-        except_any = {
-            role = { "GtkFileChooserDialog" },
-            instance = { "Toolkit" },
-            type = { "dialog" },
-        },
-        properties = {
-            -- screen = 2,
-            -- tag = awful.screen.focused().tags[1]
-        },
-    },
     -- Google Picture-in-Picture
     {
         rule = { name = "Picture in picture" },
@@ -604,12 +563,53 @@ awful.rules.rules = {
         end,
     },
 
+    ---------------------------------------------
+    -- Start application on specific workspace --
+    ---------------------------------------------
+    --
+
+    -- Code
+    {
+        rule_any = {
+            class = {
+                "Code",
+                "Anki",
+                "scratchpad",
+            },
+        },
+        except_any = {
+            role = { "GtkFileChooserDialog" },
+            instance = { "Toolkit" },
+            type = { "dialog" },
+        },
+        properties = {
+            screen = 1,
+            tag = awful.screen.focused().tags[2],
+        },
+    },
+    -- Browsing
+    {
+        rule_any = {
+            class = {
+                "qutebrowser",
+                "Google-chrome",
+            },
+        },
+        except_any = {
+            role = { "GtkFileChooserDialog" },
+            instance = { "Toolkit" },
+            type = { "dialog" },
+        },
+        properties = {
+            -- screen = 2,
+            tag = awful.screen.focused().tags[1],
+        },
+    },
     -- Term
     {
         rule_any = {
             class = {
-                "Anki",
-                "wisdom-tree",
+                "St",
             },
             instance = {
                 "leagueclient.exe",
@@ -618,17 +618,30 @@ awful.rules.rules = {
             },
         },
         properties = {
-            screen = 1,
-            tag = awful.screen.focused().tags[2],
+            -- screen = 1,
+            tag = awful.screen.focused().tags[3],
         },
     },
     -- Docs
     {
         rule_any = {
             class = {
-                "firefox",
                 "Zathura",
-                "gotop",
+            },
+        },
+        properties = {
+            screen = 1,
+            tag = awful.screen.focused().tags[4],
+        },
+    },
+
+    -- Notes
+    {
+        rule_any = {
+            class = {
+                "notion-app-enhanced",
+                "Zathura",
+                "Obsidian",
             },
             instance = {
                 "btop",
@@ -636,10 +649,9 @@ awful.rules.rules = {
         },
         properties = {
             screen = 1,
-            -- tag = awful.screen.focused().tags[4]
+            tag = awful.screen.focused().tags[4],
         },
     },
-
     -- Chatting
     {
         rule_any = {
@@ -661,6 +673,7 @@ awful.rules.rules = {
                 "btop",
                 "battop",
                 "gotop",
+                "sensors",
             },
             instance = {
                 "btop",
@@ -696,7 +709,7 @@ awful.rules.rules = {
                 "Steam",
             },
         },
-        properties = { screen = 1, tag = awful.screen.focused().tags[7] },
+        properties = { screen = 1, tag = awful.screen.focused().tags[6] },
     },
 
     -- All clients that I want out of my way when they are running
@@ -713,7 +726,7 @@ awful.rules.rules = {
         except_any = {
             type = { "dialog" },
         },
-        properties = { screen = 2, tag = awful.screen.focused().tags[7] },
+        properties = { screen = 2, tag = awful.screen.focused().tags[6] },
     },
 }
 -- (Rules end here) ..................................................

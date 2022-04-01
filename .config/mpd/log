@@ -2840,3 +2840,60 @@ Mar 30 20:43 : player: played "Natural-[0I647GU3Jsc].mp3"
 Mar 30 20:43 : output: Failed to play on "pulse audio" (pulse): suspended
 Mar 30 20:47 : player: played "You_Belong_With_Me-[VuNIsY6JdUw].mp3"
 Mar 30 20:47 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 30 20:51 : player: played "We_Don_t_Talk_Anymore_feat._Selena_Gomez_Official_Video-[3AtDnEC4zak].mp3"
+Mar 30 20:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 30 21:18 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 30 21:20 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 30 21:20 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 30 21:24 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 30 21:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Mar 30 21:47 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 30 21:56 : config: option 'device' on line 21 was not recognized
+Mar 30 23:51 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 31 07:08 : config: option 'device' on line 21 was not recognized
+Mar 31 07:23 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 31 10:08 : config: option 'device' on line 21 was not recognized
+Mar 31 10:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 10:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 10:56 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 31 10:58 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 10:59 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 10:59 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 31 11:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 11:03 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 31 11:06 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 11:06 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 31 12:03 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 31 14:03 : config: option 'device' on line 21 was not recognized
+Mar 31 14:16 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 31 14:17 : config: option 'device' on line 21 was not recognized
+Mar 31 15:21 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Mar 31 16:07 : config: option 'device' on line 21 was not recognized
+Mar 31 20:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 20:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 20:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 20:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 20:21 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 20:50 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 20:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 20:50 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 20:50 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 20:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 20:53 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 20:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 21:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 21:20 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 21:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 21:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 21:24 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Mar 31 21:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 21:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Mar 31 21:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Mar 31 23:51 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 01 10:22 : config: option 'device' on line 21 was not recognized
+Apr 01 10:24 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 01 10:33 : config: option 'device' on line 21 was not recognized
+Apr 01 11:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 01 11:50 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 01 12:22 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 01 12:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
