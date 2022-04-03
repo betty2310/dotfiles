@@ -1,16 +1,22 @@
-local awful = require("awful")
-local gears = require("gears")
-local wibox = require("wibox")
+local awful = require "awful"
+local gears = require "gears"
+local wibox = require "wibox"
 
+local function rounded_shape(size)
+    return function(cr, width, height)
+        gears.shape.rounded_rect(cr, width, height, size)
+    end
+end
 local styles = {}
 styles.month = { padding = 20, fg_color = x.color7, bg_color = x.background .. "00", border_width = 0 }
 styles.normal = {}
 styles.focus = {
-    fg_color = x.color1,
-    bg_color = x.color5 .. 00,
+    fg_color = x.color0,
+    bg_color = x.color1,
     markup = function(t)
-        return "<b>" .. t .. "</b>"
+        return "<b>" .. t .. "  </b>"
     end,
+    shape = gears.shape.circle,
 }
 styles.header = {
     fg_color = x.color4,
@@ -42,7 +48,7 @@ local function decorate_cell(widget, flag, date)
     local default_fg = x.color7
     local default_bg = x.color0 .. "00"
     -- local default_bg = (weekday==0 or weekday==6) and x.color6 or x.color14
-    local ret = wibox.widget({
+    local ret = wibox.widget {
         {
             widget,
             margins = (props.padding or 2) + (props.border_width or 0),
@@ -54,30 +60,30 @@ local function decorate_cell(widget, flag, date)
         fg = props.fg_color or default_fg,
         bg = props.bg_color or default_bg,
         widget = wibox.container.background,
-    })
+    }
     return ret
 end
 
-calendar_widget = wibox.widget({
-    date = os.date("*t"),
+calendar_widget = wibox.widget {
+    date = os.date "*t",
     font = "sans medium 10",
     long_weekdays = false,
     spacing = dpi(3),
     fn_embed = decorate_cell,
     widget = wibox.widget.calendar.month,
-})
+}
 
 local current_month = os.date("*t").month
 calendar_widget:buttons(gears.table.join(
     -- Left Click - Reset date to current date
     awful.button({}, 1, function()
-        calendar_widget.date = os.date("*t")
+        calendar_widget.date = os.date "*t"
     end),
     -- Scroll - Move to previous or next month
     awful.button({}, 4, function()
         new_calendar_month = calendar_widget.date.month - 1
         if new_calendar_month == current_month then
-            calendar_widget.date = os.date("*t")
+            calendar_widget.date = os.date "*t"
         else
             calendar_widget.date = { month = new_calendar_month, year = calendar_widget.date.year }
         end
@@ -85,7 +91,7 @@ calendar_widget:buttons(gears.table.join(
     awful.button({}, 5, function()
         new_calendar_month = calendar_widget.date.month + 1
         if new_calendar_month == current_month then
-            calendar_widget.date = os.date("*t")
+            calendar_widget.date = os.date "*t"
         else
             calendar_widget.date = { month = new_calendar_month, year = calendar_widget.date.year }
         end

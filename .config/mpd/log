@@ -3354,3 +3354,99 @@ Apr 03 10:23 : output: Failed to play on "pulse audio" (pulse): suspended
 Apr 03 10:23 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Apr 03 10:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Apr 03 10:25 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 10:54 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 10:54 : client: [22403] command "close" during idle
+Apr 03 10:55 : client: [22471] command "close" during idle
+Apr 03 10:58 : client: [22942] command "close" during idle
+Apr 03 10:59 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 10:59 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:04 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:04 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:05 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:08 : player: played "spotify/Ed Sheeran - Perfect.mp3"
+Apr 03 11:08 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:08 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:11 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:11 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:14 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:14 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:18 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:18 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:21 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:21 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:24 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:25 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:25 : config: option 'device' on line 21 was not recognized
+Apr 03 11:25 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 11:25 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 11:26 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:28 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:31 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:31 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:34 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:34 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:37 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:37 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:40 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:40 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:44 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:44 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:47 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:47 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:50 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:50 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:53 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:53 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 11:56 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 11:56 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:00 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:00 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:03 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:03 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:06 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:06 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:09 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:09 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:12 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:12 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:13 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:16 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:16 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:19 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:19 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:22 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:22 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:25 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:25 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:28 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:31 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:31 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:35 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:35 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:38 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:41 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:41 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 12:44 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 12:44 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 15:39 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 15:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 15:41 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 15:41 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 15:45 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 15:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 15:48 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 15:48 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 15:51 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 15:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 15:54 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 15:54 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 15:57 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 15:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:01 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 16:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:04 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 16:04 : output: Failed to play on "pulse audio" (pulse): suspended

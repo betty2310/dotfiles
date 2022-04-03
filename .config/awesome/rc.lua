@@ -24,7 +24,7 @@ user = {
     battery_threshold_low = 20,
     battery_threshold_critical = 5,
     openweathermap_key = "d823d048acbbb25d8ab24c2d16e6de9c",
-    openweathermap_city_id = "1573517",
+    openweathermap_city_id = "1581130",
     weather_units = "metric",
     coronavirus_country = "vietnam",
 }

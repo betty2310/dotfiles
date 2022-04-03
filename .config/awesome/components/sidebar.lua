@@ -8,6 +8,7 @@ local helpers = require "helpers"
 local bling = require "lib.bling"
 local rubato = require "lib.rubato"
 
+local watch = require "awful.widget.watch"
 -- Helper function that changes the appearance of progress bars and their icons
 local function format_progress_bar(bar)
     -- Since we will rotate the bars 90 degrees, width and height are reversed
@@ -84,8 +85,16 @@ local weather = wibox.widget {
     right = dpi(30),
     widget = wibox.container.margin,
 }
-
+local weather_popup = require "widget.weather-widget.weather"
 local weather_box = create_boxed_widget(weather, dpi(50), dpi(40), x.background)
+weather_box:buttons(gears.table.join(awful.button({}, 1, function()
+    if weather_popup.visible then
+        weather_popup.visible = not weather_popup.visible
+    else
+        weather_popup:move_next_to(mouse.current_widget_geometry)
+    end
+end)))
+helpers.add_hover_cursor(weather_box, "hand1")
 
 local temperature_bar = require "widget.temperature_bar"
 local temperature = format_progress_bar(temperature_bar)
@@ -99,7 +108,65 @@ cpu:buttons(gears.table.join(awful.button({}, 1, apps.process_monitor), awful.bu
 local ram_bar = require "widget.ram_bar"
 local ram = format_progress_bar(ram_bar)
 
-ram:buttons(gears.table.join(awful.button({}, 1, apps.process_monitor), awful.button({}, 3, apps.process_monitor_gui)))
+--- Widget which is shown when user clicks on the ram widget
+local popup = awful.popup {
+    ontop = true,
+    visible = false,
+    widget = {
+        widget = wibox.widget.piechart,
+        forced_height = 200,
+        forced_width = 400,
+        colors = {
+            x.color6,
+            x.color3,
+            x.color1,
+        },
+    },
+    shape = gears.shape.rounded_rect,
+    border_width = 0,
+    offset = { x = -40, y = 0 },
+}
+local total, used, free, shared, buff_cache, available, total_swap, used_swap, free_swap
+
+local function getPercentage(value)
+    return math.floor(value / (total + total_swap) * 100 + 0.5) .. "%"
+end
+
+watch('bash -c "LANGUAGE=en_US.UTF-8 free | grep -z Mem.*Swap.*"', timeout, function(widget, stdout)
+    total, used, free, shared, buff_cache, available, total_swap, used_swap, free_swap =
+        stdout:match "(%d+)%s*(%d+)%s*(%d+)%s*(%d+)%s*(%d+)%s*(%d+)%s*Swap:%s*(%d+)%s*(%d+)%s*(%d+)"
+
+    if widget_show_buf then
+        widget.data = { used, free, buff_cache }
+    else
+        widget.data = { used, total - used }
+    end
+
+    if popup.visible then
+        popup:get_widget().data_list = {
+            { "used " .. getPercentage(used + used_swap), used + used_swap },
+            { "free " .. getPercentage(free + free_swap), free + free_swap },
+            { "buff_cache " .. getPercentage(buff_cache), buff_cache },
+        }
+    end
+end, ram)
+
+ram:buttons(awful.util.table.join(
+    awful.button({}, 1, function()
+        popup:get_widget().data_list = {
+            { "used " .. getPercentage(used + used_swap), used + used_swap },
+            { "free " .. getPercentage(free + free_swap), free + free_swap },
+            { "buff_cache " .. getPercentage(buff_cache), buff_cache },
+        }
+
+        if popup.visible then
+            popup.visible = not popup.visible
+        else
+            popup:move_next_to(mouse.current_widget_geometry)
+        end
+    end),
+    awful.button({}, 3, apps.process_monitor)
+))
 
 local brightness_bar = require "widget.brightness_bar"
 local brightness = format_progress_bar(brightness_bar)
@@ -417,8 +484,9 @@ sidebar_show = function()
 end
 
 sidebar_hide = function()
-    -- Do not hide it if prompt is active
     sidebar.visible = false
+    weather_popup.visible = false
+    popup.visible = false
 end
 
 sidebar_toggle = function()

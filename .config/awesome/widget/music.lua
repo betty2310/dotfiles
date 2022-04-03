@@ -113,6 +113,46 @@ local music_pos = wibox.widget {
     valign = "center",
     widget = wibox.widget.textbox,
 }
+
+local music_bar = wibox.widget {
+    max_value = 100,
+    value = 100,
+    background_color = x.color0,
+    color = x.color4,
+    forced_height = dpi(3),
+    widget = wibox.widget.progressbar,
+}
+
+music_bar:connect_signal("button::press", function(_, lx, __, button, ___, w)
+    if button == 1 then
+        awful.spawn.with_shell("mpc seek " .. math.ceil(lx * 100 / w.width) .. "%")
+    end
+end)
+
+local command = "mpdtime"
+local update_interval = 1
+local function isempty(s)
+    return s == nil or s == ""
+end
+
+local update_mpd = function()
+    awful.spawn.easy_async_with_shell(command, function(stdout)
+        local now = stdout:match "NOW: (.*)ALL"
+        if isempty(now) then
+            now = "1"
+        end
+        local all = stdout:match "ALL: (.*)"
+        music_bar.value = (tonumber(now) / tonumber(all)) * 100
+    end)
+end
+
+gears.timer {
+    autostart = true,
+    timeout = update_interval,
+    single_shot = false,
+    call_now = true,
+    callback = update_mpd,
+}
 local slider = wibox.widget {
     forced_height = dpi(3),
     bar_shape = helpers.rrect(beautiful.border_radius),
@@ -162,7 +202,7 @@ local music = wibox.widget {
             {
                 music_status,
                 helpers.vertical_pad(dpi(15)),
-                slider,
+                music_bar,
                 layout = wibox.layout.align.vertical,
             },
             layout = wibox.layout.align.vertical,
@@ -203,12 +243,12 @@ playerctl:connect_signal("playback_status", function(_, playing, __)
 end)
 
 playerctl:connect_signal("position", function(pos, length, _)
-    -- if player_name == "mpd" then
-    local pos_now = tostring(os.date("!%M:%S", math.floor(pos)))
-    local pos_length = tostring(os.date("!%M:%S", math.floor(length)))
-    local pos_markup = helpers.colorize_text(pos_now .. " / " .. pos_length, x.color8)
-    music_pos:set_markup_silently(pos_markup)
-    -- end
+    if player_name == "mpd" then
+        local pos_now = tostring(os.date("!%M:%S", math.floor(pos)))
+        local pos_length = tostring(os.date("!%M:%S", math.floor(length)))
+        local pos_markup = helpers.colorize_text(pos_now .. " / " .. pos_length, x.color8)
+        music_pos:set_markup_silently(pos_markup)
+    end
 end)
 
 local music_boxed = create_boxed_widget(music, dpi(220), dpi(170))
