@@ -280,9 +280,9 @@ end
 
 -- Load theme and custom decorations
 function decorations.init()
-    require "components.titlebar.theme"
+    require "components.decorations.theme"
     -- Custom decorations for specific clients
-    require "components.titlebar.mpd"
+    require "components.decorations.mpd"
 end
 
 return decorations

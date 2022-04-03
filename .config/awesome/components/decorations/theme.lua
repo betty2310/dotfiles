@@ -4,7 +4,7 @@ local wibox = require "wibox"
 local beautiful = require "beautiful"
 local helpers = require "helpers"
 local keys = require "keys"
-local decorations = require "components.titlebar"
+local decorations = require "components.decorations"
 
 -- This decoration theme will round clients according to your theme's
 -- border_radius value

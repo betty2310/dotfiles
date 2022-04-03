@@ -103,7 +103,7 @@ local control_button_bg_hover = x.color0
 local control_button = function(c, symbol, color, size, on_click, on_right_click)
     local icon = wibox.widget {
         markup = helpers.colorize_text(symbol, color),
-        font = "icomoon 12",
+        font = "Font Awesome 6 Pro Solid 12",
         align = "center",
         valign = "center",
         widget = wibox.widget.textbox(),
@@ -134,7 +134,8 @@ local control_button = function(c, symbol, color, size, on_click, on_right_click
     return container
 end
 
-local mpd_buttons = require "widget.mpd_buttons"
+local mpd_one = require "widget.mpd_one"
+local mpd_two = require "widget.mpd_two"
 
 local volume_bar = wibox.widget {
     max_value = 100,
@@ -237,28 +238,6 @@ notifications_button = control_button(
         )
     end
 )
-
-local main_titlebar_size = dpi(50)
-local music_art = wibox.widget {
-    image = gears.filesystem.get_configuration_dir() .. "icons/no_music.png",
-    resize = true,
-    widget = wibox.widget.imagebox,
-}
-
-local music_art_container = wibox.widget {
-    music_art,
-    shape = helpers.rrect(6),
-    widget = wibox.container.background,
-}
-
-local name_widget = wibox.widget {
-    markup = "No players",
-    font = "sans medium 11",
-    align = "center",
-    valign = "center",
-    widget = wibox.widget.textbox,
-}
-
 local title_widget = wibox.widget {
     font = "sans medium 11",
     markup = "Nothing Playing",
@@ -274,21 +253,123 @@ local artist_widget = wibox.widget {
     valign = "center",
     widget = wibox.widget.textbox,
 }
-local playerctl = require("lib.bling").signal.playerctl.lib()
 
-playerctl:connect_signal("metadata", function(_, title, artist, album_path, album, ___, player_name)
-    if player_name == "mpd" then
-        music_art:set_image(gears.surface.load_uncached(album_path))
-        -- Set player name, title and artist widgets
-        name_widget:set_markup_silently(player_name)
-        title_widget:set_markup_silently(title)
-        artist_widget:set_markup_silently(artist)
+local music_bar = wibox.widget {
+    max_value = 100,
+    value = 100,
+    background_color = x.color0,
+    color = x.color4,
+    forced_height = dpi(3),
+    widget = wibox.widget.progressbar,
+}
+
+music_bar:connect_signal("button::press", function(_, lx, __, button, ___, w)
+    if button == 1 then
+        awful.spawn.with_shell("mpc seek " .. math.ceil(lx * 100 / w.width) .. "%")
     end
 end)
 
+local music_pos = wibox.widget {
+    font = "Iosevka medium 11",
+    valign = "center",
+    widget = wibox.widget.textbox,
+}
+local command = "mpdtime"
+local update_interval = 1
+local function isempty(s)
+    return s == nil or s == ""
+end
+
+local update_mpd = function()
+    awful.spawn.easy_async_with_shell(command, function(stdout)
+        local now = stdout:match "NOW: (.*)ALL"
+        if isempty(now) then
+            now = "1"
+        end
+        local all = stdout:match "ALL: (.*)"
+        music_bar.value = (tonumber(now) / tonumber(all)) * 100
+        music_pos = now
+    end)
+end
+
+gears.timer {
+    autostart = true,
+    timeout = update_interval,
+    single_shot = false,
+    call_now = true,
+    callback = update_mpd,
+}
+
+local main_titlebar_size = dpi(50)
+local music_art = wibox.widget {
+    image = gears.filesystem.get_configuration_dir() .. "icons/no_music.png",
+    resize = true,
+    widget = wibox.widget.imagebox,
+}
+
+local filter_color = {
+    type = "linear",
+    from = { 0, 0 },
+    to = { 0, 150 },
+    stops = { { 0, x.background .. "cc" }, { 1, x.background } },
+}
+
+local music_art_filter = wibox.widget {
+    {
+        bg = filter_color,
+        widget = wibox.container.background,
+    },
+    direction = "east",
+    widget = wibox.container.rotate,
+}
+local music_art_container = wibox.widget {
+    music_art,
+    shape = helpers.rrect(6),
+    widget = wibox.container.background,
+}
+
+local music_now = wibox.widget {
+    font = "Iosevka medium 11",
+    valign = "center",
+    widget = wibox.widget.textbox,
+}
+local bling = require "lib.bling"
+playerctl = bling.signal.playerctl.lib()
+
+awesome.connect_signal("signal::mpd", function(artist, title, status, path, album)
+    title = string.gsub(title, "&", "&amp;")
+    artist = string.gsub(artist, "&", "&amp;")
+    local m_now = artist .. " - " .. title .. " / " .. album
+    music_now:set_markup_silently(m_now)
+    music_art:set_image(gears.surface.load_uncached(path))
+end)
+
 local mpd_create_decoration = function(c)
+    -- Sidebar
+    awful.titlebar(c, { position = "left", size = dpi(180), bg = x.background }):setup {
+        {
+            nil,
+            {
+                {
+                    music_art_container,
+                    music_art_filter,
+                    layout = wibox.layout.stack,
+                },
+                bottom = dpi(20),
+                left = dpi(25),
+                right = dpi(25),
+                widget = wibox.container.margin,
+            },
+            nil,
+            expand = "none",
+            layout = wibox.layout.align.vertical,
+        },
+        bg = x.background,
+        shape = helpers.prrect(dpi(20), false, true, true, false),
+        widget = wibox.container.background,
+    }
     -- Main titlebar
-    awful.titlebar(c, { position = "top", size = main_titlebar_size, bg = x.background }):setup {
+    awful.titlebar(c, { position = "top", size = main_titlebar_size, bg = "#2b313c" }):setup {
         {
             {
                 create_toolbar_button(c),
@@ -298,7 +379,7 @@ local mpd_create_decoration = function(c)
                 },
                 layout = wibox.layout.align.horizontal,
             },
-            mpd_buttons,
+            mpd_one,
             {
                 nil,
                 {
@@ -317,62 +398,52 @@ local mpd_create_decoration = function(c)
     }
 
     -- Toolbar
-    -- The functions that send keys to the ncmpcpp client assume that
-    -- you are using default ncmpcpp keybindings. Otherwise, you will
-    -- have to modify the helpers.send_key() function arguments so they
-    -- send your desired keys.
-    awful.titlebar(c, { position = toolbar_position, size = toolbar_size, bg = x.background }):setup {
+    awful.titlebar(c, { position = "bottom", size = dpi(63), bg = "#2b313c" }):setup {
+        music_bar,
         {
             {
-                -- Go to playlist and focus currently playing song
-                control_button(c, "", x.color6, dpi(30), function()
-                    helpers.send_key_sequence(c, "1o")
-                end),
-                -- Toggle lyrics
-                control_button(c, "", x.color5, dpi(30), function()
-                    helpers.send_key(c, "l")
-                end),
-                -- Go to list of playlists
-                control_button(c, "", x.color4, dpi(30), function()
-                    helpers.send_key(c, "5")
-                end),
-                -- Visualizer button
-                control_button(
-                    c,
-                    "",
-                    x.color5,
-                    dpi(30),
-                    -- Left click - Go to visualizer
-                    function()
-                        helpers.send_key(c, "8")
-                    end,
-                    -- Right click - Toggle visualizer
-                    function()
-                        awful.spawn.with_shell "mpc toggleoutput mpd_fifo"
-                    end
-                ),
-                random_button,
-                loop_button,
-                notifications_button,
-                layout = wibox.layout.flex.vertical,
+                {
+                    control_button(c, "", x.foreground, dpi(50), function()
+                        awful.spawn.with_shell "mpc -q prev"
+                    end),
+                    helpers.horizontal_pad(dpi(10)),
+                    mpd_two,
+                    -- control_button(c, "", x.foreground, dpi(50), function()
+                    --     awful.spawn.with_shell "mpc -q toggle"
+                    -- end),
+                    helpers.horizontal_pad(dpi(10)),
+                    -- Go to list of playlists
+                    control_button(c, "", x.foreground, dpi(50), function()
+                        awful.spawn.with_shell "mpc -q next"
+                    end),
+                    layout = wibox.layout.fixed.horizontal,
+                },
+                {
+                    {
+                        step_function = wibox.container.scroll.step_functions.waiting_nonlinear_back_and_forth,
+                        speed = 60,
+                        {
+                            widget = music_now,
+                        },
+                        widget = wibox.container.scroll.horizontal,
+                    },
+                    left = dpi(15),
+                    right = dpi(20),
+                    widget = wibox.container.margin,
+                },
+                layout = wibox.layout.align.horizontal,
             },
-            {
-                buttons = keys.titlebar_buttons,
-                widget = wibox.container.background,
-            },
-            layout = wibox.layout.align.vertical,
+            margins = dpi(15),
+            widget = wibox.container.margin,
         },
-        bg = toolbar_bg,
-        shape = helpers.prrect(dpi(20), false, true, false, false),
-        widget = wibox.container.background,
+        layout = wibox.layout.align.vertical,
     }
-
     if not toolbar_enabled_initially then
         awful.titlebar.hide(c, toolbar_position)
     end
 
     -- Set custom decoration flags
-    c.custom_decoration = { top = true, left = true, right = true }
+    c.custom_decoration = { top = true, left = true, right = true, bottom = true }
 end
 
 -- Add the titlebar whenever a new music client is spawned

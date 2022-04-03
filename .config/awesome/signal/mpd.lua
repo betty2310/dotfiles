@@ -8,33 +8,38 @@
 -- signal::mpd_options
 --      loop (boolean)
 --      random (boolean)
-local awful = require("awful")
+local awful = require "awful"
 
 local function emit_info()
-    awful.spawn.easy_async_with_shell("sh -c 'mpc -f ARTIST@%artist%@TITLE@%title%@FILE@%file%@'", function(stdout)
-        local artist = stdout:match("^ARTIST@(.*)@TITLE")
-        local title = stdout:match("@TITLE@(.*)@FILE")
-        local status = stdout:match("\n%[(.*)%]")
+    awful.spawn.easy_async_with_shell(
+        "sh -c 'mpc -f ARTIST@%artist%@TITLE@%title%@ALBUM@%album%@FILE@%file%@ && getCoverMpd'",
+        function(stdout)
+            local artist = stdout:match "^ARTIST@(.*)@TITLE"
+            local title = stdout:match "@TITLE@(.*)@ALBUM"
+            local album = stdout:match "@ALBUM@(.*)@FILE"
+            local status = stdout:match "\n%[(.*)%]"
+            local path = "/tmp/music_cover.png"
 
-        if not artist or artist == "" then
-            artist = "N/A"
-        end
-        if not title or title == "" then
-            title = stdout:match("@FILE@(.*)@")
-            if not title or title == "" then
-                title = "N/A"
+            if not artist or artist == "" then
+                artist = "N/A"
             end
-        end
+            if not title or title == "" then
+                title = stdout:match "@FILE@(.*)@"
+                if not title or title == "" then
+                    title = "N/A"
+                end
+            end
 
-        local paused
-        if status == "playing" then
-            paused = false
-        else
-            paused = true
-        end
+            local paused
+            if status == "playing" then
+                paused = false
+            else
+                paused = true
+            end
 
-        awesome.emit_signal("signal::mpd", artist, title, paused)
-    end)
+            awesome.emit_signal("signal::mpd", artist, title, paused, path, album)
+        end
+    )
 end
 
 -- Run once to initialize widgets
@@ -101,8 +106,8 @@ local mpd_options_script = [[
 
 local function emit_options_info()
     awful.spawn.easy_async_with_shell("mpc | tail -1", function(stdout)
-        local loop = stdout:match("repeat: (.*)")
-        local random = stdout:match("random: (.*)")
+        local loop = stdout:match "repeat: (.*)"
+        local random = stdout:match "random: (.*)"
         awesome.emit_signal("signal::mpd_options", loop:sub(1, 2) == "on", random:sub(1, 2) == "on")
     end)
 end
@@ -122,3 +127,16 @@ awful.spawn.easy_async_with_shell(
         })
     end
 )
+local update_interval = 1
+
+local time_script = [[
+    sh -c "
+    mpdtime
+    "
+]]
+
+awful.widget.watch(time_script, update_interval, function(stdout)
+    local now = stdout:match "NOW: (.*)"
+    local all = stdout:match "ALL: (.*)"
+    awesome.emit_signal("signal::mpd_time", now, all)
+end)

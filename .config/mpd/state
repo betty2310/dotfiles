@@ -1,11 +1,11 @@
-sw_volume: 72
+sw_volume: 58
 audio_device_state:1:My ALSA Device
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: pause
-current: 2
-time: 243.493000
-random: 0
+state: play
+current: 17
+time: 120.929000
+random: 1
 repeat: 1
 single: 0
 consume: 0
@@ -13,57 +13,51 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Closer_Lyric_ft._Halsey-[PT2_F-1esPk].mp3
-1:Something_Just_Like_This_Lyric-[FM7MFYoylVs].mp3
-2:cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3
-3:Rolling_in_the_Deep_Official_Music_Video-[rYEDA3JcQqw].mp3
-4:When_We_Were_Young_Live_at_The_Church_Studios-[DDWKuo3gXMQ].mp3
-5:Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3
-6:Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3
-7:Someone_Like_You_Vietsub-[sj25Ar9VRqE].mp3
-8:Wavin_Flag_Coca-Cola_Celebration_Mix-[WTJSt4wP2ME].mp3
-9:God_s_Country_Official_Music_Video-[ZEWGyyLiqY4].mp3
-10:Stitches_Official_Video-[VbfpW0pbvaU].mp3
-11:Treat_You_Better-[lY2yjAdbvdQ].mp3
-12:Anh_ch_C_n_Gi_Nhi_u_Ngoai_Em_ft._V_._Thanh_ng_M_V-[KdrbBJNFwGw].mp3
-13:Dusk_Till_Dawn_Official_Video_ft._Sia-[tt2k8PGm-TI].mp3
-14:In_My_Blood-[36tggrpRoTI].mp3
-15:Hanh_tinh_song_song_V_._Official_Audio-[Bmo4PSbB8E8].mp3
-16:MORE_ft._Madison_Beer_G_I-DLE_Lexie_Liu_Jaira_Burns_Seraphine_Official_Music_Video-[3VTkBuxU4yk].mp3
-17:Say_You_Won_t_Let_Go-[0yW7w8F2TVA].mp3
-18:Shape_of_You_Official_Music_Video-[JGwWNGJdvx8].mp3
-19:Trung_Quan_Idol_Lyrics-[xq9KpBCFuXs].mp3
-20:Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3
-21:V_._Original-[8TszjrFJOe0].mp3
-22:You_Spin_Me_Round_Feat._Silver_Letomi-[b4JfmlpAdRM].mp3
-23:Bad_Blood_ft._Kendrick_Lamar-[QcIy9NiNbmo].mp3
-24:Believer-[7wtfhZwyrcc].mp3
-25:Blank_Space-[e-ORhEE9VVg].mp3
-26:Kill_This_Love_M_V-[2S24-y0Ij3Y].mp3
-27:Castle_On_The_Hill_Official_Music_Video-[K0ibBPhiaG0].mp3
-28:Counting_Stars_Official_Music_Video-[hT_nvWreIhg].mp3
-29:Dark_Horse_Official_ft._Juicy_J-[0KSOMA3QBU0].mp3
-30:ONG_KI_M_EM_V_._Original-[NLBTbCfR-Fg].mp3
-31:Demons_Official_Video-[mWRsgZuwf_8].mp3
-32:Taylor_Swift_exile_feat._Bon_Iver_Official_Lyric_Video-[osdoLjUNFnA].mp3
-33:Galway_Girl_Official_Music_Video-[87gWaABqGYs].mp3
-34:Happier_Official_Music_Video-[iWZmdoY1aTE].mp3
-35:L_LUNG_V_._Original-[F5tS5m86bOI].mp3
-36:Look_What_You_Made_Me_Do-[3tmd-ClpJxA].mp3
-37:Love_Yourself_Live_At_Jingle_Bell_Ball_2015-[5V_FQa363Y0].mp3
-38:Natural-[0I647GU3Jsc].mp3
-39:Perfect_Official_Music_Video-[2Vv-BfVoq4g].mp3
-40:Photograph_Official_Music_Video-[nSDgHBxUbVQ].mp3
-41:Roar_Official-[CevxZvSJLk8].mp3
-42:Safe_Sound_feat._The_Civil_Wars_The_Hunger_Games_-_Songs_From_District_12_And_Beyond-[RzhAS_GnJIc].mp3
-43:See_You_Again_ft._Charlie_Puth_Official_Video_Furious_7_Soundtrack-[RgKAFK5djSk].mp3
-44:Shake_It_Off-[nfWlot6h_JM].mp3
-45:Sugar_Official_Music_Video-[09R8_2nJtjg].mp3
-46:Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3
-47:Radioactive-[ktvTqknDobU].mp3
-48:Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3
-49:We_Don_t_Talk_Anymore_feat._Selena_Gomez_Official_Video-[3AtDnEC4zak].mp3
-50:You_Belong_With_Me-[VuNIsY6JdUw].mp3
-51:Old Town Road.mp3
-52:AMV_Leave_a_light_on_Vietsub_lyrics-[iudEfcbhb10].mp3
+0:spotify/Ed Sheeran - Perfect.mp3
+1:spotify/Ed Sheeran - Galway Girl.mp3
+2:spotify/Adele - Rolling in the Deep.mp3
+3:spotify/Adele - Set Fire to the Rain.mp3
+4:spotify/Adele - Someone Like You.mp3
+5:spotify/Bruno Mars - 24K Magic.mp3
+6:spotify/Adele - Hello.mp3
+7:spotify/Adele - When We Were Young.mp3
+8:spotify/The Chainsmokers, Halsey - Closer.mp3
+9:spotify/Redbone - Come and Get Your Love - Single Version.mp3
+10:spotify/Alan Walker - Faded.mp3
+11:spotify/The Chainsmokers, Daya - Don't Let Me Down.mp3
+12:spotify/Imagine Dragons - Whatever It Takes.mp3
+13:spotify/Imagine Dragons - Believer.mp3
+14:spotify/Shawn Mendes - Stitches.mp3
+15:spotify/Auralnauts, Silver Letomi - You Spin Me Round.mp3
+16:spotify/Shawn Mendes - Treat You Better.mp3
+17:spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
+18:spotify/Shawn Mendes - Mercy.mp3
+19:spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
+20:spotify/Tom Walker - Leave a Light On.mp3
+21:spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
+22:spotify/The Chainsmokers - Paris.mp3
+23:spotify/ZAYN - PILLOWTALK.mp3
+24:spotify/OneRepublic - Counting Stars.mp3
+25:spotify/Imagine Dragons - Radioactive.mp3
+26:spotify/Imagine Dragons - Demons.mp3
+27:spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
+28:spotify/Imagine Dragons - Natural.mp3
+29:spotify/Imagine Dragons - Bad Liar.mp3
+30:spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
+31:spotify/Justin Bieber - Love Yourself.mp3
+32:spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
+33:spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
+34:spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
+35:spotify/The Chainsmokers - Sick Boy.mp3
+36:spotify/Adele - Skyfall.mp3
+37:spotify/Ed Sheeran - Photograph.mp3
+38:spotify/Shawn Mendes - Wonder.mp3
+39:spotify/Maroon 5 - Sugar.mp3
+40:spotify/Maroon 5 - Animals.mp3
+41:spotify/Maroon 5 - Maps.mp3
+42:spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
+43:spotify/Shawn Mendes - In My Blood.mp3
+44:Wavin_Flag_Coca-Cola_Celebration_Mix-[WTJSt4wP2ME].mp3
+45:Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3
+46:spotify/Taylor Swift - cardigan.mp3
 playlist_end

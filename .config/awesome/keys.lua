@@ -3,7 +3,7 @@ local naughty = require "naughty"
 local gears = require "gears"
 local beautiful = require "beautiful"
 local apps = require "apps"
-local decorations = require "components.titlebar"
+local decorations = require "components.decorations"
 local icons = require "icons"
 local bling = require "lib.bling"
 local rubato = require "lib.rubato"
@@ -142,10 +142,10 @@ keys.desktopbuttons = gears.table.join(
 
     -- Side buttons - Control volume
     awful.button({}, 9, function()
-        awful.spawn.with_shell "amixer -q sset Master 3%+"
+        helpers.volume_control(5)
     end),
     awful.button({}, 8, function()
-        awful.spawn.with_shell "amixer -q sset Master 3%-"
+        helpers.volume_control(-5)
     end)
 
     -- Side buttons - Minimize and restore minimized client
@@ -333,11 +333,12 @@ keys.globalkeys = gears.table.join(
         helpers.volume_control(0)
     end, { description = "(un)mute volume", group = "volume" }),
     awful.key({}, "XF86AudioLowerVolume", function()
-        awful.spawn.with_shell "amixer -q sset Master 3%-"
+        helpers.volume_control(-5)
     end, { description = "lower volume", group = "volume" }),
     awful.key({}, "XF86AudioRaiseVolume", function()
-        awful.spawn.with_shell "amixer -q sset Master 3%+"
+        helpers.volume_control(5)
     end, { description = "raise volume", group = "volume" }),
+
     -- clipboard manager keybingdings like windows
     awful.key({ altkey }, "v", function()
         awful.spawn.with_shell "copyq show"

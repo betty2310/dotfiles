@@ -2897,3 +2897,456 @@ Apr 01 11:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Apr 01 11:50 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
 Apr 01 12:22 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Apr 01 12:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 01 15:29 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Apr 01 16:04 : config: option 'device' on line 21 was not recognized
+Apr 01 18:44 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Apr 01 18:45 : config: option 'device' on line 21 was not recognized
+Apr 02 00:20 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Apr 02 09:45 : config: option 'device' on line 21 was not recognized
+Apr 02 09:48 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Apr 02 09:56 : config: option 'device' on line 21 was not recognized
+Apr 02 09:56 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 09:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 09:57 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Apr 02 09:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 09:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 09:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 10:01 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 10:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 10:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 10:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 10:04 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 10:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 10:05 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 10:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 10:09 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 10:09 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 10:09 : player: played "Thang_T_La_L_i_Noi_D_i_C_a_Em_Official_MV-[UCXao7aTDQM].mp3"
+Apr 02 10:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 10:34 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 10:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 10:38 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 10:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 11:16 : player: played "Someone_Like_You_Vietsub-[sj25Ar9VRqE].mp3"
+Apr 02 13:18 : config: option 'device' on line 21 was not recognized
+Apr 02 13:51 : player: played "Someone_Like_You_Vietsub-[sj25Ar9VRqE].mp3"
+Apr 02 15:31 : config: option 'device' on line 21 was not recognized
+Apr 02 17:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 17:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 17:57 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 20:48 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 20:48 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 20:49 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 20:49 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 20:49 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 20:49 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 20:50 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 20:59 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:03 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:06 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:06 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:09 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 21:09 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:13 : player: played "ONG_KI_M_EM_V_._Original-[NLBTbCfR-Fg].mp3"
+Apr 02 21:13 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:18 : player: played "Sugar_Official_Music_Video-[09R8_2nJtjg].mp3"
+Apr 02 21:18 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:22 : player: played "Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3"
+Apr 02 21:22 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:26 : player: played "MORE_ft._Madison_Beer_G_I-DLE_Lexie_Liu_Jaira_Burns_Seraphine_Official_Music_Video-[3VTkBuxU4yk].mp3"
+Apr 02 21:26 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 21:26 : player: played "Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3"
+Apr 02 21:28 : config: option 'device' on line 21 was not recognized
+Apr 02 21:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:36 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:36 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:36 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:42 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:43 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:43 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:43 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:43 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:47 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:47 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:47 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:53 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:54 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:55 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 21:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 21:57 : player: played "God_s_Country_Official_Music_Video-[ZEWGyyLiqY4].mp3"
+Apr 02 21:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:04 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 22:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:05 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:08 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 22:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:11 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:15 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
+Apr 02 22:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:18 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:18 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:19 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:20 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:20 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:26 : player: played "Dusk_Till_Dawn_Official_Video_ft._Sia-[tt2k8PGm-TI].mp3"
+Apr 02 22:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:29 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:29 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:33 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 22:33 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:34 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:42 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 22:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:45 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:48 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 22:48 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:52 : player: played "Safe_Sound_feat._The_Civil_Wars_The_Hunger_Games_-_Songs_From_District_12_And_Beyond-[RzhAS_GnJIc].mp3"
+Apr 02 22:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:54 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 22:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 02 22:57 : player: played "God_s_Country_Official_Music_Video-[ZEWGyyLiqY4].mp3"
+Apr 02 22:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 02 23:04 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:04 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:06 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:06 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:07 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:07 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:11 : player: played "Rolling_in_the_Deep_Official_Music_Video-[rYEDA3JcQqw].mp3"
+Apr 02 23:11 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:15 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:15 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:15 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:20 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:30 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:30 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:30 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:30 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:30 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:30 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:34 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 23:34 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:35 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:38 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 02 23:38 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:42 : player: played "You_Belong_With_Me-[VuNIsY6JdUw].mp3"
+Apr 02 23:42 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:46 : player: played "Happier_Official_Music_Video-[iWZmdoY1aTE].mp3"
+Apr 02 23:46 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:51 : player: played "Hanh_tinh_song_song_V_._Official_Audio-[Bmo4PSbB8E8].mp3"
+Apr 02 23:51 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:53 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:53 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:57 : player: played "Demons_Official_Video-[mWRsgZuwf_8].mp3"
+Apr 02 23:57 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 02 23:59 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:00 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:03 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:06 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:08 : player: played "Old Town Road.mp3"
+Apr 03 00:08 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:10 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:12 : player: played "Castle_On_The_Hill_Official_Music_Video-[K0ibBPhiaG0].mp3"
+Apr 03 00:12 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:12 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:13 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:13 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:15 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:15 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:17 : player: played "Safe_Sound_feat._The_Civil_Wars_The_Hunger_Games_-_Songs_From_District_12_And_Beyond-[RzhAS_GnJIc].mp3"
+Apr 03 00:17 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:21 : player: played "Sugar_Official_Music_Video-[09R8_2nJtjg].mp3"
+Apr 03 00:21 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:22 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:22 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:22 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:22 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:23 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:23 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:26 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:29 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:31 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:35 : player: played "Jenny_of_Oldstones_Lyric_Video_Season_8_Game_of_Thrones_HBO-[eTa1jHk1Lxc].mp3"
+Apr 03 00:35 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:35 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 00:35 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 07:00 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:00 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:00 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:00 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:02 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:02 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:03 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:06 : player: played "Natural-[0I647GU3Jsc].mp3"
+Apr 03 07:06 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:10 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:10 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:13 : mixer: Failed to set mixer for 'pulse audio': disconnected
+Apr 03 07:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:18 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:18 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:18 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:20 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:22 : player: played "V_._Original-[8TszjrFJOe0].mp3"
+Apr 03 07:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:26 : player: played "Radioactive-[ktvTqknDobU].mp3"
+Apr 03 07:27 : config: option 'device' on line 21 was not recognized
+Apr 03 07:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 07:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:30 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:33 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:33 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:36 : player: played "Radioactive-[ktvTqknDobU].mp3"
+Apr 03 07:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:41 : player: played "You_Spin_Me_Round_Feat._Silver_Letomi-[b4JfmlpAdRM].mp3"
+Apr 03 07:41 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:42 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:46 : player: played "Safe_Sound_feat._The_Civil_Wars_The_Hunger_Games_-_Songs_From_District_12_And_Beyond-[RzhAS_GnJIc].mp3"
+Apr 03 07:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:50 : player: played "MORE_ft._Madison_Beer_G_I-DLE_Lexie_Liu_Jaira_Burns_Seraphine_Official_Music_Video-[3VTkBuxU4yk].mp3"
+Apr 03 07:50 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 07:54 : player: played "Symphony_feat._Zara_Larsson_Official_Video-[aatr_2MstrI].mp3"
+Apr 03 07:54 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:59 : player: played "Too_Good_At_Goodbyes_Official_Video-[J_ub7Etch2U].mp3"
+Apr 03 07:59 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:59 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 07:59 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:02 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:04 : player: played "Look_What_You_Made_Me_Do-[3tmd-ClpJxA].mp3"
+Apr 03 08:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:04 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:17 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:22 : player: played "Castle_On_The_Hill_Official_Music_Video-[K0ibBPhiaG0].mp3"
+Apr 03 08:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:23 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:23 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:27 : player: played "Demons_Official_Video-[mWRsgZuwf_8].mp3"
+Apr 03 08:27 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:30 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:34 : update: added /cardigan.mp3
+Apr 03 08:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:34 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 08:38 : player: played "cardigan_Official_Music_Video-[K-a8s8OLBSE].mp3"
+Apr 03 08:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:42 : player: played "You_Belong_With_Me-[VuNIsY6JdUw].mp3"
+Apr 03 08:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 08:48 : player: played "Dusk_Till_Dawn_Official_Video_ft._Sia-[tt2k8PGm-TI].mp3"
+Apr 03 08:48 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 09:09 : update: added /Taylor Swift, HAIM - no body, no crime (feat. HAIM).mp3
+Apr 03 09:09 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 09:09 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 09:09 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 09:09 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 09:24 : update: added spotify/Adele - Hello.mp3
+Apr 03 09:24 : update: added spotify/The Chainsmokers, Daya - Don't Let Me Down.mp3
+Apr 03 09:24 : update: added spotify/Imagine Dragons - Whatever It Takes.mp3
+Apr 03 09:24 : update: added spotify/Imagine Dragons - Natural.mp3
+Apr 03 09:24 : update: added spotify/Imagine Dragons - Radioactive.mp3
+Apr 03 09:24 : update: added spotify/Alan Walker - Faded.mp3
+Apr 03 09:24 : update: added spotify/Shawn Mendes - In My Blood.mp3
+Apr 03 09:24 : update: added spotify/Justin Bieber - Love Yourself.mp3
+Apr 03 09:24 : update: added spotify/Shawn Mendes - Wonder.mp3
+Apr 03 09:24 : update: added spotify/Ed Sheeran - Galway Girl.mp3
+Apr 03 09:24 : update: added spotify/Shawn Mendes - Treat You Better.mp3
+Apr 03 09:24 : update: added spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
+Apr 03 09:24 : update: added spotify/Adele - Someone Like You.mp3
+Apr 03 09:24 : update: added spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
+Apr 03 09:24 : update: added spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
+Apr 03 09:24 : update: added spotify/Bruno Mars - 24K Magic.mp3
+Apr 03 09:24 : update: added spotify/Shawn Mendes - Stitches.mp3
+Apr 03 09:24 : update: added spotify/The Chainsmokers - Paris.mp3
+Apr 03 09:24 : update: added spotify/Adele - Rolling in the Deep.mp3
+Apr 03 09:24 : update: added spotify/Imagine Dragons - Believer.mp3
+Apr 03 09:24 : update: added spotify/ZAYN - PILLOWTALK.mp3
+Apr 03 09:24 : update: added spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
+Apr 03 09:24 : update: added spotify/Maroon 5 - Maps.mp3
+Apr 03 09:24 : update: added spotify/Ed Sheeran - Perfect.mp3
+Apr 03 09:24 : update: added spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
+Apr 03 09:24 : update: added spotify/OneRepublic - Counting Stars.mp3
+Apr 03 09:24 : update: added spotify/The Chainsmokers, Halsey - Closer.mp3
+Apr 03 09:24 : update: added spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
+Apr 03 09:24 : update: added spotify/Auralnauts, Silver Letomi - You Spin Me Round.mp3
+Apr 03 09:24 : update: added spotify/Adele - Set Fire to the Rain.mp3
+Apr 03 09:24 : update: added spotify/Shawn Mendes - Mercy.mp3
+Apr 03 09:24 : update: added spotify/Adele - Skyfall.mp3
+Apr 03 09:24 : update: added spotify/Maroon 5 - Sugar.mp3
+Apr 03 09:24 : update: added spotify/The Chainsmokers - Sick Boy.mp3
+Apr 03 09:24 : update: added spotify/Ed Sheeran - Photograph.mp3
+Apr 03 09:24 : update: added spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
+Apr 03 09:24 : update: added spotify/Adele - When We Were Young.mp3
+Apr 03 09:24 : update: added spotify/Tom Walker - Leave a Light On.mp3
+Apr 03 09:24 : update: added spotify/Maroon 5 - Animals.mp3
+Apr 03 09:24 : update: added spotify/Imagine Dragons - Bad Liar.mp3
+Apr 03 09:24 : update: added spotify/Imagine Dragons - Demons.mp3
+Apr 03 09:24 : update: added spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
+Apr 03 09:24 : update: added spotify/Redbone - Come and Get Your Love - Single Version.mp3
+Apr 03 09:24 : update: added spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
+Apr 03 09:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:25 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:26 : exception: No such directory
+Apr 03 09:27 : player: played "spotify/The Chainsmokers - Paris.mp3"
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:28 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:29 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:29 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:29 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 09:32 : update: added spotify/Taylor Swift - cardigan.mp3
+Apr 03 09:32 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 03 10:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:11 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 10:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:11 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 10:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 10:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 10:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 10:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:17 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 10:20 : player: played "spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3"
+Apr 03 10:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:21 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 10:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 10:21 : alsa_output: Decoder is too slow; playing silence to avoid xrun

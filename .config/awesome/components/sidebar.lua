@@ -219,10 +219,10 @@ volume:buttons(gears.table.join(
     awful.button({}, 3, apps.volume),
     -- Scroll - Increase / Decrease volume
     awful.button({}, 4, function()
-        awful.spawn.with_shell "amixer -q sset Master 3%+"
+        helpers.volume_control(1)
     end),
     awful.button({}, 5, function()
-        awful.spawn.with_shell "amixer -q sset Master 3%-"
+        helpers.volume_control(-1)
     end)
 ))
 
@@ -576,7 +576,7 @@ sidebar:setup {
         },
         layout = wibox.layout.align.vertical,
     },
-    shape = helpers.prrect(beautiful.sidebar_border_radius, false, true, false, false),
+    shape = helpers.prrect(beautiful.sidebar_border_radius, true, true, true, true),
     bg = "#2b313c",
     widget = wibox.container.background,
 }

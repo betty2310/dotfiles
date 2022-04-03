@@ -5,7 +5,7 @@ user = {
     file_manager = "st -c files -e ranger",
     editor = "st -c editor -e nvim",
     email_client = "st -c email -e neomutt",
-    music_client = "st -c music -e ncmpcpp",
+    music_client = "st -f 'Iosevka SS05:style=Medium:pixelsize=19:antialias=true:autohint=true' -A 1 -c music -e ncmpcpp",
     web_search_cmd = "https://www.google.com/search?q=",
     profile_picture = os.getenv "HOME" .. "/.config/awesome/profile.png",
     dirs = {
@@ -71,7 +71,7 @@ naughty.connect_signal("request::display_error", function(message, startup)
         urgency = "critical",
         title = "Oops, an error happened" .. (startup and " during startup!" or "!"),
         message = message,
-        icon = beautiful.notification_icon,
+        icon = beautiful.notification_icon_error,
     }
 end)
 
@@ -80,7 +80,7 @@ icons.init()
 local keys = require "keys"
 local notifications = require "notifications"
 notifications.init()
-local decorations = require "components.titlebar"
+local decorations = require "components.decorations"
 decorations.init()
 local helpers = require "helpers"
 
@@ -417,8 +417,8 @@ awful.rules.rules = {
         },
         properties = {
             floating = true,
-            width = screen_width * 0.45,
-            height = screen_height * 0.50,
+            width = screen_width * 0.22,
+            height = screen_height * 0.30,
         },
     },
     -- Microsoft Edge
@@ -609,7 +609,7 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "St",
+                -- "St",
             },
             instance = {
                 "leagueclient.exe",

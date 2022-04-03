@@ -7,7 +7,7 @@ padding_top=4
 padding_bottom=-1
 padding_right=2
 max_width=30
-reserved_playlist_cols=31
+reserved_playlist_cols=61
 reserved_cols_in_percent="false"
 force_square="true"
 

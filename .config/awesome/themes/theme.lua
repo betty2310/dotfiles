@@ -42,6 +42,7 @@ theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
 theme.font = "monospace medium 8"
 theme.font_name = "SF Pro Display "
 theme.icon_font_name = "Material Icons "
+theme.icon_font = theme.icon_font_name .. "18"
 
 theme.bg_dark = x.background
 theme.bg_normal = x.background
@@ -95,7 +96,8 @@ theme.titlebar_fg_normal = x.color8
 --theme.titlebar_fg = x.color7
 
 -- Notifications
-theme.notification_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/love.png")
+theme.notification_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/notif.png")
+theme.notification_icon_error = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/error.png")
 theme.notification_position = "top_right"
 theme.notification_border_width = dpi(0)
 theme.notification_border_radius = theme.border_radius

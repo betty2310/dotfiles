@@ -1,13 +1,13 @@
-local awful = require("awful")
-local gears = require("gears")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
-local naughty = require("naughty")
-local icons = require("icons")
-local helpers = require("helpers")
-local apps = require("apps")
+local awful = require "awful"
+local gears = require "gears"
+local wibox = require "wibox"
+local beautiful = require "beautiful"
+local naughty = require "naughty"
+local icons = require "icons"
+local helpers = require "helpers"
+local apps = require "apps"
 
-local keygrabber = require("awful.keygrabber")
+local keygrabber = require "awful.keygrabber"
 
 -- Appearance
 local box_radius = beautiful.dashboard_box_border_radius or dpi(12)
@@ -18,7 +18,7 @@ local screen_width = awful.screen.focused().geometry.width
 local screen_height = awful.screen.focused().geometry.height
 
 -- Create the widget
-dashboard = wibox({ visible = false, ontop = true, type = "dock", screen = screen.primary })
+dashboard = wibox { visible = false, ontop = true, type = "dock", screen = screen.primary }
 awful.placement.maximize(dashboard)
 
 dashboard.bg = beautiful.dashboard_bg or beautiful.exit_screen_bg or beautiful.wibar_bg or "#111111"
@@ -58,7 +58,7 @@ local function create_boxed_widget(widget_to_be_boxed, width, height, bg_color)
     -- box_container.shape = helpers.prrect(20, true, true, true, true)
     -- box_container.shape = helpers.prrect(30, true, true, false, true)
 
-    local boxed_widget = wibox.widget({
+    local boxed_widget = wibox.widget {
         -- Add margins
         {
             -- Add background color
@@ -81,7 +81,7 @@ local function create_boxed_widget(widget_to_be_boxed, width, height, bg_color)
         margins = box_gap,
         color = "#FF000000",
         widget = wibox.container.margin,
-    })
+    }
 
     return boxed_widget
 end
@@ -92,15 +92,15 @@ local user_picture_container = wibox.container.background()
 user_picture_container.shape = helpers.prrect(dpi(40), true, true, false, true)
 user_picture_container.forced_height = dpi(140)
 user_picture_container.forced_width = dpi(140)
-local user_picture = wibox.widget({
+local user_picture = wibox.widget {
     {
         wibox.widget.imagebox(user.profile_picture),
         widget = user_picture_container,
     },
     shape = helpers.rrect(box_radius / 2),
     widget = wibox.container.background,
-})
-local username = os.getenv("USER")
+}
+local username = os.getenv "USER"
 local user_text = wibox.widget.textbox(username:upper())
 user_text.font = "San Francisco Display Heavy 20"
 user_text.align = "center"
@@ -116,28 +116,28 @@ end)
 host_text.font = "monospace 16"
 host_text.align = "center"
 host_text.valign = "center"
-local user_widget = wibox.widget({
+local user_widget = wibox.widget {
     user_picture,
     helpers.vertical_pad(dpi(24)),
     user_text,
     helpers.vertical_pad(dpi(4)),
     host_text,
     layout = wibox.layout.fixed.vertical,
-})
+}
 local user_box = create_boxed_widget(user_widget, dpi(300), dpi(340), x.background)
 
 -- Calendar
-local calendar = require("widget.calendar")
+local calendar = require "widget.calendar_"
 -- Update calendar whenever dashboard is shown
 dashboard:connect_signal("property::visible", function()
     if dashboard.visible then
-        calendar.date = os.date("*t")
+        calendar.date = os.date "*t"
     end
 end)
 
 local calendar_box = create_boxed_widget(calendar, dpi(300), dpi(400), x.background)
 
-local disk_arc = wibox.widget({
+local disk_arc = wibox.widget {
     start_angle = 3 * math.pi / 2,
     min_value = 0,
     max_value = 100,
@@ -150,41 +150,41 @@ local disk_arc = wibox.widget({
     bg = x.color8 .. "55",
     colors = { "#5E81AC" },
     widget = wibox.container.arcchart,
-})
+}
 
-local disk_hover_text_value = wibox.widget({
+local disk_hover_text_value = wibox.widget {
     align = "center",
     valign = "center",
     font = "sans medium 10",
     widget = wibox.widget.textbox(),
-})
-local disk_hover_text = wibox.widget({
+}
+local disk_hover_text = wibox.widget {
     disk_hover_text_value,
     {
         align = "center",
         valign = "center",
         font = "sans medium 10",
-        widget = wibox.widget.textbox("free"),
+        widget = wibox.widget.textbox "free",
     },
     spacing = dpi(2),
     visible = false,
     layout = wibox.layout.fixed.vertical,
-})
+}
 
 awesome.connect_signal("signal::disk", function(used, total)
     disk_arc.value = used * 100 / total
     disk_hover_text_value.markup = helpers.colorize_text(tostring(helpers.round(total - used, 1)) .. "G", x.color4)
 end)
 
-local disk_icon = wibox.widget({
+local disk_icon = wibox.widget {
     align = "center",
     valign = "center",
     font = "icomoon 22",
     markup = helpers.colorize_text("", x.color3),
     widget = wibox.widget.textbox(),
-})
+}
 
-local disk = wibox.widget({
+local disk = wibox.widget {
     {
         nil,
         disk_hover_text,
@@ -195,7 +195,7 @@ local disk = wibox.widget({
     disk_arc,
     top_only = false,
     layout = wibox.layout.stack,
-})
+}
 
 local disk_box = create_boxed_widget(disk, dpi(150), dpi(150), x.background)
 
@@ -242,8 +242,8 @@ local function create_bookmark(name, path, color, hover_color)
     return bookmark
 end
 
-local bookmarks = wibox.widget({
-    create_bookmark("home", os.getenv("HOME"), x.color1, x.color9),
+local bookmarks = wibox.widget {
+    create_bookmark("home", os.getenv "HOME", x.color1, x.color9),
     create_bookmark("downloads", user.dirs.downloads, x.color2, x.color10),
     create_bookmark("music", user.dirs.music, x.color6, x.color14),
     create_bookmark("pictures", user.dirs.pictures, x.color4, x.color12),
@@ -251,7 +251,7 @@ local bookmarks = wibox.widget({
     create_bookmark("screenshots", user.dirs.screenshots, x.color3, x.color11),
     spacing = dpi(10),
     layout = wibox.layout.fixed.vertical,
-})
+}
 
 local bookmarks_box = create_boxed_widget(bookmarks, dpi(200), dpi(300), x.background)
 
@@ -259,51 +259,57 @@ local bookmarks_box = create_boxed_widget(bookmarks, dpi(200), dpi(300), x.backg
 local fortune_command = "kanji"
 local fortune_update_interval = 60
 -- local fortune_command = "fortune -n 140 -s computers"
-local kanji_text = wibox.widget({
+local kanji_text = wibox.widget {
     font = "sans 36",
     text = "loading your Kanji now ...",
     widget = wibox.widget.textbox,
-})
+}
 
-local han_text = wibox.widget({
-    font = "sans 15",
+local han_text = wibox.widget {
+    font = "sans medium 15",
     text = "...",
     widget = wibox.widget.textbox,
-})
-local viet_text = wibox.widget({
+}
+local viet_text = wibox.widget {
     font = "sans 12",
     text = "...",
     widget = wibox.widget.textbox,
-})
+}
 local update_fortune = function()
     awful.spawn.easy_async_with_shell(fortune_command, function(stdout)
         -- Remove trailing whitespaces
         -- kanji = out:gsub("^%s*(.-)%s*$", "%1")
-        kanji = stdout:match("^KANJI@(.*)@HAN")
-        han = stdout:match("@HAN@(.*)@VIET")
-        viet = stdout:match("@VIET@(.*)@END")
+        kanji = stdout:match "^KANJI@(.*)@HAN"
+        han = stdout:match "@HAN@(.*)@VIET"
+        viet = stdout:match "@VIET@(.*)@END"
         kanji_text.markup = helpers.colorize_text(kanji, x.color4)
         han_text.markup = helpers.colorize_text(han, x.color2)
         viet_text.markup = helpers.colorize_text(viet, x.foreground)
     end)
 end
 
-gears.timer({
+gears.timer {
     autostart = true,
     timeout = fortune_update_interval,
     single_shot = false,
     call_now = true,
     callback = update_fortune,
-})
+}
 
-local fortune_widget = wibox.widget({
+local kanji_widget = wibox.widget {
     {
         kanji_text,
-        helpers.horizontal_pad(dpi(30)),
+        helpers.horizontal_pad(dpi(20)),
         {
             han_text,
             helpers.vertical_pad(dpi(10)),
-            viet_text,
+            {
+                step_function = wibox.container.scroll.step_functions.waiting_nonlinear_back_and_forth,
+                speed = 50,
+                viet_text,
+                forced_width = 150,
+                widget = wibox.container.scroll.horizontal,
+            },
             layout = wibox.layout.align.vertical,
         },
         layout = wibox.layout.align.horizontal,
@@ -311,9 +317,9 @@ local fortune_widget = wibox.widget({
     margins = box_gap * 4,
     color = "#00000000",
     widget = wibox.container.margin,
-})
+}
 
-local fortune_box = create_boxed_widget(fortune_widget, dpi(300), dpi(140), x.background)
+local fortune_box = create_boxed_widget(kanji_widget, dpi(300), dpi(140), x.background)
 fortune_box:buttons(gears.table.join(
     -- Left click - New fortune
     awful.button({}, 1, update_fortune)
@@ -323,15 +329,15 @@ helpers.add_hover_cursor(fortune_box, "hand1")
 -- URL launcher petals
 local petal_font = "Sans Bold 11"
 local function create_url_petal(text, bg_color, hover_color, url, tl, tr, br, bl)
-    local petal_container = wibox.widget({
+    local petal_container = wibox.widget {
         bg = bg_color,
         forced_height = dpi(65),
         forced_width = dpi(65),
         shape = helpers.prrect(99, tl, tr, br, bl),
         widget = wibox.container.background(),
-    })
+    }
 
-    local petal = wibox.widget({
+    local petal = wibox.widget {
         {
             {
                 font = petal_font,
@@ -345,7 +351,7 @@ local function create_url_petal(text, bg_color, hover_color, url, tl, tr, br, bl
         -- Because I want the unrounded petal corner to not be pointy!
         shape = helpers.rrect(dpi(4)),
         widget = wibox.container.background(),
-    })
+    }
 
     petal:buttons(gears.table.join(
         awful.button({}, 1, function()
@@ -380,7 +386,7 @@ helpers.add_hover_cursor(petal_top_right, "hand1")
 helpers.add_hover_cursor(petal_bottom_left, "hand1")
 helpers.add_hover_cursor(petal_bottom_right, "hand1")
 
-local url_petals = wibox.widget({
+local url_petals = wibox.widget {
     petal_top_left,
     petal_top_right,
     petal_bottom_left,
@@ -388,7 +394,7 @@ local url_petals = wibox.widget({
     forced_num_cols = 2,
     spacing = box_gap * 2,
     layout = wibox.layout.grid,
-})
+}
 
 local url_petals_box = create_boxed_widget(url_petals, dpi(150), dpi(150), "#00000000")
 local icon_size = dpi(40)
@@ -400,7 +406,7 @@ awful.widget.watch("sh -c 'uptime -p | sed 's/^...//''", 60, function(_, stdout)
     local out = stdout:gsub("^%s*(.-)%s*$", "%1")
     uptime_text.text = out
 end)
-local uptime = wibox.widget({
+local uptime = wibox.widget {
     {
         align = "center",
         valign = "center",
@@ -416,7 +422,7 @@ local uptime = wibox.widget({
     },
     spacing = dpi(10),
     layout = wibox.layout.fixed.horizontal,
-})
+}
 
 local uptime_box = create_boxed_widget(uptime, dpi(300), dpi(80), x.background)
 
@@ -428,12 +434,12 @@ uptime_box:buttons(gears.table.join(awful.button({}, 1, function()
 end)))
 helpers.add_hover_cursor(uptime_box, "hand1")
 
-local notification_state = wibox.widget({
+local notification_state = wibox.widget {
     align = "center",
     valign = "center",
     font = "icomoon 25",
-    widget = wibox.widget.textbox(""),
-})
+    widget = wibox.widget.textbox "",
+}
 local function update_notification_state_icon()
     if naughty.suspended then
         notification_state.markup = helpers.colorize_text(notification_state.text, x.color8)
@@ -453,27 +459,27 @@ notification_state_box:buttons(gears.table.join(
 
 helpers.add_hover_cursor(notification_state_box, "hand1")
 
-local screenshot = wibox.widget({
+local screenshot = wibox.widget {
     align = "center",
     valign = "center",
     font = "icomoon 25",
     markup = helpers.colorize_text("", x.color5),
     widget = wibox.widget.textbox(),
-})
+}
 local screenshot_box = create_boxed_widget(screenshot, dpi(150), dpi(78), x.background)
 screenshot_box:buttons(gears.table.join(
     -- Left click - Take screenshot
     awful.button({}, 1, function()
-        apps.screenshot("full")
+        apps.screenshot "full"
     end),
     -- Right click - Take screenshot in 5 seconds
     awful.button({}, 3, function()
-        naughty.notify({
+        naughty.notify {
             title = "Say cheese!",
             text = "Taking shot in 5 seconds",
             timeout = 4,
             icon = icons.image.screenshot,
-        })
+        }
         apps.screenshot("full", 5)
     end)
 ))
@@ -481,28 +487,28 @@ screenshot_box:buttons(gears.table.join(
 helpers.add_hover_cursor(screenshot_box, "hand1")
 
 -- Music
-local music_text = wibox.widget({
+local music_text = wibox.widget {
     markup = helpers.colorize_text("Nothing Playing", beautiful.xcolor8),
     font = "sans medium 8",
     valign = "center",
     widget = wibox.widget.textbox,
-})
+}
 
-local music_art = wibox.widget({
+local music_art = wibox.widget {
     image = gears.filesystem.get_configuration_dir() .. "icons/pngegg.png",
     resize = true,
     opacity = 0.2,
     halign = "center",
     valign = "center",
     widget = wibox.widget.imagebox,
-})
+}
 
-local music_art_container = wibox.widget({
+local music_art_container = wibox.widget {
     music_art,
     forced_height = dpi(150),
     forced_width = dpi(160),
     widget = wibox.container.background,
-})
+}
 
 local filter_color = {
     type = "linear",
@@ -511,7 +517,7 @@ local filter_color = {
     stops = { { 0, x.background .. "11" }, { 1, x.background } },
 }
 
-local music_art_filter = wibox.widget({
+local music_art_filter = wibox.widget {
     {
         bg = filter_color,
         forced_height = dpi(150),
@@ -520,38 +526,38 @@ local music_art_filter = wibox.widget({
     },
     direction = "east",
     widget = wibox.container.rotate,
-})
+}
 
-local music_title = wibox.widget({
+local music_title = wibox.widget {
     markup = "No Title",
     font = "sans medium 10",
     valign = "center",
     widget = wibox.widget.textbox,
-})
+}
 
-local music_artist = wibox.widget({
+local music_artist = wibox.widget {
     markup = helpers.colorize_text("No Artist", beautiful.xcolor8),
     font = "sans medium 8",
     valign = "center",
     widget = wibox.widget.textbox,
-})
+}
 
-local music_status = wibox.widget({
+local music_status = wibox.widget {
     font = "Font Awesome 6 Pro Solid 11",
     markup = "",
     align = "right",
     valign = "bottom",
     widget = wibox.widget.textbox,
-})
+}
 
-local music_pos = wibox.widget({
+local music_pos = wibox.widget {
     font = "sans medium 9",
     markup = helpers.colorize_text("- / -", x.foreground),
     valign = "center",
     widget = wibox.widget.textbox,
-})
+}
 
-local music = wibox.widget({
+local music = wibox.widget {
     {
         music_art_container,
         music_art_filter,
@@ -594,7 +600,7 @@ local music = wibox.widget({
         widget = wibox.container.margin,
     },
     layout = wibox.layout.stack,
-})
+}
 
 local playerctl = require("lib.bling").signal.playerctl.lib()
 playerctl:connect_signal("metadata", function(_, title, artist, album_path, __, ___, ____)
@@ -616,10 +622,10 @@ end)
 playerctl:connect_signal("playback_status", function(_, playing, __)
     if playing then
         music_text:set_markup_silently(helpers.colorize_text("Now Playing", beautiful.xcolor8))
-        music_status:set_markup_silently(" ")
+        music_status:set_markup_silently " "
     else
         music_text:set_markup_silently(helpers.colorize_text("Music", beautiful.xcolor8))
-        music_status:set_markup_silently("")
+        music_status:set_markup_silently ""
     end
 end)
 
@@ -634,7 +640,7 @@ end)
 
 local music_boxed = create_boxed_widget(music, dpi(200), dpi(180), x.background)
 -- Item placement
-dashboard:setup({
+dashboard:setup {
     -- Center boxes vertically
     nil,
     {
@@ -677,7 +683,7 @@ dashboard:setup({
     nil,
     expand = "none",
     layout = wibox.layout.align.vertical,
-})
+}
 
 local dashboard_grabber
 function dashboard_hide()
