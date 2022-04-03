@@ -1,3 +1,7 @@
 pos=$(mpc status | awk '/^\[playing\]/ { sub(/\/.+/,"",$3); split($3,a,/:/); print a[1]*60+a[2] }')
+if [ -z "$pos" ] 
+then
+  pos=1
+fi
 all=$(mpcall $(mpc -f %time% | head -n1))
 echo "NOW: $pos ALL: $all"
