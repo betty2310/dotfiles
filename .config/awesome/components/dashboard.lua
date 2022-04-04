@@ -197,7 +197,7 @@ local disk = wibox.widget {
     layout = wibox.layout.stack,
 }
 
-local disk_box = create_boxed_widget(disk, dpi(150), dpi(150), x.background)
+local disk_box = create_boxed_widget(disk, dpi(150), dpi(148), x.background)
 
 disk_box:connect_signal("mouse::enter", function()
     disk_icon.visible = false

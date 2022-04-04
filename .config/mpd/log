@@ -3450,3 +3450,34 @@ Apr 03 16:01 : player: played "spotify/Florence + The Machine - Jenny of Oldston
 Apr 03 16:01 : output: Failed to play on "pulse audio" (pulse): suspended
 Apr 03 16:04 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
 Apr 03 16:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:07 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 03 16:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 16:11 : player: played "spotify/Tom Walker - Leave a Light On.mp3"
+Apr 03 16:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:15 : player: played "spotify/Redbone - Come and Get Your Love - Single Version.mp3"
+Apr 03 16:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:17 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 16:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:17 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 03 16:20 : player: played "spotify/Ed Sheeran - Galway Girl.mp3"
+Apr 03 16:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:25 : player: played "spotify/Adele - Skyfall.mp3"
+Apr 03 16:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:28 : player: played "spotify/Imagine Dragons - Demons.mp3"
+Apr 03 16:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:32 : player: played "spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3"
+Apr 03 16:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:35 : player: played "spotify/Maroon 5 - Maps.mp3"
+Apr 03 16:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 16:40 : player: played "spotify/Ed Sheeran - Photograph.mp3"
+Apr 03 16:40 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 03 18:53 : player: played "spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3"
+Apr 03 18:54 : config: option 'device' on line 21 was not recognized
+Apr 03 23:40 : player: played "spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3"
+Apr 04 08:25 : config: option 'device' on line 21 was not recognized
+Apr 04 11:39 : player: played "spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3"
+Apr 04 16:55 : config: option 'device' on line 21 was not recognized

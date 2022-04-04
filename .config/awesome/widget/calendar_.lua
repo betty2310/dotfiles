@@ -6,11 +6,12 @@ local styles = {}
 styles.month = { padding = 20, fg_color = x.color7, bg_color = x.background .. "00", border_width = 0 }
 styles.normal = {}
 styles.focus = {
-    fg_color = x.color1,
-    bg_color = x.color5 .. 00,
+    fg_color = x.color0,
+    bg_color = x.color1,
     markup = function(t)
-        return "<b>" .. t .. "</b>"
+        return "<b>" .. t .. "  </b>"
     end,
+    shape = gears.shape.circle,
 }
 styles.header = {
     fg_color = x.color4,

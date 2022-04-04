@@ -138,7 +138,7 @@ local args = {
     time_format_12h = true,
     units = "metric",
     both_units_widget = true,
-    font_name = "sans",
+    font_name = "Iosevka Regular Italic ",
     icons = "weather-underground-icons",
     show_hourly_forecast = true,
     show_daily_forecast = true,
@@ -164,7 +164,7 @@ local show_hourly_forecast = args.show_hourly_forecast
 local show_daily_forecast = args.show_daily_forecast
 local icon_pack_name = args.icons or "weather-underground-icons"
 local icons_extension = args.icons_extension or ".png"
-local timeout = args.timeout or 120
+local timeout = args.timeout or 240
 
 local ICONS_DIR = WIDGET_DIR .. "/icons/" .. icon_pack_name .. "/"
 local owm_one_cal_api = (
@@ -330,8 +330,8 @@ local daily_forecast_widget = {
                         {
                             image = ICONS_DIR .. icon_map[day.weather[1].icon] .. icons_extension,
                             resize = true,
-                            forced_width = 48,
-                            forced_height = 48,
+                            forced_width = 44,
+                            forced_height = 44,
                             widget = wibox.widget.imagebox,
                         },
                         align = "center",

@@ -127,8 +127,8 @@ awful.screen.connect_for_each_screen(function(s)
     local layouts = {
         bling.layout.deck,
         bling.layout.deck,
-        l.spiral.dwindle,
         bling.layout.mstab,
+        l.max,
         l.max,
         l.max,
     }
@@ -573,6 +573,7 @@ awful.rules.rules = {
         rule_any = {
             class = {
                 "Code",
+                "Mars",
                 "Anki",
                 "scratchpad",
             },
@@ -605,23 +606,6 @@ awful.rules.rules = {
             tag = awful.screen.focused().tags[1],
         },
     },
-    -- Term
-    {
-        rule_any = {
-            class = {
-                -- "St",
-            },
-            instance = {
-                "leagueclient.exe",
-                "glyphclientapp.exe",
-                "wisdom-tree",
-            },
-        },
-        properties = {
-            -- screen = 1,
-            tag = awful.screen.focused().tags[3],
-        },
-    },
     -- Docs
     {
         rule_any = {
@@ -631,7 +615,7 @@ awful.rules.rules = {
         },
         properties = {
             screen = 1,
-            tag = awful.screen.focused().tags[4],
+            tag = awful.screen.focused().tags[3],
         },
     },
 
@@ -642,6 +626,7 @@ awful.rules.rules = {
                 "notion-app-enhanced",
                 "Zathura",
                 "Obsidian",
+                "Inkdrop",
             },
             instance = {
                 "btop",
@@ -649,7 +634,7 @@ awful.rules.rules = {
         },
         properties = {
             screen = 1,
-            tag = awful.screen.focused().tags[4],
+            tag = awful.screen.focused().tags[3],
         },
     },
     -- Chatting

@@ -53,7 +53,6 @@ return packer.startup(function()
     use { "akinsho/toggleterm.nvim", config = require "plugins.config.toggleterm" }
     use { "windwp/nvim-autopairs", config = require "plugins.config.autopairs" }
     use { "norcalli/nvim-colorizer.lua" }
-    use { "karb94/neoscroll.nvim", config = require "plugins.config.neoscroll" }
     use { "liuchengxu/vista.vim" }
     use { "simrat39/symbols-outline.nvim" }
     use {
