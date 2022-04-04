@@ -625,7 +625,7 @@ awful.rules.rules = {
             class = {
                 "notion-app-enhanced",
                 "Zathura",
-                "Obsidian",
+                "obsidian",
                 "Inkdrop",
             },
             instance = {

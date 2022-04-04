@@ -3481,3 +3481,19 @@ Apr 03 23:40 : player: played "spotify/ZAYN, Taylor Swift - I Don’t Wanna Live
 Apr 04 08:25 : config: option 'device' on line 21 was not recognized
 Apr 04 11:39 : player: played "spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3"
 Apr 04 16:55 : config: option 'device' on line 21 was not recognized
+Apr 04 18:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 04 18:23 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 04 18:27 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 04 18:27 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 04 18:30 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 04 18:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 04 18:33 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 04 18:33 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 04 18:36 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 04 18:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 04 18:39 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 04 18:39 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 04 18:42 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 04 18:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 04 18:46 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 04 18:46 : output: Failed to play on "pulse audio" (pulse): suspended

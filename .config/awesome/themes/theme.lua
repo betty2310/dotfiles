@@ -40,7 +40,7 @@ theme.dash_box_bg = x.background
 theme.transparent = "#00000000"
 theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
 theme.font = "monospace medium 8"
-theme.font_name = "SF Pro Display "
+theme.font_name = "SF Pro Display 14"
 theme.icon_font_name = "Material Icons "
 theme.icon_font = theme.icon_font_name .. "18"
 
