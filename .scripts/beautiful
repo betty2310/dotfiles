@@ -11,7 +11,7 @@ width="$(identify "$dir" | awk '{print $3}' | rev | awk -F'x' '{print $NF}' | re
 height="$(identify "$dir" | awk '{print $3}' | awk -F'x' '{print $NF}')"
 
 # convert use imageMagick
-convert -size "$width"x"$height" xc:none -draw "roundrectangle 0,0,"$width","$height",20,20" png:- | convert "$dir" -matte - -compose DstIn -composite round.png
+convert -size "$width"x"$height" xc:none -draw "roundrectangle 0,0,"$width","$height",10,10" png:- | convert "$dir" -matte - -compose DstIn -composite round.png
 convert round.png \( +clone -background black -shadow 100x30+0+0 \) +swap -bordercolor none -border 15 -background none -layers merge +repage final.png
 
 # final image is in Folder Pictures and name as final.png

@@ -146,7 +146,7 @@ local volume_bar = wibox.widget {
         left = dpi(6),
         right = dpi(6),
     },
-    forced_width = dpi(60),
+    forced_width = dpi(80),
     shape = gears.shape.rounded_bar,
     bar_shape = gears.shape.rounded_bar,
     color = x.color4,
@@ -156,7 +156,8 @@ local volume_bar = wibox.widget {
 }
 
 -- Update bar
-awesome.connect_signal("signal::mpd_volume", function(value)
+
+awesome.connect_signal("signal::volume", function(value, muted)
     volume_bar.value = value and value <= 100 and value or 100
 end)
 

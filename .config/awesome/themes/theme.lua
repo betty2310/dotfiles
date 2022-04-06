@@ -429,7 +429,7 @@ theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
 -- theme.icon_theme = "/usr/share/icons/Nordzy-dark"
-theme.window_switcher_widget_bg = "#262b33" -- The bg color of the widget
+theme.window_switcher_widget_bg = "#2b313c" -- The bg color of the widget
 theme.window_switcher_widget_border_width = 0 -- The border width of the widget
 theme.window_switcher_widget_border_radius = 3 -- The border radius of the widget
 theme.window_switcher_widget_border_color = "#ffffff" -- The border color of the widget
@@ -443,8 +443,8 @@ theme.thumbnail_scale = true -- If set to true, the thumbnails fit policy will b
 theme.window_switcher_name_margins = 5 -- The margin of one clients title to the rest of the widget
 theme.window_switcher_name_valign = "left" -- How to vertically align one clients title
 theme.window_switcher_name_forced_width = 200 -- The width of one title
-theme.window_switcher_name_font = "sans medium 10" -- The font of all titles
-theme.window_switcher_name_normal_color = x.foreground .. "60"
+theme.window_switcher_name_font = "Iosevka medium 10" -- The font of all titles
+theme.window_switcher_name_normal_color = x.foreground .. "55"
 theme.window_switcher_name_focus_color = x.foreground -- The color of one title if the client is focused
 theme.window_switcher_icon_valign = "center" -- How to vertically align the one icon
 theme.window_switcher_icon_width = dpi(0)

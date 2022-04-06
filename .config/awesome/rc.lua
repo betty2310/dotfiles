@@ -5,7 +5,7 @@ user = {
     file_manager = "st -c files -e ranger",
     editor = "st -c editor -e nvim",
     email_client = "st -c email -e neomutt",
-    music_client = "st -f 'Iosevka SS05:style=Medium:pixelsize=19:antialias=true:autohint=true' -A 1 -c music -e ncmpcpp",
+    music_client = "st -f 'Iosevka Term:style=Medium:pixelsize=19:antialias=true:autohint=true' -A 1 -c music -e ncmpcpp",
     web_search_cmd = "https://www.google.com/search?q=",
     profile_picture = os.getenv "HOME" .. "/.config/awesome/profile.png",
     dirs = {
@@ -82,6 +82,19 @@ local notifications = require "notifications"
 notifications.init()
 local decorations = require "components.decorations"
 decorations.init()
+local nice = require "lib.nice"
+nice {
+    titlebar_font = "Sans Medium 10",
+    floating_color = x.color1,
+    ontop_color = x.color2,
+    sticky_color = x.color3,
+    titlebar_items = {
+        right = {},
+        middle = "title",
+        left = { "floating", "sticky", "ontop" },
+    },
+}
+
 local helpers = require "helpers"
 
 F = {}
@@ -128,7 +141,7 @@ awful.screen.connect_for_each_screen(function(s)
         bling.layout.deck,
         bling.layout.deck,
         bling.layout.mstab,
-        l.max,
+        l.tile,
         l.max,
         l.max,
     }
@@ -492,13 +505,15 @@ awful.rules.rules = {
     },
 
     -- Anki
-    -- {
-    --     rule = { class = "Anki" },
-    --     properties = {},
-    --     callback = function(c)
-    --         c.opacity = 0.8
-    --     end,
-    -- },
+    {
+        rule = { class = "Anki" },
+        properties = {
+            titlebars_enabled = true,
+        },
+        -- callback = function(c)
+        --     c.opacity = 0.8
+        -- end,
+    },
 
     {
         rule_any = {

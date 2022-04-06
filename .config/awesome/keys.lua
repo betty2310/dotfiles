@@ -266,10 +266,10 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey, ctrlkey }, "Right", function(c)
         helpers.resize_dwim(client.focus, "right")
     end),
-    awful.key({ superkey, ctrlkey }, "j", function(c)
+    awful.key({ superkey, ctrlkey }, "k", function(c)
         helpers.resize_dwim(client.focus, "down")
     end),
-    awful.key({ superkey, ctrlkey }, "k", function(c)
+    awful.key({ superkey, ctrlkey }, "j", function(c)
         helpers.resize_dwim(client.focus, "up")
     end),
     awful.key({ superkey, ctrlkey }, "h", function(c)

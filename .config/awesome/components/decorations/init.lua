@@ -280,7 +280,7 @@ end
 
 -- Load theme and custom decorations
 function decorations.init()
-    require "components.decorations.theme"
+    -- require "components.decorations.theme"
     -- Custom decorations for specific clients
     require "components.decorations.mpd"
 end

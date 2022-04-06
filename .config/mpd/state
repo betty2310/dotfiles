@@ -1,10 +1,10 @@
-sw_volume: 58
+sw_volume: 83
 audio_device_state:1:My ALSA Device
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: play
+state: pause
 current: 19
-time: 120.049000
+time: 109.957000
 random: 1
 repeat: 1
 single: 1
@@ -60,4 +60,7 @@ playlist_begin
 44:Wavin_Flag_Coca-Cola_Celebration_Mix-[WTJSt4wP2ME].mp3
 45:Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3
 46:spotify/Taylor Swift - cardigan.mp3
+47:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
+48:spotify/Lil Nas X - Old Town Road.mp3
+49:spotify/BLACKPINK - How You Like That.mp3
 playlist_end

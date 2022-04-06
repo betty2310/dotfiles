@@ -81,15 +81,19 @@ mpd_next_icon:buttons(gears.table.join(
 local music_playing_counter = 0
 local last_artist
 local last_title
+
 local music_playing_colors = {
-    x.color9,
-    x.color2,
-    x.color3,
-    x.color4,
-    x.color5,
+    x.color14,
     x.color6,
+    x.color12,
     x.color1,
+    x.color11,
+    x.color3,
+    x.color2,
+    x.color5,
+    x.color2,
 }
+
 local last_color = music_playing_colors[1]
 
 awesome.connect_signal("signal::mpd", function(artist, title, paused)

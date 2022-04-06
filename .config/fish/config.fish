@@ -74,7 +74,7 @@ set -x FZF_DEFAULT_OPTS '--prompt="הּ "
     --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
     --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b --layout=reverse --border --margin=1 --padding=1'
 
-alias yo="git add -A && git commit -m (curl -s 'whatthecommit.com/index.txt')"
+alias yo="curl -s 'whatthecommit.com/index.txt' | xclip -selection c"
 
 #auto run tmux
 #if status is-interactive
@@ -87,5 +87,5 @@ function fish_title
     set -q argv[1];
     # Looks like ~/d/fish: [git log]
     # or /e/apt: [fish]
-    echo $USER@$hostname: (fish_prompt_pwd_dir_length=1 prompt_pwd) [$argv];
+    echo 🐟 $USER@$hostname: (fish_prompt_pwd_dir_length=1 prompt_pwd) [$argv];
 end
