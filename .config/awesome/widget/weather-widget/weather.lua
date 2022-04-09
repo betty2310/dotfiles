@@ -7,7 +7,7 @@
 -------------------------------------------------
 local awful = require "awful"
 local watch = require "awful.widget.watch"
-local json = require "json"
+local json = require "lib.json"
 local naughty = require "naughty"
 local wibox = require "wibox"
 local gears = require "gears"

@@ -245,7 +245,6 @@ local day_of_the_week = wibox.widget {
 --local spotify = require "widget.spotify"
 
 local pacman = require "widget.pacman"
-pacman:buttons(gears.table.join(awful.button({}, 1, apps.tree)))
 
 -- Mpd
 local mpd_buttons = require "widget.mpd_buttons"
@@ -413,7 +412,6 @@ helpers.add_hover_cursor(volume, "hand1")
 helpers.add_hover_cursor(brightness, "hand1")
 helpers.add_hover_cursor(mpd_song, "hand1")
 helpers.add_hover_cursor(cute_battery_face, "hand1")
-helpers.add_hover_cursor(pacman, "hand1")
 
 -- Create the sidebar
 sidebar = wibox { visible = false, ontop = true, type = "normal", screen = screen.primary }
@@ -544,7 +542,6 @@ end
 -- Item placement
 
 local music_boxed = require "widget.music"
-
 sidebar:setup {
     {
         { ----------- TOP GROUP -----------
@@ -608,7 +605,7 @@ sidebar:setup {
                     expand = "none",
                     layout = wibox.layout.align.horizontal,
                 },
-                helpers.vertical_pad(dpi(25)),
+                helpers.vertical_pad(dpi(30)),
                 pacman,
                 layout = wibox.layout.fixed.vertical,
             },
@@ -636,7 +633,7 @@ sidebar:setup {
                 },
                 left = dpi(40),
                 right = dpi(20),
-                bottom = dpi(10),
+                bottom = dpi(20),
                 widget = wibox.container.margin,
             },
             bg = x.background,

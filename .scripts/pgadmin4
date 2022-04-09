@@ -1,0 +1,4 @@
+#!/bin/bash
+docker run --name pgadmin --network="host" -e "PGADMIN_DEFAULT_EMAIL=admin@admin.admin" -e "PGADMIN_DEFAULT_PASSWORD=admin" -d dpage/pgadmin4 || true
+
+(nohup xdg-open http://127.0.0.1 >/dev/null 2>&1) &

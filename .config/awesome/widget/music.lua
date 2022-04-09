@@ -138,11 +138,17 @@ end
 local update_mpd = function()
     awful.spawn.easy_async_with_shell(command, function(stdout)
         local now = stdout:match "NOW: (.*)ALL"
-        if isempty(now) then
-            now = "1"
-        end
         local all = stdout:match "ALL: (.*)"
-        music_bar.value = (tonumber(now) / tonumber(all)) * 100
+        local prev
+        local out = tonumber(now)
+        if out == 1000 then
+            music_bar.value = 100
+            music_bar.color = x.color3
+        else
+            prev = tonumber(now)
+            music_bar.value = (tonumber(now) / tonumber(all)) * 100
+            music_bar.color = x.color4
+        end
     end)
 end
 

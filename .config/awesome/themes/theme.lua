@@ -13,6 +13,7 @@ local taglist_icon_path = os.getenv "HOME" .. "/.config/awesome/themes/taglist/"
 
 local tip = titlebar_icon_path --alias to save time/space
 local xrdb = xresources.get_current_theme()
+
 local theme = {}
 
 theme.xbackground = xrdb.background
@@ -54,6 +55,7 @@ theme.fg_normal = x.foreground
 theme.fg_focus = x.color2
 theme.fg_urgent = x.color9
 theme.fg_minimize = x.color8
+
 -- Tooltip
 theme.tooltip_height = dpi(490)
 theme.tooltip_width = dpi(310)

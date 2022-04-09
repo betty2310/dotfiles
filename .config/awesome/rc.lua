@@ -485,7 +485,7 @@ awful.rules.rules = {
     -- MPV
     {
         rule = { class = "mpv" },
-        properties = {},
+        properties = { titlebars_enabled = true },
         callback = function(c)
             c.floating = true
             c.ontop = true
