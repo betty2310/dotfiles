@@ -35,12 +35,13 @@ end
 local popup = awful.popup {
     ontop = true,
     visible = false,
-    shape = gears.shape.rounded_rect,
-    border_width = 0,
-    border_color = x.background,
-    maximum_width = 400,
-    offset = { x = -100, y = -20 },
+    shape = helpers.prrect(dpi(0), true, true, true, true),
+    border_width = 3,
+    border_color = x.color4,
+    maximum_width = 600,
+    offset = { x = -140, y = 94 },
     widget = {},
+    type = "dock",
 }
 
 local docker_widget = wibox.widget {
@@ -317,7 +318,7 @@ local function rebuild_widget(containers, errors, _, _)
                     {
                         {
                             status_icon,
-                            margins = 8,
+                            margins = 12,
                             layout = wibox.container.margin,
                         },
                         valign = "center",
@@ -355,7 +356,7 @@ local function rebuild_widget(containers, errors, _, _)
                         haligh = "center",
                         layout = wibox.container.place,
                     },
-                    spacing = 8,
+                    spacing = 10,
                     layout = wibox.layout.align.horizontal,
                 },
                 margins = 8,

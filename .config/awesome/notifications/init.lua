@@ -41,10 +41,9 @@ function notifications.init()
     require "notifications.brightness"
     require "notifications.battery"
     require "notifications.mpd"
-    require "notifications.league_of_legends"
     -- require "notifications.keyboardlayout"
     -- Load theme
-    require "notifications.lovelace"
+    require "notifications.theme"
 end
 
 -- Handle notification icon

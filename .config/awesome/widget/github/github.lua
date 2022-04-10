@@ -89,7 +89,7 @@ local update_widget = function(_, stdout, _, _, _)
     end
     github_contributions_widget:setup {
         row,
-        margins = 5,
+        margins = 7,
         layout = wibox.container.margin,
     }
 end
@@ -100,15 +100,24 @@ end)
 local popup = awful.popup {
     ontop = true,
     visible = false,
-    shape = gears.shape.rounded_rect,
-    border_width = 0,
-    border_color = x.background,
+    shape = helpers.prrect(dpi(0), true, true, true, true),
+    border_width = 3,
+    border_color = x.color2,
     width = 500,
     height = 500,
     x = 200,
     y = 770,
     widget = github_contributions_widget,
+    hide_on_right_click = true,
+    type = "dock",
 }
+
+if sidebar and sidebar.visible then
+    popup.visible = true
+else
+    popup.visible = false
+end
+
 local go2 = wibox.widget {
     font = "JetBrainsMono Nerd Font 13",
     markup = helpers.colorize_text(" ", x.color2),

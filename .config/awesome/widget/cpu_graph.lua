@@ -38,7 +38,7 @@ local timeout = args.timeout or 1
 
 local cpugraph_widget = wibox.widget {
     max_value = 100,
-    background_color = background_color,
+    background_color = x.background,
     forced_width = width,
     forced_height = 40,
     step_width = step_width,
@@ -54,7 +54,7 @@ cpu_widget = wibox.widget {
         layout = wibox.container.mirror,
     },
     bottom = 3,
-    color = background_color,
+    color = x.background,
     widget = wibox.container.margin,
 }
 
@@ -80,12 +80,14 @@ end, cpugraph_widget)
 local popup = awful.popup {
     ontop = true,
     visible = false,
-    shape = gears.shape.rounded_rect,
-    border_width = 0,
-    border_color = x.background,
+    shape = helpers.prrect(dpi(0), true, true, true, true),
+    border_width = 3,
+    border_color = x.color11,
     x = 170,
     y = 770,
     widget = cpu_widget,
+    hide_on_right_click = true,
+    type = "dock",
 }
 local go = wibox.widget {
     font = "JetBrainsMono Nerd Font 13",
