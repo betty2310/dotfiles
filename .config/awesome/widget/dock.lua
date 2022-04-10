@@ -50,10 +50,7 @@ dock_pinned_apps = {
     { class = "notion-app-enhanced", launcher = apps.notion },
     { class = "Spotify", launcher = apps.spotify },
     { class = "scratchpad", launcher = apps.scratchpad },
-    { class = "email", launcher = apps.mail },
-    { class = "obsidian", launcher = apps.obsidian },
     { class = "Code", launcher = apps.code },
-    { class = "Mars", launcher = apps.mars },
 }
 
 ----------------------------------------------------------------------------

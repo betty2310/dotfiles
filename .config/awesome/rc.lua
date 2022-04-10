@@ -365,7 +365,7 @@ awful.rules.rules = {
         except_any = {
             type = { "dialog" },
         },
-        properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.60 },
+        properties = { floating = true, width = screen_width * 0.50, height = screen_height * 0.55 },
     },
 
     -- floating_terminal
@@ -504,6 +504,13 @@ awful.rules.rules = {
         end,
     },
 
+    -- thunar
+    {
+        rule = { class = "Thunar" },
+        properties = {
+            titlebars_enabled = true,
+        },
+    },
     -- Anki
     {
         rule = { class = "Anki" },
@@ -590,7 +597,7 @@ awful.rules.rules = {
                 "Code",
                 "Mars",
                 "Anki",
-                "scratchpad",
+                "firefox",
             },
         },
         except_any = {
@@ -639,6 +646,7 @@ awful.rules.rules = {
         rule_any = {
             class = {
                 "notion-app-enhanced",
+                "scratchpad",
                 "Zathura",
                 "obsidian",
                 "Inkdrop",

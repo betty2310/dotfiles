@@ -131,136 +131,76 @@ end)
 local calendar_box = create_boxed_widget(calendar, dpi(150), dpi(250), "#313744")
 
 local kanji_box = require "widget.kanji"
--- Uptime
-local uptime_text = wibox.widget.textbox()
-awful.widget.watch("sh -c 'uptime -p | sed 's/^...//''", 60, function(_, stdout)
-    -- Remove trailing whitespaces
-    local out = stdout:gsub("^%s*(.-)%s*$", "%1")
-    uptime_text.text = out
-end)
-local uptime = wibox.widget {
-    {
-        align = "center",
-        valign = "center",
-        font = "Material Design Icons  16",
-        markup = helpers.colorize_text("󰮯", x.color3),
-        widget = wibox.widget.textbox(),
-    },
-    {
-        align = "center",
-        valign = "center",
-        font = "CartographCF Medium Italic 10",
-        widget = uptime_text,
-    },
-    spacing = dpi(10),
-    layout = wibox.layout.fixed.horizontal,
-}
-
-local uptime_box = create_boxed_widget(uptime, dpi(200), dpi(20), x.background)
-
-uptime_box:buttons(gears.table.join(awful.button({}, 1, function()
-    exit_screen_show()
-    gears.timer.delayed_call(function()
-        dashboard_hide()
-    end)
-end)))
-helpers.add_hover_cursor(uptime_box, "hand1")
-
-local notification_state = wibox.widget {
-    align = "center",
-    valign = "center",
-    font = "icomoon 20",
-    widget = wibox.widget.textbox "",
-}
-local function update_notification_state_icon()
-    if naughty.suspended then
-        notification_state.markup = helpers.colorize_text(notification_state.text, x.color8)
-    else
-        notification_state.markup = helpers.colorize_text(notification_state.text, x.color3)
-    end
-end
-update_notification_state_icon()
-local notification_state_box = create_boxed_widget(notification_state, dpi(65), dpi(50), x.background)
-notification_state_box:buttons(gears.table.join(
-    -- Left click - Toggle notification state
-    awful.button({}, 1, function()
-        naughty.suspended = not naughty.suspended
-        update_notification_state_icon()
-    end)
-))
-
-helpers.add_hover_cursor(notification_state_box, "hand1")
-
-local nightlight = wibox.widget {
-    align = "center",
-    valign = "center",
-    font = "Font Awesome 6 Pro Solid 18",
-    markup = helpers.colorize_text("", x.color4),
-    widget = wibox.widget.textbox(),
-}
-
-local nightlight_box = create_boxed_widget(nightlight, dpi(65), dpi(50), x.background)
-nightlight_box:buttons(gears.table.join(awful.button({}, 1, function()
-    apps.night_mode()
-end)))
-
-helpers.add_hover_cursor(nightlight_box, "hand1")
-local screenshot = wibox.widget {
-    align = "center",
-    valign = "center",
-    font = "icomoon 20",
-    markup = helpers.colorize_text("", x.color2),
-    widget = wibox.widget.textbox(),
-}
-local screenshot_box = create_boxed_widget(screenshot, dpi(65), dpi(50), x.background)
-screenshot_box:buttons(gears.table.join(
-    -- Left click - Take screenshot
-    awful.button({}, 1, function()
-        apps.screenshot "full"
-    end),
-    -- Right click - Take screenshot in 5 seconds
-    awful.button({}, 3, function()
-        naughty.notify {
-            title = "Say cheese!",
-            text = "Taking shot in 5 seconds",
-            timeout = 4,
-            icon = icons.image.screenshot,
-        }
-        apps.screenshot("full", 5)
-    end)
-))
-
-helpers.add_hover_cursor(screenshot_box, "hand1")
-local screenrec = wibox.widget {
-    align = "center",
-    valign = "center",
-    font = "Font Awesome 6 Pro Solid 18",
-    markup = helpers.colorize_text("", x.color5),
-    widget = wibox.widget.textbox(),
-}
-local screenrec_box = create_boxed_widget(screenrec, dpi(65), dpi(50), x.background)
-screenrec_box:buttons(gears.table.join(
-    -- Left click - Take screenshot
-    awful.button({}, 1, function()
-        apps.record()
-    end),
-    -- Right click - Take screenshot in 5 seconds
-    awful.button({}, 3, function()
-        naughty.notify {
-            title = "Open Screen apps!",
-            text = "What r u doing?",
-            timeout = 1,
-            icon = icons.image.screenshot,
-        }
-        awful.spawn.with_shell "simplescreenrecorder"
-    end)
-))
-helpers.add_hover_cursor(screenrec_box, "hand1")
 
 F.action = {}
 
 local notifs = require "components.notif_center.notif"
 
+local function create_buttons(icon, color)
+    local button = wibox.widget {
+        id = "icon",
+        markup = helpers.colorize_text(icon, color),
+        font = beautiful.icon_font_name .. "Round 15",
+        align = "center",
+        valign = "center",
+        widget = wibox.widget.textbox,
+    }
+
+    local button_container = wibox.widget {
+        {
+            {
+                button,
+                margins = dpi(5),
+                forced_height = dpi(55),
+                forced_width = dpi(55),
+                widget = wibox.container.margin,
+            },
+            widget = require "widget.click",
+        },
+        bg = x.color0,
+        shape = gears.shape.circle,
+        widget = wibox.container.background,
+    }
+
+    return button_container
+end
+-- user profile
+local format_item = function(widget)
+    return wibox.widget {
+        {
+            {
+                layout = wibox.layout.align.vertical,
+                expand = "none",
+                nil,
+                widget,
+                nil,
+            },
+            margins = dpi(8),
+            widget = wibox.container.margin,
+        },
+        forced_height = dpi(80),
+        forced_width = dpi(100),
+        bg = x.background,
+        shape = helpers.rrect(dpi(8)),
+        widget = wibox.container.background,
+    }
+end
+local user_profile = wibox.widget {
+    format_item(require "widget.user"()),
+    direction = "west",
+    widget = wibox.container.rotate,
+}
+local end_sec = wibox.widget {
+    align = "center",
+    valign = "center",
+    font = beautiful.icon_font_name .. 18,
+    markup = helpers.colorize_text("", x.color1),
+    widget = wibox.widget.textbox(),
+}
+
+local end_button = create_boxed_widget(end_sec, dpi(40), dpi(50), "#313744")
+
+helpers.add_hover_cursor(end_button, "hand1")
 local action = awful.popup {
     widget = {
         widget = wibox.container.margin,
@@ -275,17 +215,14 @@ local action = awful.popup {
             },
             {
                 {
-                    {
-                        notification_state_box,
-                        screenshot_box,
-                        screenrec_box,
-                        nightlight_box,
-                        layout = wibox.layout.flex.vertical,
-                    },
-                    calendar_box,
-                    layout = wibox.layout.align.horizontal,
+                    nil,
+                    user_profile,
+                    end_button,
+                    layout = wibox.layout.align.vertical,
                 },
-                layout = wibox.layout.fixed.vertical,
+                calendar_box,
+                nil,
+                layout = wibox.layout.align.horizontal,
             },
             layout = wibox.layout.fixed.vertical,
         },
@@ -334,6 +271,11 @@ local function action_hide()
     action_status = true
 end
 
+end_button:buttons(gears.table.join(awful.button({}, 1, nil, function()
+    action_hide()
+    exit_screen_show()
+end)))
+
 F.action.toggle = function()
     if action.visible then
         action_hide()
@@ -341,3 +283,6 @@ F.action.toggle = function()
         action_show()
     end
 end
+action:buttons(gears.table.join(awful.button({}, 3, nil, function()
+    action_hide()
+end)))

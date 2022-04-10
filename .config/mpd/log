@@ -3821,3 +3821,80 @@ Apr 08 20:11 : player: played "spotify/Adele - Someone Like You.mp3"
 Apr 08 22:47 : config: option 'device' on line 21 was not recognized
 Apr 08 23:34 : player: played "spotify/Adele - Someone Like You.mp3"
 Apr 09 07:48 : config: option 'device' on line 21 was not recognized
+Apr 09 13:01 : player: played "spotify/Adele - Someone Like You.mp3"
+Apr 09 14:03 : config: option 'device' on line 21 was not recognized
+Apr 09 14:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 14:44 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 09 14:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 15:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 15:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 09 21:06 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 21:06 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 09 21:08 : player: played "spotify/Lil Nas X - Old Town Road.mp3"
+Apr 09 21:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 21:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 21:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 09 21:12 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 09 21:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 21:15 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 09 21:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 22:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 22:42 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 09 22:42 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 22:43 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 22:43 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 09 22:46 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 09 22:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 09 23:41 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 10 06:44 : config: option 'device' on line 21 was not recognized
+Apr 10 09:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:21 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:21 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:21 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:22 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:22 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:23 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:23 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:24 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:24 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:25 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:25 : player: played "spotify/Shawn Mendes - Mercy.mp3"
+Apr 10 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:25 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:25 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:26 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:26 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:31 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:34 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
+Apr 10 09:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:38 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
+Apr 10 09:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:41 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
+Apr 10 09:41 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 10 09:44 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 10 09:44 : output: Failed to play on "pulse audio" (pulse): suspended

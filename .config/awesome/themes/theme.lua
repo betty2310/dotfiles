@@ -16,6 +16,7 @@ local xrdb = xresources.get_current_theme()
 
 local theme = {}
 
+theme.pfp = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/betty.jpg")
 theme.xbackground = xrdb.background
 theme.xforeground = xrdb.foreground
 theme.xcolor0 = xrdb.color0
@@ -36,9 +37,11 @@ theme.xcolor14 = xrdb.color14
 theme.xcolor15 = xrdb.color15
 theme.darker = "#232731"
 
+theme.accent = theme.xcolor4
+theme.hover_effect = theme.accent .. "44"
 theme.dash_box_bg = x.background
-
 theme.transparent = "#00000000"
+
 theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
 theme.font = "monospace medium 8"
 theme.font_name = "SF Pro Display 14"

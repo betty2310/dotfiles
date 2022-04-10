@@ -90,22 +90,22 @@ gears.timer {
 local kanji_widget = wibox.widget {
     {
         kanji_text,
-        helpers.horizontal_pad(dpi(20)),
+        helpers.horizontal_pad(dpi(30)),
         {
             han_text,
-            helpers.vertical_pad(dpi(10)),
+            helpers.vertical_pad(dpi(8)),
             {
                 step_function = wibox.container.scroll.step_functions.waiting_nonlinear_back_and_forth,
                 speed = 50,
                 viet_text,
-                forced_width = 110,
+                forced_width = 120,
                 widget = wibox.container.scroll.horizontal,
             },
             layout = wibox.layout.align.vertical,
         },
         layout = wibox.layout.align.horizontal,
     },
-    margins = box_gap * 4,
+    margins = box_gap * 3,
     color = "#00000000",
     widget = wibox.container.margin,
 }

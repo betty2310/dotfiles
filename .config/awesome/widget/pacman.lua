@@ -43,11 +43,7 @@ local function create_boxed_widget(widget_to_be_boxed, width, height, bg_color)
     return boxed_widget
 end
 
-local go1 = wibox.widget {
-    font = "JetBrainsMono Nerd Font 13",
-    markup = helpers.colorize_text(" ", x.color1),
-    widget = wibox.widget.textbox,
-}
+local go1 = require "widget.cpu_graph"
 local go0 = wibox.widget {
     font = "JetBrainsMono Nerd Font 13",
     align = "right",

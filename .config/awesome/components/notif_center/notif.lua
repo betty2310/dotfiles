@@ -26,6 +26,8 @@ notifs_clear:buttons(gears.table.join(awful.button({}, 1, function()
     _G.notif_center_reset_notifs_container()
 end)))
 
+helpers.add_hover_cursor(notifs_clear, "hand1")
+
 local notifs_empty = wibox.widget {
     {
         nil,
@@ -36,20 +38,12 @@ local notifs_empty = wibox.widget {
                 widget = wibox.widget.imagebox,
                 image = gears.color.recolor_image(
                     os.getenv "HOME" .. "/.config/awesome/icons/no-notifs.png",
-                    x.foreground .. "88"
+                    "#4C566A"
                 ),
                 forced_height = 120,
                 forced_width = 120,
                 valign = "center",
                 halign = "center",
-            },
-            helpers.vertical_pad(dpi(20)),
-            {
-                markup = "<span foreground='" .. x.foreground .. "88" .. "'>😀 No Notifications</span>",
-                font = "sans 13",
-                align = "center",
-                valign = "center",
-                widget = wibox.widget.textbox,
             },
             layout = wibox.layout.fixed.vertical,
         },
@@ -72,7 +66,6 @@ local notifs_container = wibox.widget {
         right = 6,
         widget = wibox.container.margin,
     },
-    forced_width = 300,
     forced_height = 490,
     layout = wibox.layout.fixed.vertical,
 }
@@ -219,11 +212,6 @@ naughty.connect_signal("request::display", function(n)
     notifs_container:insert(1, create_notif(appicon, n, width))
 end)
 
-local space = wibox.widget {
-    bg = x.background,
-    shape = helpers.rrect(dpi(14)),
-    widget = wibox.container.background,
-}
 local notifs = wibox.widget {
     {
         {

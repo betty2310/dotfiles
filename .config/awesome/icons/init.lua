@@ -37,8 +37,7 @@ icons.text.by_class = {
 
     -- General
     ["TelegramDesktop"] = { symbol = "", color = x.color4 },
-    ["Firefox"] = { symbol = "", color = x.foreground .. "99" },
-    ["firefox"] = { symbol = "", color = x.foreground },
+    ["firefox"] = { symbol = "", color = x.color3 },
     ["notion-app-enhanced"] = { symbol = "", color = x.foreground },
     ["Nightly"] = { symbol = "", color = x.color4 },
     ["Google-chrome"] = { symbol = "", color = x.color1 },
