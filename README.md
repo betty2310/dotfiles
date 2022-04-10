@@ -1,7 +1,10 @@
 
 <p align="center">
-    <img src="https://github.com/betty2310/file/blob/main/awesome/ghost.png?raw=true" alt="img" class="center" align="center" width="200px">
+    <img src="https://github.com/betty2310/file/blob/main/awesome/ghost.png?raw=true" alt="img" class="center" align="center" width="350px">
 </p>
+
+---
+
 <p align="center">
     <b>🐧 Betty's configuration files 🐧</b>
 </p>
@@ -19,7 +22,7 @@
 
 <p/>
 </br></br>
-<img src="https://github.com/betty2310/file/blob/main/awesome/out.png?raw=true" alt="img" align="right" width="400px">
+<img src="https://github.com/betty2310/file/blob/main/awesome/output.png?raw=true" alt="img" align="right" width="400px">
 
 This is my personal collection of configuration files.
 
