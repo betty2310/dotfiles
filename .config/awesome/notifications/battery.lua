@@ -74,12 +74,8 @@ awesome.connect_signal("signal::charger", function(plugged)
     end
 
     -- Do not send a notification the first time (when AwesomeWM (re)starts)
-    if charger_first_time then
-        charger_first_time = false
-    else
-        notif = notifications.notify_dwim(
-            { title = "Charger", message = message, icon = icon, timeout = 3, app_name = "charger" },
-            notif
-        )
-    end
+    notif = notifications.notify_dwim(
+        { title = "Charger", message = message, icon = icon, timeout = 3, app_name = "charger" },
+        notif
+    )
 end)

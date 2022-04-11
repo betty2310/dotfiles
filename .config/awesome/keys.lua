@@ -86,6 +86,7 @@ superkey = "Mod1"
 altkey = "Mod4"
 ctrlkey = "Control"
 shiftkey = "Shift"
+
 bling.widget.window_switcher.enable {
     type = "thumbnail",
     hide_window_switcher_key = "Escape",
@@ -194,11 +195,8 @@ keys.globalkeys = gears.table.join(
     -- Double tap: Also disable floating for ALL visible clients in the tag
     --
     awful.key({ altkey }, "n", function()
-        awful.layout.inc(1)
+        layout_popup_show(awful.screen.focused())
     end, { description = "select next", group = "layout" }),
-    awful.key({ altkey, "Shift" }, "n", function()
-        awful.layout.inc(-1)
-    end, { description = "select previous", group = "layout" }),
 
     awful.key({ superkey }, "'", function()
         awful.layout.set(awful.layout.suit.max)

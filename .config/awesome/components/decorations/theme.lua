@@ -13,7 +13,7 @@ local decorations = require "components.decorations"
 
 -- Button configuration
 local gen_button_size = dpi(12)
-local gen_button_margin = dpi(8)
+local gen_button_margin = dpi(5)
 local gen_button_color_unfocused = x.color8
 local gen_button_shape = gears.shape.circle
 

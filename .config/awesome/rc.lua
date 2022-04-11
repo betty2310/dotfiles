@@ -829,6 +829,8 @@ end)
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 
+awful.spawn.with_shell "mpd-notification -v -t 5 -m ~/Music -s 200 --notification-file-workaround &"
+
 -- focus by mouse hover
 -- client.connect_signal("mouse::enter", function(c)
 --     if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier and awful.client.focus.filter(c) then

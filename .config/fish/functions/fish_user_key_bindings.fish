@@ -1,5 +1,5 @@
 function fish_user_key_bindings
-bind \cR his
+bind \cr his
 bind \ct frepo
 bind \ce fedit
 

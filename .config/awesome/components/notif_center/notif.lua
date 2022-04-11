@@ -144,11 +144,11 @@ local create_notif = function(icon, n, width)
                                 speed = 50,
                                 {
                                     markup = n.message,
-                                    font = "sans medium 8",
+                                    font = "sans 8",
                                     align = "left",
                                     widget = wibox.widget.textbox,
                                 },
-                                forced_width = 50,
+                                forced_width = 100,
                                 widget = wibox.container.scroll.horizontal,
                             },
                             spacing = 5,

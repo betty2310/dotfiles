@@ -167,6 +167,9 @@ local image_icon_names = {
     "high",
     "max",
     "low",
+    "brlow",
+    "brmedium",
+    "brhigh",
 }
 
 -- Path to icons

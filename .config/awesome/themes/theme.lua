@@ -42,7 +42,21 @@ theme.hover_effect = theme.accent .. "44"
 theme.dash_box_bg = x.background
 theme.transparent = "#00000000"
 
+-- Pop up notifications
+theme.pop_size = dpi(180)
+theme.pop_bg = theme.xbackground
+theme.pop_vol_color = theme.accent
+theme.pop_brightness_color = theme.accent
+theme.pop_bar_bg = theme.accent .. "44"
+theme.pop_fg = theme.xforeground
+theme.pop_border_radius = theme.border_radius
+
+theme.volume_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/high.png")
+theme.volume_muted_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/muted.png")
+theme.brightness_icon = gears.surface.load_uncached(gfs.get_configuration_dir() .. "icons/redshift.png")
+
 theme.wallpaper = os.getenv "HOME" .. "/Pictures/bg.jpg"
+
 theme.font = "monospace medium 8"
 theme.font_name = "SF Pro Display 14"
 theme.icon_font_name = "Material Icons "
