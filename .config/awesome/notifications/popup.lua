@@ -107,13 +107,13 @@ awesome.connect_signal("signal::volume", function(value, muted)
             if value > 0 and value <= 30 then
                 icon = icons.image.low
             end
-            if value > 30 and value <= 60 then
+            if value > 30 and value <= 65 then
                 icon = icons.image.medium
             end
-            if value > 60 and value <= 80 then
+            if value > 65 and value <= 90 then
                 icon = icons.image.high
             end
-            if value > 80 then
+            if value > 90 then
                 icon = icons.image.max
             end
             pop_bar.color = "#c1b494"

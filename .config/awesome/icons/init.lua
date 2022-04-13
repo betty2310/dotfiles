@@ -99,6 +99,7 @@ icons.text.by_class = {
     ["copyq"] = { symbol = "", color = x.color2 },
     ["obsidian"] = { symbol = "", color = x.color13 },
     ["Mars"] = { symbol = "", color = x.color11 },
+    ["Todoist"] = { symbol = "", color = x.color3 },
 
     -- Default
     ["_"] = { symbol = "", color = x.color4 },

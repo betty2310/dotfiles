@@ -4,7 +4,7 @@
 # I use it for editing dotfiles in my ~/.config directory
 
 # Directory to search in
-dir="$HOME/Music/"
+dir="$HOME/OneDrive/"
 # Change directory so that the paths are shorter in rofi
 cd "$dir" || exit
 choice="$(rg --files --color=never --ignore-file "$ignore_file" | rofi -i -dmenu -theme ~/.config/rofi/nord/nord.rasi)"

@@ -67,7 +67,10 @@ set -gx PATH node_modules/.bin $PATH
 set -g GOPATH $HOME/go $PATH
 set -gx PATH $GOPATH/bin $PATH
 
-#set -x FZF_DEFAULT_OPTS '-e --prompt="הּ " --preview "bat --color=always {1} --theme=ansi" --layout=reverse --height=50% --info=inline --border --margin=1 --padding=1'
+# Rust path
+
+set -gx PATH ~/.cargo/bin $PATH
+
 set -x FZF_DEFAULT_OPTS '--prompt="הּ "
     --color=hl:#81a1c1
     --color=hl+:#BF616A

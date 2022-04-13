@@ -54,15 +54,15 @@ local spotify_scratch = bling.module.scratchpad:new {
     rubato = { y = anim_y },
 }
 
-local term = bling.module.scratchpad:new {
-    command = "kitty --class=scratch",
-    rule = { instance = "scratch" },
+local todo = bling.module.scratchpad:new {
+    command = "todoist",
+    rule = { class = "Todoist" },
     sticky = true,
     autoclose = false,
     floating = true,
-    geometry = { x = 150, y = 65, height = 300, width = 500 },
+    geometry = { x = 840, y = 150 },
     reapply = true,
-    rubato = { y = anim_y },
+    rubato = { x = anim_x },
     dont_focus_before_close = false,
 }
 
@@ -76,8 +76,8 @@ awesome.connect_signal("scratch::spotify", function()
     spotify_scratch:toggle()
 end)
 
-awesome.connect_signal("scratch::term", function()
-    term:toggle()
+awesome.connect_signal("scratch::todoist", function()
+    todo:toggle()
 end)
 local keys = {}
 
@@ -342,12 +342,12 @@ keys.globalkeys = gears.table.join(
         awful.spawn.with_shell "copyq show"
     end, { description = "show clipboard", group = "launcher" }),
     -- Microphone (V for voice)
-    awful.key({ superkey }, "v", function()
+    awful.key({}, "XF86AudioMicMute", function()
         awful.spawn.with_shell "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     end, { description = "(un)mute microphone", group = "volume" }),
 
     -- Microphone overlay
-    awful.key({ superkey, shiftkey }, "v", function()
+    awful.key({ superkey }, "XF86AudioMicMute", function()
         microphone_overlay_toggle()
     end, { description = "toggle microphone overlay", group = "volume" }),
 
@@ -422,6 +422,9 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey, shiftkey }, "c", function()
         awesome.emit_signal "scratch::discord"
     end, { description = "Toggle discord scratchpad", group = "Bling" }),
+    awful.key({ superkey, shiftkey }, "t", function()
+        awesome.emit_signal "scratch::todoist"
+    end, { description = "Toggle todoist scratchpad", group = "Bling" }),
     awful.key({ superkey, shiftkey }, "n", function(c)
         apps.notion()
     end, { description = "notion", group = "launcher" }),
@@ -443,7 +446,7 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey }, "F10", function()
         awful.spawn.with_shell "class"
     end, { description = "show class of program !!", group = "launcher" }),
-    awful.key({ superkey }, "F7", function()
+    awful.key({}, "XF86Favorites", function()
         awful.spawn.with_shell "notflix"
     end, { description = "netflix and chill!!", group = "launcher" }),
     awful.key({ superkey }, "F11", function()

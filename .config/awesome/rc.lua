@@ -335,8 +335,22 @@ awful.rules.rules = {
 
     -- Pavucontrol
     {
-        rule_any = { class = { "Pavucontrol" } },
+        rule_any = {
+            class = {
+                "Pavucontrol",
+                "Blueman-manager",
+            },
+        },
         properties = { floating = true, width = screen_width * 0.45, height = screen_height * 0.8 },
+    },
+    -- todoist
+    {
+        rule_any = {
+            class = {
+                "Todoist",
+            },
+        },
+        properties = { floating = true, width = screen_width * 0.45, height = screen_height * 0.7 },
     },
     -- Zathura
     -- {
@@ -828,8 +842,6 @@ end)
 
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
-
-awful.spawn.with_shell "mpd-notification -v -t 5 -m ~/Music -s 200 --notification-file-workaround &"
 
 -- focus by mouse hover
 -- client.connect_signal("mouse::enter", function(c)

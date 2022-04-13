@@ -38,7 +38,6 @@ end
 function notifications.init()
     -- Initialize various notification daemons
     require "notifications.battery"
-    -- require "notifications.mpd"
     -- Load theme
     require "notifications.theme"
     require "notifications.popup"

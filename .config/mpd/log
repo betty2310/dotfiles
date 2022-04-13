@@ -4072,3 +4072,123 @@ Apr 11 12:45 : player: played "spotify/Florence + The Machine - Jenny of Oldston
 Apr 11 12:45 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
 Apr 11 12:47 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
 Apr 11 12:47 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 11 12:49 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 12:49 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 12:49 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 12:49 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 12:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 12:53 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 12:54 : player: played "spotify/Imagine Dragons - Bad Liar.mp3"
+Apr 11 15:51 : config: option 'device' on line 21 was not recognized
+Apr 11 15:55 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 15:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 15:55 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 15:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 15:56 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 15:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:00 : player: played "spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3"
+Apr 11 16:00 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:04 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 11 16:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:07 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:07 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:09 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:09 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:12 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:22 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:30 : player: played "spotify/Imagine Dragons - Natural.mp3"
+Apr 11 16:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:38 : player: played "spotify/Imagine Dragons - Natural.mp3"
+Apr 11 16:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:41 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:41 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:42 : player: played "spotify/Ed Sheeran - Photograph.mp3"
+Apr 11 16:43 : config: option 'device' on line 21 was not recognized
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:44 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:44 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:44 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:45 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:45 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:45 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:46 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:46 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:50 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:51 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 16:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:52 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 16:52 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 18:33 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 18:33 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 18:33 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 18:33 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 18:33 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 19:47 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 19:47 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 11 19:50 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 11 19:50 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 19:53 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 11 19:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 19:57 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 11 19:57 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 11 23:37 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 12 07:13 : config: option 'device' on line 21 was not recognized
+Apr 12 07:16 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 12 07:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 12 07:17 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 12 07:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 12 07:58 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 12 10:13 : config: option 'device' on line 21 was not recognized
+Apr 12 10:18 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 12 10:18 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 12 11:29 : player: played "spotify/Tom Walker - Leave a Light On.mp3"
+Apr 12 12:50 : config: option 'device' on line 21 was not recognized
+Apr 12 23:31 : player: played "spotify/Tom Walker - Leave a Light On.mp3"
+Apr 12 23:32 : config: option 'device' on line 21 was not recognized
+Apr 13 08:05 : config: option 'device' on line 21 was not recognized
+Apr 13 08:52 : player: played "spotify/Tom Walker - Leave a Light On.mp3"
+Apr 13 09:26 : config: option 'device' on line 21 was not recognized
+Apr 13 10:58 : player: played "spotify/Tom Walker - Leave a Light On.mp3"
+Apr 13 11:41 : config: option 'device' on line 21 was not recognized
+Apr 13 13:17 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 14:49 : player: played "spotify/Tom Walker - Leave a Light On.mp3"
+Apr 13 15:54 : config: option 'device' on line 21 was not recognized
+Apr 13 15:55 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 15:55 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 15:58 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 13 15:58 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 16:01 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 13 16:01 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 16:04 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 13 16:04 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 16:07 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 13 16:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 16:11 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 13 16:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 17:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 13 17:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
