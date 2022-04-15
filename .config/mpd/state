@@ -2,12 +2,12 @@ sw_volume: 83
 audio_device_state:1:My ALSA Device
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: pause
-current: 19
-time: 187.279000
+state: play
+current: 31
+time: 81.066000
 random: 1
 repeat: 1
-single: 1
+single: 0
 consume: 0
 crossfade: 0
 mixrampdb: 0.000000
@@ -29,38 +29,37 @@ playlist_begin
 13:spotify/Imagine Dragons - Believer.mp3
 14:spotify/Shawn Mendes - Stitches.mp3
 15:spotify/Auralnauts, Silver Letomi - You Spin Me Round.mp3
-16:spotify/Shawn Mendes - Treat You Better.mp3
-17:spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
-18:spotify/Shawn Mendes - Mercy.mp3
-19:spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
-20:spotify/Tom Walker - Leave a Light On.mp3
-21:spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
-22:spotify/The Chainsmokers - Paris.mp3
-23:spotify/ZAYN - PILLOWTALK.mp3
-24:spotify/OneRepublic - Counting Stars.mp3
-25:spotify/Imagine Dragons - Radioactive.mp3
-26:spotify/Imagine Dragons - Demons.mp3
-27:spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
-28:spotify/Imagine Dragons - Natural.mp3
-29:spotify/Imagine Dragons - Bad Liar.mp3
-30:spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
-31:spotify/Justin Bieber - Love Yourself.mp3
-32:spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
-33:spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
-34:spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
-35:spotify/The Chainsmokers - Sick Boy.mp3
-36:spotify/Adele - Skyfall.mp3
-37:spotify/Ed Sheeran - Photograph.mp3
-38:spotify/Shawn Mendes - Wonder.mp3
-39:spotify/Maroon 5 - Sugar.mp3
-40:spotify/Maroon 5 - Animals.mp3
-41:spotify/Maroon 5 - Maps.mp3
-42:spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
-43:spotify/Shawn Mendes - In My Blood.mp3
-44:Wavin_Flag_Coca-Cola_Celebration_Mix-[WTJSt4wP2ME].mp3
-45:Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3
-46:spotify/Taylor Swift - cardigan.mp3
-47:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
-48:spotify/Lil Nas X - Old Town Road.mp3
-49:spotify/BLACKPINK - How You Like That.mp3
+16:spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
+17:spotify/Shawn Mendes - Mercy.mp3
+18:spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
+19:spotify/Tom Walker - Leave a Light On.mp3
+20:spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
+21:spotify/The Chainsmokers - Paris.mp3
+22:spotify/ZAYN - PILLOWTALK.mp3
+23:spotify/OneRepublic - Counting Stars.mp3
+24:spotify/Imagine Dragons - Radioactive.mp3
+25:spotify/Imagine Dragons - Demons.mp3
+26:spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
+27:spotify/Imagine Dragons - Natural.mp3
+28:spotify/Imagine Dragons - Bad Liar.mp3
+29:spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
+30:spotify/Justin Bieber - Love Yourself.mp3
+31:spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
+32:spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
+33:spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
+34:spotify/The Chainsmokers - Sick Boy.mp3
+35:spotify/Adele - Skyfall.mp3
+36:spotify/Ed Sheeran - Photograph.mp3
+37:spotify/Shawn Mendes - Wonder.mp3
+38:spotify/Maroon 5 - Sugar.mp3
+39:spotify/Maroon 5 - Animals.mp3
+40:spotify/Maroon 5 - Maps.mp3
+41:spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
+42:spotify/Shawn Mendes - In My Blood.mp3
+43:Wavin_Flag_Coca-Cola_Celebration_Mix-[WTJSt4wP2ME].mp3
+44:Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3
+45:spotify/Taylor Swift - cardigan.mp3
+46:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
+47:spotify/Lil Nas X - Old Town Road.mp3
+48:spotify/BLACKPINK - How You Like That.mp3
 playlist_end

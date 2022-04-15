@@ -610,7 +610,6 @@ awful.rules.rules = {
                 "Code",
                 "Mars",
                 "Anki",
-                "firefox",
             },
         },
         except_any = {
@@ -629,6 +628,7 @@ awful.rules.rules = {
             class = {
                 "qutebrowser",
                 "Google-chrome",
+                "firefox",
             },
         },
         except_any = {

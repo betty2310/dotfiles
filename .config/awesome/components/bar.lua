@@ -15,6 +15,123 @@ local dock_placement = function(w)
     return awful.placement.bottom(w)
 end
 
+-- Battery
+-------------
+
+local charge_icon = wibox.widget {
+    bg = x.color8,
+    widget = wibox.container.background,
+    visible = false,
+}
+
+local batt = wibox.widget {
+    charge_icon,
+    max_value = 100,
+    value = 50,
+    thickness = dpi(2),
+    padding = dpi(1),
+    start_angle = math.pi * 3 / 2,
+    color = { x.color2 },
+    bg = x.color2 .. "55",
+    widget = wibox.container.arcchart,
+}
+
+local batt_last_value = 100
+local batt_low_value = 40
+local batt_critical_value = 20
+awesome.connect_signal("signal::battery", function(value)
+    batt.value = value
+    batt_last_value = value
+    local color
+
+    if charge_icon.visible then
+        color = x.color6
+    elseif value <= batt_critical_value then
+        color = x.color1
+    elseif value <= batt_low_value then
+        color = x.color3
+    else
+        color = x.color2
+    end
+
+    batt.colors = { color }
+    batt.bg = color .. "44"
+end)
+
+local wrap_widget = function(widget)
+    return {
+        widget,
+        margins = dpi(6),
+        widget = wibox.container.margin,
+    }
+end
+
+awesome.connect_signal("signal::charger", function(state)
+    local color
+    if state then
+        charge_icon.visible = true
+        color = x.color6
+    elseif batt_last_value <= batt_critical_value then
+        charge_icon.visible = false
+        color = x.color1
+    elseif batt_last_value <= batt_low_value then
+        charge_icon.visible = false
+        color = x.color3
+    else
+        charge_icon.visible = false
+        color = x.color2
+    end
+
+    batt.colors = { color }
+    batt.bg = color .. "44"
+end)
+
+local hour = wibox.widget {
+    font = "Iosevka Medium 13",
+    format = "%H",
+    align = "center",
+    valign = "center",
+    widget = wibox.widget.textclock,
+}
+
+local min = wibox.widget {
+    font = "Iosevka Medium 13",
+    format = "%M",
+    align = "center",
+    valign = "center",
+    widget = wibox.widget.textclock,
+}
+
+local clock = wibox.widget {
+    {
+        {
+            hour,
+            min,
+            spacing = dpi(3),
+            layout = wibox.layout.fixed.horizontal,
+        },
+        top = dpi(5),
+        bottom = dpi(5),
+        left = dpi(5),
+        right = dpi(5),
+        widget = wibox.container.margin,
+    },
+    bg = x.color0,
+    shape = helpers.rrect(dpi(5)),
+    widget = wibox.container.background,
+}
+
+local stats = wibox.widget {
+    {
+        clock,
+        wrap_widget(batt),
+        spacing = dpi(5),
+        layout = wibox.layout.fixed.horizontal,
+    },
+    bg = "#434C5E",
+    shape = helpers.rrect(dpi(5)),
+    widget = wibox.container.background,
+}
 local tag_colors_empty = {
     "#00000000",
     "#00000000",
@@ -92,24 +209,6 @@ local ll = awful.widget.layoutlist {
     },
 }
 helpers.add_hover_cursor(ll, "hand1")
-
-local layout_popup = awful.popup {
-    widget = wibox.widget {
-        ll,
-        margins = 6,
-        widget = wibox.container.margin,
-    },
-    border_color = beautiful.border_color,
-    border_width = beautiful.border_width,
-    ontop = true,
-    visible = false,
-    shape = helpers.rrect(beautiful.border_radius_tray),
-}
-
-awful.placement.bottom_right(layout_popup, {
-    honor_workarea = true,
-    margins = { right = dpi(277), bottom = dpi(200) },
-})
 
 awful.screen.connect_for_each_screen(function(s)
     s.mytaglist = awful.widget.taglist {
@@ -241,46 +340,60 @@ awful.screen.connect_for_each_screen(function(s)
         autohide()
     end)
 
+    local layoutbox_buttons = gears.table.join(
+        -- Left click
+        awful.button({}, 1, function(c)
+            awful.layout.inc(1)
+        end),
+
+        -- Right click
+        awful.button({}, 3, function(c)
+            awful.layout.inc(-1)
+        end),
+
+        -- Scrolling
+        awful.button({}, 4, function()
+            awful.layout.inc(-1)
+        end),
+        awful.button({}, 5, function()
+            awful.layout.inc(1)
+        end)
+    )
+
+    s.mylayoutbox = awful.widget.layoutbox(s)
+    s.mylayoutbox:buttons(layoutbox_buttons)
+
+    local layoutbox = wibox.widget {
+        s.mylayoutbox,
+        margins = { left = dpi(8), right = dpi(8) },
+        widget = wibox.container.margin,
+    }
+
+    helpers.add_hover_cursor(layoutbox, "hand1")
     -- Create a system tray widget
     s.systray = wibox.widget.systray()
     -- Create the tray box
     s.traybox = wibox {
         screen = s,
-        width = dpi(250),
+        width = dpi(300),
         height = dpi(50),
         bg = "#00000000",
         visible = false,
         ontop = true,
     }
 
-    s.mylayoutbox = awful.widget.layoutbox(s)
-    s.mylayoutbox:buttons(gears.table.join(
-        awful.button({}, 1, function()
-            if layout_popup.visible == false then
-                layout_popup.visible = true
-            else
-                layout_popup.visible = false
-            end
-            -- awful.layout.inc(1)
-        end),
-        awful.button({}, 3, function()
-            awful.layout.inc(-1)
-        end),
-        awful.button({}, 4, function()
-            awful.layout.inc(1)
-        end),
-        awful.button({}, 5, function()
-            awful.layout.inc(-1)
-        end)
-    ))
-    helpers.add_hover_cursor(s.mylayoutbox, "hand1")
     s.traybox:setup {
         {
             {
-                s.mylayoutbox,
+                {
+                    layoutbox,
+                    stats,
+                    spacing = dpi(10),
+                    layout = wibox.layout.align.horizontal,
+                },
                 nil,
                 s.systray,
-                expand = "none",
+                spacing = dpi(10),
                 layout = wibox.layout.align.horizontal,
             },
             margins = dpi(10),
@@ -293,7 +406,6 @@ awful.screen.connect_for_each_screen(function(s)
     awful.placement.bottom_right(s.traybox, { margins = beautiful.useless_gap * 2 })
     s.traybox:buttons(gears.table.join(awful.button({}, 2, function()
         s.traybox.visible = false
-        layout_popup.visible = false
     end)))
 end)
 
@@ -310,5 +422,4 @@ end
 function tray_toggle()
     local s = awful.screen.focused()
     s.traybox.visible = not s.traybox.visible
-    layout_popup.visible = false
 end

@@ -55,6 +55,8 @@ naughty.connect_signal("request::display", function(n)
         widget = naughty.list.actions,
     }
 
+    helpers.add_hover_cursor(actions, "hand1")
+
     naughty.layout.box {
         notification = n,
         shape = helpers.rrect(beautiful.notification_border_radius),

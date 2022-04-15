@@ -62,6 +62,7 @@ set -gx PATH /usr/local/texlive/2021/bin/x86_64-linux/ $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
+set -gx PATH ~/.npm-global/bin $PATH
 
 # Go
 set -g GOPATH $HOME/go $PATH
