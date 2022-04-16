@@ -4359,3 +4359,24 @@ Apr 15 23:30 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Apr 15 23:30 : output: Failed to play on "pulse audio" (pulse): suspended
 Apr 15 23:30 : output: Failed to play on "pulse audio" (pulse): suspended
 Apr 15 23:30 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 15 23:37 : player: played "spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3"
+Apr 15 23:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 15 23:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 15 23:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 15 23:37 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 15 23:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 15 23:37 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 16 08:15 : config: option 'device' on line 21 was not recognized
+Apr 16 08:17 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 16 08:24 : config: option 'device' on line 21 was not recognized
+Apr 16 08:38 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 16 08:45 : config: option 'device' on line 21 was not recognized
+Apr 16 09:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 16 09:53 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 16 12:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 16 12:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 16 13:46 : config: option 'device' on line 21 was not recognized
+Apr 16 13:47 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
+Apr 16 14:33 : config: option 'device' on line 21 was not recognized
+Apr 16 15:46 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
+Apr 16 16:54 : config: option 'device' on line 21 was not recognized

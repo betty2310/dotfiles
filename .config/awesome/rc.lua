@@ -626,7 +626,6 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "qutebrowser",
                 "Google-chrome",
                 "firefox",
             },
@@ -657,13 +656,7 @@ awful.rules.rules = {
     -- Notes
     {
         rule_any = {
-            class = {
-                "notion-app-enhanced",
-                "scratchpad",
-                "Zathura",
-                "obsidian",
-                "Inkdrop",
-            },
+            class = {},
             instance = {
                 "btop",
             },

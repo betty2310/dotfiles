@@ -87,7 +87,7 @@ awesome.connect_signal("signal::charger", function(state)
 end)
 
 local hour = wibox.widget {
-    font = "Iosevka Medium 13",
+    font = "Iosevka Medium 12",
     format = "%H",
     align = "center",
     valign = "center",
@@ -95,19 +95,27 @@ local hour = wibox.widget {
 }
 
 local min = wibox.widget {
-    font = "Iosevka Medium 13",
+    font = "Iosevka Medium 11",
     format = "%M",
     align = "center",
     valign = "center",
     widget = wibox.widget.textclock,
 }
 
+local space = wibox.widget {
+    font = "Iosevka Medium 11",
+    format = ":",
+    align = "center",
+    valign = "center",
+    widget = wibox.widget.textclock,
+}
 local clock = wibox.widget {
     {
         {
             hour,
+            space,
             min,
-            spacing = dpi(3),
+            spacing = dpi(2),
             layout = wibox.layout.fixed.horizontal,
         },
         top = dpi(5),
@@ -117,7 +125,7 @@ local clock = wibox.widget {
         widget = wibox.container.margin,
     },
     bg = x.color0,
-    shape = helpers.rrect(dpi(5)),
+    shape = helpers.rrect(dpi(8)),
     widget = wibox.container.background,
 }
 
@@ -129,7 +137,7 @@ local stats = wibox.widget {
         layout = wibox.layout.fixed.horizontal,
     },
     bg = "#434C5E",
-    shape = helpers.rrect(dpi(5)),
+    shape = helpers.rrect(dpi(8)),
     widget = wibox.container.background,
 }
 local tag_colors_empty = {
