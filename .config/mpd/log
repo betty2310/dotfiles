@@ -4380,3 +4380,17 @@ Apr 16 13:47 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
 Apr 16 14:33 : config: option 'device' on line 21 was not recognized
 Apr 16 15:46 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
 Apr 16 16:54 : config: option 'device' on line 21 was not recognized
+Apr 16 23:58 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
+Apr 17 07:37 : config: option 'device' on line 21 was not recognized
+Apr 17 09:25 : update: added study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3
+Apr 17 09:25 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 09:51 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 17 10:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 10:24 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 17 10:24 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 10:27 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
+Apr 17 10:27 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 10:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 10:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 10:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 17 10:28 : output: Failed to play on "pulse audio" (pulse): suspended

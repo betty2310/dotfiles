@@ -3,8 +3,8 @@ audio_device_state:1:My ALSA Device
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
 state: pause
-current: 22
-time: 2.986000
+current: 34
+time: 185.942000
 random: 1
 repeat: 1
 single: 0
@@ -62,4 +62,5 @@ playlist_begin
 46:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
 47:spotify/Lil Nas X - Old Town Road.mp3
 48:spotify/BLACKPINK - How You Like That.mp3
+49:study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3
 playlist_end
