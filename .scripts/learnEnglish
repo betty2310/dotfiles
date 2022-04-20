@@ -1,0 +1,6 @@
+zathura "~/OneDrive/20212/English/Level 1 Beginner.pdf" &
+zathura "~/OneDrive/20212/English/Practice Book Level 1.pdf" &
+zathura "~/OneDrive/20212/English/Grammar.pdf" &
+zathura "~/OneDrive/20212/English/Vocabulary Builder.pdf" &
+
+google-chrome-stable "https://www.dkefe.com/en/audio/" &

@@ -37,6 +37,7 @@ local wcontainer_place = wcontainer.place
 local gsurface = require "gears.surface"
 local gtimer = require "gears.timer"
 local gtimer_weak_start_new = gtimer.weak_start_new
+local gears = require "gears"
 -- ------------------------------------------------------------
 
 -- => Math + standard Lua methods
@@ -392,7 +393,7 @@ end
 
 local function get_titlebar_mouse_bindings(c)
     local client_color = c._nice_base_color
-    local shade_enabled = _private.win_shade_enabled
+    local shade_enabled = false
     -- Add functionality for double click to (un)maximize, and single click and hold to move
     local clicks = 0
     local tolerance = double_click_jitter_tolerance
@@ -937,12 +938,13 @@ function nice.initialize(args)
             c:connect_signal("request::activate", c._cb_add_window_decorations)
         end
         -- Shape the client
-        c.shape = shapes.rounded_rect {
-            tl = _private.titlebar_radius,
-            tr = _private.titlebar_radius,
-            bl = 4,
-            br = 4,
-        }
+        -- c.shape = shapes.rounded_rect {
+        --     tl = _private.titlebar_radius,
+        --     tr = _private.titlebar_radius,
+        --     bl = 4,
+        --     br = 4,
+        -- }
+        -- c.shape = gears.shape.rounded_rect(6)
     end)
 end
 

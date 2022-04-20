@@ -58,6 +58,9 @@ end
 apps.mars = function()
     awful.spawn.with_shell "mars-mips"
 end
+apps.datagrip = function()
+    awful.spawn.with_shell "datagrip"
+end
 apps.font = function()
     awful.spawn.with_shell "font-manager"
 end

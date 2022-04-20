@@ -51,6 +51,8 @@ dock_pinned_apps = {
     { class = "Spotify", launcher = apps.spotify },
     { class = "scratchpad", launcher = apps.scratchpad },
     { class = "Code", launcher = apps.code },
+    { class = "jetbrains-datagrip", launcher = apps.datagrip },
+    { class = "Mars", launcher = apps.mars },
 }
 
 ----------------------------------------------------------------------------

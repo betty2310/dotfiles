@@ -15,7 +15,7 @@
         "keyword": "so",
         "cmd": "https://stackoverflow.com/search?q=%s",
         "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
-        "is_default_search": true,
+        "is_default_search": false,
         "run_without_argument": false,
         "added": 1646268348.423292
     },
@@ -25,7 +25,7 @@
         "keyword": "wiki",
         "cmd": "https://en.wikipedia.org/wiki/%s",
         "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
-        "is_default_search": true,
+        "is_default_search": false,
         "run_without_argument": false,
         "added": 1646268348.4233167
     },
@@ -95,7 +95,7 @@
         "keyword": "y",
         "cmd": "https://www.youtube.com/results?search_query=%s",
         "icon": "~/Pictures/icons/youtube.png",
-        "is_default_search": true,
+        "is_default_search": false,
         "run_without_argument": false,
         "added": 1648034357.3798268
     },
@@ -108,5 +108,25 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1648648127.9872432
+    },
+    "f744bb25-35e5-4ef8-9c8a-a4eed03c791a": {
+        "id": "f744bb25-35e5-4ef8-9c8a-a4eed03c791a",
+        "name": "Google Images",
+        "keyword": "im",
+        "cmd": "http://images.google.com/images?um=1&hl=en&safe=active&nfpr=1&q=%s",
+        "icon": "~/Pictures/icons/google-image.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1650342531.6895893
+    },
+    "c06fd272-1816-4192-883c-b52eecbd6606": {
+        "id": "c06fd272-1816-4192-883c-b52eecbd6606",
+        "name": "Mazii",
+        "keyword": "ma",
+        "cmd": "https://vi.mazii.net/search/word?dict=javi&query=%s",
+        "icon": "~/Pictures/icons/mazi.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1650342806.004405
     }
 }

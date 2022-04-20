@@ -4394,3 +4394,182 @@ Apr 17 10:28 : output: Failed to play on "pulse audio" (pulse): suspended
 Apr 17 10:28 : output: Failed to play on "pulse audio" (pulse): suspended
 Apr 17 10:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
 Apr 17 10:28 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 11:52 : player: played "spotify/The Chainsmokers - Sick Boy.mp3"
+Apr 17 11:53 : config: option 'device' on line 21 was not recognized
+Apr 17 13:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 13:26 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 17 13:30 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 17 13:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 13:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 13:32 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 17 13:35 : player: played "spotify/Maroon 5 - Maps.mp3"
+Apr 17 13:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 13:38 : player: played "spotify/Shawn Mendes - Stitches.mp3"
+Apr 17 13:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 14:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 14:26 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 17 14:29 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 17 14:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 14:29 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 14:29 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 17 14:32 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 17 14:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 14:33 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 14:36 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 17 14:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 15:20 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 17 15:20 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 17 17:06 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 17:06 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 17 17:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 17:08 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 17 17:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 17:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 17:08 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 17:11 : player: played "spotify/Redbone - Come and Get Your Love - Single Version.mp3"
+Apr 17 17:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 17:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 17:16 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 17 17:16 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 17:20 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 17 17:20 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 17 23:28 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 18 08:28 : config: option 'device' on line 21 was not recognized
+Apr 18 11:43 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 18 12:16 : config: option 'device' on line 21 was not recognized
+Apr 18 12:23 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:23 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 18 12:27 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:27 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:31 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:31 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:35 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:35 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:39 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:39 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:43 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:43 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:47 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:47 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:51 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:51 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:55 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:55 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 12:59 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 12:59 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:03 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 13:03 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:07 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 13:07 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:11 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 13:11 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:15 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 13:15 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:19 : player: played "spotify/Taylor Swift - cardigan.mp3"
+Apr 18 13:19 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:21 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 18 13:21 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:21 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 18 13:26 : player: played "spotify/Adele - Hello.mp3"
+Apr 18 13:26 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:30 : player: played "spotify/OneRepublic - Counting Stars.mp3"
+Apr 18 13:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:32 : player: played "spotify/Lil Nas X - Old Town Road.mp3"
+Apr 18 13:32 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:36 : player: played "spotify/Ed Sheeran - Photograph.mp3"
+Apr 18 13:36 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:41 : player: played "spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3"
+Apr 18 13:41 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 13:52 : player: played "spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3"
+Apr 18 17:06 : config: option 'device' on line 21 was not recognized
+Apr 18 18:53 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 18:53 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 18 20:51 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 20:51 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 20:55 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 20:55 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 20:55 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 20:58 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 20:58 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:01 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 21:01 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:04 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 21:04 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:07 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 21:07 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:11 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 21:11 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:14 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 21:14 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:17 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 21:17 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:20 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 21:20 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:23 : player: played "spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3"
+Apr 18 21:23 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:24 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:27 : player: played "spotify/ZAYN - PILLOWTALK.mp3"
+Apr 18 21:27 : exception: Failed to open "My ALSA Device" (alsa); Failed to open ALSA device "hw:0,0": Device or resource busy
+Apr 18 21:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 18 21:34 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 18 23:45 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 19 10:15 : config: option 'device' on line 21 was not recognized
+Apr 19 12:10 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 12:10 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 12:13 : player: played "spotify/Maroon 5 - Maps.mp3"
+Apr 19 12:13 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 12:18 : player: played "spotify/Adele - Someone Like You.mp3"
+Apr 19 12:18 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 12:22 : player: played "spotify/Ed Sheeran - Photograph.mp3"
+Apr 19 12:22 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 12:27 : player: played "spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3"
+Apr 19 12:27 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 12:30 : player: played "spotify/The Chainsmokers - Paris.mp3"
+Apr 19 12:30 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 12:34 : player: played "spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3"
+Apr 19 12:34 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 12:38 : player: played "spotify/Alan Walker - Faded.mp3"
+Apr 19 12:38 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 12:41 : player: played "spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3"
+Apr 19 13:11 : config: option 'device' on line 21 was not recognized
+Apr 19 13:11 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:12 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:12 : output: Failed to play on "pulse audio" (pulse): disconnected
+Apr 19 13:12 : player: played "spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3"
+Apr 19 13:27 : config: option 'device' on line 21 was not recognized
+Apr 19 13:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:28 : player: played "spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3"
+Apr 19 13:30 : player: played "spotify/Bruno Mars - 24K Magic.mp3"
+Apr 19 13:38 : config: option 'device' on line 21 was not recognized
+Apr 19 13:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 19 13:39 : player: played "spotify/Bruno Mars - 24K Magic.mp3"
+Apr 19 15:18 : player: played "spotify/OneRepublic - Counting Stars.mp3"
+Apr 19 17:58 : config: option 'device' on line 21 was not recognized
+Apr 19 19:40 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 19 21:30 : player: played "spotify/OneRepublic - Counting Stars.mp3"
+Apr 20 05:14 : config: option 'device' on line 21 was not recognized
+Apr 20 05:36 : player: played "spotify/OneRepublic - Counting Stars.mp3"
+Apr 20 06:42 : config: option 'device' on line 21 was not recognized
+Apr 20 06:45 : player: played "spotify/OneRepublic - Counting Stars.mp3"
+Apr 20 06:46 : config: option 'device' on line 21 was not recognized
+Apr 20 06:46 : player: played "spotify/OneRepublic - Counting Stars.mp3"
+Apr 20 06:51 : config: option 'device' on line 21 was not recognized
+Apr 20 08:15 : player: played "spotify/OneRepublic - Counting Stars.mp3"
+Apr 20 08:31 : config: option 'device' on line 21 was not recognized
+Apr 20 08:35 : player: played "spotify/OneRepublic - Counting Stars.mp3"
+Apr 20 08:41 : config: option 'device' on line 21 was not recognized
+Apr 20 08:44 : output: Failed to play on "pulse audio" (pulse): suspended
+Apr 20 08:44 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Apr 20 11:46 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 20 12:23 : config: option 'device' on line 21 was not recognized
+Apr 20 14:52 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 20 15:23 : config: option 'device' on line 21 was not recognized
+Apr 20 15:49 : player: played "study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3"
+Apr 20 17:50 : config: option 'device' on line 21 was not recognized
