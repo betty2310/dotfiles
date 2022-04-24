@@ -120,7 +120,7 @@ awful.layout.layouts = {
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.tile,
     awful.layout.suit.floating,
-    -- awful.layout.suit.tile.top,
+    awful.layout.suit.tile.top,
     -- awful.layout.suit.fair,
     -- awful.layout.suit.fair.horizontal,
     -- awful.layout.suit.tile.left,
@@ -498,7 +498,7 @@ awful.rules.rules = {
     -- MPV
     {
         rule = { class = "mpv" },
-        properties = { titlebars_enabled = true },
+        properties = { titlebars_enabled = false },
         callback = function(c)
             c.floating = true
             c.ontop = true

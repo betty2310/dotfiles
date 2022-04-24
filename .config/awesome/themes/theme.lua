@@ -384,7 +384,8 @@ theme.layout_fullscreen = layout_icon_path .. "fullscreen.png"
 theme.layout_tilebottom = layout_icon_path .. "tilebottom.png"
 theme.layout_tileleft = layout_icon_path .. "tileleft.png"
 theme.layout_tile = layout_icon_path .. "tile.png"
-theme.layout_tiletop = layout_icon_path .. "tiletop.png"
+
+theme.layout_tiletop = gears.color.recolor_image(themes_path .. "default/layouts/tiletop.png", theme.fg_normal)
 theme.layout_spiral = layout_icon_path .. "spiral.png"
 theme.layout_dwindle = layout_icon_path .. "dwindle.png"
 theme.layout_cornernw = layout_icon_path .. "cornernw.png"

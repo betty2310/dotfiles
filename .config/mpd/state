@@ -3,8 +3,8 @@ audio_device_state:1:My ALSA Device
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
 state: pause
-current: 49
-time: 34.078000
+current: 312
+time: 54.261000
 random: 1
 repeat: 1
 single: 1
@@ -21,46 +21,334 @@ playlist_begin
 5:spotify/Bruno Mars - 24K Magic.mp3
 6:spotify/Adele - Hello.mp3
 7:spotify/Adele - When We Were Young.mp3
-8:spotify/The Chainsmokers, Halsey - Closer.mp3
-9:spotify/Redbone - Come and Get Your Love - Single Version.mp3
-10:spotify/Alan Walker - Faded.mp3
-11:spotify/The Chainsmokers, Daya - Don't Let Me Down.mp3
-12:spotify/Imagine Dragons - Whatever It Takes.mp3
-13:spotify/Imagine Dragons - Believer.mp3
-14:spotify/Shawn Mendes - Stitches.mp3
-15:spotify/Auralnauts, Silver Letomi - You Spin Me Round.mp3
-16:spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
-17:spotify/Shawn Mendes - Mercy.mp3
-18:spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
-19:spotify/Tom Walker - Leave a Light On.mp3
-20:spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
-21:spotify/The Chainsmokers - Paris.mp3
-22:spotify/ZAYN - PILLOWTALK.mp3
-23:spotify/OneRepublic - Counting Stars.mp3
-24:spotify/Imagine Dragons - Radioactive.mp3
-25:spotify/Imagine Dragons - Demons.mp3
-26:spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
-27:spotify/Imagine Dragons - Natural.mp3
-28:spotify/Imagine Dragons - Bad Liar.mp3
-29:spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
-30:spotify/Justin Bieber - Love Yourself.mp3
-31:spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
-32:spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
-33:spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
-34:spotify/The Chainsmokers - Sick Boy.mp3
-35:spotify/Adele - Skyfall.mp3
-36:spotify/Ed Sheeran - Photograph.mp3
-37:spotify/Shawn Mendes - Wonder.mp3
-38:spotify/Maroon 5 - Sugar.mp3
-39:spotify/Maroon 5 - Animals.mp3
-40:spotify/Maroon 5 - Maps.mp3
-41:spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
-42:spotify/Shawn Mendes - In My Blood.mp3
-43:Wavin_Flag_Coca-Cola_Celebration_Mix-[WTJSt4wP2ME].mp3
-44:Uptown_Funk_Official_Video_ft._Bruno_Mars-[OPf0YbXqDm0].mp3
-45:spotify/Taylor Swift - cardigan.mp3
-46:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
-47:spotify/Lil Nas X - Old Town Road.mp3
-48:spotify/BLACKPINK - How You Like That.mp3
-49:study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3
+8:spotify/Lil Nas X - Old Town Road.mp3
+9:spotify/The Chainsmokers, Halsey - Closer.mp3
+10:spotify/Redbone - Come and Get Your Love - Single Version.mp3
+11:spotify/Alan Walker - Faded.mp3
+12:spotify/The Chainsmokers, Daya - Don't Let Me Down.mp3
+13:spotify/Imagine Dragons - Whatever It Takes.mp3
+14:spotify/Imagine Dragons - Believer.mp3
+15:spotify/Taylor Swift - cardigan.mp3
+16:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
+17:spotify/Shawn Mendes - Stitches.mp3
+18:spotify/Auralnauts, Silver Letomi - You Spin Me Round.mp3
+19:spotify/Shawn Mendes - Treat You Better.mp3
+20:spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
+21:spotify/Shawn Mendes - Mercy.mp3
+22:spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
+23:spotify/Tom Walker - Leave a Light On.mp3
+24:spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
+25:spotify/The Chainsmokers - Paris.mp3
+26:spotify/ZAYN - PILLOWTALK.mp3
+27:spotify/OneRepublic - Counting Stars.mp3
+28:spotify/Imagine Dragons - Radioactive.mp3
+29:spotify/Imagine Dragons - Demons.mp3
+30:spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
+31:spotify/Imagine Dragons - Natural.mp3
+32:spotify/Imagine Dragons - Bad Liar.mp3
+33:spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
+34:spotify/Justin Bieber - Love Yourself.mp3
+35:spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
+36:spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
+37:spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
+38:spotify/Shawn Mendes - In My Blood.mp3
+39:spotify/The Chainsmokers - Sick Boy.mp3
+40:spotify/Adele - Skyfall.mp3
+41:spotify/BLACKPINK - How You Like That.mp3
+42:spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
+43:spotify/Maroon 5 - Maps.mp3
+44:spotify/Maroon 5 - Animals.mp3
+45:spotify/Maroon 5 - Sugar.mp3
+46:spotify/Shawn Mendes - Wonder.mp3
+47:spotify/Ed Sheeran - Photograph.mp3
+48:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L1-1.mp3
+49:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L1-2.mp3
+50:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L2-1.mp3
+51:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L2-2.mp3
+52:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L3-1.mp3
+53:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L3-2.mp3
+54:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L4-1.mp3
+55:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L4-2.mp3
+56:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L5-1.mp3
+57:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L5-2.mp3
+58:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L6-1.mp3
+59:4技能でひろがる中級日本語カルテット【音声】/1.Yomimono_L6-2.mp3
+60:4技能でひろがる中級日本語カルテット【音声】/2.Bunkei_L1.mp3
+61:4技能でひろがる中級日本語カルテット【音声】/2.Bunkei_L2.mp3
+62:4技能でひろがる中級日本語カルテット【音声】/2.Bunkei_L3.mp3
+63:4技能でひろがる中級日本語カルテット【音声】/2.Bunkei_L4.mp3
+64:4技能でひろがる中級日本語カルテット【音声】/2.Bunkei_L5.mp3
+65:4技能でひろがる中級日本語カルテット【音声】/2.Bunkei_L6.mp3
+66:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L1-1.mp3
+67:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L1-2.mp3
+68:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L2-1.mp3
+69:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L2-2.mp3
+70:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L3-1.mp3
+71:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L3-2.mp3
+72:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L4-1.mp3
+73:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L4-2.mp3
+74:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L5-1.mp3
+75:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L5-2.mp3
+76:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L6-1.mp3
+77:4技能でひろがる中級日本語カルテット【音声】/3.Kaiwa_L6-2.mp3
+78:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L1-1.mp3
+79:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L1-2.mp3
+80:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L2-1.mp3
+81:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L2-2.mp3
+82:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L3-1.mp3
+83:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L3-2.mp3
+84:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L4-1.mp3
+85:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L4-2.mp3
+86:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L5-1.mp3
+87:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L5-2.mp3
+88:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L6-1.mp3
+89:4技能でひろがる中級日本語カルテット【音声】/4.Chokai_L6-2.mp3
+90:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L1-1.mp3
+91:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L1-2.mp3
+92:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L2-1.mp3
+93:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L2-2.mp3
+94:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L3-1.mp3
+95:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L3-2.mp3
+96:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L4-1.mp3
+97:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L4-2.mp3
+98:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L5-1.mp3
+99:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L5-2.mp3
+100:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L6-1.mp3
+101:4技能でひろがる中級日本語カルテット【音声】/5.Tango_L6-2.mp3
+102:spotify/Ed Sheeran - Perfect.mp3
+103:spotify/Ed Sheeran - Galway Girl.mp3
+104:spotify/Adele - Rolling in the Deep.mp3
+105:spotify/Adele - Set Fire to the Rain.mp3
+106:spotify/Adele - Someone Like You.mp3
+107:spotify/Bruno Mars - 24K Magic.mp3
+108:spotify/Adele - Hello.mp3
+109:spotify/Adele - When We Were Young.mp3
+110:spotify/Lil Nas X - Old Town Road.mp3
+111:spotify/The Chainsmokers, Halsey - Closer.mp3
+112:spotify/Redbone - Come and Get Your Love - Single Version.mp3
+113:spotify/Alan Walker - Faded.mp3
+114:spotify/The Chainsmokers, Daya - Don't Let Me Down.mp3
+115:spotify/Imagine Dragons - Whatever It Takes.mp3
+116:spotify/Imagine Dragons - Believer.mp3
+117:spotify/Taylor Swift - cardigan.mp3
+118:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
+119:spotify/Shawn Mendes - Stitches.mp3
+120:spotify/Auralnauts, Silver Letomi - You Spin Me Round.mp3
+121:spotify/Shawn Mendes - Treat You Better.mp3
+122:spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
+123:spotify/Shawn Mendes - Mercy.mp3
+124:spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
+125:spotify/Tom Walker - Leave a Light On.mp3
+126:spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
+127:spotify/The Chainsmokers - Paris.mp3
+128:spotify/ZAYN - PILLOWTALK.mp3
+129:spotify/OneRepublic - Counting Stars.mp3
+130:spotify/Imagine Dragons - Radioactive.mp3
+131:spotify/Imagine Dragons - Demons.mp3
+132:spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
+133:spotify/Imagine Dragons - Natural.mp3
+134:spotify/Imagine Dragons - Bad Liar.mp3
+135:spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
+136:spotify/Justin Bieber - Love Yourself.mp3
+137:spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
+138:spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
+139:spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
+140:spotify/Shawn Mendes - In My Blood.mp3
+141:spotify/The Chainsmokers - Sick Boy.mp3
+142:spotify/Adele - Skyfall.mp3
+143:spotify/BLACKPINK - How You Like That.mp3
+144:spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
+145:spotify/Maroon 5 - Maps.mp3
+146:spotify/Maroon 5 - Animals.mp3
+147:spotify/Maroon 5 - Sugar.mp3
+148:spotify/Shawn Mendes - Wonder.mp3
+149:spotify/Ed Sheeran - Photograph.mp3
+150:study/Rainforest_Animals_Waterfall_and_Rain_Sounds-[STWVMl_cGuc].mp3
+151:spotify/Ed Sheeran - Perfect.mp3
+152:spotify/Ed Sheeran - Galway Girl.mp3
+153:spotify/Adele - Rolling in the Deep.mp3
+154:spotify/Adele - Set Fire to the Rain.mp3
+155:spotify/Adele - Someone Like You.mp3
+156:spotify/Bruno Mars - 24K Magic.mp3
+157:spotify/Adele - Hello.mp3
+158:spotify/Adele - When We Were Young.mp3
+159:spotify/Lil Nas X - Old Town Road.mp3
+160:spotify/The Chainsmokers, Halsey - Closer.mp3
+161:spotify/Redbone - Come and Get Your Love - Single Version.mp3
+162:spotify/Alan Walker - Faded.mp3
+163:spotify/The Chainsmokers, Daya - Don't Let Me Down.mp3
+164:spotify/Imagine Dragons - Whatever It Takes.mp3
+165:spotify/Imagine Dragons - Believer.mp3
+166:spotify/Taylor Swift - cardigan.mp3
+167:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
+168:spotify/Shawn Mendes - Stitches.mp3
+169:spotify/Auralnauts, Silver Letomi - You Spin Me Round.mp3
+170:spotify/Shawn Mendes - Treat You Better.mp3
+171:spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
+172:spotify/Shawn Mendes - Mercy.mp3
+173:spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
+174:spotify/Tom Walker - Leave a Light On.mp3
+175:spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
+176:spotify/The Chainsmokers - Paris.mp3
+177:spotify/ZAYN - PILLOWTALK.mp3
+178:spotify/OneRepublic - Counting Stars.mp3
+179:spotify/Imagine Dragons - Radioactive.mp3
+180:spotify/Imagine Dragons - Demons.mp3
+181:spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
+182:spotify/Imagine Dragons - Natural.mp3
+183:spotify/Imagine Dragons - Bad Liar.mp3
+184:spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
+185:spotify/Justin Bieber - Love Yourself.mp3
+186:spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
+187:spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
+188:spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
+189:spotify/Shawn Mendes - In My Blood.mp3
+190:spotify/The Chainsmokers - Sick Boy.mp3
+191:spotify/Adele - Skyfall.mp3
+192:spotify/BLACKPINK - How You Like That.mp3
+193:spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
+194:spotify/Maroon 5 - Maps.mp3
+195:spotify/Maroon 5 - Animals.mp3
+196:spotify/Maroon 5 - Sugar.mp3
+197:spotify/Shawn Mendes - Wonder.mp3
+198:spotify/Ed Sheeran - Photograph.mp3
+199:Shadowing/01 前書.m4a
+200:Shadowing/02 ユニット「一」セクション「一」.m4a
+201:Shadowing/03 ユニット「一」セクション「二」.m4a
+202:Shadowing/04 ユニット「一」セクション「三」.m4a
+203:Shadowing/05 ユニット「一」セクション「四」.m4a
+204:Shadowing/06 ユニット「一」セクション「五」.m4a
+205:Shadowing/07 ユニット「一」セクション「六」.m4a
+206:Shadowing/08 ユニット「一」セクション「七」.m4a
+207:Shadowing/09 ユニット「一」セクション「八」.m4a
+208:Shadowing/10 ユニット「一」セクション「九」.m4a
+209:Shadowing/11 ユニット「一」セクション「十」.m4a
+210:Shadowing/12 ユニット「二」セクション「一」.m4a
+211:Shadowing/13 ユニット「二」セクション「二」.m4a
+212:Shadowing/14 ユニット「二」セクション「三」.m4a
+213:Shadowing/15 ユニット「二」セクション「四」.m4a
+214:Shadowing/16 ユニット「二」セクション「五」.m4a
+215:Shadowing/17 ユニット「二」セクション「六」.m4a
+216:Shadowing/18 ユニット「二」セクション「七」.m4a
+217:Shadowing/19 ユニット「二」セクション「八」.m4a
+218:Shadowing/20 ユニット「二」セクション「九」.m4a
+219:Shadowing/21 ユニット「三」セクション「一」.m4a
+220:Shadowing/22 ユニット「三」セクション「二」.m4a
+221:Shadowing/23 ユニット「三」セクション「三」.m4a
+222:Shadowing/24 ユニット「三」セクション「四」.m4a
+223:Shadowing/25 ユニット「三」セクション「五」.m4a
+224:Shadowing/26 ユニット「三」セクション「六」.m4a
+225:Shadowing/27 ユニット「三」セクション「七」.m4a
+226:Shadowing/28 ユニット「三」セクション「八」.m4a
+227:Shadowing/29 ユニット「四」セクション「一」.m4a
+228:Shadowing/30 ユニット「四」セクション「二」.m4a
+229:Shadowing/31 ユニット「四」セクション「三」.m4a
+230:Shadowing/32 ユニット「四」セクション「四」.m4a
+231:Shadowing/33 ユニット「四」セクション「五」.m4a
+232:Shadowing/34 ユニット「四」セクション「六」.m4a
+233:Shadowing/35 ユニット「四」セクション「七」.m4a
+234:Shadowing/36 ユニット「四」セクション「八」.m4a
+235:Shadowing/37 ユニット「五」セクション「一」.m4a
+236:Shadowing/38 ユニット「五」セクション「二」.m4a
+237:Shadowing/39 ユニット「五」セクション「三」.m4a
+238:Shadowing/40 ユニット「五」セクション「四」.m4a
+239:Shadowing/41 ユニット「五」セクション「五」.m4a
+240:Shadowing/42 ユニット「五」セクション「六」.m4a
+241:Shadowing/43 ユニット「五」セクション「七」.m4a
+242:soundtrack/Ramin Djawadi - The Night King.mp3
+243:Shadowing/01 前書.m4a
+244:Shadowing/02 ユニット「一」セクション「一」.m4a
+245:Shadowing/03 ユニット「一」セクション「二」.m4a
+246:Shadowing/04 ユニット「一」セクション「三」.m4a
+247:Shadowing/05 ユニット「一」セクション「四」.m4a
+248:Shadowing/06 ユニット「一」セクション「五」.m4a
+249:Shadowing/07 ユニット「一」セクション「六」.m4a
+250:Shadowing/08 ユニット「一」セクション「七」.m4a
+251:Shadowing/09 ユニット「一」セクション「八」.m4a
+252:Shadowing/10 ユニット「一」セクション「九」.m4a
+253:Shadowing/11 ユニット「一」セクション「十」.m4a
+254:Shadowing/12 ユニット「二」セクション「一」.m4a
+255:Shadowing/13 ユニット「二」セクション「二」.m4a
+256:Shadowing/14 ユニット「二」セクション「三」.m4a
+257:Shadowing/15 ユニット「二」セクション「四」.m4a
+258:Shadowing/16 ユニット「二」セクション「五」.m4a
+259:Shadowing/17 ユニット「二」セクション「六」.m4a
+260:Shadowing/18 ユニット「二」セクション「七」.m4a
+261:Shadowing/19 ユニット「二」セクション「八」.m4a
+262:Shadowing/20 ユニット「二」セクション「九」.m4a
+263:Shadowing/21 ユニット「三」セクション「一」.m4a
+264:Shadowing/22 ユニット「三」セクション「二」.m4a
+265:Shadowing/23 ユニット「三」セクション「三」.m4a
+266:Shadowing/24 ユニット「三」セクション「四」.m4a
+267:Shadowing/25 ユニット「三」セクション「五」.m4a
+268:Shadowing/26 ユニット「三」セクション「六」.m4a
+269:Shadowing/27 ユニット「三」セクション「七」.m4a
+270:Shadowing/28 ユニット「三」セクション「八」.m4a
+271:Shadowing/29 ユニット「四」セクション「一」.m4a
+272:Shadowing/30 ユニット「四」セクション「二」.m4a
+273:Shadowing/31 ユニット「四」セクション「三」.m4a
+274:Shadowing/32 ユニット「四」セクション「四」.m4a
+275:Shadowing/33 ユニット「四」セクション「五」.m4a
+276:Shadowing/34 ユニット「四」セクション「六」.m4a
+277:Shadowing/35 ユニット「四」セクション「七」.m4a
+278:Shadowing/36 ユニット「四」セクション「八」.m4a
+279:Shadowing/37 ユニット「五」セクション「一」.m4a
+280:Shadowing/38 ユニット「五」セクション「二」.m4a
+281:Shadowing/39 ユニット「五」セクション「三」.m4a
+282:Shadowing/40 ユニット「五」セクション「四」.m4a
+283:Shadowing/41 ユニット「五」セクション「五」.m4a
+284:Shadowing/42 ユニット「五」セクション「六」.m4a
+285:Shadowing/43 ユニット「五」セクション「七」.m4a
+286:spotify/Ed Sheeran - Perfect.mp3
+287:spotify/Ed Sheeran - Galway Girl.mp3
+288:spotify/Adele - Rolling in the Deep.mp3
+289:spotify/Adele - Set Fire to the Rain.mp3
+290:spotify/Adele - Someone Like You.mp3
+291:spotify/Bruno Mars - 24K Magic.mp3
+292:spotify/Adele - Hello.mp3
+293:spotify/Adele - When We Were Young.mp3
+294:spotify/Lil Nas X - Old Town Road.mp3
+295:spotify/The Chainsmokers, Halsey - Closer.mp3
+296:spotify/Redbone - Come and Get Your Love - Single Version.mp3
+297:spotify/Alan Walker - Faded.mp3
+298:spotify/The Chainsmokers, Daya - Don't Let Me Down.mp3
+299:spotify/Imagine Dragons - Whatever It Takes.mp3
+300:spotify/Imagine Dragons - Believer.mp3
+301:spotify/Taylor Swift - cardigan.mp3
+302:spotify/Pharrell Williams - Happy - From 'Despicable Me 2'.mp3
+303:spotify/Shawn Mendes - Stitches.mp3
+304:spotify/Auralnauts, Silver Letomi - You Spin Me Round.mp3
+305:spotify/Shawn Mendes - Treat You Better.mp3
+306:spotify/Shawn Mendes - There's Nothing Holdin' Me Back.mp3
+307:spotify/Shawn Mendes - Mercy.mp3
+308:spotify/Florence + The Machine - Jenny of Oldstones (Game of Thrones).mp3
+309:spotify/Tom Walker - Leave a Light On.mp3
+310:spotify/The Chainsmokers, Coldplay - Something Just Like This.mp3
+311:spotify/The Chainsmokers - Paris.mp3
+312:spotify/ZAYN - PILLOWTALK.mp3
+313:spotify/OneRepublic - Counting Stars.mp3
+314:spotify/Imagine Dragons - Radioactive.mp3
+315:spotify/Imagine Dragons - Demons.mp3
+316:spotify/Charlie Puth, Selena Gomez - We Don't Talk Anymore (feat. Selena Gomez).mp3
+317:spotify/Imagine Dragons - Natural.mp3
+318:spotify/Imagine Dragons - Bad Liar.mp3
+319:spotify/Ed Sheeran, Beyoncé - Perfect Duet (Ed Sheeran & Beyoncé).mp3
+320:spotify/Justin Bieber - Love Yourself.mp3
+321:spotify/Nick Cave & The Bad Seeds, Flood - Red Right Hand - Peaky Blinders Theme;Flood Remix.mp3
+322:spotify/ZAYN, Taylor Swift - I Don’t Wanna Live Forever (Fifty Shades Darker).mp3
+323:spotify/Wiz Khalifa, Charlie Puth - See You Again (feat. Charlie Puth).mp3
+324:spotify/Shawn Mendes - In My Blood.mp3
+325:spotify/The Chainsmokers - Sick Boy.mp3
+326:spotify/Adele - Skyfall.mp3
+327:spotify/BLACKPINK - How You Like That.mp3
+328:spotify/Mark Ronson, Bruno Mars - Uptown Funk (feat. Bruno Mars).mp3
+329:spotify/Maroon 5 - Maps.mp3
+330:spotify/Maroon 5 - Animals.mp3
+331:spotify/Maroon 5 - Sugar.mp3
+332:spotify/Shawn Mendes - Wonder.mp3
+333:spotify/Ed Sheeran - Photograph.mp3
+334:soundtrack/Ramin Djawadi - Jenny of Oldstones.mp3
+335:soundtrack/Hans Zimmer - Leaving Caladan.mp3
+336:soundtrack/Ramin Djawadi, Serj Tankian - The Rains of Castamere.mp3
+337:soundtrack/Ramin Djawadi - The Last of the Starks.mp3
 playlist_end

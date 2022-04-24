@@ -30,18 +30,6 @@ local anim_x = rubato.timed {
     awestore_compat = true, -- this option must be set to true.
 }
 
-local discord_scratch = bling.module.scratchpad:new {
-    command = "discord",
-    rule = { instance = "discord" },
-    sticky = false,
-    autoclose = false,
-    floating = true,
-    geometry = { x = 245, y = 85, height = 800, width = 1200 },
-    reapply = true,
-    dont_focus_before_close = false,
-    rubato = { x = anim_x },
-}
-
 local spotify_scratch = bling.module.scratchpad:new {
     command = "spotify",
     rule = { instance = "spotify" },
@@ -54,31 +42,12 @@ local spotify_scratch = bling.module.scratchpad:new {
     rubato = { y = anim_y },
 }
 
-local todo = bling.module.scratchpad:new {
-    command = "todoist",
-    rule = { class = "Todoist" },
-    sticky = true,
-    autoclose = false,
-    floating = true,
-    geometry = { x = 840, y = 150 },
-    reapply = true,
-    rubato = { x = anim_x },
-    dont_focus_before_close = false,
-}
-
 -- Signals
 ------------
-
-awesome.connect_signal("scratch::discord", function()
-    discord_scratch:toggle()
-end)
 awesome.connect_signal("scratch::spotify", function()
     spotify_scratch:toggle()
 end)
 
-awesome.connect_signal("scratch::todoist", function()
-    todo:toggle()
-end)
 local keys = {}
 
 -- Mod keys
@@ -419,12 +388,7 @@ keys.globalkeys = gears.table.join(
     awful.key({ superkey, shiftkey }, "s", function()
         awesome.emit_signal "scratch::spotify"
     end, { description = "Toggle music scratchpad", group = "Bling" }),
-    awful.key({ superkey, shiftkey }, "c", function()
-        awesome.emit_signal "scratch::discord"
-    end, { description = "Toggle discord scratchpad", group = "Bling" }),
-    awful.key({ superkey, shiftkey }, "t", function()
-        awesome.emit_signal "scratch::todoist"
-    end, { description = "Toggle todoist scratchpad", group = "Bling" }),
+
     awful.key({ superkey, shiftkey }, "n", function(c)
         apps.notion()
     end, { description = "notion", group = "launcher" }),

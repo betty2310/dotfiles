@@ -49,10 +49,9 @@ dock_pinned_apps = {
     { class = "Anki", launcher = apps.anki },
     { class = "notion-app-enhanced", launcher = apps.notion },
     { class = "Spotify", launcher = apps.spotify },
-    { class = "scratchpad", launcher = apps.scratchpad },
+    { class = "Mars", launcher = apps.mars },
     { class = "Code", launcher = apps.code },
     { class = "jetbrains-datagrip", launcher = apps.datagrip },
-    { class = "Mars", launcher = apps.mars },
 }
 
 ----------------------------------------------------------------------------
