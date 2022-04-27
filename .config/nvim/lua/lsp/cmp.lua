@@ -9,7 +9,7 @@ if ok then
         Function = "",
         Constructor = "⌘",
         Field = "ﰠ",
-        Variable = "",
+        Variable = "�",
         Class = "ﴯ",
         Interface = "",
         Module = "",
@@ -75,7 +75,7 @@ if ok then
                 behavior = cmp.ConfirmBehavior.Replace,
                 select = false,
             },
-            ["<Tab>"] = function(fallback)
+            ["<Tab>"] = cmp.mapping(function(fallback)
                 if cmp.visible() then
                     cmp.select_next_item()
                 elseif require("luasnip").expand_or_jumpable() then
@@ -86,8 +86,8 @@ if ok then
                 else
                     fallback()
                 end
-            end,
-            ["<S-Tab>"] = function(fallback)
+            end, { "i", "s" }),
+            ["<S-Tab>"] = cmp.mapping(function(fallback)
                 if cmp.visible() then
                     cmp.select_prev_item()
                 elseif require("luasnip").jumpable(-1) then
@@ -95,7 +95,7 @@ if ok then
                 else
                     fallback()
                 end
-            end,
+            end, { "i", "s" }),
         },
         sources = {
             { name = "nvim_lsp" },

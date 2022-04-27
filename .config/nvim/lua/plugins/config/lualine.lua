@@ -204,14 +204,14 @@ ins_left {
         return "%="
     end,
 }
-ins_left {
-    function()
-        return " 󰮯 "
-    end,
-    color = { fg = colors.yellow, bg = colors.bg },
-    cond = conditions.buffer_not_empty and conditions.hide_in_width,
-    padding = 0,
-}
+-- ins_left {
+--     function()
+--         return " 󰮯 "
+--     end,
+--     color = { fg = colors.yellow, bg = colors.bg },
+--     cond = conditions.buffer_not_empty and conditions.hide_in_width,
+--     padding = 0,
+-- }
 
 ins_left {
     -- mode component
@@ -227,7 +227,7 @@ ins_left {
     function()
         return " "
     end,
-    color = { fg = colors.orange, bg = colors.bg },
+    color = { fg = colors.yellow, bg = colors.bg },
     cond = conditions.buffer_not_empty and conditions.hide_in_width,
     padding = 0,
 }
@@ -235,7 +235,7 @@ ins_left {
     function()
         return " "
     end,
-    color = { fg = colors.magenta, bg = colors.bg },
+    color = { fg = colors.orange, bg = colors.bg },
     cond = conditions.buffer_not_empty and conditions.hide_in_width,
     padding = 0,
 }
@@ -268,16 +268,7 @@ ins_right {
     cond = conditions.hide_in_width_1,
     color = { fg = colors.fg1, bg = colors.bg },
 }
-ins_right {
-    "fileformat",
-    symbols = {
-        unix = "🐧", -- e712
-        dos = " DOS", -- e70f
-        mac = " MAC", -- e711
-    },
-    cond = conditions.hide_in_width_1,
-    color = { fg = colors.fg1, bg = colors.bg },
-}
+
 ins_right {
     "branch",
     icon = "",

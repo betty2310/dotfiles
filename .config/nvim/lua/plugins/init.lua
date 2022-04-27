@@ -11,16 +11,16 @@ return packer.startup(function()
     use { "L3MON4D3/LuaSnip" }
     use { "rafamadriz/friendly-snippets" }
 
-    use { "kyazdani42/nvim-web-devicons", config = require "plugins.config.icons" }
+    use { "kyazdani42/nvim-web-devicons" }
     use {
         "nvim-lualine/lualine.nvim",
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
         config = require "plugins.config.lualine",
     }
     use {
-        "noib3/nvim-cokeline",
-        requires = "kyazdani42/nvim-web-devicons", -- If you want devicons
-        config = require "plugins.config.coke",
+        "akinsho/bufferline.nvim",
+        requires = { "kyazdani42/nvim-web-devicons" },
+        config = require "plugins.config.bufferline",
     }
     use {
         "goolord/alpha-nvim",
@@ -29,7 +29,7 @@ return packer.startup(function()
     use {
         "folke/which-key.nvim",
     }
-    use { "petertriho/nvim-scrollbar", config = require "plugins.config.scrollbar" }
+    --  use { "petertriho/nvim-scrollbar", config = require "plugins.config.scrollbar" }
 
     -- Coding utilities
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = require "plugins.config.treesitter" }
@@ -116,12 +116,12 @@ return packer.startup(function()
         config = require "plugins.config.gitsigns",
     }
     -- test case
-    use {
-        "xeluxee/competitest.nvim",
-        requires = "MunifTanjim/nui.nvim",
-        config = require "plugins.config.competitest",
-    }
+    -- use {
+    --     "xeluxee/competitest.nvim",
+    --     requires = "MunifTanjim/nui.nvim",
+    --     config = require "plugins.config.competitest",
+    --}
 
     -- debug
-    use { "puremourning/vimspector", config = require "plugins.config.dap" }
+    -- use { "puremourning/vimspector", config = require "plugins.config.dap" }
 end)

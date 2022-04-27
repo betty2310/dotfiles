@@ -5,37 +5,37 @@ end
 
 local colors = require("utils").colors
 cokeline.setup {
-    rendering = {
-        left_sidebar = {
-            filetype = "NvimTree",
-            components = {
-                {
-                    text = "  🌳 NvimTree  ",
-                    hl = {
-                        fg = colors.yellow,
-                        bg = colors.bg,
-                        style = "bold",
-                    },
-                },
-            },
-        },
-    },
+    -- rendering = {
+    --     left_sidebar = {
+    --         filetype = "NvimTree",
+    --         components = {
+    --             {
+    --                 text = "  🌳 NvimTree  ",
+    --                 hl = {
+    --                     fg = colors.yellow,
+    --                     bg = colors.bg,
+    --                     style = "bold",
+    --                 },
+    --             },
+    --         },
+    --     },
+    -- },
     show_if_buffers_are_at_least = 1,
 
     mappings = {
         cycle_prev_next = true,
     },
 
-    default_hl = {
-        focused = {
-            fg = colors.magenta,
-            bg = "NONE",
-        },
-        unfocused = {
-            fg = colors.bg3,
-            bg = "NONE",
-        },
-    },
+    -- default_hl = {
+    --     focused = {
+    --         fg = colors.magenta,
+    --         bg = "NONE",
+    --     },
+    --     unfocused = {
+    --         fg = colors.bg3,
+    --         bg = "NONE",
+    --     },
+    -- },
 
     components = {
         {
