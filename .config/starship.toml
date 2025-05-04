@@ -1,63 +1,71 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 add_newline = true
-line_break.disabled = true
 
-right_format = """$time"""
-
-[time]
-disabled = true
-format = '[$time](#4C566A)'
-time_format = "%T"
+[character] # The name of the module we are configuring is 'character'
+success_symbol = "[ ❯](bold green)"
+error_symbol = "[ ❯](bold red)"
+vimcmd_symbol = "[ ❯](bold green)"
+vimcmd_visual_symbol = "[ ❯](bold yellow)"
+vimcmd_replace_symbol = "[ ❯](bold purple)"
+vimcmd_replace_one_symbol = "[ ❯](bold purple)"
 
 [directory]
-format = "[$read_only](red)[ ](blue)[$path](bold #4c566a) "
-read_only = " "
-fish_style_pwd_dir_length = 1
-truncation_length = 4
-
-[character]
-error_symbol = "[ ](red)"
-success_symbol = "[ ](green)"
-vicmd_symbol = "[ ](yellow)"
+format = ' [$path]($style)[$read_only]($read_only_style) '
+style = "bold blue"
 
 [package]
-symbol = " "
+symbol = "󰏓 "
+style = 'bold yellow'
 
 [nodejs]
-format = "via [ $version](bold yellow) "
+symbol = "󰋘 "
 
 [python]
 symbol = " "
 
 [lua]
-format = "via [ $version](bold yellow) "
+symbol = " "
 
 [git_branch]
-symbol = " "
-format = "on [$symbol$branch]($style) "
-style = "bold green"
+symbol = " "
+format = "on [$symbol$branch(:$remote_branch)]($style) "
 
 [cmake]
-format = "via [卑$version](bold #B48EAD) "
+symbol = "󰲉 "
 
 [golang]
-symbol = "ﳑ "
+symbol = " "
 
-[custom.docker]
-command = "docker version -f '{{.Server.Version}}' 2>/dev/null"
-files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
-style = "blue bold"
-symbol = " v"
-format = "via [$symbol$output]($style) "
+[rust]
+symbol = " "
 
-[git_status]
-style = "bold red"
-ahead = '[  $count](bold green)'
-behind = '[  $count](bold green)'
-untracked = '[  $count](bold yellow)'
-modified = '[  $count](bold #D08770)'
-staged = '[  $count](bold green)'
-renamed = '[  $count](bold yellow)'
-deleted = '[ $count](bold red)'
-conflicted = '[ﮗ $count](bold cyan)'
-diverged = '[↕ ${ahead_count}⇣${behind_count}](bold cyan)'
-stashed = '[ﰩ $count](bold yellow)'
+[c]
+symbol = " "
+
+[docker_context]
+format = 'has [ docker ](cyan bold)'
+
+[bun]
+symbol = "🍙 "
+
+[dotnet]
+format = "via [$symbol($version )]($style)"
+symbol = "󱢺 "
+style = "bold cyan"
+version_format = "v${major}"
+
+[ruby]
+symbol = ' '
+disabled = true
+
+[java]
+symbol = " "
+format = 'use [${symbol}(${version} )]($style)'
+style = "bold red dimmed"
+
+[gradle]
+symbol = " "
+
+[kotlin]
+symbol = " "
