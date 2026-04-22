@@ -14,8 +14,9 @@ vimcmd_replace_one_symbol = "[ ❯](bold purple)"
 format = ' [$path]($style)[$read_only]($read_only_style) '
 style = "bold blue"
 
+
 [package]
-symbol = "󰏓 "
+symbol = " "
 style = 'bold yellow'
 
 [nodejs]
@@ -26,10 +27,12 @@ symbol = " "
 
 [lua]
 symbol = " "
+style = "yellow"
 
 [git_branch]
 symbol = " "
 format = "on [$symbol$branch(:$remote_branch)]($style) "
+
 
 [cmake]
 symbol = "󰲉 "
@@ -38,20 +41,21 @@ symbol = "󰲉 "
 symbol = " "
 
 [rust]
-symbol = " "
+symbol = " "
 
 [c]
 symbol = " "
 
 [docker_context]
-format = 'has [ docker ](cyan bold)'
+format = 'with [  ](cyan bold)'
 
 [bun]
-symbol = "🍙 "
+symbol = " "
+style = "white"
 
 [dotnet]
-format = "via [$symbol($version )]($style)"
-symbol = "󱢺 "
+format = "via [$symbol($version)]($style) "
+symbol = "🐳 "
 style = "bold cyan"
 version_format = "v${major}"
 
@@ -60,9 +64,8 @@ symbol = ' '
 disabled = true
 
 [java]
-symbol = " "
+symbol = " "
 format = 'use [${symbol}(${version} )]($style)'
-style = "bold red dimmed"
 
 [gradle]
 symbol = " "
