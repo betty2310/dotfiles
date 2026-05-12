@@ -6,6 +6,7 @@ set fish_pager_color_progress black --background=blue
 
 fish_add_path -p $GOPATH/bin $HOME/.cargo/bin $HOME/.local/share/bob/nvim-bin $HOME/.local/bin $HOME/.dotnet/tools $HOME/.lmstudio/bin
 fish_add_path /opt/homebrew/sbin
+fish_add_path /opt/homebrew/opt/libpq/bin
 fish_add_path /opt/local/bin
 fish_add_path /opt/local/sbin
 fish_add_path /Users/betty/Library/Python/3.9/bin
@@ -15,7 +16,6 @@ fish_add_path /Users/betty/.opencode/bin
 
 fish_add_path /Users/betty/Developer/gnss-tools/gnss-sdr/install
 fish_add_path /Users/betty/Developer/gnss-tools/gps-sdr-sim/
-
 set -x EDITOR nvim
 
 set -x fish_color_command green
@@ -84,4 +84,10 @@ function y
         builtin cd -- "$cwd"
     end
     rm -f -- "$tmp"
+end
+
+function conda --description "Lazy-load conda on demand"
+    functions -e conda
+    source /opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish
+    conda $argv
 end
