@@ -2,18 +2,24 @@ clipboard-read = allow
 clipboard-write = allow
 
 
-font-family = "Maple Mono NF"
+font-family = "MonolisaCode"
+
 
 font-size = 12
-font-style = Medium
-font-style-bold = Bold
+font-style = Semibold
+font-style-italic = Semibold Italic
+font-style-bold = Extrabold
+font-style-bold-italic = Extrabold Italic
 
-adjust-cell-height = 7
+font-feature = ss01
+font-feature = calt,dlig,liga,ss10,ss11,cv01,cv02,cv03,cv04,cv09
 
-theme = dark:tokyo-night-default,light:Gitlab light
+adjust-cell-height = 10
 
-background-opacity = 0.9
-background-blur-radius = 20
+theme = dark:TokyoNight Night,light:Kanagawa Lotus
+# theme = catppuccin-mocha.conf
+background-opacity = 1
+background-blur-radius = 30
 macos-titlebar-style = transparent
 window-padding-x = 10
 window-padding-y = 8
@@ -28,9 +34,43 @@ shell-integration = fish
 window-subtitle = working-directory
 window-theme = system
 
-auto-update-channel = stable
+auto-update-channel = tip
 
 shell-integration-features = ssh-terminfo,ssh-env
 macos-option-as-alt = left
+
+# --- tmux-style keybinds (Alt = Option) ---
+# Tabs (= tmux windows)
+keybind = alt+n=new_tab
+keybind = alt+left_bracket=previous_tab
+keybind = alt+right_bracket=next_tab
+keybind = alt+shift+left_bracket=move_tab:-1
+keybind = alt+shift+right_bracket=move_tab:1
+keybind = alt+shift+q=close_tab
+keybind = alt+one=goto_tab:1
+keybind = alt+two=goto_tab:2
+keybind = alt+three=goto_tab:3
+keybind = alt+four=goto_tab:4
+keybind = alt+five=goto_tab:5
+keybind = alt+six=goto_tab:6
+keybind = alt+seven=goto_tab:7
+keybind = alt+eight=goto_tab:8
+keybind = alt+nine=goto_tab:9
+keybind = alt+zero=goto_tab:10
+
+# Splits (= tmux panes)
+keybind = alt+minus=new_split:down
+keybind = alt+backslash=new_split:right
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+keybind = alt+shift+h=resize_split:left,10
+keybind = alt+shift+j=resize_split:down,10
+keybind = alt+shift+k=resize_split:up,10
+keybind = alt+shift+l=resize_split:right,10
+keybind = alt+f=toggle_split_zoom
+keybind = alt+q=close_surface
+keybind = alt+x=close_surface
 
 

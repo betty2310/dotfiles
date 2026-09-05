@@ -47,7 +47,8 @@ symbol = " "
 symbol = " "
 
 [docker_context]
-format = 'with [  ](cyan bold)'
+symbol =  " "
+format = 'have [$symbol docker]($style) '
 
 [bun]
 symbol = " "
